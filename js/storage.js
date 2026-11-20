@@ -1,13 +1,13 @@
 (function (root) {
   'use strict';
   const game = root.IslandMystery;
-  const KEY = 'island-mystery.save.v3';
+  const KEY = 'island-mystery.save.v4';
   function load() {
     try {
       const raw = root.localStorage.getItem(KEY);
       if (!raw) {
-        const legacy = root.localStorage.getItem('island-mystery.save.v2');
-        if (legacy) { if (legacy.length > 1000000) return { status: 'invalid', state: null }; const state = game.state.migrate(JSON.parse(legacy)); return { status: state ? 'migrated' : 'invalid', state }; }
+        const legacy = root.localStorage.getItem('island-mystery.save.v3') || root.localStorage.getItem('island-mystery.save.v2');
+        if (legacy) { if (legacy.length > 5000000) return { status: 'invalid', state: null }; const state = game.state.migrate(JSON.parse(legacy)); return { status: state ? 'migrated' : 'invalid', state }; }
         return { status: root.localStorage.getItem('island-mystery.save.v1') ? 'legacy' : 'empty', state: null };
       }
       if (raw.length > 5000000) return { status: 'invalid', state: null };

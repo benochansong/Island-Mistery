@@ -3,10 +3,10 @@
   const game = root.IslandMystery, { $ } = game.ui;
   let state = null, busy = false, pendingVote = null;
   function refreshWelcome() { game.ui.welcome(game.storage.load(), Boolean(state)); }
-  function render() { game.ui.render(game.state.viewFor(state)); }
-  function persist() { game.ui.saveStatus(game.storage.save(state)); }
+  function render() { const view = game.state.viewFor(state); game.ui.render(view); game.storyUI.render(view); }
+  function persist() { game.ui.saveStatus(game.storage.save(state)); const captured = game.codex.record(game.state.viewFor(state)); if ($('collection-status')) $('collection-status').textContent = captured ? '완료 기록이 미스터리 도감에 저장되었습니다.' : '도감 저장 불가 · 현재 기록은 유지됩니다.'; }
   function openGame() { render(); game.ui.screen('game'); if (state.outcome) $('ending-panel').focus(); }
-  function newGame() { state = game.state.create(undefined, undefined, $('difficulty').value); $('log-filter').value = 'all'; $('action-error').textContent = ''; persist(); openGame(); }
+  function newGame() { const raw = $('seed-input').value.trim(), seed = raw ? Number(raw) : undefined; if (seed !== undefined && (!Number.isInteger(seed) || seed < 0 || seed > 4294967295)) { $('save-description').textContent = '시드는 0~4294967295의 정수여야 합니다.'; return; } state = game.state.create(undefined, seed, $('difficulty').value); $('log-filter').value = 'all'; $('action-error').textContent = ''; persist(); openGame(); }
   function requestNew() {
     const saved = game.storage.load();
     if (state || ['loaded', 'migrated', 'invalid'].includes(saved.status)) $('restart-dialog').showModal(); else newGame();
@@ -16,9 +16,9 @@
     busy = true;
     try {
       const hadOutcome = Boolean(state.outcome);
-      state = game.state.transition(state, action); $('action-error').textContent = ''; render(); persist();
+      state = game.state.transition(state, action); $('action-error').textContent = ''; $('event-error').textContent = ''; render(); persist();
       if (!hadOutcome && state.outcome) { $('ending-panel').focus(); $('ending-panel').scrollIntoView({ block: 'start' }); }
-    } catch (error) { $('action-error').textContent = error.message; }
+    } catch (error) { $('action-error').textContent = error.message; $('event-error').textContent = error.message; }
     finally { busy = false; }
   }
   function menu() { refreshWelcome(); game.ui.screen('welcome'); }
@@ -52,5 +52,10 @@
   $('home-link').addEventListener('click', event => { event.preventDefault(); menu(); });
   $('help-button').addEventListener('click', () => $('help-dialog').showModal());
   $('close-help').addEventListener('click', () => $('help-dialog').close());
+  $('event-dialog').addEventListener('cancel', event => event.preventDefault());
+  $('event-options').addEventListener('click', event => { const b = event.target.closest('[data-event-choice]'); if (b && !b.disabled) dispatch({type:'EVENT_CHOICE', instance:b.dataset.eventInstance, choiceId:b.dataset.eventChoice}); });
+  $('hidden-sites').addEventListener('click', event => { const b = event.target.closest('[data-hidden-parent]'); if (b && !b.disabled) dispatch({type:'SELECT_LOCATION',location:b.dataset.hiddenParent}); });
+  $('codex-button').addEventListener('click', game.storyUI.codex);
+  $('close-codex').addEventListener('click', () => $('codex-dialog').close());
   refreshWelcome();
 })(globalThis);

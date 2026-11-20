@@ -10,6 +10,8 @@
     const rank = p => self.suspicion[p.id] + (50 - self.trust[p.id]) * (0.12 + self.traits.emotionalSensitivity * 0.25);
     const suspect = others.slice().sort((a, b) => rank(b) - rank(a))[0];
     if (view.phase === 'voting') { const vote = game.social.chooseVote(view, random); return { kind: 'vote', target: vote.target, reason: vote.reason }; }
+    const personal = game.missions.decide(view, random);
+    if (personal) return personal;
     if (view.phase === 'discussion') return discuss(view, random);
     if (view.phase === 'morning') {
       if (self.health < 30 && self.traits.caution > self.traits.aggression) return { kind: 'rest' };
@@ -21,7 +23,8 @@
       else if (view.resources.parts < 6) location = self.role === 'engineer' ? 'tower' : 'lab';
       else location = ['coast', 'jungle', 'lab', 'tower'][Math.floor(random() * 4)];
       if (self.traits.emotionalSensitivity > .8 && self.health < 60) location = 'coast';
-      return { kind: 'explore', location };
+      if (view.closedLocations?.[location] > view.day) location = ['coast','lab','tower','jungle'].find(l => !(view.closedLocations[l] > view.day));
+      return location ? { kind: 'explore', location } : {kind:'rest'};
     }
     if (self.role === 'doctor' && injured.length && view.resources.medicine) return { kind: 'heal', target: injured[0].id };
     if (self.role === 'saboteur' && game.social.strategy(view).id === 'disrupt') {
@@ -33,7 +36,7 @@
     if (view.phase === 'night' && self.role === 'investigator' && others.length) return { kind: 'investigate', target: suspect && rank(suspect) > 15 ? suspect.id : others[Math.floor(random() * others.length)].id };
     if (view.resources.parts >= (self.role === 'engineer' ? 1 : 2) && (self.role === 'engineer' || random() < 0.6)) return { kind: 'repair', facility: view.facilities.radio / game.config.repairGoals.radio >= view.facilities.boat / game.config.repairGoals.boat ? 'radio' : 'boat' };
     if (view.phase === 'afternoon') return { kind: 'gather', resource: view.resources.water <= view.resources.food ? 'water' : 'food' };
-    if (self.role === 'explorer' && self.health > 50) return { kind: 'explore', location: view.resources.water < alive.length ? 'coast' : 'jungle' };
+    if (self.role === 'explorer' && self.health > 50 && !(view.closedLocations?.[view.resources.water < alive.length ? 'coast' : 'jungle'] > view.day)) return { kind: 'explore', location: view.resources.water < alive.length ? 'coast' : 'jungle' };
     return { kind: 'rest' };
   }
   function discuss(view, random) {

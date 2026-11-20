@@ -185,7 +185,7 @@ test('legacy saves remain untouched; malformed saves and denied storage fail saf
   const backing = storage(); backing.setItem('island-mystery.save.v1', '{legacy}'); const g = setup(backing);
   assert.equal(g.storage.load().status, 'legacy'); assert.equal(g.storage.save(g.state.create(timestamp, 1)), true);
   assert.equal(backing.getItem('island-mystery.save.v1'), '{legacy}');
-  for (const raw of ['{', 'null', '{}', 'x'.repeat(5000001)]) { backing.setItem('island-mystery.save.v3', raw); assert.equal(g.storage.load().status, 'invalid'); }
+  for (const raw of ['{', 'null', '{}', 'x'.repeat(5000001)]) { backing.setItem('island-mystery.save.v4', raw); assert.equal(g.storage.load().status, 'invalid'); }
   for (const mutate of [s => s.version = 1, s => s.players.pop(), s => s.resources.food = -1, s => s.secrets.player = null, s => s.acted.push('invalid'), s => s.secrets.player.trust.seo = 101, s => s.log[0].text = {}, s => s.outcome = {}]) {
     const s = g.state.create(timestamp, 1); mutate(s); assert.equal(g.state.valid(s), false); assert.equal(g.storage.save(s), false);
   }

@@ -79,7 +79,7 @@
       empty: '아직 저장된 기록이 없습니다.', legacy: 'Phase 1 기록은 보존되어 있습니다. 새 규칙으로 새 기록을 시작해 주세요.',
       invalid: '저장된 기록의 형식이 올바르지 않습니다. 새 기록 시작 시 교체 여부를 확인합니다.',
       unavailable: '저장소에 접근할 수 없습니다. 이번 실행 중에는 플레이할 수 있습니다.',
-      migrated: 'Phase 2 기록을 이어갈 수 있습니다. 기존 원본은 보존하고, 새 기억은 이어하기 이후부터 쌓입니다.',
+      migrated: '이전 버전 기록을 이어갈 수 있습니다. 기존 원본은 보존하고, 새 기억은 이어하기 이후부터 쌓입니다.',
       loaded: result.state ? `${dateLabel(result.state.updatedAt)} · ${result.state.day}일차 · ${result.state.outcome ? '엔딩 확인' : C.phaseNames[result.state.phase]}` : ''
     })[result.status];
   }
