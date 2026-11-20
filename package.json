@@ -3,7 +3,7 @@
     "@playwright/test": "1.65.1"
   },
   "name": "island-mystery",
-  "version": "0.8.0",
+  "version": "0.9.0",
   "private": true,
   "description": "Korean social deduction survival game with offline and authoritative online multiplayer",
   "engines": {
@@ -11,7 +11,7 @@
   },
   "scripts": {
     "dev": "node tests/serve.cjs",
-    "test": "node --test tests/state.test.cjs tests/social.test.cjs tests/phase3.test.cjs tests/phase4.test.cjs tests/phase5.test.cjs tests/phase6.test.cjs tests/phase8.test.cjs",
+    "test": "node --test tests/state.test.cjs tests/social.test.cjs tests/phase3.test.cjs tests/phase4.test.cjs tests/phase5.test.cjs tests/phase6.test.cjs tests/phase8.test.cjs tests/phase9.test.cjs",
     "test:simulation": "node tests/simulate-phase8.cjs",
     "test:browser": "node tests/browser-phase6.cjs",
     "test:browser:features": "node tests/browser-phase6-features.cjs",
@@ -26,7 +26,10 @@
     "test:simulation:phase6": "node tests/simulate-phase6.cjs after 300",
     "test:browser:phase8": "node tests/browser-phase8.cjs",
     "test:browser:phase8-online": "node tests/browser-phase8-online.cjs",
-    "test:browser:online-repair": "node tests/browser-phase7-repair.cjs"
+    "test:browser:online-repair": "node tests/browser-phase7-repair.cjs",
+    "start:beta": "node scripts/start-beta.cjs",
+    "test:simulation:beta": "node tests/simulate-phase9.cjs final 1000",
+    "build:beta": "node scripts/build-beta.cjs"
   },
   "dependencies": {
     "socket.io": "4.8.3",

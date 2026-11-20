@@ -1,0 +1,15 @@
+{
+  "extractedZip": true,
+  "archiveSHA256": "5ae02d22b186bdf5637774aa66b87ca6165f8dc3bb618af21926d5500e02f287",
+  "manifestHashes": 78,
+  "productionDependenciesInstalled": true,
+  "health": {
+    "ok": true,
+    "mode": "memory-rooms-sqlite-profiles",
+    "version": "0.9.0",
+    "environment": "beta"
+  },
+  "singleStart": true,
+  "feedback": true,
+  "errors": []
+}

@@ -1,0 +1,284 @@
+{
+  "environment": {
+    "node": "v24.14.0",
+    "platform": "win32"
+  },
+  "browsers": [
+    {
+      "name": "Chrome",
+      "status": "PASS",
+      "physicalMobile": false,
+      "version": "157.0.8103.79",
+      "load": {
+        "domReadyMs": 173,
+        "loadMs": 181.5,
+        "images": [
+          {
+            "asset": "compass.svg",
+            "duration": 37.09999999962747,
+            "bytes": 644
+          },
+          {
+            "asset": "island.svg",
+            "duration": 18.200000001117587,
+            "bytes": 4881
+          },
+          {
+            "asset": "island-cinematic.jpg",
+            "duration": 5.700000001117587,
+            "bytes": 377399
+          },
+          {
+            "asset": "survivors-expressions.jpg",
+            "duration": 5.799999998882413,
+            "bytes": 366927
+          },
+          {
+            "asset": "compass.svg",
+            "duration": 4.700000001117587,
+            "bytes": 644
+          }
+        ]
+      },
+      "tutorial": true,
+      "startMs": 219.04219999999987,
+      "transitionMs": [
+        9.900000000372529
+      ],
+      "feedback": true,
+      "exportPrivacy": true,
+      "deletionPreservesGame": true,
+      "restore": true,
+      "storage": {
+        "writeMeanMs": 0.0650000000372529,
+        "validatedLoadMeanMs": 0.5950000000186264,
+        "saveChars": 29072,
+        "heapBytes": 8018025
+      },
+      "audio": {
+        "unlocked": true,
+        "desired": "morning",
+        "playing": true,
+        "currentTime": 0.468809,
+        "volume": 0.23316428571475273,
+        "activeEffects": 0,
+        "failures": [],
+        "activeTracks": 2
+      },
+      "viewport": {
+        "width": 1280,
+        "height": 720,
+        "touch": 0
+      }
+    },
+    {
+      "name": "Edge",
+      "status": "PASS",
+      "physicalMobile": false,
+      "version": "157.0.4341.60",
+      "load": {
+        "domReadyMs": 233,
+        "loadMs": 241.2000000011176,
+        "images": [
+          {
+            "asset": "island.svg",
+            "duration": 21.799999998882413,
+            "bytes": 4881
+          },
+          {
+            "asset": "compass.svg",
+            "duration": 55.79999999888241,
+            "bytes": 644
+          },
+          {
+            "asset": "island-cinematic.jpg",
+            "duration": 6.800000000745058,
+            "bytes": 377399
+          },
+          {
+            "asset": "survivors-expressions.jpg",
+            "duration": 7,
+            "bytes": 366927
+          },
+          {
+            "asset": "compass.svg",
+            "duration": 4.400000000372529,
+            "bytes": 644
+          }
+        ]
+      },
+      "tutorial": true,
+      "startMs": 213.4276000000009,
+      "transitionMs": [
+        9.5
+      ],
+      "feedback": true,
+      "exportPrivacy": true,
+      "deletionPreservesGame": true,
+      "restore": true,
+      "storage": {
+        "writeMeanMs": 0.060000000055879354,
+        "validatedLoadMeanMs": 0.5049999999813736,
+        "saveChars": 29072,
+        "heapBytes": 8015213
+      },
+      "audio": {
+        "unlocked": true,
+        "desired": "morning",
+        "playing": true,
+        "currentTime": 0.483737,
+        "volume": 0.23734285714223446,
+        "activeEffects": 0,
+        "failures": [],
+        "activeTracks": 2
+      },
+      "viewport": {
+        "width": 1280,
+        "height": 720,
+        "touch": 0
+      }
+    },
+    {
+      "name": "Firefox",
+      "status": "PASS",
+      "physicalMobile": false,
+      "version": "159.0",
+      "load": {
+        "domReadyMs": 1428,
+        "loadMs": 1457,
+        "images": [
+          {
+            "asset": "compass.svg",
+            "duration": 813,
+            "bytes": 644
+          },
+          {
+            "asset": "island.svg",
+            "duration": 819,
+            "bytes": 4881
+          },
+          {
+            "asset": "compass.svg",
+            "duration": 1306,
+            "bytes": 0
+          },
+          {
+            "asset": "island-cinematic.jpg",
+            "duration": 10,
+            "bytes": 377399
+          },
+          {
+            "asset": "survivors-expressions.jpg",
+            "duration": 16,
+            "bytes": 366927
+          }
+        ]
+      },
+      "tutorial": true,
+      "startMs": 311.35589999999866,
+      "transitionMs": [
+        10
+      ],
+      "feedback": true,
+      "exportPrivacy": true,
+      "deletionPreservesGame": true,
+      "restore": true,
+      "storage": {
+        "writeMeanMs": 0,
+        "validatedLoadMeanMs": 0.7,
+        "saveChars": 29072,
+        "heapBytes": null
+      },
+      "audio": {
+        "unlocked": true,
+        "desired": "morning",
+        "playing": true,
+        "currentTime": 0.530513,
+        "volume": 0.25050535714285715,
+        "activeEffects": 0,
+        "failures": [],
+        "activeTracks": 2
+      },
+      "viewport": {
+        "width": 1280,
+        "height": 720,
+        "touch": 0
+      }
+    },
+    {
+      "name": "Android Chrome emulation",
+      "status": "PASS",
+      "physicalMobile": false,
+      "version": "157.0.8103.79",
+      "load": {
+        "domReadyMs": 165.19999999925494,
+        "loadMs": 174.19999999925494,
+        "images": [
+          {
+            "asset": "compass.svg",
+            "duration": 40.59999999962747,
+            "bytes": 644
+          },
+          {
+            "asset": "island.svg",
+            "duration": 18.09999999962747,
+            "bytes": 4881
+          },
+          {
+            "asset": "island-cinematic.jpg",
+            "duration": 6.199999999254942,
+            "bytes": 377399
+          },
+          {
+            "asset": "survivors-expressions.jpg",
+            "duration": 6.5,
+            "bytes": 366927
+          },
+          {
+            "asset": "compass.svg",
+            "duration": 4.199999999254942,
+            "bytes": 644
+          }
+        ]
+      },
+      "tutorial": true,
+      "startMs": 251.15569999999934,
+      "transitionMs": [
+        9.099999999627471
+      ],
+      "feedback": true,
+      "exportPrivacy": true,
+      "deletionPreservesGame": true,
+      "restore": true,
+      "storage": {
+        "writeMeanMs": 0.06499999994412065,
+        "validatedLoadMeanMs": 0.5650000000372529,
+        "saveChars": 29072,
+        "heapBytes": 8075129
+      },
+      "audio": {
+        "unlocked": true,
+        "desired": "morning",
+        "playing": true,
+        "currentTime": 0.482234,
+        "volume": 0.23913964285760986,
+        "activeEffects": 0,
+        "failures": [],
+        "activeTracks": 2
+      },
+      "viewport": {
+        "width": 412,
+        "height": 839,
+        "touch": 1
+      }
+    },
+    {
+      "name": "iPhone WebKit emulation",
+      "status": "NOT TESTED",
+      "physicalMobile": false,
+      "reason": "Browser engine not installed/launch unavailable"
+    }
+  ],
+  "errors": [],
+  "realUsers": 0
+}

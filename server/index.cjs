@@ -14,8 +14,8 @@ function createServer(overrides={}){
     if(cfg.production)res.setHeader('Strict-Transport-Security','max-age=31536000');
     let name;try{name=decodeURIComponent(new URL(req.url,'http://localhost').pathname).slice(1)||'index.html';}catch{res.writeHead(400);return res.end();}
     if(!['GET','HEAD'].includes(req.method)){res.writeHead(405);return res.end();}
-    if(name==='health'){res.setHeader('Content-Type','application/json');return res.end(JSON.stringify({ok:true,mode:'memory-rooms-sqlite-profiles',version:'0.8.0'}));}
-    if(name==='online-config.json'){res.setHeader('Content-Type','application/json');return res.end(JSON.stringify({origin:cfg.origin||null,public:cfg.production,persistence:'memory',profiles:'sqlite',globalRanking:false}));}
+    if(name==='health'){res.setHeader('Content-Type','application/json');return res.end(JSON.stringify({ok:true,mode:'memory-rooms-sqlite-profiles',version:'0.9.0',environment:cfg.environment}));}
+    if(name==='online-config.json'){res.setHeader('Content-Type','application/json');return res.end(JSON.stringify({origin:cfg.origin||null,environment:cfg.environment,version:'0.9.0',public:cfg.production,persistence:'memory',profiles:'sqlite',globalRanking:false}));}
     if(!allowed.has(name)){res.writeHead(404);return res.end('Not found');}
     res.setHeader('Content-Type',types[path.extname(name)]);if(req.method==='HEAD')return res.end();fs.createReadStream(path.join(root,name)).on('error',()=>res.destroy()).pipe(res);
   });

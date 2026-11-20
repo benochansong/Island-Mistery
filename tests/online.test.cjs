@@ -159,3 +159,19 @@ test('active game disconnects retain their seat and role beyond lobby grace',asy
   const restored=await f.client();assert.ok((await emit(restored,'session:resume',f.auth[0])).ok);
   await wait(()=>restored.latest?.view);assert.equal(restored.latest.view.self.role,role);
 });
+
+for(const phase of ['voting','night'])test(`beta: disconnect during ${phase} preserves queued action and late acknowledgement retry cannot double apply`,async t=>{
+  const f=await fixture(t,2,{resultMs:10000});await f.start();clearTimeout(f.room.timer);f.room.state.phase=phase;f.app.rooms.openTurn(f.room);await wait(()=>f.clients.every(c=>c.latest.view.phase===phase));
+  const a=f.clients[0],b=f.clients[1],requestId=crypto.randomUUID(),turnId=f.room.turnId,command=phase==='voting'?{kind:'vote',target:null}:{kind:'rest'},request={requestId,turnId,action:command};
+  // Delay observation of the server ACK; transport still delivered the first request.
+  const delayed=new Promise((resolve,reject)=>a.timeout(4000).emit('game:action',request,(err,r)=>setTimeout(()=>err?reject(err):resolve(r),100)));
+  await wait(()=>f.room.submissions.player);assert.ok((await emit(a,'game:action',request)).ok);assert.ok((await delayed).ok);
+  a.disconnect();await wait(()=>!f.room.members[0].socketId);assert.ok((await action(b,command)).ok);await wait(()=>f.room.state.resolved||f.room.state.outcome);
+  const before=JSON.stringify(f.room.state),restored=await f.client();assert.ok((await emit(restored,'session:resume',f.auth[0])).ok);assert.ok((await emit(restored,'game:action',request)).ok);assert.equal(JSON.stringify(f.room.state),before);assert.equal(f.room.state.secrets.player.actionHistory.filter(x=>x.phase===phase).length,1);
+});
+
+test('beta: invalid/ended room access and request flood are rejected without cross-room damage',async t=>{
+  const f=await fixture(t,2),outsider=await f.client();assert.equal((await emit(outsider,'room:join',{code:'ISLAND-NOTFOUND',nickname:'Nope'})).ok,false);await f.start();await finish(f);
+  assert.equal((await emit(outsider,'room:join',{code:f.room.code,nickname:'TooLate'})).ok,false);
+  let limited=false;for(let i=0;i<85;i++){const r=await emit(outsider,'rooms:list');if(!r.ok){limited=true;break;}}assert.ok(limited);assert.equal((await fetch(f.url+'/health')).status,200);assert.ok(f.clients[0].connected);
+});

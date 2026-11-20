@@ -1,0 +1,6650 @@
+{
+  "label": "baseline",
+  "policyVersion": 1,
+  "environment": {
+    "node": "v24.14.0",
+    "platform": "win32",
+    "cpu": "AMD Ryzen AI 9 365 w/ Radeon 880M              "
+  },
+  "games": 100,
+  "completed": 100,
+  "errors": [],
+  "stageErrors": 0,
+  "aiErrors": 0,
+  "outcomeErrors": 0,
+  "saveErrors": 0,
+  "duplicateResources": 0,
+  "duplicateVotes": 0,
+  "informationViolations": 0,
+  "unsubstantiatedVotes": 0,
+  "events": {
+    "event-24": 25,
+    "event-25": 14,
+    "event-05": 25,
+    "event-20": 27,
+    "event-09": 16,
+    "event-21": 21,
+    "event-17": 4,
+    "event-08": 28,
+    "event-01": 8,
+    "event-11": 34,
+    "event-26": 7,
+    "event-33": 6,
+    "event-34": 3,
+    "event-29": 5,
+    "event-13": 14,
+    "event-07": 29,
+    "event-06": 4,
+    "event-14": 15,
+    "event-46": 27,
+    "event-44": 3,
+    "event-27": 4,
+    "event-30": 11,
+    "event-39": 14,
+    "event-15": 12,
+    "event-31": 4,
+    "event-18": 11,
+    "event-28": 6,
+    "event-16": 4,
+    "event-03": 13,
+    "event-10": 11,
+    "event-35": 9,
+    "event-04": 3,
+    "event-02": 3,
+    "event-38": 6,
+    "event-23": 3,
+    "event-19": 5,
+    "event-40": 1,
+    "event-42": 2,
+    "event-12": 4,
+    "event-32": 1
+  },
+  "runs": [
+    {
+      "seed": 900001,
+      "difficulty": "easy",
+      "mode": "classic",
+      "policy": 0,
+      "role": "investigator",
+      "humanSpy": false,
+      "day": 3,
+      "winner": "survivors",
+      "outcome": "escape",
+      "ending": "unknown",
+      "spyExiled": false,
+      "shortage": false,
+      "events": [
+        "event-24",
+        "event-25",
+        "event-05",
+        "event-20",
+        "event-09"
+      ],
+      "roles": {
+        "investigator": {
+          "actors": 1,
+          "repairs": 3,
+          "heals": 0,
+          "investigations": 2,
+          "evidence": 3,
+          "sabotage": 0
+        },
+        "explorer": {
+          "actors": 2,
+          "repairs": 4,
+          "heals": 0,
+          "investigations": 0,
+          "evidence": 3,
+          "sabotage": 0
+        },
+        "engineer": {
+          "actors": 1,
+          "repairs": 5,
+          "heals": 0,
+          "investigations": 0,
+          "evidence": 1,
+          "sabotage": 0
+        },
+        "doctor": {
+          "actors": 1,
+          "repairs": 1,
+          "heals": 0,
+          "investigations": 0,
+          "evidence": 2,
+          "sabotage": 0
+        },
+        "saboteur": {
+          "actors": 1,
+          "repairs": 0,
+          "heals": 0,
+          "investigations": 0,
+          "evidence": 1,
+          "sabotage": 3
+        }
+      },
+      "steps": 42,
+      "saveBytes": 479570
+    },
+    {
+      "seed": 900002,
+      "difficulty": "easy",
+      "mode": "classic",
+      "policy": 1,
+      "role": "explorer",
+      "humanSpy": false,
+      "day": 3,
+      "winner": "saboteur",
+      "outcome": "saboteur",
+      "ending": "covert",
+      "spyExiled": false,
+      "shortage": false,
+      "events": [
+        "event-21",
+        "event-05",
+        "event-17",
+        "event-08",
+        "event-01",
+        "event-11"
+      ],
+      "roles": {
+        "explorer": {
+          "actors": 2,
+          "repairs": 6,
+          "heals": 0,
+          "investigations": 0,
+          "evidence": 9,
+          "sabotage": 0
+        },
+        "engineer": {
+          "actors": 1,
+          "repairs": 5,
+          "heals": 0,
+          "investigations": 0,
+          "evidence": 7,
+          "sabotage": 0
+        },
+        "doctor": {
+          "actors": 1,
+          "repairs": 2,
+          "heals": 2,
+          "investigations": 0,
+          "evidence": 4,
+          "sabotage": 0
+        },
+        "investigator": {
+          "actors": 1,
+          "repairs": 0,
+          "heals": 0,
+          "investigations": 3,
+          "evidence": 6,
+          "sabotage": 0
+        },
+        "saboteur": {
+          "actors": 1,
+          "repairs": 0,
+          "heals": 0,
+          "investigations": 0,
+          "evidence": 0,
+          "sabotage": 5
+        }
+      },
+      "steps": 59,
+      "saveBytes": 770640
+    },
+    {
+      "seed": 900003,
+      "difficulty": "easy",
+      "mode": "classic",
+      "policy": 2,
+      "role": "investigator",
+      "humanSpy": false,
+      "day": 2,
+      "winner": "survivors",
+      "outcome": "escape",
+      "ending": "together",
+      "spyExiled": false,
+      "shortage": false,
+      "events": [
+        "event-21",
+        "event-26",
+        "event-33",
+        "event-34"
+      ],
+      "roles": {
+        "investigator": {
+          "actors": 1,
+          "repairs": 0,
+          "heals": 0,
+          "investigations": 2,
+          "evidence": 10,
+          "sabotage": 0
+        },
+        "explorer": {
+          "actors": 2,
+          "repairs": 4,
+          "heals": 0,
+          "investigations": 0,
+          "evidence": 4,
+          "sabotage": 0
+        },
+        "engineer": {
+          "actors": 1,
+          "repairs": 4,
+          "heals": 0,
+          "investigations": 0,
+          "evidence": 3,
+          "sabotage": 0
+        },
+        "doctor": {
+          "actors": 1,
+          "repairs": 2,
+          "heals": 0,
+          "investigations": 0,
+          "evidence": 4,
+          "sabotage": 0
+        },
+        "saboteur": {
+          "actors": 1,
+          "repairs": 0,
+          "heals": 0,
+          "investigations": 0,
+          "evidence": 0,
+          "sabotage": 1
+        }
+      },
+      "steps": 36,
+      "saveBytes": 538043
+    },
+    {
+      "seed": 900004,
+      "difficulty": "easy",
+      "mode": "classic",
+      "policy": 3,
+      "role": "doctor",
+      "humanSpy": false,
+      "day": 2,
+      "winner": "survivors",
+      "outcome": "escape",
+      "ending": "unknown",
+      "spyExiled": false,
+      "shortage": false,
+      "events": [
+        "event-24",
+        "event-05",
+        "event-29"
+      ],
+      "roles": {
+        "doctor": {
+          "actors": 1,
+          "repairs": 1,
+          "heals": 0,
+          "investigations": 0,
+          "evidence": 1,
+          "sabotage": 0
+        },
+        "explorer": {
+          "actors": 2,
+          "repairs": 2,
+          "heals": 0,
+          "investigations": 0,
+          "evidence": 1,
+          "sabotage": 0
+        },
+        "investigator": {
+          "actors": 1,
+          "repairs": 1,
+          "heals": 0,
+          "investigations": 1,
+          "evidence": 1,
+          "sabotage": 0
+        },
+        "engineer": {
+          "actors": 1,
+          "repairs": 3,
+          "heals": 0,
+          "investigations": 0,
+          "evidence": 1,
+          "sabotage": 0
+        },
+        "saboteur": {
+          "actors": 1,
+          "repairs": 0,
+          "heals": 0,
+          "investigations": 0,
+          "evidence": 0,
+          "sabotage": 1
+        }
+      },
+      "steps": 23,
+      "saveBytes": 260238
+    },
+    {
+      "seed": 900005,
+      "difficulty": "easy",
+      "mode": "classic",
+      "policy": 0,
+      "role": "explorer",
+      "humanSpy": false,
+      "day": 2,
+      "winner": "survivors",
+      "outcome": "escape",
+      "ending": "together",
+      "spyExiled": false,
+      "shortage": false,
+      "events": [
+        "event-13",
+        "event-07",
+        "event-33",
+        "event-11"
+      ],
+      "roles": {
+        "explorer": {
+          "actors": 2,
+          "repairs": 3,
+          "heals": 0,
+          "investigations": 0,
+          "evidence": 0,
+          "sabotage": 0
+        },
+        "saboteur": {
+          "actors": 1,
+          "repairs": 0,
+          "heals": 0,
+          "investigations": 0,
+          "evidence": 2,
+          "sabotage": 1
+        },
+        "doctor": {
+          "actors": 1,
+          "repairs": 1,
+          "heals": 1,
+          "investigations": 0,
+          "evidence": 2,
+          "sabotage": 0
+        },
+        "engineer": {
+          "actors": 1,
+          "repairs": 3,
+          "heals": 0,
+          "investigations": 0,
+          "evidence": 2,
+          "sabotage": 0
+        },
+        "investigator": {
+          "actors": 1,
+          "repairs": 1,
+          "heals": 0,
+          "investigations": 1,
+          "evidence": 4,
+          "sabotage": 0
+        }
+      },
+      "steps": 38,
+      "saveBytes": 443984
+    },
+    {
+      "seed": 900006,
+      "difficulty": "easy",
+      "mode": "classic",
+      "policy": 1,
+      "role": "investigator",
+      "humanSpy": false,
+      "day": 3,
+      "winner": "survivors",
+      "outcome": "escape",
+      "ending": "research",
+      "spyExiled": false,
+      "shortage": false,
+      "events": [
+        "event-06",
+        "event-14",
+        "event-05",
+        "event-46",
+        "event-13"
+      ],
+      "roles": {
+        "investigator": {
+          "actors": 1,
+          "repairs": 5,
+          "heals": 0,
+          "investigations": 0,
+          "evidence": 4,
+          "sabotage": 0
+        },
+        "explorer": {
+          "actors": 2,
+          "repairs": 5,
+          "heals": 0,
+          "investigations": 0,
+          "evidence": 0,
+          "sabotage": 0
+        },
+        "engineer": {
+          "actors": 1,
+          "repairs": 4,
+          "heals": 0,
+          "investigations": 0,
+          "evidence": 2,
+          "sabotage": 0
+        },
+        "saboteur": {
+          "actors": 1,
+          "repairs": 0,
+          "heals": 0,
+          "investigations": 0,
+          "evidence": 1,
+          "sabotage": 3
+        },
+        "doctor": {
+          "actors": 1,
+          "repairs": 0,
+          "heals": 0,
+          "investigations": 0,
+          "evidence": 0,
+          "sabotage": 0
+        }
+      },
+      "steps": 43,
+      "saveBytes": 474609
+    },
+    {
+      "seed": 900007,
+      "difficulty": "easy",
+      "mode": "classic",
+      "policy": 2,
+      "role": "explorer",
+      "humanSpy": false,
+      "day": 3,
+      "winner": "saboteur",
+      "outcome": "saboteur",
+      "ending": "covert",
+      "spyExiled": false,
+      "shortage": false,
+      "events": [
+        "event-21",
+        "event-11",
+        "event-24",
+        "event-44",
+        "event-13",
+        "event-01"
+      ],
+      "roles": {
+        "explorer": {
+          "actors": 2,
+          "repairs": 6,
+          "heals": 0,
+          "investigations": 0,
+          "evidence": 20,
+          "sabotage": 0
+        },
+        "saboteur": {
+          "actors": 1,
+          "repairs": 0,
+          "heals": 0,
+          "investigations": 0,
+          "evidence": 1,
+          "sabotage": 4
+        },
+        "investigator": {
+          "actors": 1,
+          "repairs": 2,
+          "heals": 0,
+          "investigations": 3,
+          "evidence": 2,
+          "sabotage": 0
+        },
+        "engineer": {
+          "actors": 1,
+          "repairs": 1,
+          "heals": 0,
+          "investigations": 0,
+          "evidence": 1,
+          "sabotage": 0
+        },
+        "doctor": {
+          "actors": 1,
+          "repairs": 2,
+          "heals": 1,
+          "investigations": 0,
+          "evidence": 0,
+          "sabotage": 0
+        }
+      },
+      "steps": 57,
+      "saveBytes": 662526
+    },
+    {
+      "seed": 900008,
+      "difficulty": "easy",
+      "mode": "classic",
+      "policy": 3,
+      "role": "explorer",
+      "humanSpy": false,
+      "day": 3,
+      "winner": "survivors",
+      "outcome": "escape",
+      "ending": "together",
+      "spyExiled": false,
+      "shortage": false,
+      "events": [
+        "event-06",
+        "event-05",
+        "event-27",
+        "event-30",
+        "event-14"
+      ],
+      "roles": {
+        "explorer": {
+          "actors": 2,
+          "repairs": 4,
+          "heals": 0,
+          "investigations": 0,
+          "evidence": 4,
+          "sabotage": 0
+        },
+        "doctor": {
+          "actors": 1,
+          "repairs": 2,
+          "heals": 1,
+          "investigations": 0,
+          "evidence": 1,
+          "sabotage": 0
+        },
+        "saboteur": {
+          "actors": 1,
+          "repairs": 0,
+          "heals": 0,
+          "investigations": 0,
+          "evidence": 0,
+          "sabotage": 2
+        },
+        "investigator": {
+          "actors": 1,
+          "repairs": 0,
+          "heals": 0,
+          "investigations": 2,
+          "evidence": 4,
+          "sabotage": 0
+        },
+        "engineer": {
+          "actors": 1,
+          "repairs": 4,
+          "heals": 0,
+          "investigations": 0,
+          "evidence": 1,
+          "sabotage": 0
+        }
+      },
+      "steps": 41,
+      "saveBytes": 510550
+    },
+    {
+      "seed": 900009,
+      "difficulty": "easy",
+      "mode": "classic",
+      "policy": 0,
+      "role": "doctor",
+      "humanSpy": false,
+      "day": 2,
+      "winner": "survivors",
+      "outcome": "escape",
+      "ending": "together",
+      "spyExiled": false,
+      "shortage": false,
+      "events": [
+        "event-08",
+        "event-39",
+        "event-33",
+        "event-46"
+      ],
+      "roles": {
+        "doctor": {
+          "actors": 1,
+          "repairs": 3,
+          "heals": 1,
+          "investigations": 0,
+          "evidence": 4,
+          "sabotage": 0
+        },
+        "investigator": {
+          "actors": 1,
+          "repairs": 1,
+          "heals": 0,
+          "investigations": 1,
+          "evidence": 0,
+          "sabotage": 0
+        },
+        "explorer": {
+          "actors": 2,
+          "repairs": 1,
+          "heals": 0,
+          "investigations": 0,
+          "evidence": 2,
+          "sabotage": 0
+        },
+        "saboteur": {
+          "actors": 1,
+          "repairs": 0,
+          "heals": 0,
+          "investigations": 0,
+          "evidence": 2,
+          "sabotage": 1
+        },
+        "engineer": {
+          "actors": 1,
+          "repairs": 3,
+          "heals": 0,
+          "investigations": 0,
+          "evidence": 0,
+          "sabotage": 0
+        }
+      },
+      "steps": 38,
+      "saveBytes": 423367
+    },
+    {
+      "seed": 900010,
+      "difficulty": "easy",
+      "mode": "classic",
+      "policy": 1,
+      "role": "explorer",
+      "humanSpy": false,
+      "day": 3,
+      "winner": "survivors",
+      "outcome": "escape",
+      "ending": "research",
+      "spyExiled": false,
+      "shortage": false,
+      "events": [
+        "event-13",
+        "event-20",
+        "event-15",
+        "event-21",
+        "event-31"
+      ],
+      "roles": {
+        "explorer": {
+          "actors": 2,
+          "repairs": 5,
+          "heals": 0,
+          "investigations": 0,
+          "evidence": 8,
+          "sabotage": 0
+        },
+        "doctor": {
+          "actors": 1,
+          "repairs": 3,
+          "heals": 1,
+          "investigations": 0,
+          "evidence": 3,
+          "sabotage": 0
+        },
+        "engineer": {
+          "actors": 1,
+          "repairs": 5,
+          "heals": 0,
+          "investigations": 0,
+          "evidence": 2,
+          "sabotage": 0
+        },
+        "saboteur": {
+          "actors": 1,
+          "repairs": 0,
+          "heals": 0,
+          "investigations": 0,
+          "evidence": 0,
+          "sabotage": 3
+        },
+        "investigator": {
+          "actors": 1,
+          "repairs": 0,
+          "heals": 0,
+          "investigations": 2,
+          "evidence": 0,
+          "sabotage": 0
+        }
+      },
+      "steps": 44,
+      "saveBytes": 529651
+    },
+    {
+      "seed": 900011,
+      "difficulty": "easy",
+      "mode": "classic",
+      "policy": 2,
+      "role": "explorer",
+      "humanSpy": false,
+      "day": 2,
+      "winner": "survivors",
+      "outcome": "escape",
+      "ending": "research",
+      "spyExiled": false,
+      "shortage": false,
+      "events": [
+        "event-21",
+        "event-24",
+        "event-30",
+        "event-11"
+      ],
+      "roles": {
+        "explorer": {
+          "actors": 2,
+          "repairs": 2,
+          "heals": 0,
+          "investigations": 0,
+          "evidence": 12,
+          "sabotage": 0
+        },
+        "engineer": {
+          "actors": 1,
+          "repairs": 4,
+          "heals": 0,
+          "investigations": 0,
+          "evidence": 4,
+          "sabotage": 0
+        },
+        "doctor": {
+          "actors": 1,
+          "repairs": 2,
+          "heals": 0,
+          "investigations": 0,
+          "evidence": 4,
+          "sabotage": 0
+        },
+        "saboteur": {
+          "actors": 1,
+          "repairs": 0,
+          "heals": 0,
+          "investigations": 0,
+          "evidence": 1,
+          "sabotage": 2
+        },
+        "investigator": {
+          "actors": 1,
+          "repairs": 1,
+          "heals": 0,
+          "investigations": 1,
+          "evidence": 0,
+          "sabotage": 0
+        }
+      },
+      "steps": 39,
+      "saveBytes": 549572
+    },
+    {
+      "seed": 900012,
+      "difficulty": "easy",
+      "mode": "classic",
+      "policy": 3,
+      "role": "doctor",
+      "humanSpy": false,
+      "day": 3,
+      "winner": "survivors",
+      "outcome": "escape",
+      "ending": "unknown",
+      "spyExiled": true,
+      "shortage": false,
+      "events": [
+        "event-07",
+        "event-46",
+        "event-39",
+        "event-24",
+        "event-18",
+        "event-11"
+      ],
+      "roles": {
+        "doctor": {
+          "actors": 1,
+          "repairs": 3,
+          "heals": 0,
+          "investigations": 0,
+          "evidence": 6,
+          "sabotage": 0
+        },
+        "saboteur": {
+          "actors": 1,
+          "repairs": 0,
+          "heals": 0,
+          "investigations": 0,
+          "evidence": 2,
+          "sabotage": 3
+        },
+        "explorer": {
+          "actors": 2,
+          "repairs": 5,
+          "heals": 0,
+          "investigations": 0,
+          "evidence": 3,
+          "sabotage": 0
+        },
+        "investigator": {
+          "actors": 1,
+          "repairs": 3,
+          "heals": 0,
+          "investigations": 2,
+          "evidence": 3,
+          "sabotage": 0
+        },
+        "engineer": {
+          "actors": 1,
+          "repairs": 3,
+          "heals": 0,
+          "investigations": 0,
+          "evidence": 6,
+          "sabotage": 0
+        }
+      },
+      "steps": 57,
+      "saveBytes": 705035
+    },
+    {
+      "seed": 900013,
+      "difficulty": "easy",
+      "mode": "classic",
+      "policy": 0,
+      "role": "doctor",
+      "humanSpy": false,
+      "day": 2,
+      "winner": "survivors",
+      "outcome": "escape",
+      "ending": "unknown",
+      "spyExiled": false,
+      "shortage": false,
+      "events": [
+        "event-21",
+        "event-01",
+        "event-08",
+        "event-07"
+      ],
+      "roles": {
+        "doctor": {
+          "actors": 1,
+          "repairs": 4,
+          "heals": 0,
+          "investigations": 0,
+          "evidence": 4,
+          "sabotage": 0
+        },
+        "explorer": {
+          "actors": 2,
+          "repairs": 4,
+          "heals": 0,
+          "investigations": 0,
+          "evidence": 8,
+          "sabotage": 0
+        },
+        "engineer": {
+          "actors": 1,
+          "repairs": 2,
+          "heals": 0,
+          "investigations": 0,
+          "evidence": 0,
+          "sabotage": 0
+        },
+        "investigator": {
+          "actors": 1,
+          "repairs": 0,
+          "heals": 1,
+          "investigations": 1,
+          "evidence": 2,
+          "sabotage": 0
+        },
+        "saboteur": {
+          "actors": 1,
+          "repairs": 0,
+          "heals": 0,
+          "investigations": 0,
+          "evidence": 0,
+          "sabotage": 1
+        }
+      },
+      "steps": 38,
+      "saveBytes": 474107
+    },
+    {
+      "seed": 900014,
+      "difficulty": "easy",
+      "mode": "classic",
+      "policy": 1,
+      "role": "explorer",
+      "humanSpy": false,
+      "day": 2,
+      "winner": "survivors",
+      "outcome": "escape",
+      "ending": "partial",
+      "spyExiled": true,
+      "shortage": false,
+      "events": [
+        "event-09",
+        "event-21",
+        "event-28",
+        "event-25"
+      ],
+      "roles": {
+        "explorer": {
+          "actors": 2,
+          "repairs": 4,
+          "heals": 0,
+          "investigations": 0,
+          "evidence": 3,
+          "sabotage": 0
+        },
+        "engineer": {
+          "actors": 1,
+          "repairs": 4,
+          "heals": 0,
+          "investigations": 0,
+          "evidence": 4,
+          "sabotage": 0
+        },
+        "doctor": {
+          "actors": 1,
+          "repairs": 1,
+          "heals": 1,
+          "investigations": 0,
+          "evidence": 0,
+          "sabotage": 0
+        },
+        "investigator": {
+          "actors": 1,
+          "repairs": 3,
+          "heals": 0,
+          "investigations": 1,
+          "evidence": 2,
+          "sabotage": 0
+        },
+        "saboteur": {
+          "actors": 1,
+          "repairs": 0,
+          "heals": 0,
+          "investigations": 0,
+          "evidence": 0,
+          "sabotage": 2
+        }
+      },
+      "steps": 39,
+      "saveBytes": 451845
+    },
+    {
+      "seed": 900015,
+      "difficulty": "easy",
+      "mode": "classic",
+      "policy": 2,
+      "role": "explorer",
+      "humanSpy": false,
+      "day": 3,
+      "winner": "survivors",
+      "outcome": "escape",
+      "ending": "research",
+      "spyExiled": false,
+      "shortage": false,
+      "events": [
+        "event-16",
+        "event-03",
+        "event-10",
+        "event-11",
+        "event-35"
+      ],
+      "roles": {
+        "explorer": {
+          "actors": 2,
+          "repairs": 5,
+          "heals": 0,
+          "investigations": 0,
+          "evidence": 10,
+          "sabotage": 0
+        },
+        "doctor": {
+          "actors": 1,
+          "repairs": 2,
+          "heals": 1,
+          "investigations": 0,
+          "evidence": 4,
+          "sabotage": 0
+        },
+        "saboteur": {
+          "actors": 1,
+          "repairs": 0,
+          "heals": 0,
+          "investigations": 0,
+          "evidence": 0,
+          "sabotage": 3
+        },
+        "investigator": {
+          "actors": 1,
+          "repairs": 2,
+          "heals": 0,
+          "investigations": 2,
+          "evidence": 2,
+          "sabotage": 0
+        },
+        "engineer": {
+          "actors": 1,
+          "repairs": 4,
+          "heals": 1,
+          "investigations": 0,
+          "evidence": 3,
+          "sabotage": 0
+        }
+      },
+      "steps": 41,
+      "saveBytes": 585821
+    },
+    {
+      "seed": 900016,
+      "difficulty": "easy",
+      "mode": "classic",
+      "policy": 3,
+      "role": "explorer",
+      "humanSpy": false,
+      "day": 2,
+      "winner": "survivors",
+      "outcome": "exposed",
+      "ending": "captured",
+      "spyExiled": true,
+      "shortage": false,
+      "events": [
+        "event-11",
+        "event-01",
+        "event-30",
+        "event-35"
+      ],
+      "roles": {
+        "explorer": {
+          "actors": 2,
+          "repairs": 3,
+          "heals": 0,
+          "investigations": 0,
+          "evidence": 5,
+          "sabotage": 0
+        },
+        "saboteur": {
+          "actors": 1,
+          "repairs": 0,
+          "heals": 0,
+          "investigations": 0,
+          "evidence": 1,
+          "sabotage": 1
+        },
+        "engineer": {
+          "actors": 1,
+          "repairs": 3,
+          "heals": 0,
+          "investigations": 0,
+          "evidence": 4,
+          "sabotage": 0
+        },
+        "investigator": {
+          "actors": 1,
+          "repairs": 1,
+          "heals": 0,
+          "investigations": 2,
+          "evidence": 2,
+          "sabotage": 0
+        },
+        "doctor": {
+          "actors": 1,
+          "repairs": 2,
+          "heals": 0,
+          "investigations": 0,
+          "evidence": 4,
+          "sabotage": 0
+        }
+      },
+      "steps": 39,
+      "saveBytes": 464145
+    },
+    {
+      "seed": 900017,
+      "difficulty": "easy",
+      "mode": "classic",
+      "policy": 0,
+      "role": "engineer",
+      "humanSpy": false,
+      "day": 2,
+      "winner": "survivors",
+      "outcome": "escape",
+      "ending": "together",
+      "spyExiled": false,
+      "shortage": false,
+      "events": [
+        "event-07",
+        "event-11",
+        "event-04"
+      ],
+      "roles": {
+        "engineer": {
+          "actors": 1,
+          "repairs": 3,
+          "heals": 0,
+          "investigations": 0,
+          "evidence": 1,
+          "sabotage": 0
+        },
+        "investigator": {
+          "actors": 1,
+          "repairs": 1,
+          "heals": 0,
+          "investigations": 1,
+          "evidence": 1,
+          "sabotage": 0
+        },
+        "saboteur": {
+          "actors": 1,
+          "repairs": 0,
+          "heals": 0,
+          "investigations": 0,
+          "evidence": 0,
+          "sabotage": 1
+        },
+        "explorer": {
+          "actors": 2,
+          "repairs": 2,
+          "heals": 0,
+          "investigations": 0,
+          "evidence": 3,
+          "sabotage": 0
+        },
+        "doctor": {
+          "actors": 1,
+          "repairs": 2,
+          "heals": 0,
+          "investigations": 0,
+          "evidence": 0,
+          "sabotage": 0
+        }
+      },
+      "steps": 23,
+      "saveBytes": 264317
+    },
+    {
+      "seed": 900018,
+      "difficulty": "easy",
+      "mode": "classic",
+      "policy": 1,
+      "role": "explorer",
+      "humanSpy": false,
+      "day": 2,
+      "winner": "survivors",
+      "outcome": "escape",
+      "ending": "unknown",
+      "spyExiled": false,
+      "shortage": false,
+      "events": [
+        "event-08",
+        "event-46",
+        "event-02"
+      ],
+      "roles": {
+        "explorer": {
+          "actors": 2,
+          "repairs": 5,
+          "heals": 0,
+          "investigations": 0,
+          "evidence": 1,
+          "sabotage": 0
+        },
+        "saboteur": {
+          "actors": 1,
+          "repairs": 0,
+          "heals": 0,
+          "investigations": 0,
+          "evidence": 1,
+          "sabotage": 1
+        },
+        "investigator": {
+          "actors": 1,
+          "repairs": 1,
+          "heals": 0,
+          "investigations": 1,
+          "evidence": 1,
+          "sabotage": 0
+        },
+        "engineer": {
+          "actors": 1,
+          "repairs": 3,
+          "heals": 0,
+          "investigations": 0,
+          "evidence": 1,
+          "sabotage": 0
+        },
+        "doctor": {
+          "actors": 1,
+          "repairs": 1,
+          "heals": 0,
+          "investigations": 0,
+          "evidence": 0,
+          "sabotage": 0
+        }
+      },
+      "steps": 23,
+      "saveBytes": 272976
+    },
+    {
+      "seed": 900019,
+      "difficulty": "easy",
+      "mode": "classic",
+      "policy": 2,
+      "role": "investigator",
+      "humanSpy": false,
+      "day": 3,
+      "winner": "survivors",
+      "outcome": "escape",
+      "ending": "truth",
+      "spyExiled": false,
+      "shortage": false,
+      "events": [
+        "event-11",
+        "event-20",
+        "event-46",
+        "event-18",
+        "event-08",
+        "event-29"
+      ],
+      "roles": {
+        "investigator": {
+          "actors": 1,
+          "repairs": 1,
+          "heals": 0,
+          "investigations": 2,
+          "evidence": 15,
+          "sabotage": 0
+        },
+        "explorer": {
+          "actors": 2,
+          "repairs": 5,
+          "heals": 0,
+          "investigations": 0,
+          "evidence": 9,
+          "sabotage": 0
+        },
+        "saboteur": {
+          "actors": 1,
+          "repairs": 0,
+          "heals": 0,
+          "investigations": 0,
+          "evidence": 3,
+          "sabotage": 3
+        },
+        "doctor": {
+          "actors": 1,
+          "repairs": 2,
+          "heals": 0,
+          "investigations": 0,
+          "evidence": 5,
+          "sabotage": 0
+        },
+        "engineer": {
+          "actors": 1,
+          "repairs": 2,
+          "heals": 0,
+          "investigations": 0,
+          "evidence": 0,
+          "sabotage": 0
+        }
+      },
+      "steps": 57,
+      "saveBytes": 819166
+    },
+    {
+      "seed": 900020,
+      "difficulty": "easy",
+      "mode": "classic",
+      "policy": 3,
+      "role": "saboteur",
+      "humanSpy": true,
+      "day": 2,
+      "winner": "survivors",
+      "outcome": "escape",
+      "ending": "unknown",
+      "spyExiled": false,
+      "shortage": false,
+      "events": [
+        "event-46",
+        "event-24",
+        "event-39"
+      ],
+      "roles": {
+        "saboteur": {
+          "actors": 1,
+          "repairs": 0,
+          "heals": 0,
+          "investigations": 0,
+          "evidence": 1,
+          "sabotage": 1
+        },
+        "investigator": {
+          "actors": 1,
+          "repairs": 1,
+          "heals": 0,
+          "investigations": 1,
+          "evidence": 2,
+          "sabotage": 0
+        },
+        "doctor": {
+          "actors": 1,
+          "repairs": 1,
+          "heals": 0,
+          "investigations": 0,
+          "evidence": 0,
+          "sabotage": 0
+        },
+        "explorer": {
+          "actors": 2,
+          "repairs": 4,
+          "heals": 0,
+          "investigations": 0,
+          "evidence": 3,
+          "sabotage": 0
+        },
+        "engineer": {
+          "actors": 1,
+          "repairs": 2,
+          "heals": 0,
+          "investigations": 0,
+          "evidence": 0,
+          "sabotage": 0
+        }
+      },
+      "steps": 23,
+      "saveBytes": 281746
+    },
+    {
+      "seed": 900021,
+      "difficulty": "easy",
+      "mode": "classic",
+      "policy": 0,
+      "role": "doctor",
+      "humanSpy": false,
+      "day": 2,
+      "winner": "survivors",
+      "outcome": "escape",
+      "ending": "together",
+      "spyExiled": false,
+      "shortage": false,
+      "events": [
+        "event-11",
+        "event-07",
+        "event-38",
+        "event-20"
+      ],
+      "roles": {
+        "doctor": {
+          "actors": 1,
+          "repairs": 2,
+          "heals": 0,
+          "investigations": 0,
+          "evidence": 3,
+          "sabotage": 0
+        },
+        "engineer": {
+          "actors": 1,
+          "repairs": 4,
+          "heals": 0,
+          "investigations": 0,
+          "evidence": 4,
+          "sabotage": 0
+        },
+        "explorer": {
+          "actors": 2,
+          "repairs": 3,
+          "heals": 0,
+          "investigations": 0,
+          "evidence": 3,
+          "sabotage": 0
+        },
+        "saboteur": {
+          "actors": 1,
+          "repairs": 0,
+          "heals": 0,
+          "investigations": 0,
+          "evidence": 1,
+          "sabotage": 2
+        },
+        "investigator": {
+          "actors": 1,
+          "repairs": 0,
+          "heals": 0,
+          "investigations": 1,
+          "evidence": 0,
+          "sabotage": 0
+        }
+      },
+      "steps": 38,
+      "saveBytes": 448339
+    },
+    {
+      "seed": 900022,
+      "difficulty": "easy",
+      "mode": "classic",
+      "policy": 1,
+      "role": "saboteur",
+      "humanSpy": true,
+      "day": 2,
+      "winner": "survivors",
+      "outcome": "escape",
+      "ending": "unknown",
+      "spyExiled": false,
+      "shortage": false,
+      "events": [
+        "event-38",
+        "event-20",
+        "event-05",
+        "event-29"
+      ],
+      "roles": {
+        "saboteur": {
+          "actors": 1,
+          "repairs": 0,
+          "heals": 0,
+          "investigations": 0,
+          "evidence": 0,
+          "sabotage": 1
+        },
+        "explorer": {
+          "actors": 2,
+          "repairs": 2,
+          "heals": 0,
+          "investigations": 0,
+          "evidence": 3,
+          "sabotage": 0
+        },
+        "engineer": {
+          "actors": 1,
+          "repairs": 2,
+          "heals": 0,
+          "investigations": 0,
+          "evidence": 0,
+          "sabotage": 0
+        },
+        "doctor": {
+          "actors": 1,
+          "repairs": 3,
+          "heals": 0,
+          "investigations": 0,
+          "evidence": 2,
+          "sabotage": 0
+        },
+        "investigator": {
+          "actors": 1,
+          "repairs": 1,
+          "heals": 0,
+          "investigations": 1,
+          "evidence": 0,
+          "sabotage": 0
+        }
+      },
+      "steps": 23,
+      "saveBytes": 289914
+    },
+    {
+      "seed": 900023,
+      "difficulty": "easy",
+      "mode": "classic",
+      "policy": 2,
+      "role": "investigator",
+      "humanSpy": false,
+      "day": 3,
+      "winner": "survivors",
+      "outcome": "escape",
+      "ending": "truth",
+      "spyExiled": false,
+      "shortage": false,
+      "events": [
+        "event-39",
+        "event-20",
+        "event-07",
+        "event-18",
+        "event-29"
+      ],
+      "roles": {
+        "investigator": {
+          "actors": 1,
+          "repairs": 0,
+          "heals": 0,
+          "investigations": 2,
+          "evidence": 10,
+          "sabotage": 0
+        },
+        "engineer": {
+          "actors": 1,
+          "repairs": 4,
+          "heals": 1,
+          "investigations": 0,
+          "evidence": 4,
+          "sabotage": 0
+        },
+        "doctor": {
+          "actors": 1,
+          "repairs": 3,
+          "heals": 0,
+          "investigations": 0,
+          "evidence": 2,
+          "sabotage": 0
+        },
+        "saboteur": {
+          "actors": 1,
+          "repairs": 0,
+          "heals": 0,
+          "investigations": 0,
+          "evidence": 0,
+          "sabotage": 3
+        },
+        "explorer": {
+          "actors": 2,
+          "repairs": 3,
+          "heals": 0,
+          "investigations": 0,
+          "evidence": 4,
+          "sabotage": 0
+        }
+      },
+      "steps": 41,
+      "saveBytes": 579428
+    },
+    {
+      "seed": 900024,
+      "difficulty": "easy",
+      "mode": "classic",
+      "policy": 3,
+      "role": "explorer",
+      "humanSpy": false,
+      "day": 1,
+      "winner": "survivors",
+      "outcome": "escape",
+      "ending": "unknown",
+      "spyExiled": false,
+      "shortage": false,
+      "events": [
+        "event-07",
+        "event-08"
+      ],
+      "roles": {
+        "explorer": {
+          "actors": 2,
+          "repairs": 3,
+          "heals": 0,
+          "investigations": 0,
+          "evidence": 2,
+          "sabotage": 0
+        },
+        "engineer": {
+          "actors": 1,
+          "repairs": 2,
+          "heals": 0,
+          "investigations": 0,
+          "evidence": 1,
+          "sabotage": 0
+        },
+        "doctor": {
+          "actors": 1,
+          "repairs": 0,
+          "heals": 0,
+          "investigations": 0,
+          "evidence": 1,
+          "sabotage": 0
+        },
+        "investigator": {
+          "actors": 1,
+          "repairs": 1,
+          "heals": 0,
+          "investigations": 0,
+          "evidence": 2,
+          "sabotage": 0
+        },
+        "saboteur": {
+          "actors": 1,
+          "repairs": 0,
+          "heals": 0,
+          "investigations": 0,
+          "evidence": 0,
+          "sabotage": 0
+        }
+      },
+      "steps": 19,
+      "saveBytes": 232467
+    },
+    {
+      "seed": 900025,
+      "difficulty": "easy",
+      "mode": "classic",
+      "policy": 0,
+      "role": "investigator",
+      "humanSpy": false,
+      "day": 1,
+      "winner": "survivors",
+      "outcome": "escape",
+      "ending": "unknown",
+      "spyExiled": false,
+      "shortage": false,
+      "events": [
+        "event-13",
+        "event-03"
+      ],
+      "roles": {
+        "investigator": {
+          "actors": 1,
+          "repairs": 1,
+          "heals": 0,
+          "investigations": 1,
+          "evidence": 2,
+          "sabotage": 0
+        },
+        "explorer": {
+          "actors": 2,
+          "repairs": 3,
+          "heals": 0,
+          "investigations": 0,
+          "evidence": 3,
+          "sabotage": 0
+        },
+        "engineer": {
+          "actors": 1,
+          "repairs": 2,
+          "heals": 0,
+          "investigations": 0,
+          "evidence": 1,
+          "sabotage": 0
+        },
+        "doctor": {
+          "actors": 1,
+          "repairs": 0,
+          "heals": 0,
+          "investigations": 0,
+          "evidence": 2,
+          "sabotage": 0
+        },
+        "saboteur": {
+          "actors": 1,
+          "repairs": 0,
+          "heals": 0,
+          "investigations": 0,
+          "evidence": 0,
+          "sabotage": 0
+        }
+      },
+      "steps": 19,
+      "saveBytes": 256087
+    },
+    {
+      "seed": 900026,
+      "difficulty": "easy",
+      "mode": "classic",
+      "policy": 1,
+      "role": "explorer",
+      "humanSpy": false,
+      "day": 3,
+      "winner": "survivors",
+      "outcome": "escape",
+      "ending": "together",
+      "spyExiled": false,
+      "shortage": false,
+      "events": [
+        "event-38",
+        "event-05",
+        "event-11",
+        "event-08",
+        "event-15"
+      ],
+      "roles": {
+        "explorer": {
+          "actors": 2,
+          "repairs": 6,
+          "heals": 0,
+          "investigations": 0,
+          "evidence": 3,
+          "sabotage": 0
+        },
+        "engineer": {
+          "actors": 1,
+          "repairs": 3,
+          "heals": 0,
+          "investigations": 0,
+          "evidence": 4,
+          "sabotage": 0
+        },
+        "investigator": {
+          "actors": 1,
+          "repairs": 1,
+          "heals": 0,
+          "investigations": 2,
+          "evidence": 3,
+          "sabotage": 0
+        },
+        "doctor": {
+          "actors": 1,
+          "repairs": 2,
+          "heals": 1,
+          "investigations": 0,
+          "evidence": 3,
+          "sabotage": 0
+        },
+        "saboteur": {
+          "actors": 1,
+          "repairs": 0,
+          "heals": 0,
+          "investigations": 0,
+          "evidence": 1,
+          "sabotage": 2
+        }
+      },
+      "steps": 43,
+      "saveBytes": 545148
+    },
+    {
+      "seed": 900027,
+      "difficulty": "easy",
+      "mode": "classic",
+      "policy": 2,
+      "role": "engineer",
+      "humanSpy": false,
+      "day": 3,
+      "winner": "survivors",
+      "outcome": "escape",
+      "ending": "partial",
+      "spyExiled": true,
+      "shortage": false,
+      "events": [
+        "event-08",
+        "event-11",
+        "event-23",
+        "event-20",
+        "event-13",
+        "event-14"
+      ],
+      "roles": {
+        "engineer": {
+          "actors": 1,
+          "repairs": 3,
+          "heals": 0,
+          "investigations": 0,
+          "evidence": 15,
+          "sabotage": 0
+        },
+        "explorer": {
+          "actors": 2,
+          "repairs": 6,
+          "heals": 0,
+          "investigations": 0,
+          "evidence": 7,
+          "sabotage": 0
+        },
+        "saboteur": {
+          "actors": 1,
+          "repairs": 0,
+          "heals": 0,
+          "investigations": 0,
+          "evidence": 2,
+          "sabotage": 3
+        },
+        "doctor": {
+          "actors": 1,
+          "repairs": 3,
+          "heals": 0,
+          "investigations": 0,
+          "evidence": 3,
+          "sabotage": 0
+        },
+        "investigator": {
+          "actors": 1,
+          "repairs": 2,
+          "heals": 0,
+          "investigations": 2,
+          "evidence": 6,
+          "sabotage": 0
+        }
+      },
+      "steps": 56,
+      "saveBytes": 803055
+    },
+    {
+      "seed": 900028,
+      "difficulty": "easy",
+      "mode": "classic",
+      "policy": 3,
+      "role": "investigator",
+      "humanSpy": false,
+      "day": 3,
+      "winner": "survivors",
+      "outcome": "escape",
+      "ending": "together",
+      "spyExiled": false,
+      "shortage": false,
+      "events": [
+        "event-05",
+        "event-14",
+        "event-46",
+        "event-35",
+        "event-06"
+      ],
+      "roles": {
+        "investigator": {
+          "actors": 1,
+          "repairs": 0,
+          "heals": 0,
+          "investigations": 2,
+          "evidence": 4,
+          "sabotage": 0
+        },
+        "explorer": {
+          "actors": 2,
+          "repairs": 7,
+          "heals": 0,
+          "investigations": 0,
+          "evidence": 4,
+          "sabotage": 0
+        },
+        "saboteur": {
+          "actors": 1,
+          "repairs": 0,
+          "heals": 0,
+          "investigations": 0,
+          "evidence": 0,
+          "sabotage": 2
+        },
+        "engineer": {
+          "actors": 1,
+          "repairs": 4,
+          "heals": 0,
+          "investigations": 0,
+          "evidence": 4,
+          "sabotage": 0
+        },
+        "doctor": {
+          "actors": 1,
+          "repairs": 0,
+          "heals": 0,
+          "investigations": 0,
+          "evidence": 0,
+          "sabotage": 0
+        }
+      },
+      "steps": 42,
+      "saveBytes": 512153
+    },
+    {
+      "seed": 900029,
+      "difficulty": "easy",
+      "mode": "classic",
+      "policy": 0,
+      "role": "engineer",
+      "humanSpy": false,
+      "day": 3,
+      "winner": "survivors",
+      "outcome": "escape",
+      "ending": "together",
+      "spyExiled": false,
+      "shortage": false,
+      "events": [
+        "event-46",
+        "event-26",
+        "event-15",
+        "event-11",
+        "event-21"
+      ],
+      "roles": {
+        "engineer": {
+          "actors": 1,
+          "repairs": 5,
+          "heals": 0,
+          "investigations": 0,
+          "evidence": 4,
+          "sabotage": 0
+        },
+        "explorer": {
+          "actors": 2,
+          "repairs": 3,
+          "heals": 0,
+          "investigations": 0,
+          "evidence": 6,
+          "sabotage": 0
+        },
+        "investigator": {
+          "actors": 1,
+          "repairs": 4,
+          "heals": 0,
+          "investigations": 1,
+          "evidence": 2,
+          "sabotage": 0
+        },
+        "saboteur": {
+          "actors": 1,
+          "repairs": 0,
+          "heals": 0,
+          "investigations": 0,
+          "evidence": 0,
+          "sabotage": 3
+        },
+        "doctor": {
+          "actors": 1,
+          "repairs": 3,
+          "heals": 1,
+          "investigations": 0,
+          "evidence": 0,
+          "sabotage": 0
+        }
+      },
+      "steps": 43,
+      "saveBytes": 508950
+    },
+    {
+      "seed": 900030,
+      "difficulty": "easy",
+      "mode": "classic",
+      "policy": 1,
+      "role": "investigator",
+      "humanSpy": false,
+      "day": 3,
+      "winner": "saboteur",
+      "outcome": "saboteur",
+      "ending": "covert",
+      "spyExiled": false,
+      "shortage": false,
+      "events": [
+        "event-08",
+        "event-14",
+        "event-18",
+        "event-46",
+        "event-05",
+        "event-01"
+      ],
+      "roles": {
+        "investigator": {
+          "actors": 1,
+          "repairs": 4,
+          "heals": 0,
+          "investigations": 2,
+          "evidence": 6,
+          "sabotage": 0
+        },
+        "doctor": {
+          "actors": 1,
+          "repairs": 3,
+          "heals": 3,
+          "investigations": 0,
+          "evidence": 6,
+          "sabotage": 0
+        },
+        "explorer": {
+          "actors": 2,
+          "repairs": 5,
+          "heals": 0,
+          "investigations": 0,
+          "evidence": 9,
+          "sabotage": 0
+        },
+        "saboteur": {
+          "actors": 1,
+          "repairs": 0,
+          "heals": 0,
+          "investigations": 0,
+          "evidence": 0,
+          "sabotage": 5
+        },
+        "engineer": {
+          "actors": 1,
+          "repairs": 2,
+          "heals": 0,
+          "investigations": 0,
+          "evidence": 0,
+          "sabotage": 0
+        }
+      },
+      "steps": 59,
+      "saveBytes": 729060
+    },
+    {
+      "seed": 900031,
+      "difficulty": "easy",
+      "mode": "classic",
+      "policy": 2,
+      "role": "explorer",
+      "humanSpy": false,
+      "day": 2,
+      "winner": "survivors",
+      "outcome": "escape",
+      "ending": "together",
+      "spyExiled": false,
+      "shortage": false,
+      "events": [
+        "event-08",
+        "event-39",
+        "event-30",
+        "event-29"
+      ],
+      "roles": {
+        "explorer": {
+          "actors": 2,
+          "repairs": 4,
+          "heals": 0,
+          "investigations": 0,
+          "evidence": 12,
+          "sabotage": 0
+        },
+        "doctor": {
+          "actors": 1,
+          "repairs": 2,
+          "heals": 0,
+          "investigations": 0,
+          "evidence": 3,
+          "sabotage": 0
+        },
+        "investigator": {
+          "actors": 1,
+          "repairs": 1,
+          "heals": 0,
+          "investigations": 1,
+          "evidence": 1,
+          "sabotage": 0
+        },
+        "saboteur": {
+          "actors": 1,
+          "repairs": 0,
+          "heals": 0,
+          "investigations": 0,
+          "evidence": 1,
+          "sabotage": 2
+        },
+        "engineer": {
+          "actors": 1,
+          "repairs": 3,
+          "heals": 0,
+          "investigations": 0,
+          "evidence": 0,
+          "sabotage": 0
+        }
+      },
+      "steps": 37,
+      "saveBytes": 521924
+    },
+    {
+      "seed": 900032,
+      "difficulty": "easy",
+      "mode": "classic",
+      "policy": 3,
+      "role": "saboteur",
+      "humanSpy": true,
+      "day": 2,
+      "winner": "survivors",
+      "outcome": "escape",
+      "ending": "together",
+      "spyExiled": false,
+      "shortage": false,
+      "events": [
+        "event-46",
+        "event-05",
+        "event-02"
+      ],
+      "roles": {
+        "saboteur": {
+          "actors": 1,
+          "repairs": 0,
+          "heals": 0,
+          "investigations": 0,
+          "evidence": 0,
+          "sabotage": 1
+        },
+        "explorer": {
+          "actors": 2,
+          "repairs": 3,
+          "heals": 0,
+          "investigations": 0,
+          "evidence": 4,
+          "sabotage": 0
+        },
+        "doctor": {
+          "actors": 1,
+          "repairs": 2,
+          "heals": 0,
+          "investigations": 0,
+          "evidence": 0,
+          "sabotage": 0
+        },
+        "engineer": {
+          "actors": 1,
+          "repairs": 3,
+          "heals": 0,
+          "investigations": 0,
+          "evidence": 1,
+          "sabotage": 0
+        },
+        "investigator": {
+          "actors": 1,
+          "repairs": 0,
+          "heals": 0,
+          "investigations": 1,
+          "evidence": 0,
+          "sabotage": 0
+        }
+      },
+      "steps": 23,
+      "saveBytes": 280136
+    },
+    {
+      "seed": 900033,
+      "difficulty": "easy",
+      "mode": "classic",
+      "policy": 0,
+      "role": "doctor",
+      "humanSpy": false,
+      "day": 2,
+      "winner": "survivors",
+      "outcome": "escape",
+      "ending": "together",
+      "spyExiled": false,
+      "shortage": false,
+      "events": [
+        "event-20",
+        "event-26",
+        "event-17",
+        "event-10"
+      ],
+      "roles": {
+        "doctor": {
+          "actors": 1,
+          "repairs": 2,
+          "heals": 0,
+          "investigations": 0,
+          "evidence": 4,
+          "sabotage": 0
+        },
+        "saboteur": {
+          "actors": 1,
+          "repairs": 0,
+          "heals": 0,
+          "investigations": 0,
+          "evidence": 2,
+          "sabotage": 3
+        },
+        "explorer": {
+          "actors": 2,
+          "repairs": 3,
+          "heals": 0,
+          "investigations": 0,
+          "evidence": 4,
+          "sabotage": 0
+        },
+        "engineer": {
+          "actors": 1,
+          "repairs": 4,
+          "heals": 0,
+          "investigations": 0,
+          "evidence": 2,
+          "sabotage": 0
+        },
+        "investigator": {
+          "actors": 1,
+          "repairs": 1,
+          "heals": 0,
+          "investigations": 1,
+          "evidence": 0,
+          "sabotage": 0
+        }
+      },
+      "steps": 37,
+      "saveBytes": 462810
+    },
+    {
+      "seed": 900034,
+      "difficulty": "easy",
+      "mode": "classic",
+      "policy": 1,
+      "role": "explorer",
+      "humanSpy": false,
+      "day": 3,
+      "winner": "survivors",
+      "outcome": "escape",
+      "ending": "together",
+      "spyExiled": false,
+      "shortage": false,
+      "events": [
+        "event-21",
+        "event-25",
+        "event-46",
+        "event-20",
+        "event-19",
+        "event-27"
+      ],
+      "roles": {
+        "explorer": {
+          "actors": 2,
+          "repairs": 5,
+          "heals": 0,
+          "investigations": 0,
+          "evidence": 0,
+          "sabotage": 0
+        },
+        "doctor": {
+          "actors": 1,
+          "repairs": 2,
+          "heals": 0,
+          "investigations": 0,
+          "evidence": 4,
+          "sabotage": 0
+        },
+        "investigator": {
+          "actors": 1,
+          "repairs": 2,
+          "heals": 0,
+          "investigations": 2,
+          "evidence": 0,
+          "sabotage": 0
+        },
+        "saboteur": {
+          "actors": 1,
+          "repairs": 0,
+          "heals": 0,
+          "investigations": 0,
+          "evidence": 0,
+          "sabotage": 2
+        },
+        "engineer": {
+          "actors": 1,
+          "repairs": 2,
+          "heals": 0,
+          "investigations": 0,
+          "evidence": 4,
+          "sabotage": 0
+        }
+      },
+      "steps": 45,
+      "saveBytes": 488745
+    },
+    {
+      "seed": 900035,
+      "difficulty": "easy",
+      "mode": "classic",
+      "policy": 2,
+      "role": "explorer",
+      "humanSpy": false,
+      "day": 2,
+      "winner": "survivors",
+      "outcome": "escape",
+      "ending": "together",
+      "spyExiled": false,
+      "shortage": false,
+      "events": [
+        "event-38",
+        "event-11",
+        "event-15",
+        "event-26"
+      ],
+      "roles": {
+        "explorer": {
+          "actors": 2,
+          "repairs": 3,
+          "heals": 0,
+          "investigations": 0,
+          "evidence": 12,
+          "sabotage": 0
+        },
+        "investigator": {
+          "actors": 1,
+          "repairs": 1,
+          "heals": 0,
+          "investigations": 1,
+          "evidence": 0,
+          "sabotage": 0
+        },
+        "engineer": {
+          "actors": 1,
+          "repairs": 2,
+          "heals": 0,
+          "investigations": 0,
+          "evidence": 2,
+          "sabotage": 0
+        },
+        "doctor": {
+          "actors": 1,
+          "repairs": 1,
+          "heals": 0,
+          "investigations": 0,
+          "evidence": 4,
+          "sabotage": 0
+        },
+        "saboteur": {
+          "actors": 1,
+          "repairs": 0,
+          "heals": 0,
+          "investigations": 0,
+          "evidence": 0,
+          "sabotage": 1
+        }
+      },
+      "steps": 36,
+      "saveBytes": 517002
+    },
+    {
+      "seed": 900036,
+      "difficulty": "easy",
+      "mode": "classic",
+      "policy": 3,
+      "role": "doctor",
+      "humanSpy": false,
+      "day": 2,
+      "winner": "survivors",
+      "outcome": "escape",
+      "ending": "unknown",
+      "spyExiled": true,
+      "shortage": false,
+      "events": [
+        "event-09",
+        "event-39",
+        "event-24",
+        "event-20"
+      ],
+      "roles": {
+        "doctor": {
+          "actors": 1,
+          "repairs": 2,
+          "heals": 0,
+          "investigations": 0,
+          "evidence": 3,
+          "sabotage": 0
+        },
+        "investigator": {
+          "actors": 1,
+          "repairs": 0,
+          "heals": 0,
+          "investigations": 2,
+          "evidence": 0,
+          "sabotage": 0
+        },
+        "explorer": {
+          "actors": 2,
+          "repairs": 3,
+          "heals": 0,
+          "investigations": 0,
+          "evidence": 5,
+          "sabotage": 0
+        },
+        "engineer": {
+          "actors": 1,
+          "repairs": 4,
+          "heals": 0,
+          "investigations": 0,
+          "evidence": 3,
+          "sabotage": 0
+        },
+        "saboteur": {
+          "actors": 1,
+          "repairs": 0,
+          "heals": 0,
+          "investigations": 0,
+          "evidence": 0,
+          "sabotage": 2
+        }
+      },
+      "steps": 38,
+      "saveBytes": 450423
+    },
+    {
+      "seed": 900037,
+      "difficulty": "easy",
+      "mode": "classic",
+      "policy": 0,
+      "role": "doctor",
+      "humanSpy": false,
+      "day": 3,
+      "winner": "survivors",
+      "outcome": "escape",
+      "ending": "partial",
+      "spyExiled": true,
+      "shortage": false,
+      "events": [
+        "event-03",
+        "event-10",
+        "event-28",
+        "event-11",
+        "event-40",
+        "event-07"
+      ],
+      "roles": {
+        "doctor": {
+          "actors": 1,
+          "repairs": 5,
+          "heals": 1,
+          "investigations": 0,
+          "evidence": 5,
+          "sabotage": 0
+        },
+        "saboteur": {
+          "actors": 1,
+          "repairs": 0,
+          "heals": 0,
+          "investigations": 0,
+          "evidence": 2,
+          "sabotage": 4
+        },
+        "explorer": {
+          "actors": 2,
+          "repairs": 2,
+          "heals": 0,
+          "investigations": 0,
+          "evidence": 0,
+          "sabotage": 0
+        },
+        "investigator": {
+          "actors": 1,
+          "repairs": 1,
+          "heals": 0,
+          "investigations": 2,
+          "evidence": 0,
+          "sabotage": 0
+        },
+        "engineer": {
+          "actors": 1,
+          "repairs": 5,
+          "heals": 0,
+          "investigations": 0,
+          "evidence": 5,
+          "sabotage": 0
+        }
+      },
+      "steps": 58,
+      "saveBytes": 653020
+    },
+    {
+      "seed": 900038,
+      "difficulty": "easy",
+      "mode": "classic",
+      "policy": 1,
+      "role": "saboteur",
+      "humanSpy": true,
+      "day": 2,
+      "winner": "survivors",
+      "outcome": "escape",
+      "ending": "unknown",
+      "spyExiled": false,
+      "shortage": false,
+      "events": [
+        "event-08",
+        "event-10",
+        "event-21"
+      ],
+      "roles": {
+        "saboteur": {
+          "actors": 1,
+          "repairs": 0,
+          "heals": 0,
+          "investigations": 0,
+          "evidence": 0,
+          "sabotage": 1
+        },
+        "engineer": {
+          "actors": 1,
+          "repairs": 3,
+          "heals": 0,
+          "investigations": 0,
+          "evidence": 2,
+          "sabotage": 0
+        },
+        "explorer": {
+          "actors": 2,
+          "repairs": 1,
+          "heals": 0,
+          "investigations": 0,
+          "evidence": 0,
+          "sabotage": 0
+        },
+        "investigator": {
+          "actors": 1,
+          "repairs": 2,
+          "heals": 0,
+          "investigations": 1,
+          "evidence": 1,
+          "sabotage": 0
+        },
+        "doctor": {
+          "actors": 1,
+          "repairs": 2,
+          "heals": 0,
+          "investigations": 0,
+          "evidence": 2,
+          "sabotage": 0
+        }
+      },
+      "steps": 23,
+      "saveBytes": 269129
+    },
+    {
+      "seed": 900039,
+      "difficulty": "easy",
+      "mode": "classic",
+      "policy": 2,
+      "role": "engineer",
+      "humanSpy": false,
+      "day": 3,
+      "winner": "survivors",
+      "outcome": "escape",
+      "ending": "research",
+      "spyExiled": false,
+      "shortage": false,
+      "events": [
+        "event-11",
+        "event-25",
+        "event-06",
+        "event-46",
+        "event-07"
+      ],
+      "roles": {
+        "engineer": {
+          "actors": 1,
+          "repairs": 2,
+          "heals": 0,
+          "investigations": 0,
+          "evidence": 10,
+          "sabotage": 0
+        },
+        "saboteur": {
+          "actors": 1,
+          "repairs": 0,
+          "heals": 0,
+          "investigations": 0,
+          "evidence": 0,
+          "sabotage": 2
+        },
+        "explorer": {
+          "actors": 2,
+          "repairs": 5,
+          "heals": 0,
+          "investigations": 0,
+          "evidence": 4,
+          "sabotage": 0
+        },
+        "investigator": {
+          "actors": 1,
+          "repairs": 3,
+          "heals": 0,
+          "investigations": 2,
+          "evidence": 2,
+          "sabotage": 0
+        },
+        "doctor": {
+          "actors": 1,
+          "repairs": 3,
+          "heals": 0,
+          "investigations": 0,
+          "evidence": 0,
+          "sabotage": 0
+        }
+      },
+      "steps": 42,
+      "saveBytes": 567216
+    },
+    {
+      "seed": 900040,
+      "difficulty": "easy",
+      "mode": "classic",
+      "policy": 3,
+      "role": "saboteur",
+      "humanSpy": true,
+      "day": 2,
+      "winner": "survivors",
+      "outcome": "escape",
+      "ending": "unknown",
+      "spyExiled": false,
+      "shortage": false,
+      "events": [
+        "event-09",
+        "event-08",
+        "event-04"
+      ],
+      "roles": {
+        "saboteur": {
+          "actors": 1,
+          "repairs": 0,
+          "heals": 0,
+          "investigations": 0,
+          "evidence": 0,
+          "sabotage": 2
+        },
+        "explorer": {
+          "actors": 2,
+          "repairs": 4,
+          "heals": 0,
+          "investigations": 0,
+          "evidence": 3,
+          "sabotage": 0
+        },
+        "engineer": {
+          "actors": 1,
+          "repairs": 3,
+          "heals": 0,
+          "investigations": 0,
+          "evidence": 1,
+          "sabotage": 0
+        },
+        "investigator": {
+          "actors": 1,
+          "repairs": 1,
+          "heals": 0,
+          "investigations": 1,
+          "evidence": 1,
+          "sabotage": 0
+        },
+        "doctor": {
+          "actors": 1,
+          "repairs": 2,
+          "heals": 0,
+          "investigations": 0,
+          "evidence": 0,
+          "sabotage": 0
+        }
+      },
+      "steps": 24,
+      "saveBytes": 283772
+    },
+    {
+      "seed": 900041,
+      "difficulty": "easy",
+      "mode": "classic",
+      "policy": 0,
+      "role": "saboteur",
+      "humanSpy": true,
+      "day": 2,
+      "winner": "survivors",
+      "outcome": "escape",
+      "ending": "research",
+      "spyExiled": false,
+      "shortage": false,
+      "events": [
+        "event-13",
+        "event-03",
+        "event-31"
+      ],
+      "roles": {
+        "saboteur": {
+          "actors": 1,
+          "repairs": 0,
+          "heals": 0,
+          "investigations": 0,
+          "evidence": 0,
+          "sabotage": 3
+        },
+        "explorer": {
+          "actors": 2,
+          "repairs": 3,
+          "heals": 0,
+          "investigations": 0,
+          "evidence": 7,
+          "sabotage": 0
+        },
+        "investigator": {
+          "actors": 1,
+          "repairs": 2,
+          "heals": 0,
+          "investigations": 1,
+          "evidence": 1,
+          "sabotage": 0
+        },
+        "doctor": {
+          "actors": 1,
+          "repairs": 2,
+          "heals": 0,
+          "investigations": 0,
+          "evidence": 2,
+          "sabotage": 0
+        },
+        "engineer": {
+          "actors": 1,
+          "repairs": 3,
+          "heals": 0,
+          "investigations": 0,
+          "evidence": 0,
+          "sabotage": 0
+        }
+      },
+      "steps": 22,
+      "saveBytes": 331231
+    },
+    {
+      "seed": 900042,
+      "difficulty": "easy",
+      "mode": "classic",
+      "policy": 1,
+      "role": "saboteur",
+      "humanSpy": true,
+      "day": 3,
+      "winner": "survivors",
+      "outcome": "escape",
+      "ending": "unknown",
+      "spyExiled": false,
+      "shortage": false,
+      "events": [
+        "event-05",
+        "event-14",
+        "event-15",
+        "event-08",
+        "event-11"
+      ],
+      "roles": {
+        "saboteur": {
+          "actors": 1,
+          "repairs": 0,
+          "heals": 0,
+          "investigations": 0,
+          "evidence": 1,
+          "sabotage": 3
+        },
+        "doctor": {
+          "actors": 1,
+          "repairs": 4,
+          "heals": 1,
+          "investigations": 0,
+          "evidence": 4,
+          "sabotage": 0
+        },
+        "explorer": {
+          "actors": 2,
+          "repairs": 3,
+          "heals": 0,
+          "investigations": 0,
+          "evidence": 4,
+          "sabotage": 0
+        },
+        "investigator": {
+          "actors": 1,
+          "repairs": 3,
+          "heals": 0,
+          "investigations": 2,
+          "evidence": 2,
+          "sabotage": 0
+        },
+        "engineer": {
+          "actors": 1,
+          "repairs": 4,
+          "heals": 0,
+          "investigations": 0,
+          "evidence": 0,
+          "sabotage": 0
+        }
+      },
+      "steps": 43,
+      "saveBytes": 507297
+    },
+    {
+      "seed": 900043,
+      "difficulty": "easy",
+      "mode": "classic",
+      "policy": 2,
+      "role": "explorer",
+      "humanSpy": false,
+      "day": 2,
+      "winner": "survivors",
+      "outcome": "escape",
+      "ending": "together",
+      "spyExiled": false,
+      "shortage": false,
+      "events": [
+        "event-14",
+        "event-46",
+        "event-07",
+        "event-34"
+      ],
+      "roles": {
+        "explorer": {
+          "actors": 2,
+          "repairs": 5,
+          "heals": 0,
+          "investigations": 0,
+          "evidence": 12,
+          "sabotage": 0
+        },
+        "doctor": {
+          "actors": 1,
+          "repairs": 0,
+          "heals": 1,
+          "investigations": 0,
+          "evidence": 4,
+          "sabotage": 0
+        },
+        "engineer": {
+          "actors": 1,
+          "repairs": 4,
+          "heals": 0,
+          "investigations": 0,
+          "evidence": 1,
+          "sabotage": 0
+        },
+        "saboteur": {
+          "actors": 1,
+          "repairs": 0,
+          "heals": 0,
+          "investigations": 0,
+          "evidence": 1,
+          "sabotage": 1
+        },
+        "investigator": {
+          "actors": 1,
+          "repairs": 0,
+          "heals": 0,
+          "investigations": 1,
+          "evidence": 1,
+          "sabotage": 0
+        }
+      },
+      "steps": 37,
+      "saveBytes": 539476
+    },
+    {
+      "seed": 900044,
+      "difficulty": "easy",
+      "mode": "classic",
+      "policy": 3,
+      "role": "engineer",
+      "humanSpy": false,
+      "day": 3,
+      "winner": "survivors",
+      "outcome": "escape",
+      "ending": "unknown",
+      "spyExiled": false,
+      "shortage": false,
+      "events": [
+        "event-24",
+        "event-14",
+        "event-11",
+        "event-42",
+        "event-39"
+      ],
+      "roles": {
+        "engineer": {
+          "actors": 1,
+          "repairs": 2,
+          "heals": 0,
+          "investigations": 0,
+          "evidence": 0,
+          "sabotage": 0
+        },
+        "saboteur": {
+          "actors": 1,
+          "repairs": 0,
+          "heals": 0,
+          "investigations": 0,
+          "evidence": 0,
+          "sabotage": 2
+        },
+        "explorer": {
+          "actors": 2,
+          "repairs": 6,
+          "heals": 0,
+          "investigations": 0,
+          "evidence": 4,
+          "sabotage": 0
+        },
+        "doctor": {
+          "actors": 1,
+          "repairs": 3,
+          "heals": 0,
+          "investigations": 0,
+          "evidence": 4,
+          "sabotage": 0
+        },
+        "investigator": {
+          "actors": 1,
+          "repairs": 1,
+          "heals": 0,
+          "investigations": 2,
+          "evidence": 0,
+          "sabotage": 0
+        }
+      },
+      "steps": 41,
+      "saveBytes": 491312
+    },
+    {
+      "seed": 900045,
+      "difficulty": "easy",
+      "mode": "classic",
+      "policy": 0,
+      "role": "doctor",
+      "humanSpy": false,
+      "day": 2,
+      "winner": "survivors",
+      "outcome": "escape",
+      "ending": "unknown",
+      "spyExiled": false,
+      "shortage": false,
+      "events": [
+        "event-46",
+        "event-07",
+        "event-08",
+        "event-14"
+      ],
+      "roles": {
+        "doctor": {
+          "actors": 1,
+          "repairs": 4,
+          "heals": 0,
+          "investigations": 0,
+          "evidence": 4,
+          "sabotage": 0
+        },
+        "engineer": {
+          "actors": 1,
+          "repairs": 4,
+          "heals": 0,
+          "investigations": 0,
+          "evidence": 4,
+          "sabotage": 0
+        },
+        "investigator": {
+          "actors": 1,
+          "repairs": 1,
+          "heals": 0,
+          "investigations": 1,
+          "evidence": 2,
+          "sabotage": 0
+        },
+        "saboteur": {
+          "actors": 1,
+          "repairs": 0,
+          "heals": 0,
+          "investigations": 0,
+          "evidence": 0,
+          "sabotage": 1
+        },
+        "explorer": {
+          "actors": 2,
+          "repairs": 1,
+          "heals": 0,
+          "investigations": 0,
+          "evidence": 0,
+          "sabotage": 0
+        }
+      },
+      "steps": 39,
+      "saveBytes": 441509
+    },
+    {
+      "seed": 900046,
+      "difficulty": "easy",
+      "mode": "classic",
+      "policy": 1,
+      "role": "explorer",
+      "humanSpy": false,
+      "day": 1,
+      "winner": "survivors",
+      "outcome": "exposed",
+      "ending": "captured",
+      "spyExiled": true,
+      "shortage": false,
+      "events": [
+        "event-24",
+        "event-11"
+      ],
+      "roles": {
+        "explorer": {
+          "actors": 2,
+          "repairs": 2,
+          "heals": 0,
+          "investigations": 0,
+          "evidence": 3,
+          "sabotage": 0
+        },
+        "doctor": {
+          "actors": 1,
+          "repairs": 2,
+          "heals": 0,
+          "investigations": 0,
+          "evidence": 2,
+          "sabotage": 0
+        },
+        "engineer": {
+          "actors": 1,
+          "repairs": 2,
+          "heals": 0,
+          "investigations": 0,
+          "evidence": 1,
+          "sabotage": 0
+        },
+        "investigator": {
+          "actors": 1,
+          "repairs": 0,
+          "heals": 0,
+          "investigations": 1,
+          "evidence": 2,
+          "sabotage": 0
+        },
+        "saboteur": {
+          "actors": 1,
+          "repairs": 0,
+          "heals": 0,
+          "investigations": 0,
+          "evidence": 0,
+          "sabotage": 0
+        }
+      },
+      "steps": 20,
+      "saveBytes": 260993
+    },
+    {
+      "seed": 900047,
+      "difficulty": "easy",
+      "mode": "classic",
+      "policy": 2,
+      "role": "investigator",
+      "humanSpy": false,
+      "day": 2,
+      "winner": "survivors",
+      "outcome": "escape",
+      "ending": "together",
+      "spyExiled": false,
+      "shortage": false,
+      "events": [
+        "event-13",
+        "event-21",
+        "event-17",
+        "event-03"
+      ],
+      "roles": {
+        "investigator": {
+          "actors": 1,
+          "repairs": 0,
+          "heals": 0,
+          "investigations": 2,
+          "evidence": 10,
+          "sabotage": 0
+        },
+        "explorer": {
+          "actors": 2,
+          "repairs": 6,
+          "heals": 0,
+          "investigations": 0,
+          "evidence": 5,
+          "sabotage": 0
+        },
+        "doctor": {
+          "actors": 1,
+          "repairs": 0,
+          "heals": 0,
+          "investigations": 0,
+          "evidence": 0,
+          "sabotage": 0
+        },
+        "engineer": {
+          "actors": 1,
+          "repairs": 4,
+          "heals": 0,
+          "investigations": 0,
+          "evidence": 4,
+          "sabotage": 0
+        },
+        "saboteur": {
+          "actors": 1,
+          "repairs": 0,
+          "heals": 0,
+          "investigations": 0,
+          "evidence": 0,
+          "sabotage": 2
+        }
+      },
+      "steps": 38,
+      "saveBytes": 517321
+    },
+    {
+      "seed": 900048,
+      "difficulty": "easy",
+      "mode": "classic",
+      "policy": 3,
+      "role": "doctor",
+      "humanSpy": false,
+      "day": 1,
+      "winner": "survivors",
+      "outcome": "escape",
+      "ending": "unknown",
+      "spyExiled": false,
+      "shortage": false,
+      "events": [
+        "event-08",
+        "event-24"
+      ],
+      "roles": {
+        "doctor": {
+          "actors": 1,
+          "repairs": 1,
+          "heals": 0,
+          "investigations": 0,
+          "evidence": 2,
+          "sabotage": 0
+        },
+        "engineer": {
+          "actors": 1,
+          "repairs": 2,
+          "heals": 0,
+          "investigations": 0,
+          "evidence": 2,
+          "sabotage": 0
+        },
+        "investigator": {
+          "actors": 1,
+          "repairs": 1,
+          "heals": 0,
+          "investigations": 0,
+          "evidence": 0,
+          "sabotage": 0
+        },
+        "explorer": {
+          "actors": 2,
+          "repairs": 2,
+          "heals": 0,
+          "investigations": 0,
+          "evidence": 1,
+          "sabotage": 0
+        },
+        "saboteur": {
+          "actors": 1,
+          "repairs": 0,
+          "heals": 0,
+          "investigations": 0,
+          "evidence": 1,
+          "sabotage": 0
+        }
+      },
+      "steps": 19,
+      "saveBytes": 231404
+    },
+    {
+      "seed": 900049,
+      "difficulty": "easy",
+      "mode": "classic",
+      "policy": 0,
+      "role": "doctor",
+      "humanSpy": false,
+      "day": 2,
+      "winner": "survivors",
+      "outcome": "escape",
+      "ending": "together",
+      "spyExiled": false,
+      "shortage": false,
+      "events": [
+        "event-08",
+        "event-05",
+        "event-20"
+      ],
+      "roles": {
+        "doctor": {
+          "actors": 1,
+          "repairs": 3,
+          "heals": 0,
+          "investigations": 0,
+          "evidence": 2,
+          "sabotage": 0
+        },
+        "investigator": {
+          "actors": 1,
+          "repairs": 0,
+          "heals": 0,
+          "investigations": 1,
+          "evidence": 2,
+          "sabotage": 0
+        },
+        "engineer": {
+          "actors": 1,
+          "repairs": 2,
+          "heals": 0,
+          "investigations": 0,
+          "evidence": 0,
+          "sabotage": 0
+        },
+        "saboteur": {
+          "actors": 1,
+          "repairs": 0,
+          "heals": 0,
+          "investigations": 0,
+          "evidence": 0,
+          "sabotage": 1
+        },
+        "explorer": {
+          "actors": 2,
+          "repairs": 3,
+          "heals": 0,
+          "investigations": 0,
+          "evidence": 2,
+          "sabotage": 0
+        }
+      },
+      "steps": 24,
+      "saveBytes": 266238
+    },
+    {
+      "seed": 900050,
+      "difficulty": "easy",
+      "mode": "classic",
+      "policy": 1,
+      "role": "investigator",
+      "humanSpy": false,
+      "day": 2,
+      "winner": "survivors",
+      "outcome": "escape",
+      "ending": "together",
+      "spyExiled": false,
+      "shortage": false,
+      "events": [
+        "event-09",
+        "event-05",
+        "event-33"
+      ],
+      "roles": {
+        "investigator": {
+          "actors": 1,
+          "repairs": 3,
+          "heals": 0,
+          "investigations": 0,
+          "evidence": 1,
+          "sabotage": 0
+        },
+        "explorer": {
+          "actors": 2,
+          "repairs": 3,
+          "heals": 0,
+          "investigations": 0,
+          "evidence": 3,
+          "sabotage": 0
+        },
+        "saboteur": {
+          "actors": 1,
+          "repairs": 0,
+          "heals": 0,
+          "investigations": 0,
+          "evidence": 1,
+          "sabotage": 1
+        },
+        "engineer": {
+          "actors": 1,
+          "repairs": 2,
+          "heals": 0,
+          "investigations": 0,
+          "evidence": 2,
+          "sabotage": 0
+        },
+        "doctor": {
+          "actors": 1,
+          "repairs": 2,
+          "heals": 0,
+          "investigations": 0,
+          "evidence": 0,
+          "sabotage": 0
+        }
+      },
+      "steps": 23,
+      "saveBytes": 295003
+    },
+    {
+      "seed": 900051,
+      "difficulty": "easy",
+      "mode": "classic",
+      "policy": 2,
+      "role": "engineer",
+      "humanSpy": false,
+      "day": 2,
+      "winner": "survivors",
+      "outcome": "escape",
+      "ending": "together",
+      "spyExiled": false,
+      "shortage": false,
+      "events": [
+        "event-05",
+        "event-11",
+        "event-07",
+        "event-08"
+      ],
+      "roles": {
+        "engineer": {
+          "actors": 1,
+          "repairs": 2,
+          "heals": 0,
+          "investigations": 0,
+          "evidence": 9,
+          "sabotage": 0
+        },
+        "investigator": {
+          "actors": 1,
+          "repairs": 2,
+          "heals": 0,
+          "investigations": 1,
+          "evidence": 3,
+          "sabotage": 0
+        },
+        "explorer": {
+          "actors": 2,
+          "repairs": 3,
+          "heals": 0,
+          "investigations": 0,
+          "evidence": 7,
+          "sabotage": 0
+        },
+        "saboteur": {
+          "actors": 1,
+          "repairs": 0,
+          "heals": 0,
+          "investigations": 0,
+          "evidence": 0,
+          "sabotage": 1
+        },
+        "doctor": {
+          "actors": 1,
+          "repairs": 1,
+          "heals": 1,
+          "investigations": 0,
+          "evidence": 0,
+          "sabotage": 0
+        }
+      },
+      "steps": 39,
+      "saveBytes": 539299
+    },
+    {
+      "seed": 900052,
+      "difficulty": "easy",
+      "mode": "classic",
+      "policy": 3,
+      "role": "investigator",
+      "humanSpy": false,
+      "day": 3,
+      "winner": "survivors",
+      "outcome": "escape",
+      "ending": "together",
+      "spyExiled": false,
+      "shortage": false,
+      "events": [
+        "event-13",
+        "event-05",
+        "event-24",
+        "event-07",
+        "event-39",
+        "event-21"
+      ],
+      "roles": {
+        "investigator": {
+          "actors": 1,
+          "repairs": 1,
+          "heals": 0,
+          "investigations": 2,
+          "evidence": 5,
+          "sabotage": 0
+        },
+        "explorer": {
+          "actors": 2,
+          "repairs": 5,
+          "heals": 0,
+          "investigations": 0,
+          "evidence": 11,
+          "sabotage": 0
+        },
+        "saboteur": {
+          "actors": 1,
+          "repairs": 0,
+          "heals": 0,
+          "investigations": 0,
+          "evidence": 1,
+          "sabotage": 3
+        },
+        "doctor": {
+          "actors": 1,
+          "repairs": 1,
+          "heals": 1,
+          "investigations": 0,
+          "evidence": 3,
+          "sabotage": 0
+        },
+        "engineer": {
+          "actors": 1,
+          "repairs": 5,
+          "heals": 0,
+          "investigations": 0,
+          "evidence": 0,
+          "sabotage": 0
+        }
+      },
+      "steps": 59,
+      "saveBytes": 716996
+    },
+    {
+      "seed": 900053,
+      "difficulty": "easy",
+      "mode": "classic",
+      "policy": 0,
+      "role": "explorer",
+      "humanSpy": false,
+      "day": 2,
+      "winner": "survivors",
+      "outcome": "exposed",
+      "ending": "captured",
+      "spyExiled": true,
+      "shortage": false,
+      "events": [
+        "event-16",
+        "event-07",
+        "event-04",
+        "event-24"
+      ],
+      "roles": {
+        "explorer": {
+          "actors": 2,
+          "repairs": 4,
+          "heals": 0,
+          "investigations": 0,
+          "evidence": 7,
+          "sabotage": 0
+        },
+        "investigator": {
+          "actors": 1,
+          "repairs": 1,
+          "heals": 0,
+          "investigations": 2,
+          "evidence": 4,
+          "sabotage": 0
+        },
+        "doctor": {
+          "actors": 1,
+          "repairs": 1,
+          "heals": 0,
+          "investigations": 0,
+          "evidence": 2,
+          "sabotage": 0
+        },
+        "saboteur": {
+          "actors": 1,
+          "repairs": 0,
+          "heals": 0,
+          "investigations": 0,
+          "evidence": 1,
+          "sabotage": 2
+        },
+        "engineer": {
+          "actors": 1,
+          "repairs": 1,
+          "heals": 0,
+          "investigations": 0,
+          "evidence": 0,
+          "sabotage": 0
+        }
+      },
+      "steps": 38,
+      "saveBytes": 475470
+    },
+    {
+      "seed": 900054,
+      "difficulty": "easy",
+      "mode": "classic",
+      "policy": 1,
+      "role": "engineer",
+      "humanSpy": false,
+      "day": 2,
+      "winner": "survivors",
+      "outcome": "escape",
+      "ending": "partial",
+      "spyExiled": true,
+      "shortage": false,
+      "events": [
+        "event-07",
+        "event-14",
+        "event-46",
+        "event-11"
+      ],
+      "roles": {
+        "engineer": {
+          "actors": 1,
+          "repairs": 4,
+          "heals": 0,
+          "investigations": 0,
+          "evidence": 5,
+          "sabotage": 0
+        },
+        "saboteur": {
+          "actors": 1,
+          "repairs": 0,
+          "heals": 0,
+          "investigations": 0,
+          "evidence": 1,
+          "sabotage": 2
+        },
+        "explorer": {
+          "actors": 2,
+          "repairs": 6,
+          "heals": 0,
+          "investigations": 0,
+          "evidence": 2,
+          "sabotage": 0
+        },
+        "doctor": {
+          "actors": 1,
+          "repairs": 0,
+          "heals": 1,
+          "investigations": 0,
+          "evidence": 4,
+          "sabotage": 0
+        },
+        "investigator": {
+          "actors": 1,
+          "repairs": 1,
+          "heals": 0,
+          "investigations": 1,
+          "evidence": 0,
+          "sabotage": 0
+        }
+      },
+      "steps": 39,
+      "saveBytes": 477524
+    },
+    {
+      "seed": 900055,
+      "difficulty": "easy",
+      "mode": "classic",
+      "policy": 2,
+      "role": "explorer",
+      "humanSpy": false,
+      "day": 2,
+      "winner": "survivors",
+      "outcome": "escape",
+      "ending": "together",
+      "spyExiled": false,
+      "shortage": false,
+      "events": [
+        "event-20",
+        "event-24",
+        "event-30",
+        "event-46"
+      ],
+      "roles": {
+        "explorer": {
+          "actors": 2,
+          "repairs": 5,
+          "heals": 1,
+          "investigations": 0,
+          "evidence": 14,
+          "sabotage": 0
+        },
+        "saboteur": {
+          "actors": 1,
+          "repairs": 0,
+          "heals": 0,
+          "investigations": 0,
+          "evidence": 1,
+          "sabotage": 2
+        },
+        "engineer": {
+          "actors": 1,
+          "repairs": 4,
+          "heals": 0,
+          "investigations": 0,
+          "evidence": 2,
+          "sabotage": 0
+        },
+        "doctor": {
+          "actors": 1,
+          "repairs": 1,
+          "heals": 0,
+          "investigations": 0,
+          "evidence": 2,
+          "sabotage": 0
+        },
+        "investigator": {
+          "actors": 1,
+          "repairs": 2,
+          "heals": 0,
+          "investigations": 1,
+          "evidence": 0,
+          "sabotage": 0
+        }
+      },
+      "steps": 39,
+      "saveBytes": 556330
+    },
+    {
+      "seed": 900056,
+      "difficulty": "easy",
+      "mode": "classic",
+      "policy": 3,
+      "role": "engineer",
+      "humanSpy": false,
+      "day": 3,
+      "winner": "survivors",
+      "outcome": "escape",
+      "ending": "together",
+      "spyExiled": false,
+      "shortage": false,
+      "events": [
+        "event-05",
+        "event-26",
+        "event-30",
+        "event-46",
+        "event-18",
+        "event-24"
+      ],
+      "roles": {
+        "engineer": {
+          "actors": 1,
+          "repairs": 3,
+          "heals": 0,
+          "investigations": 0,
+          "evidence": 7,
+          "sabotage": 0
+        },
+        "explorer": {
+          "actors": 2,
+          "repairs": 5,
+          "heals": 0,
+          "investigations": 0,
+          "evidence": 4,
+          "sabotage": 0
+        },
+        "saboteur": {
+          "actors": 1,
+          "repairs": 0,
+          "heals": 0,
+          "investigations": 0,
+          "evidence": 1,
+          "sabotage": 2
+        },
+        "doctor": {
+          "actors": 1,
+          "repairs": 2,
+          "heals": 0,
+          "investigations": 0,
+          "evidence": 3,
+          "sabotage": 0
+        },
+        "investigator": {
+          "actors": 1,
+          "repairs": 1,
+          "heals": 0,
+          "investigations": 2,
+          "evidence": 6,
+          "sabotage": 0
+        }
+      },
+      "steps": 57,
+      "saveBytes": 709485
+    },
+    {
+      "seed": 900057,
+      "difficulty": "easy",
+      "mode": "classic",
+      "policy": 0,
+      "role": "explorer",
+      "humanSpy": false,
+      "day": 3,
+      "winner": "survivors",
+      "outcome": "exposed",
+      "ending": "captured",
+      "spyExiled": true,
+      "shortage": false,
+      "events": [
+        "event-13",
+        "event-03",
+        "event-31",
+        "event-20",
+        "event-28",
+        "event-07"
+      ],
+      "roles": {
+        "explorer": {
+          "actors": 2,
+          "repairs": 5,
+          "heals": 0,
+          "investigations": 0,
+          "evidence": 9,
+          "sabotage": 0
+        },
+        "investigator": {
+          "actors": 1,
+          "repairs": 3,
+          "heals": 0,
+          "investigations": 3,
+          "evidence": 5,
+          "sabotage": 0
+        },
+        "engineer": {
+          "actors": 1,
+          "repairs": 3,
+          "heals": 0,
+          "investigations": 0,
+          "evidence": 3,
+          "sabotage": 0
+        },
+        "doctor": {
+          "actors": 1,
+          "repairs": 0,
+          "heals": 1,
+          "investigations": 0,
+          "evidence": 6,
+          "sabotage": 0
+        },
+        "saboteur": {
+          "actors": 1,
+          "repairs": 0,
+          "heals": 0,
+          "investigations": 0,
+          "evidence": 0,
+          "sabotage": 3
+        }
+      },
+      "steps": 60,
+      "saveBytes": 720713
+    },
+    {
+      "seed": 900058,
+      "difficulty": "easy",
+      "mode": "classic",
+      "policy": 1,
+      "role": "explorer",
+      "humanSpy": false,
+      "day": 3,
+      "winner": "survivors",
+      "outcome": "exposed",
+      "ending": "captured",
+      "spyExiled": true,
+      "shortage": false,
+      "events": [
+        "event-14",
+        "event-21",
+        "event-20",
+        "event-42",
+        "event-30",
+        "event-25"
+      ],
+      "roles": {
+        "explorer": {
+          "actors": 2,
+          "repairs": 4,
+          "heals": 0,
+          "investigations": 0,
+          "evidence": 6,
+          "sabotage": 0
+        },
+        "doctor": {
+          "actors": 1,
+          "repairs": 3,
+          "heals": 1,
+          "investigations": 0,
+          "evidence": 6,
+          "sabotage": 0
+        },
+        "investigator": {
+          "actors": 1,
+          "repairs": 1,
+          "heals": 0,
+          "investigations": 3,
+          "evidence": 6,
+          "sabotage": 0
+        },
+        "engineer": {
+          "actors": 1,
+          "repairs": 6,
+          "heals": 0,
+          "investigations": 0,
+          "evidence": 3,
+          "sabotage": 0
+        },
+        "saboteur": {
+          "actors": 1,
+          "repairs": 0,
+          "heals": 0,
+          "investigations": 0,
+          "evidence": 0,
+          "sabotage": 4
+        }
+      },
+      "steps": 59,
+      "saveBytes": 741964
+    },
+    {
+      "seed": 900059,
+      "difficulty": "easy",
+      "mode": "classic",
+      "policy": 2,
+      "role": "saboteur",
+      "humanSpy": true,
+      "day": 3,
+      "winner": "survivors",
+      "outcome": "escape",
+      "ending": "together",
+      "spyExiled": false,
+      "shortage": false,
+      "events": [
+        "event-10",
+        "event-11",
+        "event-21",
+        "event-18",
+        "event-19"
+      ],
+      "roles": {
+        "saboteur": {
+          "actors": 1,
+          "repairs": 0,
+          "heals": 0,
+          "investigations": 0,
+          "evidence": 0,
+          "sabotage": 5
+        },
+        "explorer": {
+          "actors": 2,
+          "repairs": 4,
+          "heals": 0,
+          "investigations": 0,
+          "evidence": 4,
+          "sabotage": 0
+        },
+        "doctor": {
+          "actors": 1,
+          "repairs": 3,
+          "heals": 1,
+          "investigations": 0,
+          "evidence": 2,
+          "sabotage": 0
+        },
+        "engineer": {
+          "actors": 1,
+          "repairs": 5,
+          "heals": 0,
+          "investigations": 0,
+          "evidence": 2,
+          "sabotage": 0
+        },
+        "investigator": {
+          "actors": 1,
+          "repairs": 0,
+          "heals": 0,
+          "investigations": 2,
+          "evidence": 4,
+          "sabotage": 0
+        }
+      },
+      "steps": 43,
+      "saveBytes": 511442
+    },
+    {
+      "seed": 900060,
+      "difficulty": "easy",
+      "mode": "classic",
+      "policy": 3,
+      "role": "explorer",
+      "humanSpy": false,
+      "day": 2,
+      "winner": "survivors",
+      "outcome": "escape",
+      "ending": "unknown",
+      "spyExiled": true,
+      "shortage": false,
+      "events": [
+        "event-11",
+        "event-24",
+        "event-39",
+        "event-25"
+      ],
+      "roles": {
+        "explorer": {
+          "actors": 2,
+          "repairs": 5,
+          "heals": 0,
+          "investigations": 0,
+          "evidence": 0,
+          "sabotage": 0
+        },
+        "investigator": {
+          "actors": 1,
+          "repairs": 2,
+          "heals": 0,
+          "investigations": 1,
+          "evidence": 4,
+          "sabotage": 0
+        },
+        "saboteur": {
+          "actors": 1,
+          "repairs": 0,
+          "heals": 0,
+          "investigations": 0,
+          "evidence": 0,
+          "sabotage": 2
+        },
+        "engineer": {
+          "actors": 1,
+          "repairs": 3,
+          "heals": 0,
+          "investigations": 0,
+          "evidence": 2,
+          "sabotage": 0
+        },
+        "doctor": {
+          "actors": 1,
+          "repairs": 3,
+          "heals": 0,
+          "investigations": 0,
+          "evidence": 4,
+          "sabotage": 0
+        }
+      },
+      "steps": 37,
+      "saveBytes": 462119
+    },
+    {
+      "seed": 900061,
+      "difficulty": "easy",
+      "mode": "classic",
+      "policy": 0,
+      "role": "saboteur",
+      "humanSpy": true,
+      "day": 3,
+      "winner": "survivors",
+      "outcome": "exposed",
+      "ending": "captured",
+      "spyExiled": true,
+      "shortage": false,
+      "events": [
+        "event-11",
+        "event-05",
+        "event-10",
+        "event-18",
+        "event-24",
+        "event-35"
+      ],
+      "roles": {
+        "saboteur": {
+          "actors": 1,
+          "repairs": 0,
+          "heals": 0,
+          "investigations": 0,
+          "evidence": 0,
+          "sabotage": 5
+        },
+        "explorer": {
+          "actors": 2,
+          "repairs": 5,
+          "heals": 0,
+          "investigations": 0,
+          "evidence": 6,
+          "sabotage": 0
+        },
+        "investigator": {
+          "actors": 1,
+          "repairs": 1,
+          "heals": 0,
+          "investigations": 3,
+          "evidence": 2,
+          "sabotage": 0
+        },
+        "engineer": {
+          "actors": 1,
+          "repairs": 5,
+          "heals": 0,
+          "investigations": 0,
+          "evidence": 3,
+          "sabotage": 0
+        },
+        "doctor": {
+          "actors": 1,
+          "repairs": 1,
+          "heals": 2,
+          "investigations": 0,
+          "evidence": 0,
+          "sabotage": 0
+        }
+      },
+      "steps": 60,
+      "saveBytes": 549592
+    },
+    {
+      "seed": 900062,
+      "difficulty": "easy",
+      "mode": "classic",
+      "policy": 1,
+      "role": "explorer",
+      "humanSpy": false,
+      "day": 3,
+      "winner": "saboteur",
+      "outcome": "saboteur",
+      "ending": "covert",
+      "spyExiled": false,
+      "shortage": false,
+      "events": [
+        "event-16",
+        "event-08",
+        "event-17",
+        "event-44",
+        "event-11",
+        "event-35"
+      ],
+      "roles": {
+        "explorer": {
+          "actors": 2,
+          "repairs": 7,
+          "heals": 0,
+          "investigations": 0,
+          "evidence": 6,
+          "sabotage": 0
+        },
+        "saboteur": {
+          "actors": 1,
+          "repairs": 0,
+          "heals": 0,
+          "investigations": 0,
+          "evidence": 0,
+          "sabotage": 4
+        },
+        "engineer": {
+          "actors": 1,
+          "repairs": 4,
+          "heals": 1,
+          "investigations": 0,
+          "evidence": 3,
+          "sabotage": 0
+        },
+        "investigator": {
+          "actors": 1,
+          "repairs": 2,
+          "heals": 0,
+          "investigations": 3,
+          "evidence": 4,
+          "sabotage": 0
+        },
+        "doctor": {
+          "actors": 1,
+          "repairs": 0,
+          "heals": 2,
+          "investigations": 0,
+          "evidence": 0,
+          "sabotage": 0
+        }
+      },
+      "steps": 59,
+      "saveBytes": 667234
+    },
+    {
+      "seed": 900063,
+      "difficulty": "easy",
+      "mode": "classic",
+      "policy": 2,
+      "role": "investigator",
+      "humanSpy": false,
+      "day": 3,
+      "winner": "survivors",
+      "outcome": "escape",
+      "ending": "together",
+      "spyExiled": false,
+      "shortage": false,
+      "events": [
+        "event-13",
+        "event-46",
+        "event-05",
+        "event-30",
+        "event-12"
+      ],
+      "roles": {
+        "investigator": {
+          "actors": 1,
+          "repairs": 0,
+          "heals": 0,
+          "investigations": 2,
+          "evidence": 10,
+          "sabotage": 0
+        },
+        "doctor": {
+          "actors": 1,
+          "repairs": 2,
+          "heals": 1,
+          "investigations": 0,
+          "evidence": 1,
+          "sabotage": 0
+        },
+        "explorer": {
+          "actors": 2,
+          "repairs": 6,
+          "heals": 0,
+          "investigations": 0,
+          "evidence": 4,
+          "sabotage": 0
+        },
+        "saboteur": {
+          "actors": 1,
+          "repairs": 0,
+          "heals": 0,
+          "investigations": 0,
+          "evidence": 1,
+          "sabotage": 2
+        },
+        "engineer": {
+          "actors": 1,
+          "repairs": 4,
+          "heals": 0,
+          "investigations": 0,
+          "evidence": 1,
+          "sabotage": 0
+        }
+      },
+      "steps": 43,
+      "saveBytes": 555632
+    },
+    {
+      "seed": 900064,
+      "difficulty": "easy",
+      "mode": "classic",
+      "policy": 3,
+      "role": "doctor",
+      "humanSpy": false,
+      "day": 3,
+      "winner": "survivors",
+      "outcome": "escape",
+      "ending": "research",
+      "spyExiled": false,
+      "shortage": false,
+      "events": [
+        "event-03",
+        "event-07",
+        "event-20",
+        "event-39",
+        "event-15"
+      ],
+      "roles": {
+        "doctor": {
+          "actors": 1,
+          "repairs": 2,
+          "heals": 0,
+          "investigations": 0,
+          "evidence": 4,
+          "sabotage": 0
+        },
+        "explorer": {
+          "actors": 2,
+          "repairs": 6,
+          "heals": 0,
+          "investigations": 0,
+          "evidence": 8,
+          "sabotage": 0
+        },
+        "saboteur": {
+          "actors": 1,
+          "repairs": 0,
+          "heals": 0,
+          "investigations": 0,
+          "evidence": 1,
+          "sabotage": 3
+        },
+        "investigator": {
+          "actors": 1,
+          "repairs": 1,
+          "heals": 0,
+          "investigations": 2,
+          "evidence": 2,
+          "sabotage": 0
+        },
+        "engineer": {
+          "actors": 1,
+          "repairs": 3,
+          "heals": 0,
+          "investigations": 0,
+          "evidence": 2,
+          "sabotage": 0
+        }
+      },
+      "steps": 42,
+      "saveBytes": 558407
+    },
+    {
+      "seed": 900065,
+      "difficulty": "easy",
+      "mode": "classic",
+      "policy": 0,
+      "role": "engineer",
+      "humanSpy": false,
+      "day": 2,
+      "winner": "survivors",
+      "outcome": "escape",
+      "ending": "together",
+      "spyExiled": false,
+      "shortage": false,
+      "events": [
+        "event-08",
+        "event-10",
+        "event-09",
+        "event-20"
+      ],
+      "roles": {
+        "engineer": {
+          "actors": 1,
+          "repairs": 2,
+          "heals": 0,
+          "investigations": 0,
+          "evidence": 3,
+          "sabotage": 0
+        },
+        "explorer": {
+          "actors": 2,
+          "repairs": 5,
+          "heals": 0,
+          "investigations": 0,
+          "evidence": 5,
+          "sabotage": 0
+        },
+        "doctor": {
+          "actors": 1,
+          "repairs": 3,
+          "heals": 1,
+          "investigations": 0,
+          "evidence": 2,
+          "sabotage": 0
+        },
+        "saboteur": {
+          "actors": 1,
+          "repairs": 0,
+          "heals": 0,
+          "investigations": 0,
+          "evidence": 1,
+          "sabotage": 2
+        },
+        "investigator": {
+          "actors": 1,
+          "repairs": 0,
+          "heals": 0,
+          "investigations": 1,
+          "evidence": 0,
+          "sabotage": 0
+        }
+      },
+      "steps": 38,
+      "saveBytes": 450559
+    },
+    {
+      "seed": 900066,
+      "difficulty": "easy",
+      "mode": "classic",
+      "policy": 1,
+      "role": "explorer",
+      "humanSpy": false,
+      "day": 3,
+      "winner": "survivors",
+      "outcome": "exposed",
+      "ending": "captured",
+      "spyExiled": true,
+      "shortage": false,
+      "events": [
+        "event-11",
+        "event-14",
+        "event-12",
+        "event-35",
+        "event-23",
+        "event-08"
+      ],
+      "roles": {
+        "explorer": {
+          "actors": 2,
+          "repairs": 7,
+          "heals": 0,
+          "investigations": 0,
+          "evidence": 8,
+          "sabotage": 0
+        },
+        "doctor": {
+          "actors": 1,
+          "repairs": 1,
+          "heals": 2,
+          "investigations": 0,
+          "evidence": 6,
+          "sabotage": 0
+        },
+        "saboteur": {
+          "actors": 1,
+          "repairs": 0,
+          "heals": 0,
+          "investigations": 0,
+          "evidence": 0,
+          "sabotage": 3
+        },
+        "engineer": {
+          "actors": 1,
+          "repairs": 2,
+          "heals": 0,
+          "investigations": 0,
+          "evidence": 6,
+          "sabotage": 0
+        },
+        "investigator": {
+          "actors": 1,
+          "repairs": 1,
+          "heals": 0,
+          "investigations": 3,
+          "evidence": 0,
+          "sabotage": 0
+        }
+      },
+      "steps": 58,
+      "saveBytes": 703333
+    },
+    {
+      "seed": 900067,
+      "difficulty": "easy",
+      "mode": "classic",
+      "policy": 2,
+      "role": "doctor",
+      "humanSpy": false,
+      "day": 1,
+      "winner": "survivors",
+      "outcome": "exposed",
+      "ending": "captured",
+      "spyExiled": true,
+      "shortage": false,
+      "events": [
+        "event-03",
+        "event-11"
+      ],
+      "roles": {
+        "doctor": {
+          "actors": 1,
+          "repairs": 1,
+          "heals": 0,
+          "investigations": 0,
+          "evidence": 5,
+          "sabotage": 0
+        },
+        "saboteur": {
+          "actors": 1,
+          "repairs": 0,
+          "heals": 0,
+          "investigations": 0,
+          "evidence": 0,
+          "sabotage": 0
+        },
+        "engineer": {
+          "actors": 1,
+          "repairs": 2,
+          "heals": 0,
+          "investigations": 0,
+          "evidence": 0,
+          "sabotage": 0
+        },
+        "investigator": {
+          "actors": 1,
+          "repairs": 1,
+          "heals": 0,
+          "investigations": 1,
+          "evidence": 1,
+          "sabotage": 0
+        },
+        "explorer": {
+          "actors": 2,
+          "repairs": 3,
+          "heals": 0,
+          "investigations": 0,
+          "evidence": 1,
+          "sabotage": 0
+        }
+      },
+      "steps": 19,
+      "saveBytes": 261330
+    },
+    {
+      "seed": 900068,
+      "difficulty": "easy",
+      "mode": "classic",
+      "policy": 3,
+      "role": "engineer",
+      "humanSpy": false,
+      "day": 3,
+      "winner": "survivors",
+      "outcome": "escape",
+      "ending": "together",
+      "spyExiled": false,
+      "shortage": false,
+      "events": [
+        "event-10",
+        "event-08",
+        "event-07",
+        "event-20",
+        "event-12",
+        "event-46"
+      ],
+      "roles": {
+        "engineer": {
+          "actors": 1,
+          "repairs": 3,
+          "heals": 0,
+          "investigations": 0,
+          "evidence": 7,
+          "sabotage": 0
+        },
+        "explorer": {
+          "actors": 2,
+          "repairs": 5,
+          "heals": 0,
+          "investigations": 0,
+          "evidence": 11,
+          "sabotage": 0
+        },
+        "doctor": {
+          "actors": 1,
+          "repairs": 4,
+          "heals": 2,
+          "investigations": 0,
+          "evidence": 3,
+          "sabotage": 0
+        },
+        "investigator": {
+          "actors": 1,
+          "repairs": 2,
+          "heals": 0,
+          "investigations": 2,
+          "evidence": 3,
+          "sabotage": 0
+        },
+        "saboteur": {
+          "actors": 1,
+          "repairs": 0,
+          "heals": 0,
+          "investigations": 0,
+          "evidence": 0,
+          "sabotage": 3
+        }
+      },
+      "steps": 57,
+      "saveBytes": 738177
+    },
+    {
+      "seed": 900069,
+      "difficulty": "easy",
+      "mode": "classic",
+      "policy": 0,
+      "role": "explorer",
+      "humanSpy": false,
+      "day": 1,
+      "winner": "survivors",
+      "outcome": "escape",
+      "ending": "unknown",
+      "spyExiled": false,
+      "shortage": false,
+      "events": [
+        "event-07",
+        "event-39"
+      ],
+      "roles": {
+        "explorer": {
+          "actors": 2,
+          "repairs": 2,
+          "heals": 0,
+          "investigations": 0,
+          "evidence": 1,
+          "sabotage": 0
+        },
+        "doctor": {
+          "actors": 1,
+          "repairs": 1,
+          "heals": 0,
+          "investigations": 0,
+          "evidence": 2,
+          "sabotage": 0
+        },
+        "investigator": {
+          "actors": 1,
+          "repairs": 1,
+          "heals": 0,
+          "investigations": 1,
+          "evidence": 1,
+          "sabotage": 0
+        },
+        "engineer": {
+          "actors": 1,
+          "repairs": 2,
+          "heals": 0,
+          "investigations": 0,
+          "evidence": 1,
+          "sabotage": 0
+        },
+        "saboteur": {
+          "actors": 1,
+          "repairs": 0,
+          "heals": 0,
+          "investigations": 0,
+          "evidence": 0,
+          "sabotage": 0
+        }
+      },
+      "steps": 19,
+      "saveBytes": 230062
+    },
+    {
+      "seed": 900070,
+      "difficulty": "easy",
+      "mode": "classic",
+      "policy": 1,
+      "role": "explorer",
+      "humanSpy": false,
+      "day": 3,
+      "winner": "survivors",
+      "outcome": "escape",
+      "ending": "research",
+      "spyExiled": true,
+      "shortage": false,
+      "events": [
+        "event-24",
+        "event-01",
+        "event-09",
+        "event-05",
+        "event-20",
+        "event-08"
+      ],
+      "roles": {
+        "explorer": {
+          "actors": 2,
+          "repairs": 6,
+          "heals": 0,
+          "investigations": 0,
+          "evidence": 6,
+          "sabotage": 0
+        },
+        "doctor": {
+          "actors": 1,
+          "repairs": 2,
+          "heals": 1,
+          "investigations": 0,
+          "evidence": 5,
+          "sabotage": 0
+        },
+        "engineer": {
+          "actors": 1,
+          "repairs": 4,
+          "heals": 0,
+          "investigations": 0,
+          "evidence": 3,
+          "sabotage": 0
+        },
+        "investigator": {
+          "actors": 1,
+          "repairs": 3,
+          "heals": 0,
+          "investigations": 2,
+          "evidence": 3,
+          "sabotage": 0
+        },
+        "saboteur": {
+          "actors": 1,
+          "repairs": 0,
+          "heals": 0,
+          "investigations": 0,
+          "evidence": 2,
+          "sabotage": 4
+        }
+      },
+      "steps": 58,
+      "saveBytes": 693396
+    },
+    {
+      "seed": 900071,
+      "difficulty": "easy",
+      "mode": "classic",
+      "policy": 2,
+      "role": "engineer",
+      "humanSpy": false,
+      "day": 3,
+      "winner": "survivors",
+      "outcome": "escape",
+      "ending": "together",
+      "spyExiled": false,
+      "shortage": false,
+      "events": [
+        "event-05",
+        "event-08",
+        "event-38",
+        "event-26",
+        "event-28",
+        "event-20"
+      ],
+      "roles": {
+        "engineer": {
+          "actors": 1,
+          "repairs": 3,
+          "heals": 0,
+          "investigations": 0,
+          "evidence": 15,
+          "sabotage": 0
+        },
+        "investigator": {
+          "actors": 1,
+          "repairs": 1,
+          "heals": 0,
+          "investigations": 2,
+          "evidence": 6,
+          "sabotage": 0
+        },
+        "doctor": {
+          "actors": 1,
+          "repairs": 1,
+          "heals": 3,
+          "investigations": 0,
+          "evidence": 3,
+          "sabotage": 0
+        },
+        "saboteur": {
+          "actors": 1,
+          "repairs": 0,
+          "heals": 0,
+          "investigations": 0,
+          "evidence": 0,
+          "sabotage": 2
+        },
+        "explorer": {
+          "actors": 2,
+          "repairs": 3,
+          "heals": 0,
+          "investigations": 0,
+          "evidence": 6,
+          "sabotage": 0
+        }
+      },
+      "steps": 56,
+      "saveBytes": 785221
+    },
+    {
+      "seed": 900072,
+      "difficulty": "easy",
+      "mode": "classic",
+      "policy": 3,
+      "role": "saboteur",
+      "humanSpy": true,
+      "day": 3,
+      "winner": "survivors",
+      "outcome": "escape",
+      "ending": "research",
+      "spyExiled": false,
+      "shortage": false,
+      "events": [
+        "event-21",
+        "event-25",
+        "event-03",
+        "event-30",
+        "event-11"
+      ],
+      "roles": {
+        "saboteur": {
+          "actors": 1,
+          "repairs": 0,
+          "heals": 0,
+          "investigations": 0,
+          "evidence": 1,
+          "sabotage": 3
+        },
+        "explorer": {
+          "actors": 2,
+          "repairs": 5,
+          "heals": 0,
+          "investigations": 0,
+          "evidence": 5,
+          "sabotage": 0
+        },
+        "investigator": {
+          "actors": 1,
+          "repairs": 2,
+          "heals": 0,
+          "investigations": 2,
+          "evidence": 0,
+          "sabotage": 0
+        },
+        "engineer": {
+          "actors": 1,
+          "repairs": 5,
+          "heals": 0,
+          "investigations": 0,
+          "evidence": 4,
+          "sabotage": 0
+        },
+        "doctor": {
+          "actors": 1,
+          "repairs": 3,
+          "heals": 0,
+          "investigations": 0,
+          "evidence": 0,
+          "sabotage": 0
+        }
+      },
+      "steps": 43,
+      "saveBytes": 503414
+    },
+    {
+      "seed": 900073,
+      "difficulty": "easy",
+      "mode": "classic",
+      "policy": 0,
+      "role": "investigator",
+      "humanSpy": false,
+      "day": 2,
+      "winner": "survivors",
+      "outcome": "exposed",
+      "ending": "captured",
+      "spyExiled": true,
+      "shortage": false,
+      "events": [
+        "event-20",
+        "event-08",
+        "event-15",
+        "event-14"
+      ],
+      "roles": {
+        "investigator": {
+          "actors": 1,
+          "repairs": 0,
+          "heals": 0,
+          "investigations": 2,
+          "evidence": 0,
+          "sabotage": 0
+        },
+        "explorer": {
+          "actors": 2,
+          "repairs": 4,
+          "heals": 0,
+          "investigations": 0,
+          "evidence": 6,
+          "sabotage": 0
+        },
+        "engineer": {
+          "actors": 1,
+          "repairs": 3,
+          "heals": 0,
+          "investigations": 0,
+          "evidence": 1,
+          "sabotage": 0
+        },
+        "saboteur": {
+          "actors": 1,
+          "repairs": 0,
+          "heals": 0,
+          "investigations": 0,
+          "evidence": 1,
+          "sabotage": 2
+        },
+        "doctor": {
+          "actors": 1,
+          "repairs": 2,
+          "heals": 0,
+          "investigations": 0,
+          "evidence": 0,
+          "sabotage": 0
+        }
+      },
+      "steps": 39,
+      "saveBytes": 431002
+    },
+    {
+      "seed": 900074,
+      "difficulty": "easy",
+      "mode": "classic",
+      "policy": 1,
+      "role": "investigator",
+      "humanSpy": false,
+      "day": 3,
+      "winner": "survivors",
+      "outcome": "escape",
+      "ending": "together",
+      "spyExiled": false,
+      "shortage": false,
+      "events": [
+        "event-24",
+        "event-08",
+        "event-07",
+        "event-35",
+        "event-09"
+      ],
+      "roles": {
+        "investigator": {
+          "actors": 1,
+          "repairs": 5,
+          "heals": 0,
+          "investigations": 0,
+          "evidence": 4,
+          "sabotage": 0
+        },
+        "saboteur": {
+          "actors": 1,
+          "repairs": 0,
+          "heals": 0,
+          "investigations": 0,
+          "evidence": 1,
+          "sabotage": 3
+        },
+        "doctor": {
+          "actors": 1,
+          "repairs": 1,
+          "heals": 1,
+          "investigations": 0,
+          "evidence": 4,
+          "sabotage": 0
+        },
+        "explorer": {
+          "actors": 2,
+          "repairs": 3,
+          "heals": 0,
+          "investigations": 0,
+          "evidence": 7,
+          "sabotage": 0
+        },
+        "engineer": {
+          "actors": 1,
+          "repairs": 4,
+          "heals": 0,
+          "investigations": 0,
+          "evidence": 0,
+          "sabotage": 0
+        }
+      },
+      "steps": 44,
+      "saveBytes": 548715
+    },
+    {
+      "seed": 900075,
+      "difficulty": "easy",
+      "mode": "classic",
+      "policy": 2,
+      "role": "doctor",
+      "humanSpy": false,
+      "day": 3,
+      "winner": "survivors",
+      "outcome": "escape",
+      "ending": "together",
+      "spyExiled": false,
+      "shortage": false,
+      "events": [
+        "event-09",
+        "event-20",
+        "event-38",
+        "event-24",
+        "event-15",
+        "event-25"
+      ],
+      "roles": {
+        "doctor": {
+          "actors": 1,
+          "repairs": 2,
+          "heals": 0,
+          "investigations": 0,
+          "evidence": 15,
+          "sabotage": 0
+        },
+        "saboteur": {
+          "actors": 1,
+          "repairs": 0,
+          "heals": 0,
+          "investigations": 0,
+          "evidence": 2,
+          "sabotage": 4
+        },
+        "explorer": {
+          "actors": 2,
+          "repairs": 8,
+          "heals": 0,
+          "investigations": 0,
+          "evidence": 6,
+          "sabotage": 0
+        },
+        "investigator": {
+          "actors": 1,
+          "repairs": 3,
+          "heals": 0,
+          "investigations": 2,
+          "evidence": 6,
+          "sabotage": 0
+        },
+        "engineer": {
+          "actors": 1,
+          "repairs": 4,
+          "heals": 0,
+          "investigations": 0,
+          "evidence": 1,
+          "sabotage": 0
+        }
+      },
+      "steps": 57,
+      "saveBytes": 796469
+    },
+    {
+      "seed": 900076,
+      "difficulty": "easy",
+      "mode": "classic",
+      "policy": 3,
+      "role": "explorer",
+      "humanSpy": false,
+      "day": 3,
+      "winner": "survivors",
+      "outcome": "escape",
+      "ending": "together",
+      "spyExiled": false,
+      "shortage": false,
+      "events": [
+        "event-13",
+        "event-46",
+        "event-09",
+        "event-01",
+        "event-32"
+      ],
+      "roles": {
+        "explorer": {
+          "actors": 2,
+          "repairs": 5,
+          "heals": 0,
+          "investigations": 0,
+          "evidence": 6,
+          "sabotage": 0
+        },
+        "saboteur": {
+          "actors": 1,
+          "repairs": 0,
+          "heals": 0,
+          "investigations": 0,
+          "evidence": 2,
+          "sabotage": 3
+        },
+        "engineer": {
+          "actors": 1,
+          "repairs": 5,
+          "heals": 0,
+          "investigations": 0,
+          "evidence": 2,
+          "sabotage": 0
+        },
+        "doctor": {
+          "actors": 1,
+          "repairs": 1,
+          "heals": 0,
+          "investigations": 0,
+          "evidence": 0,
+          "sabotage": 0
+        },
+        "investigator": {
+          "actors": 1,
+          "repairs": 1,
+          "heals": 0,
+          "investigations": 2,
+          "evidence": 0,
+          "sabotage": 0
+        }
+      },
+      "steps": 43,
+      "saveBytes": 494164
+    },
+    {
+      "seed": 900077,
+      "difficulty": "easy",
+      "mode": "classic",
+      "policy": 0,
+      "role": "saboteur",
+      "humanSpy": true,
+      "day": 2,
+      "winner": "survivors",
+      "outcome": "exposed",
+      "ending": "captured",
+      "spyExiled": true,
+      "shortage": false,
+      "events": [
+        "event-21",
+        "event-11",
+        "event-03",
+        "event-05"
+      ],
+      "roles": {
+        "saboteur": {
+          "actors": 1,
+          "repairs": 0,
+          "heals": 0,
+          "investigations": 0,
+          "evidence": 0,
+          "sabotage": 3
+        },
+        "engineer": {
+          "actors": 1,
+          "repairs": 4,
+          "heals": 0,
+          "investigations": 0,
+          "evidence": 4,
+          "sabotage": 0
+        },
+        "doctor": {
+          "actors": 1,
+          "repairs": 3,
+          "heals": 0,
+          "investigations": 0,
+          "evidence": 1,
+          "sabotage": 0
+        },
+        "explorer": {
+          "actors": 2,
+          "repairs": 2,
+          "heals": 0,
+          "investigations": 0,
+          "evidence": 6,
+          "sabotage": 0
+        },
+        "investigator": {
+          "actors": 1,
+          "repairs": 2,
+          "heals": 0,
+          "investigations": 2,
+          "evidence": 0,
+          "sabotage": 0
+        }
+      },
+      "steps": 40,
+      "saveBytes": 458321
+    },
+    {
+      "seed": 900078,
+      "difficulty": "easy",
+      "mode": "classic",
+      "policy": 1,
+      "role": "engineer",
+      "humanSpy": false,
+      "day": 2,
+      "winner": "survivors",
+      "outcome": "escape",
+      "ending": "unknown",
+      "spyExiled": false,
+      "shortage": false,
+      "events": [
+        "event-13",
+        "event-20",
+        "event-28",
+        "event-25"
+      ],
+      "roles": {
+        "engineer": {
+          "actors": 1,
+          "repairs": 4,
+          "heals": 0,
+          "investigations": 0,
+          "evidence": 4,
+          "sabotage": 0
+        },
+        "saboteur": {
+          "actors": 1,
+          "repairs": 0,
+          "heals": 0,
+          "investigations": 0,
+          "evidence": 1,
+          "sabotage": 2
+        },
+        "explorer": {
+          "actors": 2,
+          "repairs": 5,
+          "heals": 0,
+          "investigations": 0,
+          "evidence": 4,
+          "sabotage": 0
+        },
+        "doctor": {
+          "actors": 1,
+          "repairs": 2,
+          "heals": 0,
+          "investigations": 0,
+          "evidence": 2,
+          "sabotage": 0
+        },
+        "investigator": {
+          "actors": 1,
+          "repairs": 0,
+          "heals": 0,
+          "investigations": 1,
+          "evidence": 4,
+          "sabotage": 0
+        }
+      },
+      "steps": 39,
+      "saveBytes": 483309
+    },
+    {
+      "seed": 900079,
+      "difficulty": "easy",
+      "mode": "classic",
+      "policy": 2,
+      "role": "investigator",
+      "humanSpy": false,
+      "day": 3,
+      "winner": "survivors",
+      "outcome": "escape",
+      "ending": "truth",
+      "spyExiled": false,
+      "shortage": false,
+      "events": [
+        "event-07",
+        "event-24",
+        "event-33",
+        "event-10",
+        "event-18",
+        "event-05"
+      ],
+      "roles": {
+        "investigator": {
+          "actors": 1,
+          "repairs": 0,
+          "heals": 0,
+          "investigations": 3,
+          "evidence": 15,
+          "sabotage": 0
+        },
+        "explorer": {
+          "actors": 2,
+          "repairs": 6,
+          "heals": 0,
+          "investigations": 0,
+          "evidence": 6,
+          "sabotage": 0
+        },
+        "engineer": {
+          "actors": 1,
+          "repairs": 4,
+          "heals": 0,
+          "investigations": 0,
+          "evidence": 5,
+          "sabotage": 0
+        },
+        "saboteur": {
+          "actors": 1,
+          "repairs": 0,
+          "heals": 0,
+          "investigations": 0,
+          "evidence": 0,
+          "sabotage": 3
+        },
+        "doctor": {
+          "actors": 1,
+          "repairs": 1,
+          "heals": 2,
+          "investigations": 0,
+          "evidence": 6,
+          "sabotage": 0
+        }
+      },
+      "steps": 56,
+      "saveBytes": 823014
+    },
+    {
+      "seed": 900080,
+      "difficulty": "easy",
+      "mode": "classic",
+      "policy": 3,
+      "role": "engineer",
+      "humanSpy": false,
+      "day": 2,
+      "winner": "survivors",
+      "outcome": "escape",
+      "ending": "together",
+      "spyExiled": false,
+      "shortage": false,
+      "events": [
+        "event-12",
+        "event-26",
+        "event-09",
+        "event-05"
+      ],
+      "roles": {
+        "engineer": {
+          "actors": 1,
+          "repairs": 2,
+          "heals": 0,
+          "investigations": 0,
+          "evidence": 4,
+          "sabotage": 0
+        },
+        "explorer": {
+          "actors": 2,
+          "repairs": 5,
+          "heals": 0,
+          "investigations": 0,
+          "evidence": 5,
+          "sabotage": 0
+        },
+        "investigator": {
+          "actors": 1,
+          "repairs": 0,
+          "heals": 0,
+          "investigations": 2,
+          "evidence": 0,
+          "sabotage": 0
+        },
+        "doctor": {
+          "actors": 1,
+          "repairs": 3,
+          "heals": 1,
+          "investigations": 0,
+          "evidence": 3,
+          "sabotage": 0
+        },
+        "saboteur": {
+          "actors": 1,
+          "repairs": 0,
+          "heals": 0,
+          "investigations": 0,
+          "evidence": 0,
+          "sabotage": 1
+        }
+      },
+      "steps": 37,
+      "saveBytes": 467175
+    },
+    {
+      "seed": 900081,
+      "difficulty": "easy",
+      "mode": "classic",
+      "policy": 0,
+      "role": "saboteur",
+      "humanSpy": true,
+      "day": 2,
+      "winner": "survivors",
+      "outcome": "escape",
+      "ending": "together",
+      "spyExiled": false,
+      "shortage": false,
+      "events": [
+        "event-10",
+        "event-08",
+        "event-15",
+        "event-21"
+      ],
+      "roles": {
+        "saboteur": {
+          "actors": 1,
+          "repairs": 0,
+          "heals": 0,
+          "investigations": 0,
+          "evidence": 0,
+          "sabotage": 4
+        },
+        "explorer": {
+          "actors": 2,
+          "repairs": 6,
+          "heals": 0,
+          "investigations": 0,
+          "evidence": 3,
+          "sabotage": 0
+        },
+        "engineer": {
+          "actors": 1,
+          "repairs": 4,
+          "heals": 0,
+          "investigations": 0,
+          "evidence": 6,
+          "sabotage": 0
+        },
+        "doctor": {
+          "actors": 1,
+          "repairs": 2,
+          "heals": 0,
+          "investigations": 0,
+          "evidence": 2,
+          "sabotage": 0
+        },
+        "investigator": {
+          "actors": 1,
+          "repairs": 1,
+          "heals": 0,
+          "investigations": 1,
+          "evidence": 4,
+          "sabotage": 0
+        }
+      },
+      "steps": 37,
+      "saveBytes": 496551
+    },
+    {
+      "seed": 900082,
+      "difficulty": "easy",
+      "mode": "classic",
+      "policy": 1,
+      "role": "saboteur",
+      "humanSpy": true,
+      "day": 2,
+      "winner": "survivors",
+      "outcome": "escape",
+      "ending": "together",
+      "spyExiled": false,
+      "shortage": false,
+      "events": [
+        "event-21",
+        "event-46",
+        "event-09"
+      ],
+      "roles": {
+        "saboteur": {
+          "actors": 1,
+          "repairs": 0,
+          "heals": 0,
+          "investigations": 0,
+          "evidence": 0,
+          "sabotage": 2
+        },
+        "explorer": {
+          "actors": 2,
+          "repairs": 5,
+          "heals": 0,
+          "investigations": 0,
+          "evidence": 2,
+          "sabotage": 0
+        },
+        "investigator": {
+          "actors": 1,
+          "repairs": 3,
+          "heals": 0,
+          "investigations": 0,
+          "evidence": 1,
+          "sabotage": 0
+        },
+        "doctor": {
+          "actors": 1,
+          "repairs": 1,
+          "heals": 0,
+          "investigations": 0,
+          "evidence": 1,
+          "sabotage": 0
+        },
+        "engineer": {
+          "actors": 1,
+          "repairs": 3,
+          "heals": 0,
+          "investigations": 0,
+          "evidence": 2,
+          "sabotage": 0
+        }
+      },
+      "steps": 23,
+      "saveBytes": 290648
+    },
+    {
+      "seed": 900083,
+      "difficulty": "easy",
+      "mode": "classic",
+      "policy": 2,
+      "role": "investigator",
+      "humanSpy": false,
+      "day": 2,
+      "winner": "survivors",
+      "outcome": "escape",
+      "ending": "together",
+      "spyExiled": false,
+      "shortage": false,
+      "events": [
+        "event-09",
+        "event-03",
+        "event-20",
+        "event-35"
+      ],
+      "roles": {
+        "investigator": {
+          "actors": 1,
+          "repairs": 0,
+          "heals": 0,
+          "investigations": 2,
+          "evidence": 10,
+          "sabotage": 0
+        },
+        "engineer": {
+          "actors": 1,
+          "repairs": 4,
+          "heals": 0,
+          "investigations": 0,
+          "evidence": 4,
+          "sabotage": 0
+        },
+        "explorer": {
+          "actors": 2,
+          "repairs": 3,
+          "heals": 0,
+          "investigations": 0,
+          "evidence": 6,
+          "sabotage": 0
+        },
+        "saboteur": {
+          "actors": 1,
+          "repairs": 0,
+          "heals": 0,
+          "investigations": 0,
+          "evidence": 0,
+          "sabotage": 2
+        },
+        "doctor": {
+          "actors": 1,
+          "repairs": 2,
+          "heals": 0,
+          "investigations": 0,
+          "evidence": 0,
+          "sabotage": 0
+        }
+      },
+      "steps": 38,
+      "saveBytes": 548345
+    },
+    {
+      "seed": 900084,
+      "difficulty": "easy",
+      "mode": "classic",
+      "policy": 3,
+      "role": "saboteur",
+      "humanSpy": true,
+      "day": 3,
+      "winner": "survivors",
+      "outcome": "escape",
+      "ending": "together",
+      "spyExiled": false,
+      "shortage": false,
+      "events": [
+        "event-08",
+        "event-11",
+        "event-33",
+        "event-18",
+        "event-24"
+      ],
+      "roles": {
+        "saboteur": {
+          "actors": 1,
+          "repairs": 0,
+          "heals": 0,
+          "investigations": 0,
+          "evidence": 1,
+          "sabotage": 2
+        },
+        "explorer": {
+          "actors": 2,
+          "repairs": 7,
+          "heals": 0,
+          "investigations": 0,
+          "evidence": 4,
+          "sabotage": 0
+        },
+        "engineer": {
+          "actors": 1,
+          "repairs": 2,
+          "heals": 0,
+          "investigations": 0,
+          "evidence": 2,
+          "sabotage": 0
+        },
+        "investigator": {
+          "actors": 1,
+          "repairs": 2,
+          "heals": 0,
+          "investigations": 2,
+          "evidence": 3,
+          "sabotage": 0
+        },
+        "doctor": {
+          "actors": 1,
+          "repairs": 0,
+          "heals": 0,
+          "investigations": 0,
+          "evidence": 0,
+          "sabotage": 0
+        }
+      },
+      "steps": 42,
+      "saveBytes": 512346
+    },
+    {
+      "seed": 900085,
+      "difficulty": "easy",
+      "mode": "classic",
+      "policy": 0,
+      "role": "explorer",
+      "humanSpy": false,
+      "day": 2,
+      "winner": "survivors",
+      "outcome": "exposed",
+      "ending": "captured",
+      "spyExiled": true,
+      "shortage": false,
+      "events": [
+        "event-14",
+        "event-25",
+        "event-03",
+        "event-46"
+      ],
+      "roles": {
+        "explorer": {
+          "actors": 2,
+          "repairs": 6,
+          "heals": 0,
+          "investigations": 0,
+          "evidence": 6,
+          "sabotage": 0
+        },
+        "investigator": {
+          "actors": 1,
+          "repairs": 2,
+          "heals": 0,
+          "investigations": 2,
+          "evidence": 4,
+          "sabotage": 0
+        },
+        "doctor": {
+          "actors": 1,
+          "repairs": 0,
+          "heals": 1,
+          "investigations": 0,
+          "evidence": 0,
+          "sabotage": 0
+        },
+        "saboteur": {
+          "actors": 1,
+          "repairs": 0,
+          "heals": 0,
+          "investigations": 0,
+          "evidence": 1,
+          "sabotage": 2
+        },
+        "engineer": {
+          "actors": 1,
+          "repairs": 2,
+          "heals": 0,
+          "investigations": 0,
+          "evidence": 2,
+          "sabotage": 0
+        }
+      },
+      "steps": 39,
+      "saveBytes": 480556
+    },
+    {
+      "seed": 900086,
+      "difficulty": "easy",
+      "mode": "classic",
+      "policy": 1,
+      "role": "investigator",
+      "humanSpy": false,
+      "day": 3,
+      "winner": "survivors",
+      "outcome": "escape",
+      "ending": "together",
+      "spyExiled": false,
+      "shortage": false,
+      "events": [
+        "event-07",
+        "event-25",
+        "event-15",
+        "event-30",
+        "event-09"
+      ],
+      "roles": {
+        "investigator": {
+          "actors": 1,
+          "repairs": 5,
+          "heals": 0,
+          "investigations": 0,
+          "evidence": 0,
+          "sabotage": 0
+        },
+        "doctor": {
+          "actors": 1,
+          "repairs": 1,
+          "heals": 1,
+          "investigations": 0,
+          "evidence": 3,
+          "sabotage": 0
+        },
+        "explorer": {
+          "actors": 2,
+          "repairs": 4,
+          "heals": 0,
+          "investigations": 0,
+          "evidence": 4,
+          "sabotage": 0
+        },
+        "saboteur": {
+          "actors": 1,
+          "repairs": 0,
+          "heals": 0,
+          "investigations": 0,
+          "evidence": 0,
+          "sabotage": 2
+        },
+        "engineer": {
+          "actors": 1,
+          "repairs": 3,
+          "heals": 0,
+          "investigations": 0,
+          "evidence": 0,
+          "sabotage": 0
+        }
+      },
+      "steps": 43,
+      "saveBytes": 472372
+    },
+    {
+      "seed": 900087,
+      "difficulty": "easy",
+      "mode": "classic",
+      "policy": 2,
+      "role": "doctor",
+      "humanSpy": false,
+      "day": 2,
+      "winner": "survivors",
+      "outcome": "escape",
+      "ending": "research",
+      "spyExiled": false,
+      "shortage": false,
+      "events": [
+        "event-07",
+        "event-46",
+        "event-15",
+        "event-10"
+      ],
+      "roles": {
+        "doctor": {
+          "actors": 1,
+          "repairs": 2,
+          "heals": 0,
+          "investigations": 0,
+          "evidence": 10,
+          "sabotage": 0
+        },
+        "explorer": {
+          "actors": 2,
+          "repairs": 2,
+          "heals": 0,
+          "investigations": 0,
+          "evidence": 6,
+          "sabotage": 0
+        },
+        "saboteur": {
+          "actors": 1,
+          "repairs": 0,
+          "heals": 0,
+          "investigations": 0,
+          "evidence": 2,
+          "sabotage": 1
+        },
+        "engineer": {
+          "actors": 1,
+          "repairs": 3,
+          "heals": 0,
+          "investigations": 0,
+          "evidence": 2,
+          "sabotage": 0
+        },
+        "investigator": {
+          "actors": 1,
+          "repairs": 1,
+          "heals": 0,
+          "investigations": 1,
+          "evidence": 0,
+          "sabotage": 0
+        }
+      },
+      "steps": 37,
+      "saveBytes": 533981
+    },
+    {
+      "seed": 900088,
+      "difficulty": "easy",
+      "mode": "classic",
+      "policy": 3,
+      "role": "saboteur",
+      "humanSpy": true,
+      "day": 2,
+      "winner": "survivors",
+      "outcome": "escape",
+      "ending": "together",
+      "spyExiled": false,
+      "shortage": false,
+      "events": [
+        "event-07",
+        "event-21",
+        "event-03"
+      ],
+      "roles": {
+        "saboteur": {
+          "actors": 1,
+          "repairs": 0,
+          "heals": 0,
+          "investigations": 0,
+          "evidence": 1,
+          "sabotage": 1
+        },
+        "explorer": {
+          "actors": 2,
+          "repairs": 3,
+          "heals": 0,
+          "investigations": 0,
+          "evidence": 2,
+          "sabotage": 0
+        },
+        "doctor": {
+          "actors": 1,
+          "repairs": 2,
+          "heals": 0,
+          "investigations": 0,
+          "evidence": 1,
+          "sabotage": 0
+        },
+        "engineer": {
+          "actors": 1,
+          "repairs": 3,
+          "heals": 0,
+          "investigations": 0,
+          "evidence": 2,
+          "sabotage": 0
+        },
+        "investigator": {
+          "actors": 1,
+          "repairs": 0,
+          "heals": 0,
+          "investigations": 1,
+          "evidence": 1,
+          "sabotage": 0
+        }
+      },
+      "steps": 24,
+      "saveBytes": 289196
+    },
+    {
+      "seed": 900089,
+      "difficulty": "easy",
+      "mode": "classic",
+      "policy": 0,
+      "role": "investigator",
+      "humanSpy": false,
+      "day": 3,
+      "winner": "survivors",
+      "outcome": "escape",
+      "ending": "together",
+      "spyExiled": false,
+      "shortage": false,
+      "events": [
+        "event-07",
+        "event-46",
+        "event-13",
+        "event-25",
+        "event-31"
+      ],
+      "roles": {
+        "investigator": {
+          "actors": 1,
+          "repairs": 1,
+          "heals": 0,
+          "investigations": 2,
+          "evidence": 2,
+          "sabotage": 0
+        },
+        "saboteur": {
+          "actors": 1,
+          "repairs": 0,
+          "heals": 0,
+          "investigations": 0,
+          "evidence": 2,
+          "sabotage": 3
+        },
+        "explorer": {
+          "actors": 2,
+          "repairs": 3,
+          "heals": 0,
+          "investigations": 0,
+          "evidence": 6,
+          "sabotage": 0
+        },
+        "engineer": {
+          "actors": 1,
+          "repairs": 5,
+          "heals": 0,
+          "investigations": 0,
+          "evidence": 2,
+          "sabotage": 0
+        },
+        "doctor": {
+          "actors": 1,
+          "repairs": 3,
+          "heals": 0,
+          "investigations": 0,
+          "evidence": 4,
+          "sabotage": 0
+        }
+      },
+      "steps": 42,
+      "saveBytes": 550023
+    },
+    {
+      "seed": 900090,
+      "difficulty": "easy",
+      "mode": "classic",
+      "policy": 1,
+      "role": "explorer",
+      "humanSpy": false,
+      "day": 3,
+      "winner": "survivors",
+      "outcome": "escape",
+      "ending": "together",
+      "spyExiled": false,
+      "shortage": false,
+      "events": [
+        "event-24",
+        "event-21",
+        "event-18",
+        "event-44",
+        "event-01"
+      ],
+      "roles": {
+        "explorer": {
+          "actors": 2,
+          "repairs": 6,
+          "heals": 0,
+          "investigations": 0,
+          "evidence": 5,
+          "sabotage": 0
+        },
+        "doctor": {
+          "actors": 1,
+          "repairs": 3,
+          "heals": 0,
+          "investigations": 0,
+          "evidence": 0,
+          "sabotage": 0
+        },
+        "investigator": {
+          "actors": 1,
+          "repairs": 0,
+          "heals": 0,
+          "investigations": 2,
+          "evidence": 0,
+          "sabotage": 0
+        },
+        "engineer": {
+          "actors": 1,
+          "repairs": 4,
+          "heals": 0,
+          "investigations": 0,
+          "evidence": 2,
+          "sabotage": 0
+        },
+        "saboteur": {
+          "actors": 1,
+          "repairs": 0,
+          "heals": 0,
+          "investigations": 0,
+          "evidence": 0,
+          "sabotage": 3
+        }
+      },
+      "steps": 43,
+      "saveBytes": 463685
+    },
+    {
+      "seed": 900091,
+      "difficulty": "easy",
+      "mode": "classic",
+      "policy": 2,
+      "role": "explorer",
+      "humanSpy": false,
+      "day": 1,
+      "winner": "survivors",
+      "outcome": "exposed",
+      "ending": "captured",
+      "spyExiled": true,
+      "shortage": false,
+      "events": [
+        "event-20",
+        "event-11"
+      ],
+      "roles": {
+        "explorer": {
+          "actors": 2,
+          "repairs": 1,
+          "heals": 0,
+          "investigations": 0,
+          "evidence": 6,
+          "sabotage": 0
+        },
+        "doctor": {
+          "actors": 1,
+          "repairs": 1,
+          "heals": 0,
+          "investigations": 0,
+          "evidence": 1,
+          "sabotage": 0
+        },
+        "investigator": {
+          "actors": 1,
+          "repairs": 1,
+          "heals": 0,
+          "investigations": 1,
+          "evidence": 1,
+          "sabotage": 0
+        },
+        "engineer": {
+          "actors": 1,
+          "repairs": 1,
+          "heals": 0,
+          "investigations": 0,
+          "evidence": 2,
+          "sabotage": 0
+        },
+        "saboteur": {
+          "actors": 1,
+          "repairs": 0,
+          "heals": 0,
+          "investigations": 0,
+          "evidence": 0,
+          "sabotage": 0
+        }
+      },
+      "steps": 20,
+      "saveBytes": 270040
+    },
+    {
+      "seed": 900092,
+      "difficulty": "easy",
+      "mode": "classic",
+      "policy": 3,
+      "role": "explorer",
+      "humanSpy": false,
+      "day": 2,
+      "winner": "survivors",
+      "outcome": "escape",
+      "ending": "together",
+      "spyExiled": false,
+      "shortage": false,
+      "events": [
+        "event-07",
+        "event-24",
+        "event-27",
+        "event-18"
+      ],
+      "roles": {
+        "explorer": {
+          "actors": 2,
+          "repairs": 3,
+          "heals": 0,
+          "investigations": 0,
+          "evidence": 3,
+          "sabotage": 0
+        },
+        "engineer": {
+          "actors": 1,
+          "repairs": 4,
+          "heals": 0,
+          "investigations": 0,
+          "evidence": 4,
+          "sabotage": 0
+        },
+        "saboteur": {
+          "actors": 1,
+          "repairs": 0,
+          "heals": 0,
+          "investigations": 0,
+          "evidence": 2,
+          "sabotage": 1
+        },
+        "investigator": {
+          "actors": 1,
+          "repairs": 0,
+          "heals": 0,
+          "investigations": 1,
+          "evidence": 2,
+          "sabotage": 0
+        },
+        "doctor": {
+          "actors": 1,
+          "repairs": 1,
+          "heals": 0,
+          "investigations": 0,
+          "evidence": 4,
+          "sabotage": 0
+        }
+      },
+      "steps": 37,
+      "saveBytes": 490212
+    },
+    {
+      "seed": 900093,
+      "difficulty": "easy",
+      "mode": "classic",
+      "policy": 0,
+      "role": "saboteur",
+      "humanSpy": true,
+      "day": 3,
+      "winner": "saboteur",
+      "outcome": "saboteur",
+      "ending": "covert",
+      "spyExiled": false,
+      "shortage": false,
+      "events": [
+        "event-46",
+        "event-07",
+        "event-28",
+        "event-19",
+        "event-09",
+        "event-21"
+      ],
+      "roles": {
+        "saboteur": {
+          "actors": 1,
+          "repairs": 0,
+          "heals": 0,
+          "investigations": 0,
+          "evidence": 0,
+          "sabotage": 6
+        },
+        "doctor": {
+          "actors": 1,
+          "repairs": 2,
+          "heals": 1,
+          "investigations": 0,
+          "evidence": 6,
+          "sabotage": 0
+        },
+        "engineer": {
+          "actors": 1,
+          "repairs": 6,
+          "heals": 0,
+          "investigations": 0,
+          "evidence": 3,
+          "sabotage": 0
+        },
+        "investigator": {
+          "actors": 1,
+          "repairs": 0,
+          "heals": 0,
+          "investigations": 3,
+          "evidence": 0,
+          "sabotage": 0
+        },
+        "explorer": {
+          "actors": 2,
+          "repairs": 3,
+          "heals": 0,
+          "investigations": 0,
+          "evidence": 11,
+          "sabotage": 0
+        }
+      },
+      "steps": 58,
+      "saveBytes": 701628
+    },
+    {
+      "seed": 900094,
+      "difficulty": "easy",
+      "mode": "classic",
+      "policy": 1,
+      "role": "explorer",
+      "humanSpy": false,
+      "day": 3,
+      "winner": "survivors",
+      "outcome": "escape",
+      "ending": "together",
+      "spyExiled": false,
+      "shortage": false,
+      "events": [
+        "event-39",
+        "event-24",
+        "event-15",
+        "event-07",
+        "event-25"
+      ],
+      "roles": {
+        "explorer": {
+          "actors": 2,
+          "repairs": 8,
+          "heals": 0,
+          "investigations": 0,
+          "evidence": 6,
+          "sabotage": 0
+        },
+        "engineer": {
+          "actors": 1,
+          "repairs": 4,
+          "heals": 0,
+          "investigations": 0,
+          "evidence": 2,
+          "sabotage": 0
+        },
+        "saboteur": {
+          "actors": 1,
+          "repairs": 0,
+          "heals": 0,
+          "investigations": 0,
+          "evidence": 1,
+          "sabotage": 3
+        },
+        "investigator": {
+          "actors": 1,
+          "repairs": 0,
+          "heals": 0,
+          "investigations": 2,
+          "evidence": 4,
+          "sabotage": 0
+        },
+        "doctor": {
+          "actors": 1,
+          "repairs": 2,
+          "heals": 1,
+          "investigations": 0,
+          "evidence": 0,
+          "sabotage": 0
+        }
+      },
+      "steps": 42,
+      "saveBytes": 507744
+    },
+    {
+      "seed": 900095,
+      "difficulty": "easy",
+      "mode": "classic",
+      "policy": 2,
+      "role": "explorer",
+      "humanSpy": false,
+      "day": 1,
+      "winner": "survivors",
+      "outcome": "escape",
+      "ending": "together",
+      "spyExiled": false,
+      "shortage": false,
+      "events": [
+        "event-11",
+        "event-39"
+      ],
+      "roles": {
+        "explorer": {
+          "actors": 2,
+          "repairs": 2,
+          "heals": 0,
+          "investigations": 0,
+          "evidence": 5,
+          "sabotage": 0
+        },
+        "engineer": {
+          "actors": 1,
+          "repairs": 2,
+          "heals": 0,
+          "investigations": 0,
+          "evidence": 2,
+          "sabotage": 0
+        },
+        "investigator": {
+          "actors": 1,
+          "repairs": 1,
+          "heals": 0,
+          "investigations": 0,
+          "evidence": 1,
+          "sabotage": 0
+        },
+        "saboteur": {
+          "actors": 1,
+          "repairs": 0,
+          "heals": 0,
+          "investigations": 0,
+          "evidence": 0,
+          "sabotage": 0
+        },
+        "doctor": {
+          "actors": 1,
+          "repairs": 1,
+          "heals": 0,
+          "investigations": 0,
+          "evidence": 0,
+          "sabotage": 0
+        }
+      },
+      "steps": 18,
+      "saveBytes": 265119
+    },
+    {
+      "seed": 900096,
+      "difficulty": "easy",
+      "mode": "classic",
+      "policy": 3,
+      "role": "doctor",
+      "humanSpy": false,
+      "day": 3,
+      "winner": "survivors",
+      "outcome": "escape",
+      "ending": "together",
+      "spyExiled": false,
+      "shortage": false,
+      "events": [
+        "event-46",
+        "event-25",
+        "event-23",
+        "event-27",
+        "event-11"
+      ],
+      "roles": {
+        "doctor": {
+          "actors": 1,
+          "repairs": 1,
+          "heals": 1,
+          "investigations": 0,
+          "evidence": 5,
+          "sabotage": 0
+        },
+        "explorer": {
+          "actors": 2,
+          "repairs": 5,
+          "heals": 0,
+          "investigations": 0,
+          "evidence": 7,
+          "sabotage": 0
+        },
+        "saboteur": {
+          "actors": 1,
+          "repairs": 0,
+          "heals": 0,
+          "investigations": 0,
+          "evidence": 1,
+          "sabotage": 3
+        },
+        "investigator": {
+          "actors": 1,
+          "repairs": 2,
+          "heals": 0,
+          "investigations": 2,
+          "evidence": 2,
+          "sabotage": 0
+        },
+        "engineer": {
+          "actors": 1,
+          "repairs": 4,
+          "heals": 0,
+          "investigations": 0,
+          "evidence": 0,
+          "sabotage": 0
+        }
+      },
+      "steps": 41,
+      "saveBytes": 548830
+    },
+    {
+      "seed": 900097,
+      "difficulty": "easy",
+      "mode": "classic",
+      "policy": 0,
+      "role": "explorer",
+      "humanSpy": false,
+      "day": 3,
+      "winner": "saboteur",
+      "outcome": "saboteur",
+      "ending": "interference",
+      "spyExiled": false,
+      "shortage": false,
+      "events": [
+        "event-05",
+        "event-14",
+        "event-39",
+        "event-20",
+        "event-19",
+        "event-35"
+      ],
+      "roles": {
+        "explorer": {
+          "actors": 2,
+          "repairs": 4,
+          "heals": 0,
+          "investigations": 0,
+          "evidence": 11,
+          "sabotage": 0
+        },
+        "saboteur": {
+          "actors": 1,
+          "repairs": 0,
+          "heals": 0,
+          "investigations": 0,
+          "evidence": 1,
+          "sabotage": 4
+        },
+        "doctor": {
+          "actors": 1,
+          "repairs": 3,
+          "heals": 0,
+          "investigations": 0,
+          "evidence": 2,
+          "sabotage": 0
+        },
+        "investigator": {
+          "actors": 1,
+          "repairs": 2,
+          "heals": 0,
+          "investigations": 3,
+          "evidence": 6,
+          "sabotage": 0
+        },
+        "engineer": {
+          "actors": 1,
+          "repairs": 3,
+          "heals": 0,
+          "investigations": 0,
+          "evidence": 0,
+          "sabotage": 0
+        }
+      },
+      "steps": 58,
+      "saveBytes": 721636
+    },
+    {
+      "seed": 900098,
+      "difficulty": "easy",
+      "mode": "classic",
+      "policy": 1,
+      "role": "engineer",
+      "humanSpy": false,
+      "day": 2,
+      "winner": "survivors",
+      "outcome": "exposed",
+      "ending": "captured",
+      "spyExiled": true,
+      "shortage": false,
+      "events": [
+        "event-16",
+        "event-20",
+        "event-09",
+        "event-30"
+      ],
+      "roles": {
+        "engineer": {
+          "actors": 1,
+          "repairs": 4,
+          "heals": 0,
+          "investigations": 0,
+          "evidence": 4,
+          "sabotage": 0
+        },
+        "explorer": {
+          "actors": 2,
+          "repairs": 3,
+          "heals": 0,
+          "investigations": 0,
+          "evidence": 6,
+          "sabotage": 0
+        },
+        "saboteur": {
+          "actors": 1,
+          "repairs": 0,
+          "heals": 0,
+          "investigations": 0,
+          "evidence": 0,
+          "sabotage": 2
+        },
+        "doctor": {
+          "actors": 1,
+          "repairs": 0,
+          "heals": 0,
+          "investigations": 0,
+          "evidence": 0,
+          "sabotage": 0
+        },
+        "investigator": {
+          "actors": 1,
+          "repairs": 2,
+          "heals": 0,
+          "investigations": 2,
+          "evidence": 0,
+          "sabotage": 0
+        }
+      },
+      "steps": 39,
+      "saveBytes": 448082
+    },
+    {
+      "seed": 900099,
+      "difficulty": "easy",
+      "mode": "classic",
+      "policy": 2,
+      "role": "doctor",
+      "humanSpy": false,
+      "day": 2,
+      "winner": "survivors",
+      "outcome": "escape",
+      "ending": "together",
+      "spyExiled": false,
+      "shortage": false,
+      "events": [
+        "event-05",
+        "event-20",
+        "event-46",
+        "event-11"
+      ],
+      "roles": {
+        "doctor": {
+          "actors": 1,
+          "repairs": 2,
+          "heals": 0,
+          "investigations": 0,
+          "evidence": 10,
+          "sabotage": 0
+        },
+        "saboteur": {
+          "actors": 1,
+          "repairs": 0,
+          "heals": 0,
+          "investigations": 0,
+          "evidence": 2,
+          "sabotage": 2
+        },
+        "engineer": {
+          "actors": 1,
+          "repairs": 3,
+          "heals": 0,
+          "investigations": 0,
+          "evidence": 0,
+          "sabotage": 0
+        },
+        "explorer": {
+          "actors": 2,
+          "repairs": 7,
+          "heals": 0,
+          "investigations": 0,
+          "evidence": 6,
+          "sabotage": 0
+        },
+        "investigator": {
+          "actors": 1,
+          "repairs": 0,
+          "heals": 0,
+          "investigations": 1,
+          "evidence": 0,
+          "sabotage": 0
+        }
+      },
+      "steps": 39,
+      "saveBytes": 524133
+    },
+    {
+      "seed": 900100,
+      "difficulty": "easy",
+      "mode": "classic",
+      "policy": 3,
+      "role": "engineer",
+      "humanSpy": false,
+      "day": 3,
+      "winner": "saboteur",
+      "outcome": "saboteur",
+      "ending": "covert",
+      "spyExiled": false,
+      "shortage": false,
+      "events": [
+        "event-02",
+        "event-08",
+        "event-34",
+        "event-24",
+        "event-07",
+        "event-19"
+      ],
+      "roles": {
+        "engineer": {
+          "actors": 1,
+          "repairs": 3,
+          "heals": 0,
+          "investigations": 0,
+          "evidence": 10,
+          "sabotage": 0
+        },
+        "saboteur": {
+          "actors": 1,
+          "repairs": 0,
+          "heals": 0,
+          "investigations": 0,
+          "evidence": 1,
+          "sabotage": 3
+        },
+        "doctor": {
+          "actors": 1,
+          "repairs": 1,
+          "heals": 0,
+          "investigations": 0,
+          "evidence": 0,
+          "sabotage": 0
+        },
+        "explorer": {
+          "actors": 2,
+          "repairs": 5,
+          "heals": 0,
+          "investigations": 0,
+          "evidence": 3,
+          "sabotage": 0
+        },
+        "investigator": {
+          "actors": 1,
+          "repairs": 1,
+          "heals": 0,
+          "investigations": 3,
+          "evidence": 6,
+          "sabotage": 0
+        }
+      },
+      "steps": 58,
+      "saveBytes": 727259
+    }
+  ],
+  "peakHeap": 219686584,
+  "summary": {
+    "games": 100,
+    "wins": {
+      "survivors": 93,
+      "saboteur": 7,
+      "none": 0
+    },
+    "averageDay": 2.39,
+    "spyExiled": 21,
+    "shortages": 0,
+    "humanSpy": 16
+  },
+  "byDifficulty": {
+    "easy": {
+      "games": 100,
+      "wins": {
+        "survivors": 93,
+        "saboteur": 7,
+        "none": 0
+      },
+      "averageDay": 2.39,
+      "spyExiled": 21,
+      "shortages": 0,
+      "humanSpy": 16
+    },
+    "normal": {
+      "games": 0,
+      "wins": {
+        "survivors": 0,
+        "saboteur": 0,
+        "none": 0
+      },
+      "averageDay": 0,
+      "spyExiled": 0,
+      "shortages": 0,
+      "humanSpy": 0
+    },
+    "hard": {
+      "games": 0,
+      "wins": {
+        "survivors": 0,
+        "saboteur": 0,
+        "none": 0
+      },
+      "averageDay": 0,
+      "spyExiled": 0,
+      "shortages": 0,
+      "humanSpy": 0
+    }
+  },
+  "byMode": {
+    "classic": {
+      "games": 100,
+      "wins": {
+        "survivors": 93,
+        "saboteur": 7,
+        "none": 0
+      },
+      "averageDay": 2.39,
+      "spyExiled": 21,
+      "shortages": 0,
+      "humanSpy": 16
+    },
+    "storm": {
+      "games": 0,
+      "wins": {
+        "survivors": 0,
+        "saboteur": 0,
+        "none": 0
+      },
+      "averageDay": 0,
+      "spyExiled": 0,
+      "shortages": 0,
+      "humanSpy": 0
+    },
+    "scarcity": {
+      "games": 0,
+      "wins": {
+        "survivors": 0,
+        "saboteur": 0,
+        "none": 0
+      },
+      "averageDay": 0,
+      "spyExiled": 0,
+      "shortages": 0,
+      "humanSpy": 0
+    },
+    "darkness": {
+      "games": 0,
+      "wins": {
+        "survivors": 0,
+        "saboteur": 0,
+        "none": 0
+      },
+      "averageDay": 0,
+      "spyExiled": 0,
+      "shortages": 0,
+      "humanSpy": 0
+    },
+    "broken": {
+      "games": 0,
+      "wins": {
+        "survivors": 0,
+        "saboteur": 0,
+        "none": 0
+      },
+      "averageDay": 0,
+      "spyExiled": 0,
+      "shortages": 0,
+      "humanSpy": 0
+    },
+    "distrust": {
+      "games": 0,
+      "wins": {
+        "survivors": 0,
+        "saboteur": 0,
+        "none": 0
+      },
+      "averageDay": 0,
+      "spyExiled": 0,
+      "shortages": 0,
+      "humanSpy": 0
+    },
+    "deadline": {
+      "games": 0,
+      "wins": {
+        "survivors": 0,
+        "saboteur": 0,
+        "none": 0
+      },
+      "averageDay": 0,
+      "spyExiled": 0,
+      "shortages": 0,
+      "humanSpy": 0
+    }
+  },
+  "elapsedSeconds": 87.18444609999999,
+  "transitionMs": {
+    "count": 4007,
+    "mean": 9.605302869977622,
+    "p95": 26.36200000000099,
+    "max": 50.309800000002724
+  }
+}

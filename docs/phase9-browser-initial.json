@@ -1,0 +1,30 @@
+{
+  "note": "Initial browser harness did not resolve the valid pending story event before opening feedback. Fixed harness to choose through UI.",
+  "results": [
+    {
+      "name": "Chrome",
+      "status": "FAIL",
+      "error": "locator.click: Timeout 30000ms exceeded."
+    },
+    {
+      "name": "Edge",
+      "status": "FAIL",
+      "error": "locator.click: Timeout 30000ms exceeded."
+    },
+    {
+      "name": "Firefox",
+      "status": "FAIL",
+      "error": "locator.click: Timeout 30000ms exceeded."
+    },
+    {
+      "name": "Android Chrome emulation",
+      "status": "FAIL",
+      "error": "locator.click: Timeout 30000ms exceeded."
+    },
+    {
+      "name": "iPhone WebKit emulation",
+      "status": "NOT TESTED",
+      "reason": "Browser engine not installed/launch unavailable"
+    }
+  ]
+}

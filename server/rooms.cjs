@@ -33,7 +33,7 @@ class Rooms{
     else{room.deadline=Date.now()+this.config.resultMs;room.timer=setTimeout(()=>this.safe(room,()=>{room.state=game.state.onlineAdvance(room.state);if(room.state.outcome)this.afterResolution(room);else this.openTurn(room);}),this.config.resultMs);}
     room.timer?.unref();this.publish(room);
   }
-  safe(room,fn){try{fn();}catch{clearTimeout(room.timer);room.deadline=0;room.error='서버가 상태 오류를 감지해 이 방의 진행을 멈췄습니다. 새 방을 만들어 주세요.';this.publish(room);console.error('Room transition failed');}}
+  safe(room,fn){try{fn();}catch{clearTimeout(room.timer);room.deadline=0;room.error='서버가 상태 오류를 감지해 이 방의 진행을 멈췄습니다. 새 방을 만들어 주세요.';this.publish(room);console.error(JSON.stringify({code:'room-transition-failed',id:crypto.randomUUID(),day:room.state?.day,phase:room.state?.phase}));}}
   append(room,entry){room.chat.push({id:++room.chatSeq,time:Date.now(),...entry});if(room.chat.length>200)room.chat.shift();}
   system(room,message){this.append(room,{type:'system',nickname:'시스템',text:message});}
   chat(socket,data){const {room,m}=this.member(socket);if(room.state&&(room.state.outcome||room.state.phase!=='discussion'||room.state.resolved||!active(room.state.players.find(p=>p.id===m.seat))))throw Error('활동 중인 참가자만 토론 단계에 채팅할 수 있습니다.');const now=Date.now();m.chatTimes=m.chatTimes.filter(t=>t>now-5000);if(m.chatTimes.length>=5)throw Error('메시지가 너무 빠릅니다. 잠시 기다려 주세요.');const message=text(data.text,1,400,'메시지');m.chatTimes.push(now);this.append(room,{type:'chat',memberId:m.id,seat:m.seat,nickname:m.nickname,text:message});this.publish(room);return {};}

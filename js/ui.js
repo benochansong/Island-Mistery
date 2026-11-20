@@ -78,6 +78,7 @@
       const won = view.outcome.winner === (self.role === 'saboteur' ? 'saboteur' : 'survivors');
       $('ending-panel').innerHTML = `<p class="eyebrow">${view.day}일차 · 생존 기록 종료</p><h2 id="ending-title">${escape(view.outcome.title)}</h2><p>${escape(view.outcome.description)}</p><strong>${view.outcome.winner === 'none' ? '어느 진영도 승리하지 못했습니다.' : won ? '당신의 진영이 승리했습니다.' : '당신의 진영이 패배했습니다.'}</strong><p class="small muted">나의 상태: ${!self.isAlive ? '사망' : self.isExiled ? '추방' : '생존'} · 나의 직업: ${C.roles[self.role].name}</p><button class="primary" id="ending-new-button">새 기록 시작</button>`;
     }
+    game.beta?.observe(view);
   }
   function characterDetails(view, p) {
     if (p.id === view.self.id) return '<details class="character-details"><summary>나의 목표</summary><p>' + escape(view.self.personalGoal) + '</p></details>';

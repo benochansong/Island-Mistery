@@ -1,0 +1,11 @@
+// Explicit release allowlist: no saves, profiles, credentials, test data, or node_modules.
+const fs=require('node:fs'),path=require('node:path'),crypto=require('node:crypto'),{execFileSync}=require('node:child_process');
+const root=path.resolve(__dirname,'..'),release=path.join(root,'releases'),name='island-mystery-beta-0.9.0',dest=path.join(release,name);
+if(fs.existsSync(dest))throw Error('Release folder exists; preserve it and choose a new version before rebuilding.');
+fs.mkdirSync(dest,{recursive:true});const entries=[];
+function copy(relative){const source=path.join(root,relative);if(fs.statSync(source).isDirectory()){for(const file of fs.readdirSync(source).sort())copy(relative+'/'+file);return;}const bytes=fs.readFileSync(source),target=path.join(dest,relative);fs.mkdirSync(path.dirname(target),{recursive:true});fs.writeFileSync(target,bytes);entries.push({file:relative,bytes:bytes.length,sha256:crypto.createHash('sha256').update(bytes).digest('hex')});}
+for(const file of ['index.html','js','css','assets','server','package.json','package-lock.json','start-beta.cmd','.env.example','scripts/start-beta.cjs','docs/PHASE9-TESTER-GUIDE.md','docs/PHASE9-OPERATIONS.md','docs/PHASE9-FEEDBACK-ANALYSIS.md'])copy(file);
+fs.writeFileSync(path.join(dest,'RELEASE-MANIFEST.json'),JSON.stringify({version:'0.9.0',stage:'local-closed-beta-candidate',files:entries},null,2)+'\n');
+const archive=path.join(release,name+'.zip');if(fs.existsSync(archive))throw Error('Archive exists; refusing to overwrite.');
+if(process.platform==='win32')execFileSync('powershell.exe',['-NoProfile','-NonInteractive','-Command',"Compress-Archive -LiteralPath $env:ISLAND_BETA_FOLDER -DestinationPath $env:ISLAND_BETA_ARCHIVE -CompressionLevel Optimal"],{env:{...process.env,ISLAND_BETA_FOLDER:dest,ISLAND_BETA_ARCHIVE:archive},stdio:'inherit'});else execFileSync('zip',['-qr',archive,name],{cwd:release,stdio:'inherit'});
+const result={version:'0.9.0',files:entries.length,uncompressedBytes:entries.reduce((n,e)=>n+e.bytes,0),archive:path.relative(root,archive),archiveBytes:fs.statSync(archive).size,sha256:crypto.createHash('sha256').update(fs.readFileSync(archive)).digest('hex')};fs.writeFileSync(path.join(root,'docs/phase9-build.json'),JSON.stringify(result,null,2)+'\n');console.log(JSON.stringify(result,null,2));

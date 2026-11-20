@@ -1,0 +1,5 @@
+baseline 25/100; completed=25; errors=0
+baseline 50/100; completed=50; errors=0
+baseline 75/100; completed=75; errors=0
+baseline 100/100; completed=100; errors=0
+{"completed":100,"errors":0,"summary":{"games":100,"wins":{"survivors":93,"saboteur":7,"none":0},"averageDay":2.39,"spyExiled":21,"shortages":0,"humanSpy":16},"seconds":87.18444609999999}

@@ -1,0 +1,163 @@
+{
+  "errors": [],
+  "chatRetainsGameDOM": true,
+  "latency": [
+    1.3999999985098839,
+    1.5,
+    1.6000000014901161,
+    1.700000001117587,
+    1.700000001117587,
+    1.800000000745058,
+    1.8999999985098839,
+    1.8999999985098839,
+    1.900000000372529,
+    2.599999999627471
+  ],
+  "assets": [
+    {
+      "asset": "assets/backgrounds/island-cinematic.jpg",
+      "bytes": 377099,
+      "status": 200
+    },
+    {
+      "asset": "assets/characters/survivors-expressions.jpg",
+      "bytes": 366627,
+      "status": 200
+    },
+    {
+      "asset": "assets/island.svg",
+      "bytes": 4581,
+      "status": 200
+    },
+    {
+      "asset": "assets/audio/bgm/menu.wav",
+      "bytes": 529244,
+      "status": 200
+    },
+    {
+      "asset": "assets/audio/bgm/morning.wav",
+      "bytes": 529244,
+      "status": 200
+    },
+    {
+      "asset": "assets/audio/bgm/afternoon.wav",
+      "bytes": 529244,
+      "status": 200
+    },
+    {
+      "asset": "assets/audio/bgm/discussion.wav",
+      "bytes": 529244,
+      "status": 200
+    },
+    {
+      "asset": "assets/audio/bgm/voting.wav",
+      "bytes": 529244,
+      "status": 200
+    },
+    {
+      "asset": "assets/audio/bgm/night.wav",
+      "bytes": 529244,
+      "status": 200
+    },
+    {
+      "asset": "assets/audio/bgm/survivors.wav",
+      "bytes": 529244,
+      "status": 200
+    },
+    {
+      "asset": "assets/audio/bgm/saboteur.wav",
+      "bytes": 529244,
+      "status": 200
+    },
+    {
+      "asset": "assets/audio/bgm/none.wav",
+      "bytes": 529244,
+      "status": 200
+    },
+    {
+      "asset": "assets/audio/sfx/click.wav",
+      "bytes": 4012,
+      "status": 200
+    },
+    {
+      "asset": "assets/audio/sfx/map.wav",
+      "bytes": 10628,
+      "status": 200
+    },
+    {
+      "asset": "assets/audio/sfx/explore.wav",
+      "bytes": 28708,
+      "status": 200
+    },
+    {
+      "asset": "assets/audio/sfx/resource.wav",
+      "bytes": 15478,
+      "status": 200
+    },
+    {
+      "asset": "assets/audio/sfx/clue.wav",
+      "bytes": 39734,
+      "status": 200
+    },
+    {
+      "asset": "assets/audio/sfx/danger.wav",
+      "bytes": 26504,
+      "status": 200
+    },
+    {
+      "asset": "assets/audio/sfx/unlock.wav",
+      "bytes": 48554,
+      "status": 200
+    },
+    {
+      "asset": "assets/audio/sfx/dialogue.wav",
+      "bytes": 5336,
+      "status": 200
+    },
+    {
+      "asset": "assets/audio/sfx/evidence.wav",
+      "bytes": 28708,
+      "status": 200
+    },
+    {
+      "asset": "assets/audio/sfx/vote.wav",
+      "bytes": 13274,
+      "status": 200
+    },
+    {
+      "asset": "assets/audio/sfx/result.wav",
+      "bytes": 39734,
+      "status": 200
+    },
+    {
+      "asset": "assets/audio/sfx/exile.wav",
+      "bytes": 48554,
+      "status": 200
+    },
+    {
+      "asset": "assets/audio/sfx/repair.wav",
+      "bytes": 13274,
+      "status": 200
+    },
+    {
+      "asset": "assets/audio/sfx/damage.wav",
+      "bytes": 22094,
+      "status": 200
+    },
+    {
+      "asset": "assets/audio/sfx/win.wav",
+      "bytes": 61782,
+      "status": 200
+    },
+    {
+      "asset": "assets/audio/sfx/lose.wav",
+      "bytes": 61782,
+      "status": 200
+    }
+  ],
+  "roundTripMs": {
+    "samples": 10,
+    "mean": 1.8,
+    "p95": 2.599999999627471
+  }
+}

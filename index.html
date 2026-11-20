@@ -5,7 +5,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <meta name="theme-color" content="#101d20">
   <meta name="description" content="ISLAND MYSTERY: 사라진 섬의 비밀. 여섯 생존자와 미지의 섬을 탐색하는 추리·생존 게임 개발판.">
-  <title>ISLAND MYSTERY · 사라진 섬의 비밀</title>
+  <title>ISLAND MYSTERY — BETA 0.9.0</title>
   <link rel="icon" href="assets/compass.svg" type="image/svg+xml">
   <link rel="stylesheet" href="css/styles.css">
   <link rel="stylesheet" href="css/cinematic.css">
@@ -36,6 +36,9 @@
   <script defer src="js/app.js"></script>
   <script defer src="js/online.js"></script>
   <script defer src="js/growth-ui.js"></script>
+  <script defer src="js/beta-core.js"></script>
+  <script defer src="js/beta-ui.js"></script>
+  <link rel="stylesheet" href="css/beta.css">
   <link rel="stylesheet" href="css/growth.css">
   <link rel="stylesheet" href="css/online.css">
 </head>
@@ -43,10 +46,10 @@
   <a class="skip-link" href="#main">본문으로 건너뛰기</a>
   <header class="topbar">
     <a class="brand" href="#" id="home-link" aria-label="시작 화면으로"><img src="assets/compass.svg" alt="" width="34" height="34"><span>ISLAND MYSTERY<small>사라진 섬의 비밀</small></span></a>
-    <div class="header-right"><span class="edition">사라진 섬의 기록</span><button class="quiet" id="codex-button">미스터리 도감</button><button class="quiet" id="settings-button">설정</button><button class="quiet" id="help-button">게임 소개</button></div>
+    <div class="header-right"><span class="edition beta-badge">BETA 0.9.0</span><button class="quiet" id="codex-button">미스터리 도감</button><button class="quiet" id="settings-button">설정</button><button class="quiet" id="help-button">게임 소개</button></div>
   </header>
 
-  <nav class="growth-nav" aria-label="성장과 기록"><button class="quiet" data-growth="profile">내 프로필</button><button class="quiet" data-growth="achievements">도전과제</button><button class="quiet" data-growth="history">게임 전적</button><button class="quiet" data-growth="leaderboard">랭킹</button><button class="quiet" data-growth="challenges">특별 도전</button><button class="quiet" data-growth="rewards">보상 및 꾸미기</button></nav>
+  <nav class="growth-nav" aria-label="성장과 기록"><button class="quiet" id="beta-tutorial-open">10단계 시작 안내</button><button class="quiet" id="beta-open">베타 의견·오류 신고</button><button class="quiet" data-growth="profile">내 프로필</button><button class="quiet" data-growth="achievements">도전과제</button><button class="quiet" data-growth="history">게임 전적</button><button class="quiet" data-growth="leaderboard">랭킹</button><button class="quiet" data-growth="challenges">특별 도전</button><button class="quiet" data-growth="rewards">보상 및 꾸미기</button></nav>
   <main id="main">
     <section id="welcome" class="welcome" aria-labelledby="welcome-title">
       <div class="welcome-art" aria-hidden="true"></div><div class="mist-layer" aria-hidden="true"></div>
@@ -111,5 +114,14 @@
   </form><div class="dialog-actions"><button id="fullscreen-button" class="secondary">전체화면 전환</button><button id="reset-settings" class="quiet">설정 초기화</button></div><p id="fullscreen-status" class="small" role="status"></p><p id="settings-status" class="small" role="status"></p></dialog>
   <dialog id="online-role-dialog"><p class="eyebrow">당신에게만 전달된 정보</p><h2 id="online-role-title"></h2><p id="online-role-description"></p><button id="online-role-close" class="primary">확인 · 비밀을 지키기</button></dialog><dialog id="online-leave-dialog"><h2>방을 나갈까요?</h2><p>명시적으로 나가면 재접속 권한이 해제됩니다. 접속 중인 동료는 계속 진행하며 빈 행동은 시간 초과 후 기본 처리됩니다.</p><button id="online-leave-confirm" class="primary">방 나가기</button><button id="online-leave-cancel" class="secondary">머무르기</button></dialog><noscript><p class="notice">게임을 실행하려면 브라우저에서 JavaScript를 허용해 주세요.</p></noscript>
 <dialog id="growth-dialog" class="growth-dialog"><div class="dialog-top"><h2 id="growth-title">내 프로필</h2><select id="growth-source" aria-label="기록 구분"><option value="single">싱글플레이 · 이 브라우저</option><option value="online">온라인 · 서버 게스트</option></select><button class="quiet" id="growth-close">닫기</button></div><div id="ranking-filters" hidden><label>구분 <select id="ranking-kind"><option value="casual">캐주얼 · AI 혼합 포함</option><option value="competitive">경쟁 조건 · 인간 6명</option></select></label><label>역할 <select id="ranking-role"></select></label></div><p id="growth-error" class="error" role="alert"></p><div id="growth-content"></div></dialog><div id="growth-toast" role="status" hidden></div>
+
+<dialog id="beta-tutorial" aria-labelledby="beta-tutorial-title"><h2 id="beta-tutorial-title"></h2><p id="beta-tutorial-copy"></p><p id="beta-tutorial-context" class="small"></p><button id="beta-tutorial-prev" class="quiet">이전 안내</button> <button id="beta-tutorial-next" class="primary">다음 안내</button> <button id="beta-tutorial-skip" class="quiet">건너뛰기 · 닫기</button></dialog>
+<dialog id="beta-feedback" class="beta-dialog" aria-labelledby="beta-title"><button class="quiet dialog-close" id="beta-close">닫기</button><h2 id="beta-title">BETA 0.9.0 · 의견과 오류 신고</h2>
+<p class="notice">목적: 게임 오류 재현과 사용성 개선. 의견·선택한 점수·버전·모드·날짜/단계·브라우저 종류·화면 크기를 <strong>이 브라우저에만</strong> 저장합니다. 자동 전송하지 않습니다. 최대 50개, 30일 보관 후 다음 접속 시 삭제합니다. 직접 내보낸 파일은 사용자가 관리하세요. 이름·연락처·비밀번호·토큰·채팅·비밀 역할을 의견에 적지 마세요.</p>
+<form id="beta-form"><div class="beta-grid"><label>종류<select id="beta-type" name="type"><option value="survey">플레이 평가 설문</option><option value="bug">버그 신고</option><option value="suggestion">개선 제안</option></select></label><label>분류<select name="category"><option value="A">A · 반드시 수정할 오류</option><option value="B" selected>B · 사용성</option><option value="C">C · 밸런스</option><option value="D">D · 그래픽/사운드</option><option value="E">E · 향후 콘텐츠</option></select></label><label>오류 우선순위<select name="severity"><option>P0</option><option>P1</option><option selected>P2</option><option>P3</option></select></label></div>
+<p>설문은 10항목 모두 선택하세요. 오류 신고·제안에는 점수가 필요 없습니다. 1점: 매우 낮음, 5점: 매우 높음.</p><div id="beta-ratings" class="beta-grid"></div><div id="beta-text" class="beta-grid"></div>
+<p class="small">자동 포함되는 재현 정보:</p><p id="beta-context" class="small"></p><label class="beta-check"><input type="checkbox" id="beta-diagnostics">선택: 이번 실행의 오류 종류와 단계 포함 (최대 20개, 메시지·스택·URL·토큰·채팅 제외)</label><label class="beta-check"><input type="checkbox" id="beta-consent">위 수집 항목·목적·30일 보관 및 로컬 저장에 동의합니다.</label><button class="primary" type="submit">이 브라우저에 의견 저장</button></form>
+<p id="beta-error" class="error" role="alert"></p><p id="beta-result" role="status"></p><hr><h3>내가 저장한 의견 확인·분류</h3><p id="beta-count"></p><p class="small">수정 우선순위 P0 치명적 / P1 진행·저장 / P2 기능·안내 / P3 경미. 분류와 검토 상태를 바꿀 수 있습니다. 실제 전달은 JSON 파일을 직접 공유할 때 이루어집니다.</p><div class="beta-buttons"><button class="secondary" id="beta-export">JSON 내보내기</button><button class="quiet" id="beta-delete">의견 전체 삭제</button></div><label class="beta-check"><input type="checkbox" id="beta-delete-confirm">피드백만 삭제함을 확인합니다. 게임 저장은 유지됩니다.</label><div id="beta-records"></div></dialog>
+
 </body>
 </html>

@@ -1,0 +1,43 @@
+
+> island-mystery@0.9.0 test:online
+> node --test tests/online.test.cjs tests/profiles-online.test.cjs
+
+(node:38772) ExperimentalWarning: SQLite is an experimental feature and might change at any time
+(Use `node --trace-warnings ...` to show where the warning was created)
+✔ M1: private rooms, host authorization, ready gate, capacity and host transfer (153.7331ms)
+✔ M2/F: 2 human socket clients + 4 AI complete a real game (807.3744ms)
+✔ M2/F: 3 human socket clients + 3 AI complete a real game (984.1243ms)
+✔ M2/F: 4 human socket clients + 2 AI complete a real game (1144.5017ms)
+✔ M2/F: 5 human socket clients + 1 AI complete a real game (3377.3319ms)
+✔ M2/F: 6 human socket clients + 0 AI complete a real game (3883.1805ms)
+✔ M2 security: scoped packets exclude seed, roles, AI memories and private clues (83.5924ms)
+✔ M2 idempotency: duplicate request does not grant resources, old turns and impersonation fail (36.1132ms)
+✔ M3 secret voting, exact single tally, spectator rejection and synchronized result (99.5889ms)
+✔ M3 chat: order, literal HTML, limits, block/report hooks and no semantic AI claims (22.1031ms)
+✔ M4 reconnect tokens preserve roles and queued actions; nickname cannot steal a seat (59.1601ms)
+✔ M4 timers progress disconnected players, abandoned rooms expire, rematch resets secrets (144.9753ms)
+✔ production config rejects missing/insecure origin and static server denies private files (65.6011ms)
+✔ explicit AI saboteur scenario completes; server-only starting fixture (1394.4916ms)
+✔ explicit human saboteur scenario completes; server-only starting fixture (683.7853ms)
+✔ AI planner exceptions use a legal fallback rather than hanging a room (3.3157ms)
+✔ AI-disabled lobby requires six humans; full room and stale reconnect tokens are refused (21.8077ms)
+✔ night actions apply once in seat order, investigation stays private, deadline ends day three (4.9804ms)
+✔ all human spectators automatically watch the remaining AI reach an ending (1313.0344ms)
+✔ public lobby discovery works and foreign browser origins cannot connect (24.436ms)
+✔ unstartable AI-disabled room settings and failed joins never leave orphan rooms (26.8818ms)
+✔ lobby reconnect grace preserves a seat, expires abandoned seats, and permits a replacement to start (65.0496ms)
+✔ active game disconnects retain their seat and role beyond lobby grace (49.6879ms)
+✔ beta: disconnect during voting preserves queued action and late acknowledgement retry cannot double apply (182.3791ms)
+✔ beta: disconnect during night preserves queued action and late acknowledgement retry cannot double apply (189.2854ms)
+✔ beta: invalid/ended room access and request flood are rejected without cross-room damage (662.4481ms)
+(node:38716) ExperimentalWarning: SQLite is an experimental feature and might change at any time
+(Use `node --trace-warnings ...` to show where the warning was created)
+✔ real socket results persist across server shutdown/restart; two guest profiles and ranking agree (1125.2877ms)
+ℹ tests 27
+ℹ suites 0
+ℹ pass 27
+ℹ fail 0
+ℹ cancelled 0
+ℹ skipped 0
+ℹ todo 0
+ℹ duration_ms 16028.8989

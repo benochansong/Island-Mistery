@@ -4,7 +4,7 @@
   const offlineData=game.data,onlineData=Object.freeze({...game.data,survivors:game.onlineRoster});
   const requestId=()=>Array.from(crypto.getRandomValues(new Uint8Array(16)),n=>n.toString(16).padStart(2,'0')).join('');
   let socket=null,current=null,credentials=null,selected='coast',shownRole=null,pending=false,offset=0,config=null,lastView=null;
-  let guest=null,profileReady=false,profileError=null;
+  let guest=null,profileReady=false,profileError=null,lastRenderKey=null;
   const guestKey='island-mystery.online.guest.v1';
   try{guest=JSON.parse(localStorage.getItem(guestKey));}catch{}
   try{credentials=JSON.parse(localStorage.getItem(key));}catch{}
@@ -28,7 +28,7 @@
   function growing(profile){game.growthUI?.onlineProfile(profile);}
   async function service(event,data={}){if(!['profile:get','profile:customize','leaderboard:list'].includes(event))throw Error('허용되지 않은 프로필 요청');if(!socket?.connected)await connect(true);const until=Date.now()+9000;while(!profileReady&&Date.now()<until&&!profileError)await new Promise(r=>setTimeout(r,40));if(!profileReady)throw Error(profileError||'온라인 서버 연결 불가 · 로컬 기록은 계속 사용할 수 있습니다.');return call(event,data);}
   function status(){const online=Boolean(socket?.connected);$('online-status').textContent=online?'서버 연결됨':'연결이 끊겼습니다. 자동 재접속 중…';$('online-connection').textContent=online?'● 연결됨':'○ 연결 끊김 · 자동 재접속 중';if(current?.view)renderGame();}
-  function render(snapshot){game.data=onlineData;if(current?.turnId!==snapshot.turnId)$('vote-dialog').close();if(current?.runId!==snapshot.runId){selected='coast';shownRole=null;lastView=null;}current=snapshot;pending=false;offset=Date.now()-snapshot.serverTime;document.body.dataset.online='true';$('online-forms').hidden=true;$('online-lobby').hidden=Boolean(snapshot.view);$('online-error').textContent=snapshot.error||'';$('action-error').textContent=snapshot.error||'';
+  function render(snapshot){game.data=onlineData;if(current?.turnId!==snapshot.turnId)$('vote-dialog').close();if(current?.runId!==snapshot.runId){selected='coast';shownRole=null;lastView=null;lastRenderKey=null;}current=snapshot;pending=false;offset=Date.now()-snapshot.serverTime;document.body.dataset.online='true';$('online-forms').hidden=true;$('online-lobby').hidden=Boolean(snapshot.view);$('online-error').textContent=snapshot.error||'';$('action-error').textContent=snapshot.error||'';
     $('room-title').textContent=snapshot.room.name;$('room-code').textContent=snapshot.room.code;$('room-summary').textContent=`실제 참가자 ${snapshot.room.participants.length}/${snapshot.room.maxHumans} · AI ${snapshot.room.aiCount}명 · ${snapshot.room.difficulty} · 토론 ${snapshot.room.discussionSeconds}초`;
     $('lobby-players').replaceChildren(...snapshot.room.participants.map(p=>{const li=document.createElement('li');li.textContent=`${p.id===snapshot.room.host?'방장 · ':''}${p.nickname} · ${p.connected?'접속 중':p.reconnectUntil?'재접속 대기 · 기한 후 좌석 해제':'연결 끊김'} · ${p.ready?'준비 완료':'대기'} · ${game.data.survivors.find(x=>x.id===p.seat).name}`;return li;}));
     $('lobby-reconnect-help').textContent=`대기실에서 연결이 끊기면 ${snapshot.room.lobbyReconnectSeconds}초 동안 좌석을 보관합니다. 기한이 지나면 다시 참가하세요. 진행 중인 게임은 좌석을 유지합니다.`;
@@ -40,7 +40,7 @@
     renderChat();
   }
   function scoped(){const v=JSON.parse(JSON.stringify(current.view));v.selectedLocation=selected;if(current.submitted.includes(current.seat)&&!v.acted.includes(current.seat))v.acted.push(current.seat);return v;}
-  function renderGame(){if(!current?.view)return;const v=scoped();game.ui.render(v);game.storyUI.render(v);game.presentation.render(v);game.growthUI?.game(v,current.reward,current.profile);$('online-chat').hidden=false;$('online-bar').hidden=false;$('onboarding').hidden=true;
+  function renderGame(){if(!current?.view)return;const renderKey=JSON.stringify([current.view,current.room.participants,current.room.host,current.submitted,current.waitingForEvent,selected,pending,Boolean(socket?.connected)]);if(lastRenderKey===renderKey)return;lastRenderKey=renderKey;const v=scoped();game.ui.render(v);game.storyUI.render(v);game.presentation.render(v);game.growthUI?.game(v,current.reward,current.profile);$('online-chat').hidden=false;$('online-bar').hidden=false;$('onboarding').hidden=true;
     const participants=current.room.participants;document.querySelectorAll('#survivors .survivor').forEach((el,i)=>{const member=participants.find(m=>m.seat===v.players[i].id);if(member){const line=document.createElement('p');line.className='small';line.textContent=member.nickname+(member.id===current.selfId?' · 나':'')+(member.connected?'':' · 연결 끊김');el.append(line);}});
     $('save-status').textContent='진행 중인 방은 재시작 시 삭제 · 완료 전적은 서버에 보존';if($('collection-status'))$('collection-status').textContent='온라인 결과 · 서버 게스트 전적에 정산';
     const watching=!v.self.isAlive||v.self.isExiled,submitted=current.submitted.includes(current.seat);$('action-hint').textContent=watching?'관전 중 · 행동과 생존자 채팅은 사용할 수 없습니다.':current.waitingForEvent?'사건 담당자의 선택을 기다립니다.':v.resolved?'모두의 결과를 확인하세요. 서버가 다음 단계로 이동합니다.':submitted?'행동 확정됨 · 동료를 기다립니다.':'한 가지 행동을 확정하세요. 모두 제출하면 서버가 처리합니다.';

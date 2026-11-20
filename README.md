@@ -1,6 +1,6 @@
 # ISLAND MYSTERY · 사라진 섬의 비밀
 
-HTML/CSS/JavaScript로 실행하는 한국어 생존·추리 게임입니다. **Phase 8: 레벨·30개 업적·꾸미기·전적·특별 도전 6종·신규 사건 12종과 SQLite 기반 온라인 성장 기록을 추가했습니다.** 온라인에서는 실제 참가자 2~6명과 나머지 AI가 함께 최대 3일을 플레이합니다. 기존 인간 1명 + AI 5명의 오프라인 싱글플레이도 유지합니다.
+HTML/CSS/JavaScript로 실행하는 한국어 생존·추리 게임입니다. **현재 버전은 BETA 0.9.0입니다.** `start-beta.cmd`로 별도 로컬 베타 환경을 실행하세요. [테스터 안내](docs/PHASE9-TESTER-GUIDE.md), [베타 검증 보고서](docs/PHASE9-REPORT.md), [운영·롤백 안내](docs/PHASE9-OPERATIONS.md)를 확인할 수 있습니다. 외부 배포와 실제 사용자 초대는 수행하지 않았습니다. **Phase 8: 레벨·30개 업적·꾸미기·전적·특별 도전 6종·신규 사건 12종과 SQLite 기반 온라인 성장 기록을 추가했습니다.** 온라인에서는 실제 참가자 2~6명과 나머지 AI가 함께 최대 3일을 플레이합니다. 기존 인간 1명 + AI 5명의 오프라인 싱글플레이도 유지합니다.
 
 기존 탐험·직업·자원·네 엔딩과 Phase 3의 성격·기억·토론을 유지합니다. 과거 초안은 `drafts/phase3/`에 보존하고 실제 기능은 `js/`에서 실행합니다. 온라인 대기실 안정화와 최신 멀티플레이 재검증은 [Phase 7 보완 보고서](docs/PHASE7-REPAIR-REPORT.md)를 확인하세요. 성장 기능의 검증과 한계는 [Phase 8 결과 보고서](docs/PHASE8-REPORT.md), 밸런스 기준은 [Phase 6 보고서](docs/PHASE6-REPORT.md), 사건·목표별 설명은 [콘텐츠 목록](docs/PHASE4-CONTENT.md)을 확인하세요.
 

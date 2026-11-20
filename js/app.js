@@ -23,7 +23,7 @@
       const next = game.state.transition(state, action); if (next === state) return;
       state = next; $('action-error').textContent = ''; $('event-error').textContent = ''; render(action); persist();
       if (!hadOutcome && state.outcome) { $('ending-panel').focus(); $('ending-panel').scrollIntoView({ block: 'start' }); }
-    } catch (error) { $('action-error').textContent = error.message; $('event-error').textContent = error.message; }
+    } catch (error) { game.beta?.error('action-error'); $('action-error').textContent = error.message; $('event-error').textContent = error.message; }
     finally { busy = false; }
   }
   function menu() { if (game.online?.active()) { game.online.menu(); return; } refreshWelcome(); game.ui.screen('welcome'); game.presentation.screen('welcome'); }
