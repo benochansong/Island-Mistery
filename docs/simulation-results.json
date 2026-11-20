@@ -1,0 +1,23 @@
+{
+  "games": 300,
+  "seeds": "1–300",
+  "endings": {
+    "exposed": 139,
+    "escape": 135,
+    "saboteur": 26
+  },
+  "endingDays": {
+    "1": 63,
+    "2": 146,
+    "3": 91
+  },
+  "humanSaboteur": 47,
+  "humanSurvivor": 253,
+  "maxTransitions": 30,
+  "failures": [],
+  "policies": [
+    "규칙 기반 선택",
+    "탐험·보급·기권·휴식",
+    "직업 능력 우선"
+  ]
+}
