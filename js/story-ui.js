@@ -6,7 +6,7 @@
   function render(view){
     $('story-dashboard').hidden=!view.storyEnabled;
     if(view.storyEnabled){
-      $('story-chapter').textContent=`DAY ${view.day} · ${view.chapter} · 시드 ${view.replaySeed??'이전 저장'}`;
+      $('story-chapter').textContent=`DAY ${view.day} · ${view.chapter}${view.mode==='online'?' · 온라인 공동 기록':' · 시드 '+(view.replaySeed??'이전 저장')}`;
       const m=view.self.mission,definition=D.missions.find(x=>x.id===m.id);
       $('mission-info').innerHTML=`<p class="eyebrow">나만의 비밀 임무</p><h2>${esc(definition.title)}</h2><p>${esc(definition.description)}</p>${['protect','trust','escapeTogether'].includes(m.id)?`<p>대상: ${esc(name(m.target))}</p>`:''}<strong>${m.complete?'달성 · 추가 점수 100':'진행 중 · '+m.progress}</strong><p class="small muted">진영의 승리 조건은 그대로 유지됩니다. 완료 여부는 결말까지의 실제 기록으로 평가합니다.</p>`;
       $('hidden-sites').innerHTML=D.sites.map(site=>`<article><strong>${view.unlockedSites.includes(site.id)?'◇':'▧'} ${esc(site.name)}</strong><p>${view.unlockedSites.includes(site.id)?view.self.visitedSites.includes(site.id)?'탐험 완료':'발견됨 · 부모 지역 선택 후 탐험':'잠김 · 해당 지역을 반복 탐험하거나 사건의 단서를 찾으세요'}</p><button class="quiet" data-hidden-parent="${site.parent}" ${view.outcome||view.pendingEvent?'disabled':''}>${esc(game.discussion.place(site.parent))} 선택</button></article>`).join('');

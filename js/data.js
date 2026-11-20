@@ -19,4 +19,6 @@
     ],
     resources: [ { id: 'food', name: '식량', icon: '◒', unit: '인분' }, { id: 'water', name: '식수', icon: '◈', unit: '회분' }, { id: 'medicine', name: '의약품', icon: '✚', unit: '개' }, { id: 'parts', name: '부품', icon: '⚙', unit: '개' } ]
   });
+  // Online seats need a shared name; only the per-view "나" badge identifies the viewer.
+  game.onlineRoster = Object.freeze(game.data.survivors.map(p => p.id === 'player' ? { ...p, name: '첫 생존자', initials: '1' } : p));
 })(globalThis);

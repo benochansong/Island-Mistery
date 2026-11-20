@@ -8,7 +8,7 @@
   const clamp = n => Math.max(0, Math.min(100, n));
   const active = p => p.isAlive && !p.isExiled;
   const stamp = () => new Date().toISOString();
-  function random(s) { s.rng = (Math.imul(s.rng, 1664525) + 1013904223) >>> 0; return s.rng / 4294967296; }
+  function random(s) { if (s.online) return game.onlineRandom(); s.rng = (Math.imul(s.rng, 1664525) + 1013904223) >>> 0; return s.rng / 4294967296; }
   function integer(s, min, max) { return min + Math.floor(random(s) * (max - min + 1)); }
   function shuffle(s, values) {
     const result = values.slice();
@@ -21,12 +21,17 @@
     if (s.log.length > 500) s.log.shift();
     return entry;
   }
-  function create(now = stamp(), seed = Math.floor(Math.random() * 4294967296), difficulty = C.defaultDifficulty, storyEnabled = true) {
+  function create(now = stamp(), seed = Math.floor(Math.random() * 4294967296), difficulty = C.defaultDifficulty, storyEnabled = true, onlineHumans = null) {
     if (!Object.hasOwn(C.difficulty, difficulty)) throw new Error("알 수 없는 난이도입니다.");
     const s = { version: 4, initialSeed: seed >>> 0, difficulty, discussionRound: 0, statements: [], facts: [], invalidDecisions: 0, day: 1, phase: 'morning', rng: seed >>> 0, sequence: 0,
       selectedLocation: 'coast', plannedLocation: null, resources: { ...C.initialResources }, facilities: { radio: 0, boat: 0 },
       players: game.data.survivors.map((p, i) => ({ ...p, isHuman: i === 0, isAlive: true, isExiled: false, health: 100, location: 'camp' })),
       secrets: {}, log: [], acted: [], resolved: false, votes: {}, outcome: null, lastResults: [], eventsSeen: [], settledDays: [], updatedAt: now };
+    if (onlineHumans) {
+      if (onlineHumans.length < 2 || onlineHumans.length > 6 || new Set(onlineHumans).size !== onlineHumans.length || !onlineHumans.every(id => ids.includes(id))) throw new Error('온라인 참가 구성이 올바르지 않습니다.');
+      s.online = { humans: onlineHumans.slice(), locations: Object.fromEntries(ids.map(id => [id, 'coast'])) };
+      s.players.forEach(p => { p.isHuman = onlineHumans.includes(p.id); });
+    }
     const loyal = ['explorer', 'doctor', 'engineer', 'investigator'];
     const roles = shuffle(s, [...loyal, loyal[integer(s, 0, 3)], 'saboteur']);
     s.players.forEach((p, i) => {
@@ -48,9 +53,10 @@
       if (!obj(s.resources) || !game.data.resources.every(r => int(s.resources[r.id], 0, 10000))) return false;
       if (!obj(s.facilities) || !Object.keys(C.repairGoals).every(key => int(s.facilities[key], 0, C.repairGoals[key]))) return false;
       if (!Array.isArray(s.players) || s.players.length !== 6 || !obj(s.secrets) || Object.keys(s.secrets).length !== 6) return false;
+      if (s.online && (!Array.isArray(s.online.humans) || s.online.humans.length < 2 || s.online.humans.length > 6 || new Set(s.online.humans).size !== s.online.humans.length || !s.online.humans.every(id => ids.includes(id)) || !ids.every(id => places.includes(s.online.locations[id])))) return false;
       for (let i = 0; i < 6; i++) {
         const p = s.players[i], base = game.data.survivors[i], secret = s.secrets[base.id];
-        if (!obj(p) || p.id !== base.id || p.name !== base.name || p.personality !== base.personality || p.initials !== base.initials || p.isHuman !== (i === 0) || typeof p.isAlive !== 'boolean' || typeof p.isExiled !== 'boolean' || !int(p.health, 0, 100) || p.isAlive !== (p.health > 0) || !['camp', ...places].includes(p.location)) return false;
+        if (!obj(p) || p.id !== base.id || p.name !== base.name || p.personality !== base.personality || p.initials !== base.initials || p.isHuman !== (s.online ? s.online.humans.includes(p.id) : i === 0) || typeof p.isAlive !== 'boolean' || typeof p.isExiled !== 'boolean' || !int(p.health, 0, 100) || p.isAlive !== (p.health > 0) || !['camp', ...places].includes(p.location)) return false;
         if (!obj(secret) || !Object.hasOwn(C.roles, secret.role) || !text(secret.secretGoal) || !obj(secret.trust) || !obj(secret.suspicion)) return false;
         if (!ids.filter(id => id !== p.id).every(id => int(secret.trust[id], 0, 100) && int(secret.suspicion[id], 0, 100))) return false;
         if (!Array.isArray(secret.inventory) || secret.inventory.length > 50 || !secret.inventory.every(item => text(item, 100))) return false;
@@ -76,7 +82,7 @@
     if (!ids.includes(playerId)) throw new Error('알 수 없는 인물입니다.');
     const visible = e => e.audience === 'public' || e.audience === playerId;
     const publicPlayer = p => ({ id: p.id, name: p.name, personality: p.personality, initials: p.initials, isHuman: p.isHuman, isAlive: p.isAlive, isExiled: p.isExiled, health: p.health, location: p.id === playerId ? p.location : null });
-    return clone({ ...game.story.view(s, playerId), day: s.day, phase: s.phase, selectedLocation: playerId === 'player' ? s.selectedLocation : 'coast', plannedLocation: playerId === 'player' ? s.plannedLocation : null, difficulty: s.difficulty, discussionRound: s.discussionRound, statements: s.statements,
+    return clone({ ...game.story.view(s, playerId), day: s.day, phase: s.phase, selectedLocation: s.online ? s.online.locations[playerId] : playerId === 'player' ? s.selectedLocation : 'coast', plannedLocation: playerId === 'player' ? s.plannedLocation : null, difficulty: s.difficulty, discussionRound: s.discussionRound, statements: s.statements,
       resources: s.resources, facilities: s.facilities, players: s.players.map(publicPlayer),
       self: { ...publicPlayer(s.players.find(p => p.id === playerId)), ...s.secrets[playerId] },
       acted: s.acted, resolved: s.resolved, votes: s.resolved ? s.votes : {}, outcome: s.outcome,
@@ -272,6 +278,7 @@
     }
   }
   function transition(state, action, now = stamp()) {
+    if (state.online) throw new Error('온라인 상태는 서버에서만 진행합니다.');
     if (!valid(state)) throw new Error('유효하지 않은 게임 상태입니다.');
     if (state.outcome) throw new Error('게임이 종료되었습니다. 새 기록을 시작해 주세요.');
     if (state.story.pending && action.type !== 'EVENT_CHOICE') throw new Error('발생한 사건의 선택을 먼저 완료해 주세요.');
@@ -334,5 +341,47 @@
     if (s.outcome) game.story.finish(s, record, () => random(s));
     return valid(s) ? s : null;
   }
-  game.state = Object.freeze({ create, valid, migrate, transition, viewFor, availableActions });
+  // Server adapter uses the same action, perception, settlement and ending rules.
+  function onlineRound(state, submissions, now = stamp()) {
+    if (!valid(state) || !state.online || state.resolved || state.outcome || state.story.pending) throw new Error('진행할 수 없는 온라인 단계입니다.');
+    const s = clone(state), start = s.sequence; s.updatedAt = now; s.pendingReports = [];
+    for (const p of s.players.filter(active)) {
+      if (s.outcome) break;
+      if (submissions[p.id]?.kind === 'explore' && places.includes(submissions[p.id].location)) s.online.locations[p.id] = submissions[p.id].location;
+      if (submissions[p.id]?.kind === 'explore_hidden') { const site=game.storyData.sites.find(site=>site.id===submissions[p.id].siteId); if(site)s.online.locations[p.id]=site.parent; }
+      const view = viewFor(s, p.id, true), options = availableActions(view);
+      let action = submissions[p.id];
+      if (!p.isHuman) {
+        try {
+          const plan = game.ai.plan(view, () => random(s)); action = plan.action;
+          s.secrets[p.id].decisionHistory.push({day:s.day,phase:s.phase,round:s.discussionRound,kind:action.kind,reason:plan.reason,strategy:plan.strategy});
+        } catch { s.invalidDecisions++; action=null; }
+      }
+      const permitted = action && options.some(a => matches(a.kind === 'explore' && places.includes(action.location) && !(s.story.closed[action.location] > s.day) ? {...a,location:action.location} : a, action));
+      if (!permitted) {
+        action = options.find(a => a.kind === 'rest' || a.kind === 'discuss' || a.kind === 'vote' && a.target === null);
+        record(s, '미제출 또는 처리 순서 중 비용·대상이 변경되어 기본 행동을 적용했다.', p.id, p.id, 'online-default');
+      }
+      if (!action) throw new Error('기본 행동을 찾을 수 없습니다.');
+      perform(s, p, action); checkEnd(s);
+    }
+    settleTurn(s);
+    for (const text of s.pendingReports) record(s,text); delete s.pendingReports;
+    game.story.maybe(s,{type:'ACT'},record,()=>random(s)); checkEnd(s); game.story.finish(s,record,()=>random(s));
+    s.lastResults=s.log.filter(e=>e.id>start);
+    if (!valid(s)) throw new Error('온라인 결과 검증 실패.'); return s;
+  }
+  function onlineAdvance(state, choice = null, now = stamp()) {
+    if (!valid(state) || !state.online || state.outcome || !state.resolved) throw new Error('온라인 단계 이동 불가.');
+    const s=clone(state),start=s.sequence;s.updatedAt=now;
+    if (s.story.pending) {
+      if (!choice || choice.actorId !== s.story.pending.actorId) throw new Error('사건 선택 권한이 없습니다.');
+      game.story.resolve(s,choice.instance,choice.choiceId,record,()=>random(s));checkEnd(s);
+    } else if(s.phase==='discussion'&&s.discussionRound<4){s.discussionRound++;s.acted=[];s.resolved=false;}
+    else if(s.phase==='night')nightSettlement(s);
+    else{s.phase=C.phases[C.phases.indexOf(s.phase)+1];s.acted=[];s.resolved=false;s.votes={};}
+    game.story.finish(s,record,()=>random(s));s.lastResults=s.log.filter(e=>e.id>start);
+    if(!valid(s))throw new Error('온라인 단계 검증 실패.');return s;
+  }
+  game.state = Object.freeze({ create, valid, migrate, transition, viewFor, availableActions, onlineRound, onlineAdvance });
 })(globalThis);

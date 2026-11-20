@@ -3,7 +3,7 @@ const http = require('node:http');
 const fs = require('node:fs');
 const path = require('node:path');
 const root = path.resolve(__dirname, '..');
-const allowed = new Set(['index.html', 'css/styles.css', 'css/cinematic.css', 'assets/island.svg', 'assets/compass.svg', ...['data', 'config', 'social', 'dialogue', 'discussion', 'perception', 'schema', 'story-data', 'story', 'missions', 'codex', 'ai', 'state', 'storage', 'ui', 'story-ui', 'assets', 'settings', 'audio', 'presentation-model', 'presentation', 'app'].map(name => `js/${name}.js`)]);
+const allowed = new Set(['index.html', 'css/styles.css', 'css/cinematic.css', 'css/online.css', 'assets/island.svg', 'assets/compass.svg', ...['data', 'config', 'social', 'dialogue', 'discussion', 'perception', 'schema', 'story-data', 'story', 'missions', 'codex', 'ai', 'state', 'storage', 'ui', 'story-ui', 'assets', 'settings', 'audio', 'presentation-model', 'presentation', 'app', 'online'].map(name => `js/${name}.js`)]);
 for (const folder of ['assets/backgrounds','assets/characters','assets/audio/bgm','assets/audio/sfx']) for (const file of fs.readdirSync(path.join(root,folder))) allowed.add(folder+'/'+file);
 const types = { '.html': 'text/html; charset=utf-8', '.css': 'text/css; charset=utf-8', '.js': 'text/javascript; charset=utf-8', '.svg': 'image/svg+xml', '.jpg': 'image/jpeg', '.wav': 'audio/wav' };
 http.createServer((req, res) => {

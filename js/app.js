@@ -15,6 +15,7 @@
     if (state || ['loaded', 'migrated', 'invalid'].includes(saved.status)) $('restart-dialog').showModal(); else newGame();
   }
   function dispatch(action) {
+    if (game.online?.active()) { game.online.dispatch(action); return; }
     if (!state || busy) return;
     busy = true;
     try {
@@ -25,7 +26,7 @@
     } catch (error) { $('action-error').textContent = error.message; $('event-error').textContent = error.message; }
     finally { busy = false; }
   }
-  function menu() { refreshWelcome(); game.ui.screen('welcome'); game.presentation.screen('welcome'); }
+  function menu() { if (game.online?.active()) { game.online.menu(); return; } refreshWelcome(); game.ui.screen('welcome'); game.presentation.screen('welcome'); }
   $('new-button').addEventListener('click', requestNew);
   $('restart-button').addEventListener('click', requestNew);
   $('ending-panel').addEventListener('click', event => { if (event.target.closest('#ending-new-button')) requestNew(); });
@@ -51,7 +52,7 @@
   $('cancel-vote').addEventListener('click', () => { pendingVote = null; $('vote-dialog').close(); });
   $('skip-discussion').addEventListener('click', () => dispatch({ type: 'SKIP_DISCUSSION' }));
   $('next-button').addEventListener('click', () => dispatch({ type: 'NEXT' }));
-  $('log-filter').addEventListener('change', () => { if (state) game.ui.renderJournal(game.state.viewFor(state)); });
+  $('log-filter').addEventListener('change', () => { if (game.online?.active()) game.online.journal(); else if (state) game.ui.renderJournal(game.state.viewFor(state)); });
   $('menu-button').addEventListener('click', menu);
   $('home-link').addEventListener('click', event => { event.preventDefault(); menu(); });
   $('help-button').addEventListener('click', () => $('help-dialog').showModal());
@@ -64,6 +65,7 @@
   $('codex-button').addEventListener('click', game.storyUI.codex);
   $('close-codex').addEventListener('click', () => $('codex-dialog').close());
   game.presentation.init(location => dispatch({type: 'SELECT_LOCATION', location}));
-  game.settings.subscribe(() => { if (state) game.ui.renderResults(game.state.viewFor(state)); });
+  game.settings.subscribe(() => { if (game.online?.active()) game.online.results(); else if (state) game.ui.renderResults(game.state.viewFor(state)); });
+  $('settings-form').addEventListener('submit', event => event.preventDefault());
   refreshWelcome();
 })(globalThis);

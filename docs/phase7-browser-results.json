@@ -1,0 +1,35 @@
+{
+  "browsers": [
+    "157.0.8103.79",
+    "159.0"
+  ],
+  "errors": [],
+  "runs": [
+    {
+      "roles": [
+        "탐험가",
+        "조사관"
+      ],
+      "steps": 119,
+      "chat": true,
+      "started": 1795153483680,
+      "ending": "엔딩 A · 바다 너머로",
+      "seconds": 33.435
+    },
+    {
+      "roles": [
+        "기술자",
+        "탐험가"
+      ],
+      "steps": 123,
+      "chat": true,
+      "started": 1795153522740,
+      "ending": "엔딩 A · 바다 너머로",
+      "seconds": 31.637
+    }
+  ],
+  "reconnect": true,
+  "chat": true,
+  "privatePackets": true,
+  "rematch": true
+}

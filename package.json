@@ -3,9 +3,9 @@
     "@playwright/test": "1.65.1"
   },
   "name": "island-mystery",
-  "version": "0.6.0",
+  "version": "0.7.0",
   "private": true,
-  "description": "Offline Korean social deduction and mystery survival game",
+  "description": "Korean social deduction survival game with offline and authoritative online multiplayer",
   "engines": {
     "node": ">=22"
   },
@@ -17,6 +17,15 @@
     "test:browser:features": "node tests/browser-phase6-features.cjs",
     "assets:audio": "node scripts/generate-audio.cjs",
     "test:browser:scenes": "node tests/browser-phase5-scenes.cjs",
-    "test:strategies": "node tests/strategies-phase6.cjs"
+    "test:strategies": "node tests/strategies-phase6.cjs",
+    "start": "node server/index.cjs",
+    "test:online": "node --test tests/online.test.cjs",
+    "test:browser:online": "node tests/browser-phase7.cjs",
+    "test:browser:online-features": "node tests/browser-phase7-features.cjs",
+    "test:browser:offline-regression": "node tests/browser-phase7-offline.cjs"
+  },
+  "dependencies": {
+    "socket.io": "4.8.3",
+    "socket.io-client": "4.8.3"
   }
 }

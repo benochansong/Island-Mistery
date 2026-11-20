@@ -12,11 +12,11 @@
       }
       if (raw.length > 5000000) return { status: 'invalid', state: null };
       const state = JSON.parse(raw);
-      return game.state.valid(state) ? { status: 'loaded', state } : { status: 'invalid', state: null };
+      return !state?.online && game.state.valid(state) ? { status: 'loaded', state } : { status: 'invalid', state: null };
     } catch (error) { return { status: error instanceof SyntaxError ? 'invalid' : 'unavailable', state: null }; }
   }
   function save(state) {
-    if (!game.state.valid(state)) return false;
+    if (state?.online || !game.state.valid(state)) return false;
     try { root.localStorage.setItem(KEY, JSON.stringify(state)); return true; } catch { return false; }
   }
   game.storage = Object.freeze({ load, save });
