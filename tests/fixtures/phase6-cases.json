@@ -1,0 +1,2102 @@
+[
+  {
+    "group": "survivor",
+    "seed": 1,
+    "difficulty": "easy",
+    "role": "doctor",
+    "policy": "cooperate"
+  },
+  {
+    "group": "survivor",
+    "seed": 2,
+    "difficulty": "normal",
+    "role": "doctor",
+    "policy": "evidence"
+  },
+  {
+    "group": "survivor",
+    "seed": 3,
+    "difficulty": "hard",
+    "role": "explorer",
+    "policy": "survival"
+  },
+  {
+    "group": "survivor",
+    "seed": 4,
+    "difficulty": "easy",
+    "role": "explorer",
+    "policy": "escape"
+  },
+  {
+    "group": "survivor",
+    "seed": 6,
+    "difficulty": "normal",
+    "role": "engineer",
+    "policy": "cooperate"
+  },
+  {
+    "group": "survivor",
+    "seed": 7,
+    "difficulty": "hard",
+    "role": "engineer",
+    "policy": "evidence"
+  },
+  {
+    "group": "survivor",
+    "seed": 9,
+    "difficulty": "easy",
+    "role": "engineer",
+    "policy": "survival"
+  },
+  {
+    "group": "survivor",
+    "seed": 11,
+    "difficulty": "normal",
+    "role": "investigator",
+    "policy": "escape"
+  },
+  {
+    "group": "survivor",
+    "seed": 12,
+    "difficulty": "hard",
+    "role": "investigator",
+    "policy": "cooperate"
+  },
+  {
+    "group": "survivor",
+    "seed": 13,
+    "difficulty": "easy",
+    "role": "doctor",
+    "policy": "evidence"
+  },
+  {
+    "group": "survivor",
+    "seed": 14,
+    "difficulty": "normal",
+    "role": "doctor",
+    "policy": "survival"
+  },
+  {
+    "group": "survivor",
+    "seed": 16,
+    "difficulty": "hard",
+    "role": "engineer",
+    "policy": "escape"
+  },
+  {
+    "group": "survivor",
+    "seed": 17,
+    "difficulty": "easy",
+    "role": "investigator",
+    "policy": "cooperate"
+  },
+  {
+    "group": "survivor",
+    "seed": 18,
+    "difficulty": "normal",
+    "role": "engineer",
+    "policy": "evidence"
+  },
+  {
+    "group": "survivor",
+    "seed": 19,
+    "difficulty": "hard",
+    "role": "engineer",
+    "policy": "survival"
+  },
+  {
+    "group": "survivor",
+    "seed": 21,
+    "difficulty": "easy",
+    "role": "engineer",
+    "policy": "escape"
+  },
+  {
+    "group": "survivor",
+    "seed": 22,
+    "difficulty": "normal",
+    "role": "investigator",
+    "policy": "cooperate"
+  },
+  {
+    "group": "survivor",
+    "seed": 23,
+    "difficulty": "hard",
+    "role": "explorer",
+    "policy": "evidence"
+  },
+  {
+    "group": "survivor",
+    "seed": 24,
+    "difficulty": "easy",
+    "role": "explorer",
+    "policy": "survival"
+  },
+  {
+    "group": "survivor",
+    "seed": 25,
+    "difficulty": "normal",
+    "role": "doctor",
+    "policy": "escape"
+  },
+  {
+    "group": "survivor",
+    "seed": 26,
+    "difficulty": "hard",
+    "role": "doctor",
+    "policy": "cooperate"
+  },
+  {
+    "group": "survivor",
+    "seed": 27,
+    "difficulty": "easy",
+    "role": "explorer",
+    "policy": "evidence"
+  },
+  {
+    "group": "survivor",
+    "seed": 28,
+    "difficulty": "normal",
+    "role": "investigator",
+    "policy": "survival"
+  },
+  {
+    "group": "survivor",
+    "seed": 29,
+    "difficulty": "hard",
+    "role": "doctor",
+    "policy": "escape"
+  },
+  {
+    "group": "survivor",
+    "seed": 30,
+    "difficulty": "easy",
+    "role": "engineer",
+    "policy": "cooperate"
+  },
+  {
+    "group": "survivor",
+    "seed": 31,
+    "difficulty": "normal",
+    "role": "engineer",
+    "policy": "evidence"
+  },
+  {
+    "group": "survivor",
+    "seed": 32,
+    "difficulty": "hard",
+    "role": "explorer",
+    "policy": "survival"
+  },
+  {
+    "group": "survivor",
+    "seed": 33,
+    "difficulty": "easy",
+    "role": "explorer",
+    "policy": "escape"
+  },
+  {
+    "group": "survivor",
+    "seed": 34,
+    "difficulty": "normal",
+    "role": "doctor",
+    "policy": "cooperate"
+  },
+  {
+    "group": "survivor",
+    "seed": 35,
+    "difficulty": "hard",
+    "role": "explorer",
+    "policy": "evidence"
+  },
+  {
+    "group": "survivor",
+    "seed": 37,
+    "difficulty": "easy",
+    "role": "doctor",
+    "policy": "survival"
+  },
+  {
+    "group": "survivor",
+    "seed": 38,
+    "difficulty": "normal",
+    "role": "doctor",
+    "policy": "escape"
+  },
+  {
+    "group": "survivor",
+    "seed": 39,
+    "difficulty": "hard",
+    "role": "investigator",
+    "policy": "cooperate"
+  },
+  {
+    "group": "survivor",
+    "seed": 40,
+    "difficulty": "easy",
+    "role": "engineer",
+    "policy": "evidence"
+  },
+  {
+    "group": "survivor",
+    "seed": 41,
+    "difficulty": "normal",
+    "role": "doctor",
+    "policy": "survival"
+  },
+  {
+    "group": "survivor",
+    "seed": 42,
+    "difficulty": "hard",
+    "role": "doctor",
+    "policy": "escape"
+  },
+  {
+    "group": "survivor",
+    "seed": 43,
+    "difficulty": "easy",
+    "role": "engineer",
+    "policy": "cooperate"
+  },
+  {
+    "group": "survivor",
+    "seed": 44,
+    "difficulty": "normal",
+    "role": "explorer",
+    "policy": "evidence"
+  },
+  {
+    "group": "survivor",
+    "seed": 46,
+    "difficulty": "hard",
+    "role": "investigator",
+    "policy": "survival"
+  },
+  {
+    "group": "survivor",
+    "seed": 47,
+    "difficulty": "easy",
+    "role": "doctor",
+    "policy": "escape"
+  },
+  {
+    "group": "survivor",
+    "seed": 48,
+    "difficulty": "normal",
+    "role": "explorer",
+    "policy": "cooperate"
+  },
+  {
+    "group": "survivor",
+    "seed": 49,
+    "difficulty": "hard",
+    "role": "investigator",
+    "policy": "evidence"
+  },
+  {
+    "group": "survivor",
+    "seed": 50,
+    "difficulty": "easy",
+    "role": "doctor",
+    "policy": "survival"
+  },
+  {
+    "group": "survivor",
+    "seed": 51,
+    "difficulty": "normal",
+    "role": "explorer",
+    "policy": "escape"
+  },
+  {
+    "group": "survivor",
+    "seed": 52,
+    "difficulty": "hard",
+    "role": "investigator",
+    "policy": "cooperate"
+  },
+  {
+    "group": "survivor",
+    "seed": 53,
+    "difficulty": "easy",
+    "role": "doctor",
+    "policy": "evidence"
+  },
+  {
+    "group": "survivor",
+    "seed": 54,
+    "difficulty": "normal",
+    "role": "explorer",
+    "policy": "survival"
+  },
+  {
+    "group": "survivor",
+    "seed": 55,
+    "difficulty": "hard",
+    "role": "investigator",
+    "policy": "escape"
+  },
+  {
+    "group": "survivor",
+    "seed": 56,
+    "difficulty": "easy",
+    "role": "doctor",
+    "policy": "cooperate"
+  },
+  {
+    "group": "survivor",
+    "seed": 58,
+    "difficulty": "normal",
+    "role": "doctor",
+    "policy": "evidence"
+  },
+  {
+    "group": "survivor",
+    "seed": 59,
+    "difficulty": "hard",
+    "role": "explorer",
+    "policy": "survival"
+  },
+  {
+    "group": "survivor",
+    "seed": 60,
+    "difficulty": "easy",
+    "role": "engineer",
+    "policy": "escape"
+  },
+  {
+    "group": "survivor",
+    "seed": 61,
+    "difficulty": "normal",
+    "role": "doctor",
+    "policy": "cooperate"
+  },
+  {
+    "group": "survivor",
+    "seed": 62,
+    "difficulty": "hard",
+    "role": "explorer",
+    "policy": "evidence"
+  },
+  {
+    "group": "survivor",
+    "seed": 63,
+    "difficulty": "easy",
+    "role": "explorer",
+    "policy": "survival"
+  },
+  {
+    "group": "survivor",
+    "seed": 64,
+    "difficulty": "normal",
+    "role": "doctor",
+    "policy": "escape"
+  },
+  {
+    "group": "survivor",
+    "seed": 65,
+    "difficulty": "hard",
+    "role": "doctor",
+    "policy": "cooperate"
+  },
+  {
+    "group": "survivor",
+    "seed": 66,
+    "difficulty": "easy",
+    "role": "investigator",
+    "policy": "evidence"
+  },
+  {
+    "group": "survivor",
+    "seed": 68,
+    "difficulty": "normal",
+    "role": "doctor",
+    "policy": "survival"
+  },
+  {
+    "group": "survivor",
+    "seed": 69,
+    "difficulty": "hard",
+    "role": "engineer",
+    "policy": "escape"
+  },
+  {
+    "group": "survivor",
+    "seed": 70,
+    "difficulty": "easy",
+    "role": "engineer",
+    "policy": "cooperate"
+  },
+  {
+    "group": "survivor",
+    "seed": 71,
+    "difficulty": "normal",
+    "role": "explorer",
+    "policy": "evidence"
+  },
+  {
+    "group": "survivor",
+    "seed": 72,
+    "difficulty": "hard",
+    "role": "engineer",
+    "policy": "survival"
+  },
+  {
+    "group": "survivor",
+    "seed": 73,
+    "difficulty": "easy",
+    "role": "investigator",
+    "policy": "escape"
+  },
+  {
+    "group": "survivor",
+    "seed": 74,
+    "difficulty": "normal",
+    "role": "explorer",
+    "policy": "cooperate"
+  },
+  {
+    "group": "survivor",
+    "seed": 75,
+    "difficulty": "hard",
+    "role": "doctor",
+    "policy": "evidence"
+  },
+  {
+    "group": "survivor",
+    "seed": 76,
+    "difficulty": "easy",
+    "role": "investigator",
+    "policy": "survival"
+  },
+  {
+    "group": "survivor",
+    "seed": 78,
+    "difficulty": "normal",
+    "role": "explorer",
+    "policy": "escape"
+  },
+  {
+    "group": "survivor",
+    "seed": 79,
+    "difficulty": "hard",
+    "role": "investigator",
+    "policy": "cooperate"
+  },
+  {
+    "group": "survivor",
+    "seed": 80,
+    "difficulty": "easy",
+    "role": "doctor",
+    "policy": "evidence"
+  },
+  {
+    "group": "survivor",
+    "seed": 82,
+    "difficulty": "normal",
+    "role": "investigator",
+    "policy": "survival"
+  },
+  {
+    "group": "survivor",
+    "seed": 83,
+    "difficulty": "hard",
+    "role": "explorer",
+    "policy": "escape"
+  },
+  {
+    "group": "survivor",
+    "seed": 84,
+    "difficulty": "easy",
+    "role": "engineer",
+    "policy": "cooperate"
+  },
+  {
+    "group": "survivor",
+    "seed": 85,
+    "difficulty": "normal",
+    "role": "doctor",
+    "policy": "evidence"
+  },
+  {
+    "group": "survivor",
+    "seed": 87,
+    "difficulty": "hard",
+    "role": "explorer",
+    "policy": "survival"
+  },
+  {
+    "group": "survivor",
+    "seed": 89,
+    "difficulty": "easy",
+    "role": "doctor",
+    "policy": "escape"
+  },
+  {
+    "group": "survivor",
+    "seed": 90,
+    "difficulty": "normal",
+    "role": "explorer",
+    "policy": "cooperate"
+  },
+  {
+    "group": "survivor",
+    "seed": 91,
+    "difficulty": "hard",
+    "role": "engineer",
+    "policy": "evidence"
+  },
+  {
+    "group": "survivor",
+    "seed": 92,
+    "difficulty": "easy",
+    "role": "doctor",
+    "policy": "survival"
+  },
+  {
+    "group": "survivor",
+    "seed": 94,
+    "difficulty": "normal",
+    "role": "engineer",
+    "policy": "escape"
+  },
+  {
+    "group": "survivor",
+    "seed": 95,
+    "difficulty": "hard",
+    "role": "investigator",
+    "policy": "cooperate"
+  },
+  {
+    "group": "survivor",
+    "seed": 96,
+    "difficulty": "easy",
+    "role": "doctor",
+    "policy": "evidence"
+  },
+  {
+    "group": "survivor",
+    "seed": 97,
+    "difficulty": "normal",
+    "role": "investigator",
+    "policy": "survival"
+  },
+  {
+    "group": "survivor",
+    "seed": 98,
+    "difficulty": "hard",
+    "role": "explorer",
+    "policy": "escape"
+  },
+  {
+    "group": "survivor",
+    "seed": 99,
+    "difficulty": "easy",
+    "role": "explorer",
+    "policy": "cooperate"
+  },
+  {
+    "group": "survivor",
+    "seed": 100,
+    "difficulty": "normal",
+    "role": "investigator",
+    "policy": "evidence"
+  },
+  {
+    "group": "survivor",
+    "seed": 101,
+    "difficulty": "hard",
+    "role": "investigator",
+    "policy": "survival"
+  },
+  {
+    "group": "survivor",
+    "seed": 102,
+    "difficulty": "easy",
+    "role": "explorer",
+    "policy": "escape"
+  },
+  {
+    "group": "survivor",
+    "seed": 103,
+    "difficulty": "normal",
+    "role": "engineer",
+    "policy": "cooperate"
+  },
+  {
+    "group": "survivor",
+    "seed": 104,
+    "difficulty": "hard",
+    "role": "doctor",
+    "policy": "evidence"
+  },
+  {
+    "group": "survivor",
+    "seed": 106,
+    "difficulty": "easy",
+    "role": "investigator",
+    "policy": "survival"
+  },
+  {
+    "group": "survivor",
+    "seed": 107,
+    "difficulty": "normal",
+    "role": "doctor",
+    "policy": "escape"
+  },
+  {
+    "group": "survivor",
+    "seed": 108,
+    "difficulty": "hard",
+    "role": "doctor",
+    "policy": "cooperate"
+  },
+  {
+    "group": "survivor",
+    "seed": 109,
+    "difficulty": "easy",
+    "role": "doctor",
+    "policy": "evidence"
+  },
+  {
+    "group": "survivor",
+    "seed": 110,
+    "difficulty": "normal",
+    "role": "doctor",
+    "policy": "survival"
+  },
+  {
+    "group": "survivor",
+    "seed": 111,
+    "difficulty": "hard",
+    "role": "explorer",
+    "policy": "escape"
+  },
+  {
+    "group": "survivor",
+    "seed": 112,
+    "difficulty": "easy",
+    "role": "doctor",
+    "policy": "cooperate"
+  },
+  {
+    "group": "survivor",
+    "seed": 113,
+    "difficulty": "normal",
+    "role": "doctor",
+    "policy": "evidence"
+  },
+  {
+    "group": "survivor",
+    "seed": 114,
+    "difficulty": "hard",
+    "role": "explorer",
+    "policy": "survival"
+  },
+  {
+    "group": "survivor",
+    "seed": 117,
+    "difficulty": "easy",
+    "role": "engineer",
+    "policy": "escape"
+  },
+  {
+    "group": "saboteur",
+    "seed": 100004,
+    "difficulty": "normal",
+    "role": "saboteur",
+    "policy": "cooperate"
+  },
+  {
+    "group": "saboteur",
+    "seed": 100006,
+    "difficulty": "hard",
+    "role": "saboteur",
+    "policy": "evidence"
+  },
+  {
+    "group": "saboteur",
+    "seed": 100016,
+    "difficulty": "easy",
+    "role": "saboteur",
+    "policy": "survival"
+  },
+  {
+    "group": "saboteur",
+    "seed": 100018,
+    "difficulty": "normal",
+    "role": "saboteur",
+    "policy": "escape"
+  },
+  {
+    "group": "saboteur",
+    "seed": 100041,
+    "difficulty": "hard",
+    "role": "saboteur",
+    "policy": "cooperate"
+  },
+  {
+    "group": "saboteur",
+    "seed": 100050,
+    "difficulty": "easy",
+    "role": "saboteur",
+    "policy": "evidence"
+  },
+  {
+    "group": "saboteur",
+    "seed": 100057,
+    "difficulty": "normal",
+    "role": "saboteur",
+    "policy": "survival"
+  },
+  {
+    "group": "saboteur",
+    "seed": 100060,
+    "difficulty": "hard",
+    "role": "saboteur",
+    "policy": "escape"
+  },
+  {
+    "group": "saboteur",
+    "seed": 100062,
+    "difficulty": "easy",
+    "role": "saboteur",
+    "policy": "cooperate"
+  },
+  {
+    "group": "saboteur",
+    "seed": 100079,
+    "difficulty": "normal",
+    "role": "saboteur",
+    "policy": "evidence"
+  },
+  {
+    "group": "saboteur",
+    "seed": 100085,
+    "difficulty": "hard",
+    "role": "saboteur",
+    "policy": "survival"
+  },
+  {
+    "group": "saboteur",
+    "seed": 100090,
+    "difficulty": "easy",
+    "role": "saboteur",
+    "policy": "escape"
+  },
+  {
+    "group": "saboteur",
+    "seed": 100097,
+    "difficulty": "normal",
+    "role": "saboteur",
+    "policy": "cooperate"
+  },
+  {
+    "group": "saboteur",
+    "seed": 100105,
+    "difficulty": "hard",
+    "role": "saboteur",
+    "policy": "evidence"
+  },
+  {
+    "group": "saboteur",
+    "seed": 100107,
+    "difficulty": "easy",
+    "role": "saboteur",
+    "policy": "survival"
+  },
+  {
+    "group": "saboteur",
+    "seed": 100115,
+    "difficulty": "normal",
+    "role": "saboteur",
+    "policy": "escape"
+  },
+  {
+    "group": "saboteur",
+    "seed": 100116,
+    "difficulty": "hard",
+    "role": "saboteur",
+    "policy": "cooperate"
+  },
+  {
+    "group": "saboteur",
+    "seed": 100117,
+    "difficulty": "easy",
+    "role": "saboteur",
+    "policy": "evidence"
+  },
+  {
+    "group": "saboteur",
+    "seed": 100126,
+    "difficulty": "normal",
+    "role": "saboteur",
+    "policy": "survival"
+  },
+  {
+    "group": "saboteur",
+    "seed": 100143,
+    "difficulty": "hard",
+    "role": "saboteur",
+    "policy": "escape"
+  },
+  {
+    "group": "saboteur",
+    "seed": 100144,
+    "difficulty": "easy",
+    "role": "saboteur",
+    "policy": "cooperate"
+  },
+  {
+    "group": "saboteur",
+    "seed": 100149,
+    "difficulty": "normal",
+    "role": "saboteur",
+    "policy": "evidence"
+  },
+  {
+    "group": "saboteur",
+    "seed": 100154,
+    "difficulty": "hard",
+    "role": "saboteur",
+    "policy": "survival"
+  },
+  {
+    "group": "saboteur",
+    "seed": 100164,
+    "difficulty": "easy",
+    "role": "saboteur",
+    "policy": "escape"
+  },
+  {
+    "group": "saboteur",
+    "seed": 100171,
+    "difficulty": "normal",
+    "role": "saboteur",
+    "policy": "cooperate"
+  },
+  {
+    "group": "saboteur",
+    "seed": 100184,
+    "difficulty": "hard",
+    "role": "saboteur",
+    "policy": "evidence"
+  },
+  {
+    "group": "saboteur",
+    "seed": 100186,
+    "difficulty": "easy",
+    "role": "saboteur",
+    "policy": "survival"
+  },
+  {
+    "group": "saboteur",
+    "seed": 100206,
+    "difficulty": "normal",
+    "role": "saboteur",
+    "policy": "escape"
+  },
+  {
+    "group": "saboteur",
+    "seed": 100218,
+    "difficulty": "hard",
+    "role": "saboteur",
+    "policy": "cooperate"
+  },
+  {
+    "group": "saboteur",
+    "seed": 100219,
+    "difficulty": "easy",
+    "role": "saboteur",
+    "policy": "evidence"
+  },
+  {
+    "group": "saboteur",
+    "seed": 100225,
+    "difficulty": "normal",
+    "role": "saboteur",
+    "policy": "survival"
+  },
+  {
+    "group": "saboteur",
+    "seed": 100226,
+    "difficulty": "hard",
+    "role": "saboteur",
+    "policy": "escape"
+  },
+  {
+    "group": "saboteur",
+    "seed": 100227,
+    "difficulty": "easy",
+    "role": "saboteur",
+    "policy": "cooperate"
+  },
+  {
+    "group": "saboteur",
+    "seed": 100232,
+    "difficulty": "normal",
+    "role": "saboteur",
+    "policy": "evidence"
+  },
+  {
+    "group": "saboteur",
+    "seed": 100255,
+    "difficulty": "hard",
+    "role": "saboteur",
+    "policy": "survival"
+  },
+  {
+    "group": "saboteur",
+    "seed": 100258,
+    "difficulty": "easy",
+    "role": "saboteur",
+    "policy": "escape"
+  },
+  {
+    "group": "saboteur",
+    "seed": 100260,
+    "difficulty": "normal",
+    "role": "saboteur",
+    "policy": "cooperate"
+  },
+  {
+    "group": "saboteur",
+    "seed": 100270,
+    "difficulty": "hard",
+    "role": "saboteur",
+    "policy": "evidence"
+  },
+  {
+    "group": "saboteur",
+    "seed": 100275,
+    "difficulty": "easy",
+    "role": "saboteur",
+    "policy": "survival"
+  },
+  {
+    "group": "saboteur",
+    "seed": 100295,
+    "difficulty": "normal",
+    "role": "saboteur",
+    "policy": "escape"
+  },
+  {
+    "group": "saboteur",
+    "seed": 100296,
+    "difficulty": "hard",
+    "role": "saboteur",
+    "policy": "cooperate"
+  },
+  {
+    "group": "saboteur",
+    "seed": 100307,
+    "difficulty": "easy",
+    "role": "saboteur",
+    "policy": "evidence"
+  },
+  {
+    "group": "saboteur",
+    "seed": 100313,
+    "difficulty": "normal",
+    "role": "saboteur",
+    "policy": "survival"
+  },
+  {
+    "group": "saboteur",
+    "seed": 100317,
+    "difficulty": "hard",
+    "role": "saboteur",
+    "policy": "escape"
+  },
+  {
+    "group": "saboteur",
+    "seed": 100324,
+    "difficulty": "easy",
+    "role": "saboteur",
+    "policy": "cooperate"
+  },
+  {
+    "group": "saboteur",
+    "seed": 100329,
+    "difficulty": "normal",
+    "role": "saboteur",
+    "policy": "evidence"
+  },
+  {
+    "group": "saboteur",
+    "seed": 100336,
+    "difficulty": "hard",
+    "role": "saboteur",
+    "policy": "survival"
+  },
+  {
+    "group": "saboteur",
+    "seed": 100338,
+    "difficulty": "easy",
+    "role": "saboteur",
+    "policy": "escape"
+  },
+  {
+    "group": "saboteur",
+    "seed": 100343,
+    "difficulty": "normal",
+    "role": "saboteur",
+    "policy": "cooperate"
+  },
+  {
+    "group": "saboteur",
+    "seed": 100359,
+    "difficulty": "hard",
+    "role": "saboteur",
+    "policy": "evidence"
+  },
+  {
+    "group": "saboteur",
+    "seed": 100365,
+    "difficulty": "easy",
+    "role": "saboteur",
+    "policy": "survival"
+  },
+  {
+    "group": "saboteur",
+    "seed": 100369,
+    "difficulty": "normal",
+    "role": "saboteur",
+    "policy": "escape"
+  },
+  {
+    "group": "saboteur",
+    "seed": 100371,
+    "difficulty": "hard",
+    "role": "saboteur",
+    "policy": "cooperate"
+  },
+  {
+    "group": "saboteur",
+    "seed": 100406,
+    "difficulty": "easy",
+    "role": "saboteur",
+    "policy": "evidence"
+  },
+  {
+    "group": "saboteur",
+    "seed": 100407,
+    "difficulty": "normal",
+    "role": "saboteur",
+    "policy": "survival"
+  },
+  {
+    "group": "saboteur",
+    "seed": 100412,
+    "difficulty": "hard",
+    "role": "saboteur",
+    "policy": "escape"
+  },
+  {
+    "group": "saboteur",
+    "seed": 100414,
+    "difficulty": "easy",
+    "role": "saboteur",
+    "policy": "cooperate"
+  },
+  {
+    "group": "saboteur",
+    "seed": 100423,
+    "difficulty": "normal",
+    "role": "saboteur",
+    "policy": "evidence"
+  },
+  {
+    "group": "saboteur",
+    "seed": 100424,
+    "difficulty": "hard",
+    "role": "saboteur",
+    "policy": "survival"
+  },
+  {
+    "group": "saboteur",
+    "seed": 100425,
+    "difficulty": "easy",
+    "role": "saboteur",
+    "policy": "escape"
+  },
+  {
+    "group": "saboteur",
+    "seed": 100428,
+    "difficulty": "normal",
+    "role": "saboteur",
+    "policy": "cooperate"
+  },
+  {
+    "group": "saboteur",
+    "seed": 100435,
+    "difficulty": "hard",
+    "role": "saboteur",
+    "policy": "evidence"
+  },
+  {
+    "group": "saboteur",
+    "seed": 100440,
+    "difficulty": "easy",
+    "role": "saboteur",
+    "policy": "survival"
+  },
+  {
+    "group": "saboteur",
+    "seed": 100462,
+    "difficulty": "normal",
+    "role": "saboteur",
+    "policy": "escape"
+  },
+  {
+    "group": "saboteur",
+    "seed": 100470,
+    "difficulty": "hard",
+    "role": "saboteur",
+    "policy": "cooperate"
+  },
+  {
+    "group": "saboteur",
+    "seed": 100476,
+    "difficulty": "easy",
+    "role": "saboteur",
+    "policy": "evidence"
+  },
+  {
+    "group": "saboteur",
+    "seed": 100484,
+    "difficulty": "normal",
+    "role": "saboteur",
+    "policy": "survival"
+  },
+  {
+    "group": "saboteur",
+    "seed": 100487,
+    "difficulty": "hard",
+    "role": "saboteur",
+    "policy": "escape"
+  },
+  {
+    "group": "saboteur",
+    "seed": 100515,
+    "difficulty": "easy",
+    "role": "saboteur",
+    "policy": "cooperate"
+  },
+  {
+    "group": "saboteur",
+    "seed": 100518,
+    "difficulty": "normal",
+    "role": "saboteur",
+    "policy": "evidence"
+  },
+  {
+    "group": "saboteur",
+    "seed": 100519,
+    "difficulty": "hard",
+    "role": "saboteur",
+    "policy": "survival"
+  },
+  {
+    "group": "saboteur",
+    "seed": 100523,
+    "difficulty": "easy",
+    "role": "saboteur",
+    "policy": "escape"
+  },
+  {
+    "group": "saboteur",
+    "seed": 100525,
+    "difficulty": "normal",
+    "role": "saboteur",
+    "policy": "cooperate"
+  },
+  {
+    "group": "saboteur",
+    "seed": 100526,
+    "difficulty": "hard",
+    "role": "saboteur",
+    "policy": "evidence"
+  },
+  {
+    "group": "saboteur",
+    "seed": 100530,
+    "difficulty": "easy",
+    "role": "saboteur",
+    "policy": "survival"
+  },
+  {
+    "group": "saboteur",
+    "seed": 100536,
+    "difficulty": "normal",
+    "role": "saboteur",
+    "policy": "escape"
+  },
+  {
+    "group": "saboteur",
+    "seed": 100540,
+    "difficulty": "hard",
+    "role": "saboteur",
+    "policy": "cooperate"
+  },
+  {
+    "group": "saboteur",
+    "seed": 100551,
+    "difficulty": "easy",
+    "role": "saboteur",
+    "policy": "evidence"
+  },
+  {
+    "group": "saboteur",
+    "seed": 100557,
+    "difficulty": "normal",
+    "role": "saboteur",
+    "policy": "survival"
+  },
+  {
+    "group": "saboteur",
+    "seed": 100562,
+    "difficulty": "hard",
+    "role": "saboteur",
+    "policy": "escape"
+  },
+  {
+    "group": "saboteur",
+    "seed": 100567,
+    "difficulty": "easy",
+    "role": "saboteur",
+    "policy": "cooperate"
+  },
+  {
+    "group": "saboteur",
+    "seed": 100572,
+    "difficulty": "normal",
+    "role": "saboteur",
+    "policy": "evidence"
+  },
+  {
+    "group": "saboteur",
+    "seed": 100585,
+    "difficulty": "hard",
+    "role": "saboteur",
+    "policy": "survival"
+  },
+  {
+    "group": "saboteur",
+    "seed": 100592,
+    "difficulty": "easy",
+    "role": "saboteur",
+    "policy": "escape"
+  },
+  {
+    "group": "saboteur",
+    "seed": 100596,
+    "difficulty": "normal",
+    "role": "saboteur",
+    "policy": "cooperate"
+  },
+  {
+    "group": "saboteur",
+    "seed": 100614,
+    "difficulty": "hard",
+    "role": "saboteur",
+    "policy": "evidence"
+  },
+  {
+    "group": "saboteur",
+    "seed": 100618,
+    "difficulty": "easy",
+    "role": "saboteur",
+    "policy": "survival"
+  },
+  {
+    "group": "saboteur",
+    "seed": 100622,
+    "difficulty": "normal",
+    "role": "saboteur",
+    "policy": "escape"
+  },
+  {
+    "group": "saboteur",
+    "seed": 100626,
+    "difficulty": "hard",
+    "role": "saboteur",
+    "policy": "cooperate"
+  },
+  {
+    "group": "saboteur",
+    "seed": 100629,
+    "difficulty": "easy",
+    "role": "saboteur",
+    "policy": "evidence"
+  },
+  {
+    "group": "saboteur",
+    "seed": 100630,
+    "difficulty": "normal",
+    "role": "saboteur",
+    "policy": "survival"
+  },
+  {
+    "group": "saboteur",
+    "seed": 100634,
+    "difficulty": "hard",
+    "role": "saboteur",
+    "policy": "escape"
+  },
+  {
+    "group": "saboteur",
+    "seed": 100637,
+    "difficulty": "easy",
+    "role": "saboteur",
+    "policy": "cooperate"
+  },
+  {
+    "group": "saboteur",
+    "seed": 100641,
+    "difficulty": "normal",
+    "role": "saboteur",
+    "policy": "evidence"
+  },
+  {
+    "group": "saboteur",
+    "seed": 100666,
+    "difficulty": "hard",
+    "role": "saboteur",
+    "policy": "survival"
+  },
+  {
+    "group": "saboteur",
+    "seed": 100668,
+    "difficulty": "easy",
+    "role": "saboteur",
+    "policy": "escape"
+  },
+  {
+    "group": "saboteur",
+    "seed": 100678,
+    "difficulty": "normal",
+    "role": "saboteur",
+    "policy": "cooperate"
+  },
+  {
+    "group": "saboteur",
+    "seed": 100696,
+    "difficulty": "hard",
+    "role": "saboteur",
+    "policy": "evidence"
+  },
+  {
+    "group": "saboteur",
+    "seed": 100703,
+    "difficulty": "easy",
+    "role": "saboteur",
+    "policy": "survival"
+  },
+  {
+    "group": "saboteur",
+    "seed": 100706,
+    "difficulty": "normal",
+    "role": "saboteur",
+    "policy": "escape"
+  },
+  {
+    "group": "random",
+    "seed": 200001,
+    "difficulty": "hard",
+    "role": "engineer",
+    "policy": "cooperate"
+  },
+  {
+    "group": "random",
+    "seed": 200002,
+    "difficulty": "easy",
+    "role": "saboteur",
+    "policy": "evidence"
+  },
+  {
+    "group": "random",
+    "seed": 200003,
+    "difficulty": "normal",
+    "role": "engineer",
+    "policy": "survival"
+  },
+  {
+    "group": "random",
+    "seed": 200004,
+    "difficulty": "hard",
+    "role": "saboteur",
+    "policy": "escape"
+  },
+  {
+    "group": "random",
+    "seed": 200005,
+    "difficulty": "easy",
+    "role": "investigator",
+    "policy": "cooperate"
+  },
+  {
+    "group": "random",
+    "seed": 200006,
+    "difficulty": "normal",
+    "role": "engineer",
+    "policy": "evidence"
+  },
+  {
+    "group": "random",
+    "seed": 200007,
+    "difficulty": "hard",
+    "role": "engineer",
+    "policy": "survival"
+  },
+  {
+    "group": "random",
+    "seed": 200008,
+    "difficulty": "easy",
+    "role": "investigator",
+    "policy": "escape"
+  },
+  {
+    "group": "random",
+    "seed": 200009,
+    "difficulty": "normal",
+    "role": "explorer",
+    "policy": "cooperate"
+  },
+  {
+    "group": "random",
+    "seed": 200010,
+    "difficulty": "hard",
+    "role": "investigator",
+    "policy": "evidence"
+  },
+  {
+    "group": "random",
+    "seed": 200011,
+    "difficulty": "easy",
+    "role": "investigator",
+    "policy": "survival"
+  },
+  {
+    "group": "random",
+    "seed": 200012,
+    "difficulty": "normal",
+    "role": "saboteur",
+    "policy": "escape"
+  },
+  {
+    "group": "random",
+    "seed": 200013,
+    "difficulty": "hard",
+    "role": "engineer",
+    "policy": "cooperate"
+  },
+  {
+    "group": "random",
+    "seed": 200014,
+    "difficulty": "easy",
+    "role": "investigator",
+    "policy": "evidence"
+  },
+  {
+    "group": "random",
+    "seed": 200015,
+    "difficulty": "normal",
+    "role": "saboteur",
+    "policy": "survival"
+  },
+  {
+    "group": "random",
+    "seed": 200016,
+    "difficulty": "hard",
+    "role": "investigator",
+    "policy": "escape"
+  },
+  {
+    "group": "random",
+    "seed": 200017,
+    "difficulty": "easy",
+    "role": "investigator",
+    "policy": "cooperate"
+  },
+  {
+    "group": "random",
+    "seed": 200018,
+    "difficulty": "normal",
+    "role": "investigator",
+    "policy": "evidence"
+  },
+  {
+    "group": "random",
+    "seed": 200019,
+    "difficulty": "hard",
+    "role": "doctor",
+    "policy": "survival"
+  },
+  {
+    "group": "random",
+    "seed": 200020,
+    "difficulty": "easy",
+    "role": "investigator",
+    "policy": "escape"
+  },
+  {
+    "group": "random",
+    "seed": 200021,
+    "difficulty": "normal",
+    "role": "investigator",
+    "policy": "cooperate"
+  },
+  {
+    "group": "random",
+    "seed": 200022,
+    "difficulty": "hard",
+    "role": "doctor",
+    "policy": "evidence"
+  },
+  {
+    "group": "random",
+    "seed": 200023,
+    "difficulty": "easy",
+    "role": "saboteur",
+    "policy": "survival"
+  },
+  {
+    "group": "random",
+    "seed": 200024,
+    "difficulty": "normal",
+    "role": "explorer",
+    "policy": "escape"
+  },
+  {
+    "group": "random",
+    "seed": 200025,
+    "difficulty": "hard",
+    "role": "saboteur",
+    "policy": "cooperate"
+  },
+  {
+    "group": "random",
+    "seed": 200026,
+    "difficulty": "easy",
+    "role": "investigator",
+    "policy": "evidence"
+  },
+  {
+    "group": "random",
+    "seed": 200027,
+    "difficulty": "normal",
+    "role": "explorer",
+    "policy": "survival"
+  },
+  {
+    "group": "random",
+    "seed": 200028,
+    "difficulty": "hard",
+    "role": "engineer",
+    "policy": "escape"
+  },
+  {
+    "group": "random",
+    "seed": 200029,
+    "difficulty": "easy",
+    "role": "investigator",
+    "policy": "cooperate"
+  },
+  {
+    "group": "random",
+    "seed": 200030,
+    "difficulty": "normal",
+    "role": "engineer",
+    "policy": "evidence"
+  },
+  {
+    "group": "random",
+    "seed": 200031,
+    "difficulty": "hard",
+    "role": "engineer",
+    "policy": "survival"
+  },
+  {
+    "group": "random",
+    "seed": 200032,
+    "difficulty": "easy",
+    "role": "investigator",
+    "policy": "escape"
+  },
+  {
+    "group": "random",
+    "seed": 200033,
+    "difficulty": "normal",
+    "role": "engineer",
+    "policy": "cooperate"
+  },
+  {
+    "group": "random",
+    "seed": 200034,
+    "difficulty": "hard",
+    "role": "doctor",
+    "policy": "evidence"
+  },
+  {
+    "group": "random",
+    "seed": 200035,
+    "difficulty": "easy",
+    "role": "investigator",
+    "policy": "survival"
+  },
+  {
+    "group": "random",
+    "seed": 200036,
+    "difficulty": "normal",
+    "role": "investigator",
+    "policy": "escape"
+  },
+  {
+    "group": "random",
+    "seed": 200037,
+    "difficulty": "hard",
+    "role": "investigator",
+    "policy": "cooperate"
+  },
+  {
+    "group": "random",
+    "seed": 200038,
+    "difficulty": "easy",
+    "role": "investigator",
+    "policy": "evidence"
+  },
+  {
+    "group": "random",
+    "seed": 200039,
+    "difficulty": "normal",
+    "role": "investigator",
+    "policy": "survival"
+  },
+  {
+    "group": "random",
+    "seed": 200040,
+    "difficulty": "hard",
+    "role": "engineer",
+    "policy": "escape"
+  },
+  {
+    "group": "random",
+    "seed": 200041,
+    "difficulty": "easy",
+    "role": "investigator",
+    "policy": "cooperate"
+  },
+  {
+    "group": "random",
+    "seed": 200042,
+    "difficulty": "normal",
+    "role": "engineer",
+    "policy": "evidence"
+  },
+  {
+    "group": "random",
+    "seed": 200043,
+    "difficulty": "hard",
+    "role": "investigator",
+    "policy": "survival"
+  },
+  {
+    "group": "random",
+    "seed": 200044,
+    "difficulty": "easy",
+    "role": "saboteur",
+    "policy": "escape"
+  },
+  {
+    "group": "random",
+    "seed": 200045,
+    "difficulty": "normal",
+    "role": "investigator",
+    "policy": "cooperate"
+  },
+  {
+    "group": "random",
+    "seed": 200046,
+    "difficulty": "hard",
+    "role": "saboteur",
+    "policy": "evidence"
+  },
+  {
+    "group": "random",
+    "seed": 200047,
+    "difficulty": "easy",
+    "role": "explorer",
+    "policy": "survival"
+  },
+  {
+    "group": "random",
+    "seed": 200048,
+    "difficulty": "normal",
+    "role": "explorer",
+    "policy": "escape"
+  },
+  {
+    "group": "random",
+    "seed": 200049,
+    "difficulty": "hard",
+    "role": "doctor",
+    "policy": "cooperate"
+  },
+  {
+    "group": "random",
+    "seed": 200050,
+    "difficulty": "easy",
+    "role": "doctor",
+    "policy": "evidence"
+  },
+  {
+    "group": "random",
+    "seed": 200051,
+    "difficulty": "normal",
+    "role": "explorer",
+    "policy": "survival"
+  },
+  {
+    "group": "random",
+    "seed": 200052,
+    "difficulty": "hard",
+    "role": "engineer",
+    "policy": "escape"
+  },
+  {
+    "group": "random",
+    "seed": 200053,
+    "difficulty": "easy",
+    "role": "doctor",
+    "policy": "cooperate"
+  },
+  {
+    "group": "random",
+    "seed": 200054,
+    "difficulty": "normal",
+    "role": "investigator",
+    "policy": "evidence"
+  },
+  {
+    "group": "random",
+    "seed": 200055,
+    "difficulty": "hard",
+    "role": "engineer",
+    "policy": "survival"
+  },
+  {
+    "group": "random",
+    "seed": 200056,
+    "difficulty": "easy",
+    "role": "investigator",
+    "policy": "escape"
+  },
+  {
+    "group": "random",
+    "seed": 200057,
+    "difficulty": "normal",
+    "role": "investigator",
+    "policy": "cooperate"
+  },
+  {
+    "group": "random",
+    "seed": 200058,
+    "difficulty": "hard",
+    "role": "saboteur",
+    "policy": "evidence"
+  },
+  {
+    "group": "random",
+    "seed": 200059,
+    "difficulty": "easy",
+    "role": "investigator",
+    "policy": "survival"
+  },
+  {
+    "group": "random",
+    "seed": 200060,
+    "difficulty": "normal",
+    "role": "investigator",
+    "policy": "escape"
+  },
+  {
+    "group": "random",
+    "seed": 200061,
+    "difficulty": "hard",
+    "role": "investigator",
+    "policy": "cooperate"
+  },
+  {
+    "group": "random",
+    "seed": 200062,
+    "difficulty": "easy",
+    "role": "doctor",
+    "policy": "evidence"
+  },
+  {
+    "group": "random",
+    "seed": 200063,
+    "difficulty": "normal",
+    "role": "explorer",
+    "policy": "survival"
+  },
+  {
+    "group": "random",
+    "seed": 200064,
+    "difficulty": "hard",
+    "role": "engineer",
+    "policy": "escape"
+  },
+  {
+    "group": "random",
+    "seed": 200065,
+    "difficulty": "easy",
+    "role": "investigator",
+    "policy": "cooperate"
+  },
+  {
+    "group": "random",
+    "seed": 200066,
+    "difficulty": "normal",
+    "role": "engineer",
+    "policy": "evidence"
+  },
+  {
+    "group": "random",
+    "seed": 200067,
+    "difficulty": "hard",
+    "role": "engineer",
+    "policy": "survival"
+  },
+  {
+    "group": "random",
+    "seed": 200068,
+    "difficulty": "easy",
+    "role": "investigator",
+    "policy": "escape"
+  },
+  {
+    "group": "random",
+    "seed": 200069,
+    "difficulty": "normal",
+    "role": "engineer",
+    "policy": "cooperate"
+  },
+  {
+    "group": "random",
+    "seed": 200070,
+    "difficulty": "hard",
+    "role": "doctor",
+    "policy": "evidence"
+  },
+  {
+    "group": "random",
+    "seed": 200071,
+    "difficulty": "easy",
+    "role": "investigator",
+    "policy": "survival"
+  },
+  {
+    "group": "random",
+    "seed": 200072,
+    "difficulty": "normal",
+    "role": "explorer",
+    "policy": "escape"
+  },
+  {
+    "group": "random",
+    "seed": 200073,
+    "difficulty": "hard",
+    "role": "doctor",
+    "policy": "cooperate"
+  },
+  {
+    "group": "random",
+    "seed": 200074,
+    "difficulty": "easy",
+    "role": "doctor",
+    "policy": "evidence"
+  },
+  {
+    "group": "random",
+    "seed": 200075,
+    "difficulty": "normal",
+    "role": "explorer",
+    "policy": "survival"
+  },
+  {
+    "group": "random",
+    "seed": 200076,
+    "difficulty": "hard",
+    "role": "investigator",
+    "policy": "escape"
+  },
+  {
+    "group": "random",
+    "seed": 200077,
+    "difficulty": "easy",
+    "role": "doctor",
+    "policy": "cooperate"
+  },
+  {
+    "group": "random",
+    "seed": 200078,
+    "difficulty": "normal",
+    "role": "engineer",
+    "policy": "evidence"
+  },
+  {
+    "group": "random",
+    "seed": 200079,
+    "difficulty": "hard",
+    "role": "investigator",
+    "policy": "survival"
+  },
+  {
+    "group": "random",
+    "seed": 200080,
+    "difficulty": "easy",
+    "role": "explorer",
+    "policy": "escape"
+  },
+  {
+    "group": "random",
+    "seed": 200081,
+    "difficulty": "normal",
+    "role": "saboteur",
+    "policy": "cooperate"
+  },
+  {
+    "group": "random",
+    "seed": 200082,
+    "difficulty": "hard",
+    "role": "doctor",
+    "policy": "evidence"
+  },
+  {
+    "group": "random",
+    "seed": 200083,
+    "difficulty": "easy",
+    "role": "saboteur",
+    "policy": "survival"
+  },
+  {
+    "group": "random",
+    "seed": 200084,
+    "difficulty": "normal",
+    "role": "saboteur",
+    "policy": "escape"
+  },
+  {
+    "group": "random",
+    "seed": 200085,
+    "difficulty": "hard",
+    "role": "doctor",
+    "policy": "cooperate"
+  },
+  {
+    "group": "random",
+    "seed": 200086,
+    "difficulty": "easy",
+    "role": "saboteur",
+    "policy": "evidence"
+  },
+  {
+    "group": "random",
+    "seed": 200087,
+    "difficulty": "normal",
+    "role": "investigator",
+    "policy": "survival"
+  },
+  {
+    "group": "random",
+    "seed": 200088,
+    "difficulty": "hard",
+    "role": "engineer",
+    "policy": "escape"
+  },
+  {
+    "group": "random",
+    "seed": 200089,
+    "difficulty": "easy",
+    "role": "doctor",
+    "policy": "cooperate"
+  },
+  {
+    "group": "random",
+    "seed": 200090,
+    "difficulty": "normal",
+    "role": "engineer",
+    "policy": "evidence"
+  },
+  {
+    "group": "random",
+    "seed": 200091,
+    "difficulty": "hard",
+    "role": "engineer",
+    "policy": "survival"
+  },
+  {
+    "group": "random",
+    "seed": 200092,
+    "difficulty": "easy",
+    "role": "explorer",
+    "policy": "escape"
+  },
+  {
+    "group": "random",
+    "seed": 200093,
+    "difficulty": "normal",
+    "role": "saboteur",
+    "policy": "cooperate"
+  },
+  {
+    "group": "random",
+    "seed": 200094,
+    "difficulty": "hard",
+    "role": "saboteur",
+    "policy": "evidence"
+  },
+  {
+    "group": "random",
+    "seed": 200095,
+    "difficulty": "easy",
+    "role": "explorer",
+    "policy": "survival"
+  },
+  {
+    "group": "random",
+    "seed": 200096,
+    "difficulty": "normal",
+    "role": "explorer",
+    "policy": "escape"
+  },
+  {
+    "group": "random",
+    "seed": 200097,
+    "difficulty": "hard",
+    "role": "doctor",
+    "policy": "cooperate"
+  },
+  {
+    "group": "random",
+    "seed": 200098,
+    "difficulty": "easy",
+    "role": "doctor",
+    "policy": "evidence"
+  },
+  {
+    "group": "random",
+    "seed": 200099,
+    "difficulty": "normal",
+    "role": "saboteur",
+    "policy": "survival"
+  },
+  {
+    "group": "random",
+    "seed": 200100,
+    "difficulty": "hard",
+    "role": "investigator",
+    "policy": "escape"
+  }
+]

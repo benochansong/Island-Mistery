@@ -106,9 +106,9 @@
       if (!revisited) mind.visited.push(action.location);
       if (!mind.storyClues.length) grant(s,p.id,'orientation',record);
       const candidates = Object.keys(s.story.placements).filter(id => s.story.placements[id] === action.location && !mind.storyClues.some(c => c.id === id));
-      if (candidates.length && random() < .55) grant(s,p.id,pick(candidates,random),record);
+      if (candidates.length && random() < game.config.storyBalance.clueChance) grant(s,p.id,pick(candidates,random),record);
       const site = D.sites.find(site => site.parent === action.location);
-      if (site && (revisited || random() < .4)) unlock(s,site.id,record);
+      if (site && (revisited || random() < game.config.storyBalance.unlockChance)) unlock(s,site.id,record);
     }
     if (action.kind === 'research') {
       p.location = 'camp';
@@ -121,7 +121,7 @@
       if (!mind.visited.includes(site.parent)) mind.visited.push(site.parent);
       if (!mind.visitedSites.includes(site.id)) mind.visitedSites.push(site.id);
       grant(s,p.id,site.clue,record); Object.entries(site.loot).forEach(([k,n]) => resource(s,k,n,p.id,record));
-      if (random() < .4) damage(s,p,-site.risk,record);
+      if (random() < game.config.storyBalance.hiddenInjuryChance) damage(s,p,-site.risk,record);
       record(s,`${p.name}: ${site.name}에서 기록과 희귀 물자를 확보했다.`,p.id,'public','hidden-explore');
     }
     updateMissions(s);
@@ -145,7 +145,8 @@
     return true;
   }
   function chooseEvent(view, random) {
-    const opts=view.pendingEvent.choices.filter(c=>!c.disabled), m=view.self;
+    const m=view.self, definition=byId(D.events,view.pendingEvent.eventId);
+    const opts=view.pendingEvent.choices.filter(c=>!c.disabled && (m.role!=='saboteur' || !definition.choices.find(x=>x.id===c.id).effects.some(f=>f.type==='facility' && f.amount>0 && view.facilities[f.key]+f.amount>=game.config.repairGoals[f.key])));
     if (m.health<25) return opts.find(c=>c.id==='leave')?.id || opts[0].id;
     if (m.role==='saboteur' || ['conceal','cover'].includes(m.mission?.id)) return opts.find(c=>['private','keep','decline','stop','strip'].includes(c.id))?.id || opts[0].id;
     if (m.traits.cooperation>.6) return opts.find(c=>['public','share','show','broadcast','ally','help','repair','restore'].includes(c.id))?.id || opts[0].id;
@@ -226,7 +227,7 @@
     if (s.story.history.some(e=>e.day===s.day&&e.phase===s.phase)) return;
     const candidates=D.events.filter(e=>!e.terminal&&eligible(s,e));
     if (!candidates.length) return;
-    const weight=e=>e.weight*(D.events.some(parent=>s.story.flags[`resolved:${parent.id}`]&&parent.followUps.includes(e.id))?3:1);
+    const weight=e=>(game.config.storyBalance.eventWeights[e.id] ?? e.weight)*(D.events.some(parent=>s.story.flags[`resolved:${parent.id}`]&&parent.followUps.includes(e.id))?game.config.storyBalance.followupWeight:1);
     let roll=random()*candidates.reduce((n,e)=>n+weight(e),0);
     const selected=candidates.find(e=>(roll-=weight(e))<0)||candidates.at(-1); open(s,selected,record,random);
   }

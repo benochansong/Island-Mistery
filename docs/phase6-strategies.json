@@ -1,0 +1,4568 @@
+{
+  "label": "strategies",
+  "policyVersion": 1,
+  "games": 150,
+  "completed": 150,
+  "errors": [],
+  "stalls": 0,
+  "informationViolations": 0,
+  "invalidDecisions": 0,
+  "aiDecisions": 12638,
+  "events": {
+    "event-01": 30,
+    "event-02": 0,
+    "event-03": 33,
+    "event-04": 4,
+    "event-05": 50,
+    "event-06": 19,
+    "event-07": 30,
+    "event-08": 11,
+    "event-09": 23,
+    "event-10": 31,
+    "event-11": 80,
+    "event-12": 2,
+    "event-13": 8,
+    "event-14": 27,
+    "event-15": 9,
+    "event-16": 7,
+    "event-17": 8,
+    "event-18": 10,
+    "event-19": 2,
+    "event-20": 20,
+    "event-21": 48,
+    "event-22": 0,
+    "event-23": 2,
+    "event-24": 67,
+    "event-25": 11,
+    "event-26": 11,
+    "event-27": 6,
+    "event-28": 5,
+    "event-29": 16,
+    "event-30": 12,
+    "event-31": 0,
+    "event-32": 11,
+    "event-33": 0,
+    "event-34": 11,
+    "event-35": 14,
+    "event-36": 0
+  },
+  "roles": {
+    "saboteur": {
+      "actors": 150,
+      "actions": {
+        "explore": 324,
+        "hide": 90,
+        "feign": 1071,
+        "vote": 294,
+        "sabotage": 275,
+        "gather": 91,
+        "heal": 78,
+        "lie": 54,
+        "redirect": 345,
+        "rest": 1
+      },
+      "resourceGain": 3036,
+      "repairPoints": 3,
+      "storyClues": 418,
+      "investigations": 0,
+      "heals": 78,
+      "exiles": 83
+    },
+    "investigator": {
+      "actors": 210,
+      "actions": {
+        "explore": 337,
+        "repair": 301,
+        "evidence": 640,
+        "accuse": 329,
+        "question": 380,
+        "vote": 408,
+        "investigate": 299,
+        "defend": 94,
+        "discuss": 433,
+        "rebut": 11,
+        "explain": 49,
+        "gather": 103,
+        "explore_hidden": 110,
+        "research": 96,
+        "agree": 54,
+        "heal": 3,
+        "share": 15,
+        "partial": 35
+      },
+      "resourceGain": 1587,
+      "repairPoints": 588,
+      "storyClues": 701,
+      "investigations": 299,
+      "heals": 3,
+      "exiles": 11
+    },
+    "engineer": {
+      "actors": 150,
+      "actions": {
+        "explore": 212,
+        "repair": 500,
+        "partial": 104,
+        "accuse": 169,
+        "question": 257,
+        "evidence": 305,
+        "vote": 265,
+        "discuss": 361,
+        "rebut": 9,
+        "rest": 5,
+        "defend": 66,
+        "explain": 33,
+        "conceal": 21,
+        "explore_hidden": 82,
+        "research": 28,
+        "heal": 1
+      },
+      "resourceGain": 1135,
+      "repairPoints": 1493,
+      "storyClues": 411,
+      "investigations": 0,
+      "heals": 1,
+      "exiles": 19
+    },
+    "doctor": {
+      "actors": 150,
+      "actions": {
+        "explore": 272,
+        "gather": 128,
+        "evidence": 219,
+        "accuse": 226,
+        "question": 229,
+        "vote": 294,
+        "rest": 131,
+        "agree": 15,
+        "repair": 216,
+        "discuss": 287,
+        "rebut": 12,
+        "explore_hidden": 50,
+        "partial": 142,
+        "conceal": 214,
+        "heal": 50,
+        "explain": 73,
+        "research": 51,
+        "share": 20,
+        "defend": 33
+      },
+      "resourceGain": 1465,
+      "repairPoints": 427,
+      "storyClues": 397,
+      "investigations": 0,
+      "heals": 50,
+      "exiles": 2
+    },
+    "explorer": {
+      "actors": 240,
+      "actions": {
+        "explore": 426,
+        "research": 181,
+        "share": 34,
+        "discuss": 536,
+        "explain": 187,
+        "conceal": 233,
+        "vote": 428,
+        "partial": 178,
+        "accuse": 243,
+        "question": 276,
+        "evidence": 364,
+        "repair": 373,
+        "explore_hidden": 203,
+        "gather": 110,
+        "rebut": 13,
+        "defend": 55,
+        "agree": 21
+      },
+      "resourceGain": 3048,
+      "repairPoints": 744,
+      "storyClues": 874,
+      "investigations": 0,
+      "heals": 0,
+      "exiles": 30
+    }
+  },
+  "strategies": {},
+  "runs": [
+    {
+      "group": "saboteur",
+      "seed": 100004,
+      "difficulty": "easy",
+      "role": "saboteur",
+      "policy": "spy-aggressive",
+      "detectedLies": 0,
+      "steps": 40,
+      "day": 2,
+      "winner": "survivors",
+      "outcome": "exposed",
+      "ending": "captured",
+      "spyExiled": true,
+      "resources": {
+        "food": 17,
+        "water": 14,
+        "medicine": 10,
+        "parts": 0
+      },
+      "exiles": [
+        {
+          "id": "player",
+          "role": "saboteur"
+        },
+        {
+          "id": "ji",
+          "role": "explorer"
+        }
+      ],
+      "strategies": {},
+      "lieStatements": 0
+    },
+    {
+      "group": "saboteur",
+      "seed": 100004,
+      "difficulty": "easy",
+      "role": "saboteur",
+      "policy": "spy-cooperate",
+      "detectedLies": 0,
+      "steps": 24,
+      "day": 2,
+      "winner": "survivors",
+      "outcome": "escape",
+      "ending": "unknown",
+      "spyExiled": false,
+      "resources": {
+        "food": 19,
+        "water": 24,
+        "medicine": 8,
+        "parts": 2
+      },
+      "exiles": [
+        {
+          "id": "ji",
+          "role": "explorer"
+        }
+      ],
+      "strategies": {},
+      "lieStatements": 0
+    },
+    {
+      "group": "saboteur",
+      "seed": 100004,
+      "difficulty": "easy",
+      "role": "saboteur",
+      "policy": "spy-misinform",
+      "detectedLies": 1,
+      "steps": 58,
+      "day": 3,
+      "winner": "survivors",
+      "outcome": "exposed",
+      "ending": "captured",
+      "spyExiled": true,
+      "resources": {
+        "food": 10,
+        "water": 13,
+        "medicine": 12,
+        "parts": 0
+      },
+      "exiles": [
+        {
+          "id": "player",
+          "role": "saboteur"
+        },
+        {
+          "id": "ji",
+          "role": "explorer"
+        }
+      ],
+      "strategies": {},
+      "lieStatements": 3
+    },
+    {
+      "group": "saboteur",
+      "seed": 100004,
+      "difficulty": "easy",
+      "role": "saboteur",
+      "policy": "spy-divide",
+      "detectedLies": 0,
+      "steps": 59,
+      "day": 3,
+      "winner": "saboteur",
+      "outcome": "saboteur",
+      "ending": "covert",
+      "spyExiled": false,
+      "resources": {
+        "food": 12,
+        "water": 14,
+        "medicine": 13,
+        "parts": 3
+      },
+      "exiles": [
+        {
+          "id": "ji",
+          "role": "explorer"
+        }
+      ],
+      "strategies": {},
+      "lieStatements": 0
+    },
+    {
+      "group": "saboteur",
+      "seed": 100004,
+      "difficulty": "easy",
+      "role": "saboteur",
+      "policy": "spy-late",
+      "detectedLies": 0,
+      "steps": 59,
+      "day": 3,
+      "winner": "saboteur",
+      "outcome": "saboteur",
+      "ending": "covert",
+      "spyExiled": false,
+      "resources": {
+        "food": 15,
+        "water": 17,
+        "medicine": 10,
+        "parts": 0
+      },
+      "exiles": [
+        {
+          "id": "ji",
+          "role": "explorer"
+        }
+      ],
+      "strategies": {},
+      "lieStatements": 0
+    },
+    {
+      "group": "saboteur",
+      "seed": 100004,
+      "difficulty": "normal",
+      "role": "saboteur",
+      "policy": "spy-aggressive",
+      "detectedLies": 0,
+      "steps": 40,
+      "day": 2,
+      "winner": "survivors",
+      "outcome": "exposed",
+      "ending": "captured",
+      "spyExiled": true,
+      "resources": {
+        "food": 17,
+        "water": 14,
+        "medicine": 10,
+        "parts": 2
+      },
+      "exiles": [
+        {
+          "id": "player",
+          "role": "saboteur"
+        },
+        {
+          "id": "ji",
+          "role": "explorer"
+        }
+      ],
+      "strategies": {},
+      "lieStatements": 0
+    },
+    {
+      "group": "saboteur",
+      "seed": 100004,
+      "difficulty": "normal",
+      "role": "saboteur",
+      "policy": "spy-cooperate",
+      "detectedLies": 0,
+      "steps": 24,
+      "day": 2,
+      "winner": "survivors",
+      "outcome": "escape",
+      "ending": "unknown",
+      "spyExiled": false,
+      "resources": {
+        "food": 19,
+        "water": 24,
+        "medicine": 8,
+        "parts": 2
+      },
+      "exiles": [
+        {
+          "id": "ji",
+          "role": "explorer"
+        }
+      ],
+      "strategies": {},
+      "lieStatements": 0
+    },
+    {
+      "group": "saboteur",
+      "seed": 100004,
+      "difficulty": "normal",
+      "role": "saboteur",
+      "policy": "spy-misinform",
+      "detectedLies": 1,
+      "steps": 39,
+      "day": 2,
+      "winner": "survivors",
+      "outcome": "exposed",
+      "ending": "captured",
+      "spyExiled": true,
+      "resources": {
+        "food": 12,
+        "water": 13,
+        "medicine": 10,
+        "parts": 1
+      },
+      "exiles": [
+        {
+          "id": "player",
+          "role": "saboteur"
+        },
+        {
+          "id": "ji",
+          "role": "explorer"
+        }
+      ],
+      "strategies": {},
+      "lieStatements": 2
+    },
+    {
+      "group": "saboteur",
+      "seed": 100004,
+      "difficulty": "normal",
+      "role": "saboteur",
+      "policy": "spy-divide",
+      "detectedLies": 0,
+      "steps": 59,
+      "day": 3,
+      "winner": "survivors",
+      "outcome": "exposed",
+      "ending": "captured",
+      "spyExiled": true,
+      "resources": {
+        "food": 16,
+        "water": 19,
+        "medicine": 16,
+        "parts": 0
+      },
+      "exiles": [
+        {
+          "id": "player",
+          "role": "saboteur"
+        },
+        {
+          "id": "ji",
+          "role": "explorer"
+        }
+      ],
+      "strategies": {},
+      "lieStatements": 0
+    },
+    {
+      "group": "saboteur",
+      "seed": 100004,
+      "difficulty": "normal",
+      "role": "saboteur",
+      "policy": "spy-late",
+      "detectedLies": 0,
+      "steps": 60,
+      "day": 3,
+      "winner": "saboteur",
+      "outcome": "saboteur",
+      "ending": "covert",
+      "spyExiled": false,
+      "resources": {
+        "food": 16,
+        "water": 19,
+        "medicine": 9,
+        "parts": 0
+      },
+      "exiles": [
+        {
+          "id": "ji",
+          "role": "explorer"
+        }
+      ],
+      "strategies": {},
+      "lieStatements": 0
+    },
+    {
+      "group": "saboteur",
+      "seed": 100004,
+      "difficulty": "hard",
+      "role": "saboteur",
+      "policy": "spy-aggressive",
+      "detectedLies": 0,
+      "steps": 40,
+      "day": 2,
+      "winner": "survivors",
+      "outcome": "exposed",
+      "ending": "captured",
+      "spyExiled": true,
+      "resources": {
+        "food": 17,
+        "water": 14,
+        "medicine": 10,
+        "parts": 3
+      },
+      "exiles": [
+        {
+          "id": "player",
+          "role": "saboteur"
+        },
+        {
+          "id": "ji",
+          "role": "explorer"
+        }
+      ],
+      "strategies": {},
+      "lieStatements": 0
+    },
+    {
+      "group": "saboteur",
+      "seed": 100004,
+      "difficulty": "hard",
+      "role": "saboteur",
+      "policy": "spy-cooperate",
+      "detectedLies": 0,
+      "steps": 24,
+      "day": 2,
+      "winner": "survivors",
+      "outcome": "escape",
+      "ending": "unknown",
+      "spyExiled": false,
+      "resources": {
+        "food": 19,
+        "water": 24,
+        "medicine": 8,
+        "parts": 2
+      },
+      "exiles": [
+        {
+          "id": "ji",
+          "role": "explorer"
+        }
+      ],
+      "strategies": {},
+      "lieStatements": 0
+    },
+    {
+      "group": "saboteur",
+      "seed": 100004,
+      "difficulty": "hard",
+      "role": "saboteur",
+      "policy": "spy-misinform",
+      "detectedLies": 1,
+      "steps": 39,
+      "day": 2,
+      "winner": "survivors",
+      "outcome": "exposed",
+      "ending": "captured",
+      "spyExiled": true,
+      "resources": {
+        "food": 12,
+        "water": 13,
+        "medicine": 10,
+        "parts": 1
+      },
+      "exiles": [
+        {
+          "id": "player",
+          "role": "saboteur"
+        },
+        {
+          "id": "ji",
+          "role": "explorer"
+        }
+      ],
+      "strategies": {},
+      "lieStatements": 2
+    },
+    {
+      "group": "saboteur",
+      "seed": 100004,
+      "difficulty": "hard",
+      "role": "saboteur",
+      "policy": "spy-divide",
+      "detectedLies": 0,
+      "steps": 58,
+      "day": 3,
+      "winner": "survivors",
+      "outcome": "escape",
+      "ending": "partial",
+      "spyExiled": true,
+      "resources": {
+        "food": 16,
+        "water": 17,
+        "medicine": 13,
+        "parts": 1
+      },
+      "exiles": [
+        {
+          "id": "player",
+          "role": "saboteur"
+        },
+        {
+          "id": "ji",
+          "role": "explorer"
+        }
+      ],
+      "strategies": {},
+      "lieStatements": 0
+    },
+    {
+      "group": "saboteur",
+      "seed": 100004,
+      "difficulty": "hard",
+      "role": "saboteur",
+      "policy": "spy-late",
+      "detectedLies": 0,
+      "steps": 59,
+      "day": 3,
+      "winner": "survivors",
+      "outcome": "escape",
+      "ending": "partial",
+      "spyExiled": true,
+      "resources": {
+        "food": 20,
+        "water": 24,
+        "medicine": 9,
+        "parts": 1
+      },
+      "exiles": [
+        {
+          "id": "player",
+          "role": "saboteur"
+        },
+        {
+          "id": "ji",
+          "role": "explorer"
+        }
+      ],
+      "strategies": {},
+      "lieStatements": 0
+    },
+    {
+      "group": "saboteur",
+      "seed": 100006,
+      "difficulty": "easy",
+      "role": "saboteur",
+      "policy": "spy-aggressive",
+      "detectedLies": 0,
+      "steps": 42,
+      "day": 3,
+      "winner": "survivors",
+      "outcome": "escape",
+      "ending": "together",
+      "spyExiled": false,
+      "resources": {
+        "food": 23,
+        "water": 26,
+        "medicine": 15,
+        "parts": 11
+      },
+      "exiles": [],
+      "strategies": {},
+      "lieStatements": 0
+    },
+    {
+      "group": "saboteur",
+      "seed": 100006,
+      "difficulty": "easy",
+      "role": "saboteur",
+      "policy": "spy-cooperate",
+      "detectedLies": 0,
+      "steps": 18,
+      "day": 1,
+      "winner": "survivors",
+      "outcome": "escape",
+      "ending": "unknown",
+      "spyExiled": false,
+      "resources": {
+        "food": 15,
+        "water": 17,
+        "medicine": 9,
+        "parts": 1
+      },
+      "exiles": [],
+      "strategies": {},
+      "lieStatements": 0
+    },
+    {
+      "group": "saboteur",
+      "seed": 100006,
+      "difficulty": "easy",
+      "role": "saboteur",
+      "policy": "spy-misinform",
+      "detectedLies": 0,
+      "steps": 22,
+      "day": 2,
+      "winner": "survivors",
+      "outcome": "escape",
+      "ending": "together",
+      "spyExiled": false,
+      "resources": {
+        "food": 16,
+        "water": 25,
+        "medicine": 12,
+        "parts": 2
+      },
+      "exiles": [],
+      "strategies": {},
+      "lieStatements": 1
+    },
+    {
+      "group": "saboteur",
+      "seed": 100006,
+      "difficulty": "easy",
+      "role": "saboteur",
+      "policy": "spy-divide",
+      "detectedLies": 0,
+      "steps": 39,
+      "day": 2,
+      "winner": "survivors",
+      "outcome": "exposed",
+      "ending": "captured",
+      "spyExiled": true,
+      "resources": {
+        "food": 16,
+        "water": 14,
+        "medicine": 15,
+        "parts": 7
+      },
+      "exiles": [
+        {
+          "id": "player",
+          "role": "saboteur"
+        },
+        {
+          "id": "seo",
+          "role": "investigator"
+        }
+      ],
+      "strategies": {},
+      "lieStatements": 0
+    },
+    {
+      "group": "saboteur",
+      "seed": 100006,
+      "difficulty": "easy",
+      "role": "saboteur",
+      "policy": "spy-late",
+      "detectedLies": 0,
+      "steps": 18,
+      "day": 1,
+      "winner": "survivors",
+      "outcome": "escape",
+      "ending": "unknown",
+      "spyExiled": false,
+      "resources": {
+        "food": 15,
+        "water": 17,
+        "medicine": 9,
+        "parts": 1
+      },
+      "exiles": [],
+      "strategies": {},
+      "lieStatements": 0
+    },
+    {
+      "group": "saboteur",
+      "seed": 100006,
+      "difficulty": "normal",
+      "role": "saboteur",
+      "policy": "spy-aggressive",
+      "detectedLies": 0,
+      "steps": 37,
+      "day": 2,
+      "winner": "survivors",
+      "outcome": "escape",
+      "ending": "partial",
+      "spyExiled": false,
+      "resources": {
+        "food": 14,
+        "water": 24,
+        "medicine": 11,
+        "parts": 0
+      },
+      "exiles": [
+        {
+          "id": "seo",
+          "role": "investigator"
+        }
+      ],
+      "strategies": {},
+      "lieStatements": 0
+    },
+    {
+      "group": "saboteur",
+      "seed": 100006,
+      "difficulty": "normal",
+      "role": "saboteur",
+      "policy": "spy-cooperate",
+      "detectedLies": 0,
+      "steps": 18,
+      "day": 1,
+      "winner": "survivors",
+      "outcome": "escape",
+      "ending": "unknown",
+      "spyExiled": false,
+      "resources": {
+        "food": 15,
+        "water": 17,
+        "medicine": 9,
+        "parts": 1
+      },
+      "exiles": [
+        {
+          "id": "seo",
+          "role": "investigator"
+        }
+      ],
+      "strategies": {},
+      "lieStatements": 0
+    },
+    {
+      "group": "saboteur",
+      "seed": 100006,
+      "difficulty": "normal",
+      "role": "saboteur",
+      "policy": "spy-misinform",
+      "detectedLies": 1,
+      "steps": 38,
+      "day": 2,
+      "winner": "survivors",
+      "outcome": "escape",
+      "ending": "research",
+      "spyExiled": true,
+      "resources": {
+        "food": 17,
+        "water": 19,
+        "medicine": 14,
+        "parts": 5
+      },
+      "exiles": [
+        {
+          "id": "player",
+          "role": "saboteur"
+        },
+        {
+          "id": "seo",
+          "role": "investigator"
+        }
+      ],
+      "strategies": {},
+      "lieStatements": 2
+    },
+    {
+      "group": "saboteur",
+      "seed": 100006,
+      "difficulty": "normal",
+      "role": "saboteur",
+      "policy": "spy-divide",
+      "detectedLies": 0,
+      "steps": 38,
+      "day": 2,
+      "winner": "survivors",
+      "outcome": "exposed",
+      "ending": "captured",
+      "spyExiled": true,
+      "resources": {
+        "food": 18,
+        "water": 18,
+        "medicine": 11,
+        "parts": 8
+      },
+      "exiles": [
+        {
+          "id": "player",
+          "role": "saboteur"
+        },
+        {
+          "id": "seo",
+          "role": "investigator"
+        }
+      ],
+      "strategies": {},
+      "lieStatements": 0
+    },
+    {
+      "group": "saboteur",
+      "seed": 100006,
+      "difficulty": "normal",
+      "role": "saboteur",
+      "policy": "spy-late",
+      "detectedLies": 0,
+      "steps": 18,
+      "day": 1,
+      "winner": "survivors",
+      "outcome": "escape",
+      "ending": "unknown",
+      "spyExiled": false,
+      "resources": {
+        "food": 15,
+        "water": 17,
+        "medicine": 9,
+        "parts": 1
+      },
+      "exiles": [
+        {
+          "id": "seo",
+          "role": "investigator"
+        }
+      ],
+      "strategies": {},
+      "lieStatements": 0
+    },
+    {
+      "group": "saboteur",
+      "seed": 100006,
+      "difficulty": "hard",
+      "role": "saboteur",
+      "policy": "spy-aggressive",
+      "detectedLies": 0,
+      "steps": 37,
+      "day": 2,
+      "winner": "survivors",
+      "outcome": "escape",
+      "ending": "partial",
+      "spyExiled": false,
+      "resources": {
+        "food": 14,
+        "water": 24,
+        "medicine": 11,
+        "parts": 0
+      },
+      "exiles": [
+        {
+          "id": "seo",
+          "role": "investigator"
+        }
+      ],
+      "strategies": {},
+      "lieStatements": 0
+    },
+    {
+      "group": "saboteur",
+      "seed": 100006,
+      "difficulty": "hard",
+      "role": "saboteur",
+      "policy": "spy-cooperate",
+      "detectedLies": 0,
+      "steps": 18,
+      "day": 1,
+      "winner": "survivors",
+      "outcome": "escape",
+      "ending": "unknown",
+      "spyExiled": false,
+      "resources": {
+        "food": 15,
+        "water": 17,
+        "medicine": 9,
+        "parts": 1
+      },
+      "exiles": [
+        {
+          "id": "seo",
+          "role": "investigator"
+        }
+      ],
+      "strategies": {},
+      "lieStatements": 0
+    },
+    {
+      "group": "saboteur",
+      "seed": 100006,
+      "difficulty": "hard",
+      "role": "saboteur",
+      "policy": "spy-misinform",
+      "detectedLies": 1,
+      "steps": 38,
+      "day": 2,
+      "winner": "survivors",
+      "outcome": "escape",
+      "ending": "research",
+      "spyExiled": true,
+      "resources": {
+        "food": 17,
+        "water": 19,
+        "medicine": 14,
+        "parts": 5
+      },
+      "exiles": [
+        {
+          "id": "player",
+          "role": "saboteur"
+        },
+        {
+          "id": "seo",
+          "role": "investigator"
+        }
+      ],
+      "strategies": {},
+      "lieStatements": 2
+    },
+    {
+      "group": "saboteur",
+      "seed": 100006,
+      "difficulty": "hard",
+      "role": "saboteur",
+      "policy": "spy-divide",
+      "detectedLies": 0,
+      "steps": 38,
+      "day": 2,
+      "winner": "survivors",
+      "outcome": "exposed",
+      "ending": "captured",
+      "spyExiled": true,
+      "resources": {
+        "food": 16,
+        "water": 18,
+        "medicine": 13,
+        "parts": 8
+      },
+      "exiles": [
+        {
+          "id": "player",
+          "role": "saboteur"
+        },
+        {
+          "id": "seo",
+          "role": "investigator"
+        }
+      ],
+      "strategies": {},
+      "lieStatements": 0
+    },
+    {
+      "group": "saboteur",
+      "seed": 100006,
+      "difficulty": "hard",
+      "role": "saboteur",
+      "policy": "spy-late",
+      "detectedLies": 0,
+      "steps": 18,
+      "day": 1,
+      "winner": "survivors",
+      "outcome": "escape",
+      "ending": "unknown",
+      "spyExiled": false,
+      "resources": {
+        "food": 15,
+        "water": 17,
+        "medicine": 9,
+        "parts": 1
+      },
+      "exiles": [
+        {
+          "id": "seo",
+          "role": "investigator"
+        }
+      ],
+      "strategies": {},
+      "lieStatements": 0
+    },
+    {
+      "group": "saboteur",
+      "seed": 100016,
+      "difficulty": "easy",
+      "role": "saboteur",
+      "policy": "spy-aggressive",
+      "detectedLies": 0,
+      "steps": 58,
+      "day": 3,
+      "winner": "survivors",
+      "outcome": "escape",
+      "ending": "partial",
+      "spyExiled": true,
+      "resources": {
+        "food": 27,
+        "water": 29,
+        "medicine": 11,
+        "parts": 5
+      },
+      "exiles": [
+        {
+          "id": "player",
+          "role": "saboteur"
+        }
+      ],
+      "strategies": {},
+      "lieStatements": 0
+    },
+    {
+      "group": "saboteur",
+      "seed": 100016,
+      "difficulty": "easy",
+      "role": "saboteur",
+      "policy": "spy-cooperate",
+      "detectedLies": 0,
+      "steps": 39,
+      "day": 2,
+      "winner": "survivors",
+      "outcome": "escape",
+      "ending": "unknown",
+      "spyExiled": false,
+      "resources": {
+        "food": 15,
+        "water": 31,
+        "medicine": 8,
+        "parts": 12
+      },
+      "exiles": [],
+      "strategies": {},
+      "lieStatements": 0
+    },
+    {
+      "group": "saboteur",
+      "seed": 100016,
+      "difficulty": "easy",
+      "role": "saboteur",
+      "policy": "spy-misinform",
+      "detectedLies": 1,
+      "steps": 19,
+      "day": 1,
+      "winner": "survivors",
+      "outcome": "exposed",
+      "ending": "captured",
+      "spyExiled": true,
+      "resources": {
+        "food": 12,
+        "water": 10,
+        "medicine": 9,
+        "parts": 9
+      },
+      "exiles": [
+        {
+          "id": "player",
+          "role": "saboteur"
+        }
+      ],
+      "strategies": {},
+      "lieStatements": 1
+    },
+    {
+      "group": "saboteur",
+      "seed": 100016,
+      "difficulty": "easy",
+      "role": "saboteur",
+      "policy": "spy-divide",
+      "detectedLies": 0,
+      "steps": 58,
+      "day": 3,
+      "winner": "survivors",
+      "outcome": "escape",
+      "ending": "partial",
+      "spyExiled": true,
+      "resources": {
+        "food": 27,
+        "water": 28,
+        "medicine": 7,
+        "parts": 7
+      },
+      "exiles": [
+        {
+          "id": "player",
+          "role": "saboteur"
+        }
+      ],
+      "strategies": {},
+      "lieStatements": 0
+    },
+    {
+      "group": "saboteur",
+      "seed": 100016,
+      "difficulty": "easy",
+      "role": "saboteur",
+      "policy": "spy-late",
+      "detectedLies": 0,
+      "steps": 58,
+      "day": 3,
+      "winner": "survivors",
+      "outcome": "escape",
+      "ending": "partial",
+      "spyExiled": true,
+      "resources": {
+        "food": 23,
+        "water": 29,
+        "medicine": 14,
+        "parts": 15
+      },
+      "exiles": [
+        {
+          "id": "player",
+          "role": "saboteur"
+        }
+      ],
+      "strategies": {},
+      "lieStatements": 0
+    },
+    {
+      "group": "saboteur",
+      "seed": 100016,
+      "difficulty": "normal",
+      "role": "saboteur",
+      "policy": "spy-aggressive",
+      "detectedLies": 0,
+      "steps": 39,
+      "day": 2,
+      "winner": "survivors",
+      "outcome": "exposed",
+      "ending": "captured",
+      "spyExiled": true,
+      "resources": {
+        "food": 18,
+        "water": 17,
+        "medicine": 9,
+        "parts": 12
+      },
+      "exiles": [
+        {
+          "id": "player",
+          "role": "saboteur"
+        }
+      ],
+      "strategies": {},
+      "lieStatements": 0
+    },
+    {
+      "group": "saboteur",
+      "seed": 100016,
+      "difficulty": "normal",
+      "role": "saboteur",
+      "policy": "spy-cooperate",
+      "detectedLies": 0,
+      "steps": 39,
+      "day": 2,
+      "winner": "survivors",
+      "outcome": "escape",
+      "ending": "unknown",
+      "spyExiled": false,
+      "resources": {
+        "food": 15,
+        "water": 31,
+        "medicine": 8,
+        "parts": 12
+      },
+      "exiles": [],
+      "strategies": {},
+      "lieStatements": 0
+    },
+    {
+      "group": "saboteur",
+      "seed": 100016,
+      "difficulty": "normal",
+      "role": "saboteur",
+      "policy": "spy-misinform",
+      "detectedLies": 1,
+      "steps": 19,
+      "day": 1,
+      "winner": "survivors",
+      "outcome": "exposed",
+      "ending": "captured",
+      "spyExiled": true,
+      "resources": {
+        "food": 9,
+        "water": 10,
+        "medicine": 9,
+        "parts": 9
+      },
+      "exiles": [
+        {
+          "id": "player",
+          "role": "saboteur"
+        }
+      ],
+      "strategies": {},
+      "lieStatements": 1
+    },
+    {
+      "group": "saboteur",
+      "seed": 100016,
+      "difficulty": "normal",
+      "role": "saboteur",
+      "policy": "spy-divide",
+      "detectedLies": 0,
+      "steps": 58,
+      "day": 3,
+      "winner": "survivors",
+      "outcome": "escape",
+      "ending": "partial",
+      "spyExiled": true,
+      "resources": {
+        "food": 16,
+        "water": 14,
+        "medicine": 10,
+        "parts": 13
+      },
+      "exiles": [
+        {
+          "id": "player",
+          "role": "saboteur"
+        }
+      ],
+      "strategies": {},
+      "lieStatements": 0
+    },
+    {
+      "group": "saboteur",
+      "seed": 100016,
+      "difficulty": "normal",
+      "role": "saboteur",
+      "policy": "spy-late",
+      "detectedLies": 0,
+      "steps": 58,
+      "day": 3,
+      "winner": "survivors",
+      "outcome": "escape",
+      "ending": "partial",
+      "spyExiled": true,
+      "resources": {
+        "food": 21,
+        "water": 30,
+        "medicine": 16,
+        "parts": 17
+      },
+      "exiles": [
+        {
+          "id": "player",
+          "role": "saboteur"
+        }
+      ],
+      "strategies": {},
+      "lieStatements": 0
+    },
+    {
+      "group": "saboteur",
+      "seed": 100016,
+      "difficulty": "hard",
+      "role": "saboteur",
+      "policy": "spy-aggressive",
+      "detectedLies": 0,
+      "steps": 39,
+      "day": 2,
+      "winner": "survivors",
+      "outcome": "exposed",
+      "ending": "captured",
+      "spyExiled": true,
+      "resources": {
+        "food": 15,
+        "water": 17,
+        "medicine": 9,
+        "parts": 10
+      },
+      "exiles": [
+        {
+          "id": "player",
+          "role": "saboteur"
+        }
+      ],
+      "strategies": {},
+      "lieStatements": 0
+    },
+    {
+      "group": "saboteur",
+      "seed": 100016,
+      "difficulty": "hard",
+      "role": "saboteur",
+      "policy": "spy-cooperate",
+      "detectedLies": 0,
+      "steps": 39,
+      "day": 2,
+      "winner": "survivors",
+      "outcome": "escape",
+      "ending": "unknown",
+      "spyExiled": false,
+      "resources": {
+        "food": 15,
+        "water": 31,
+        "medicine": 8,
+        "parts": 12
+      },
+      "exiles": [],
+      "strategies": {},
+      "lieStatements": 0
+    },
+    {
+      "group": "saboteur",
+      "seed": 100016,
+      "difficulty": "hard",
+      "role": "saboteur",
+      "policy": "spy-misinform",
+      "detectedLies": 1,
+      "steps": 19,
+      "day": 1,
+      "winner": "survivors",
+      "outcome": "exposed",
+      "ending": "captured",
+      "spyExiled": true,
+      "resources": {
+        "food": 9,
+        "water": 10,
+        "medicine": 9,
+        "parts": 9
+      },
+      "exiles": [
+        {
+          "id": "player",
+          "role": "saboteur"
+        }
+      ],
+      "strategies": {},
+      "lieStatements": 1
+    },
+    {
+      "group": "saboteur",
+      "seed": 100016,
+      "difficulty": "hard",
+      "role": "saboteur",
+      "policy": "spy-divide",
+      "detectedLies": 0,
+      "steps": 58,
+      "day": 3,
+      "winner": "survivors",
+      "outcome": "escape",
+      "ending": "partial",
+      "spyExiled": true,
+      "resources": {
+        "food": 16,
+        "water": 17,
+        "medicine": 10,
+        "parts": 13
+      },
+      "exiles": [
+        {
+          "id": "player",
+          "role": "saboteur"
+        }
+      ],
+      "strategies": {},
+      "lieStatements": 0
+    },
+    {
+      "group": "saboteur",
+      "seed": 100016,
+      "difficulty": "hard",
+      "role": "saboteur",
+      "policy": "spy-late",
+      "detectedLies": 0,
+      "steps": 58,
+      "day": 3,
+      "winner": "survivors",
+      "outcome": "escape",
+      "ending": "partial",
+      "spyExiled": true,
+      "resources": {
+        "food": 21,
+        "water": 30,
+        "medicine": 16,
+        "parts": 17
+      },
+      "exiles": [
+        {
+          "id": "player",
+          "role": "saboteur"
+        }
+      ],
+      "strategies": {},
+      "lieStatements": 0
+    },
+    {
+      "group": "saboteur",
+      "seed": 100018,
+      "difficulty": "easy",
+      "role": "saboteur",
+      "policy": "spy-aggressive",
+      "detectedLies": 0,
+      "steps": 38,
+      "day": 2,
+      "winner": "survivors",
+      "outcome": "exposed",
+      "ending": "captured",
+      "spyExiled": true,
+      "resources": {
+        "food": 20,
+        "water": 23,
+        "medicine": 5,
+        "parts": 7
+      },
+      "exiles": [
+        {
+          "id": "player",
+          "role": "saboteur"
+        }
+      ],
+      "strategies": {},
+      "lieStatements": 0
+    },
+    {
+      "group": "saboteur",
+      "seed": 100018,
+      "difficulty": "easy",
+      "role": "saboteur",
+      "policy": "spy-cooperate",
+      "detectedLies": 0,
+      "steps": 37,
+      "day": 2,
+      "winner": "survivors",
+      "outcome": "escape",
+      "ending": "together",
+      "spyExiled": false,
+      "resources": {
+        "food": 25,
+        "water": 28,
+        "medicine": 3,
+        "parts": 8
+      },
+      "exiles": [],
+      "strategies": {},
+      "lieStatements": 0
+    },
+    {
+      "group": "saboteur",
+      "seed": 100018,
+      "difficulty": "easy",
+      "role": "saboteur",
+      "policy": "spy-misinform",
+      "detectedLies": 1,
+      "steps": 37,
+      "day": 2,
+      "winner": "survivors",
+      "outcome": "escape",
+      "ending": "unknown",
+      "spyExiled": true,
+      "resources": {
+        "food": 28,
+        "water": 28,
+        "medicine": 7,
+        "parts": 3
+      },
+      "exiles": [
+        {
+          "id": "player",
+          "role": "saboteur"
+        }
+      ],
+      "strategies": {},
+      "lieStatements": 2
+    },
+    {
+      "group": "saboteur",
+      "seed": 100018,
+      "difficulty": "easy",
+      "role": "saboteur",
+      "policy": "spy-divide",
+      "detectedLies": 0,
+      "steps": 42,
+      "day": 3,
+      "winner": "survivors",
+      "outcome": "escape",
+      "ending": "together",
+      "spyExiled": false,
+      "resources": {
+        "food": 33,
+        "water": 26,
+        "medicine": 14,
+        "parts": 14
+      },
+      "exiles": [],
+      "strategies": {},
+      "lieStatements": 0
+    },
+    {
+      "group": "saboteur",
+      "seed": 100018,
+      "difficulty": "easy",
+      "role": "saboteur",
+      "policy": "spy-late",
+      "detectedLies": 0,
+      "steps": 41,
+      "day": 3,
+      "winner": "survivors",
+      "outcome": "escape",
+      "ending": "together",
+      "spyExiled": false,
+      "resources": {
+        "food": 29,
+        "water": 32,
+        "medicine": 9,
+        "parts": 10
+      },
+      "exiles": [],
+      "strategies": {},
+      "lieStatements": 0
+    },
+    {
+      "group": "saboteur",
+      "seed": 100018,
+      "difficulty": "normal",
+      "role": "saboteur",
+      "policy": "spy-aggressive",
+      "detectedLies": 0,
+      "steps": 37,
+      "day": 2,
+      "winner": "survivors",
+      "outcome": "escape",
+      "ending": "unknown",
+      "spyExiled": true,
+      "resources": {
+        "food": 22,
+        "water": 26,
+        "medicine": 4,
+        "parts": 3
+      },
+      "exiles": [
+        {
+          "id": "player",
+          "role": "saboteur"
+        }
+      ],
+      "strategies": {},
+      "lieStatements": 0
+    },
+    {
+      "group": "saboteur",
+      "seed": 100018,
+      "difficulty": "normal",
+      "role": "saboteur",
+      "policy": "spy-cooperate",
+      "detectedLies": 0,
+      "steps": 37,
+      "day": 2,
+      "winner": "survivors",
+      "outcome": "escape",
+      "ending": "together",
+      "spyExiled": false,
+      "resources": {
+        "food": 25,
+        "water": 28,
+        "medicine": 3,
+        "parts": 8
+      },
+      "exiles": [],
+      "strategies": {},
+      "lieStatements": 0
+    },
+    {
+      "group": "saboteur",
+      "seed": 100018,
+      "difficulty": "normal",
+      "role": "saboteur",
+      "policy": "spy-misinform",
+      "detectedLies": 1,
+      "steps": 38,
+      "day": 2,
+      "winner": "survivors",
+      "outcome": "exposed",
+      "ending": "captured",
+      "spyExiled": true,
+      "resources": {
+        "food": 28,
+        "water": 23,
+        "medicine": 7,
+        "parts": 7
+      },
+      "exiles": [
+        {
+          "id": "player",
+          "role": "saboteur"
+        }
+      ],
+      "strategies": {},
+      "lieStatements": 2
+    },
+    {
+      "group": "saboteur",
+      "seed": 100018,
+      "difficulty": "normal",
+      "role": "saboteur",
+      "policy": "spy-divide",
+      "detectedLies": 0,
+      "steps": 38,
+      "day": 2,
+      "winner": "survivors",
+      "outcome": "escape",
+      "ending": "partial",
+      "spyExiled": true,
+      "resources": {
+        "food": 23,
+        "water": 23,
+        "medicine": 7,
+        "parts": 11
+      },
+      "exiles": [
+        {
+          "id": "player",
+          "role": "saboteur"
+        }
+      ],
+      "strategies": {},
+      "lieStatements": 0
+    },
+    {
+      "group": "saboteur",
+      "seed": 100018,
+      "difficulty": "normal",
+      "role": "saboteur",
+      "policy": "spy-late",
+      "detectedLies": 0,
+      "steps": 42,
+      "day": 3,
+      "winner": "survivors",
+      "outcome": "escape",
+      "ending": "together",
+      "spyExiled": false,
+      "resources": {
+        "food": 21,
+        "water": 25,
+        "medicine": 10,
+        "parts": 9
+      },
+      "exiles": [],
+      "strategies": {},
+      "lieStatements": 0
+    },
+    {
+      "group": "saboteur",
+      "seed": 100018,
+      "difficulty": "hard",
+      "role": "saboteur",
+      "policy": "spy-aggressive",
+      "detectedLies": 0,
+      "steps": 37,
+      "day": 2,
+      "winner": "survivors",
+      "outcome": "escape",
+      "ending": "unknown",
+      "spyExiled": true,
+      "resources": {
+        "food": 21,
+        "water": 23,
+        "medicine": 4,
+        "parts": 4
+      },
+      "exiles": [
+        {
+          "id": "player",
+          "role": "saboteur"
+        }
+      ],
+      "strategies": {},
+      "lieStatements": 0
+    },
+    {
+      "group": "saboteur",
+      "seed": 100018,
+      "difficulty": "hard",
+      "role": "saboteur",
+      "policy": "spy-cooperate",
+      "detectedLies": 0,
+      "steps": 37,
+      "day": 2,
+      "winner": "survivors",
+      "outcome": "escape",
+      "ending": "together",
+      "spyExiled": false,
+      "resources": {
+        "food": 25,
+        "water": 28,
+        "medicine": 3,
+        "parts": 8
+      },
+      "exiles": [],
+      "strategies": {},
+      "lieStatements": 0
+    },
+    {
+      "group": "saboteur",
+      "seed": 100018,
+      "difficulty": "hard",
+      "role": "saboteur",
+      "policy": "spy-misinform",
+      "detectedLies": 1,
+      "steps": 38,
+      "day": 2,
+      "winner": "survivors",
+      "outcome": "exposed",
+      "ending": "captured",
+      "spyExiled": true,
+      "resources": {
+        "food": 26,
+        "water": 23,
+        "medicine": 9,
+        "parts": 7
+      },
+      "exiles": [
+        {
+          "id": "player",
+          "role": "saboteur"
+        }
+      ],
+      "strategies": {},
+      "lieStatements": 2
+    },
+    {
+      "group": "saboteur",
+      "seed": 100018,
+      "difficulty": "hard",
+      "role": "saboteur",
+      "policy": "spy-divide",
+      "detectedLies": 0,
+      "steps": 38,
+      "day": 2,
+      "winner": "survivors",
+      "outcome": "escape",
+      "ending": "partial",
+      "spyExiled": true,
+      "resources": {
+        "food": 23,
+        "water": 23,
+        "medicine": 7,
+        "parts": 11
+      },
+      "exiles": [
+        {
+          "id": "player",
+          "role": "saboteur"
+        }
+      ],
+      "strategies": {},
+      "lieStatements": 0
+    },
+    {
+      "group": "saboteur",
+      "seed": 100018,
+      "difficulty": "hard",
+      "role": "saboteur",
+      "policy": "spy-late",
+      "detectedLies": 0,
+      "steps": 42,
+      "day": 3,
+      "winner": "survivors",
+      "outcome": "escape",
+      "ending": "together",
+      "spyExiled": false,
+      "resources": {
+        "food": 21,
+        "water": 25,
+        "medicine": 10,
+        "parts": 9
+      },
+      "exiles": [],
+      "strategies": {},
+      "lieStatements": 0
+    },
+    {
+      "group": "saboteur",
+      "seed": 100041,
+      "difficulty": "easy",
+      "role": "saboteur",
+      "policy": "spy-aggressive",
+      "detectedLies": 0,
+      "steps": 20,
+      "day": 1,
+      "winner": "survivors",
+      "outcome": "exposed",
+      "ending": "captured",
+      "spyExiled": true,
+      "resources": {
+        "food": 16,
+        "water": 16,
+        "medicine": 8,
+        "parts": 6
+      },
+      "exiles": [
+        {
+          "id": "player",
+          "role": "saboteur"
+        }
+      ],
+      "strategies": {},
+      "lieStatements": 0
+    },
+    {
+      "group": "saboteur",
+      "seed": 100041,
+      "difficulty": "easy",
+      "role": "saboteur",
+      "policy": "spy-cooperate",
+      "detectedLies": 0,
+      "steps": 38,
+      "day": 2,
+      "winner": "survivors",
+      "outcome": "escape",
+      "ending": "unknown",
+      "spyExiled": false,
+      "resources": {
+        "food": 38,
+        "water": 36,
+        "medicine": 10,
+        "parts": 4
+      },
+      "exiles": [],
+      "strategies": {},
+      "lieStatements": 0
+    },
+    {
+      "group": "saboteur",
+      "seed": 100041,
+      "difficulty": "easy",
+      "role": "saboteur",
+      "policy": "spy-misinform",
+      "detectedLies": 1,
+      "steps": 20,
+      "day": 1,
+      "winner": "survivors",
+      "outcome": "exposed",
+      "ending": "captured",
+      "spyExiled": true,
+      "resources": {
+        "food": 25,
+        "water": 16,
+        "medicine": 10,
+        "parts": 8
+      },
+      "exiles": [
+        {
+          "id": "player",
+          "role": "saboteur"
+        }
+      ],
+      "strategies": {},
+      "lieStatements": 1
+    },
+    {
+      "group": "saboteur",
+      "seed": 100041,
+      "difficulty": "easy",
+      "role": "saboteur",
+      "policy": "spy-divide",
+      "detectedLies": 0,
+      "steps": 20,
+      "day": 1,
+      "winner": "survivors",
+      "outcome": "exposed",
+      "ending": "captured",
+      "spyExiled": true,
+      "resources": {
+        "food": 19,
+        "water": 16,
+        "medicine": 9,
+        "parts": 6
+      },
+      "exiles": [
+        {
+          "id": "player",
+          "role": "saboteur"
+        }
+      ],
+      "strategies": {},
+      "lieStatements": 0
+    },
+    {
+      "group": "saboteur",
+      "seed": 100041,
+      "difficulty": "easy",
+      "role": "saboteur",
+      "policy": "spy-late",
+      "detectedLies": 0,
+      "steps": 44,
+      "day": 3,
+      "winner": "survivors",
+      "outcome": "escape",
+      "ending": "together",
+      "spyExiled": false,
+      "resources": {
+        "food": 41,
+        "water": 35,
+        "medicine": 13,
+        "parts": 0
+      },
+      "exiles": [],
+      "strategies": {},
+      "lieStatements": 0
+    },
+    {
+      "group": "saboteur",
+      "seed": 100041,
+      "difficulty": "normal",
+      "role": "saboteur",
+      "policy": "spy-aggressive",
+      "detectedLies": 0,
+      "steps": 20,
+      "day": 1,
+      "winner": "survivors",
+      "outcome": "exposed",
+      "ending": "captured",
+      "spyExiled": true,
+      "resources": {
+        "food": 16,
+        "water": 16,
+        "medicine": 8,
+        "parts": 6
+      },
+      "exiles": [
+        {
+          "id": "player",
+          "role": "saboteur"
+        }
+      ],
+      "strategies": {},
+      "lieStatements": 0
+    },
+    {
+      "group": "saboteur",
+      "seed": 100041,
+      "difficulty": "normal",
+      "role": "saboteur",
+      "policy": "spy-cooperate",
+      "detectedLies": 0,
+      "steps": 38,
+      "day": 2,
+      "winner": "survivors",
+      "outcome": "escape",
+      "ending": "unknown",
+      "spyExiled": false,
+      "resources": {
+        "food": 38,
+        "water": 36,
+        "medicine": 8,
+        "parts": 4
+      },
+      "exiles": [
+        {
+          "id": "ji",
+          "role": "engineer"
+        }
+      ],
+      "strategies": {},
+      "lieStatements": 0
+    },
+    {
+      "group": "saboteur",
+      "seed": 100041,
+      "difficulty": "normal",
+      "role": "saboteur",
+      "policy": "spy-misinform",
+      "detectedLies": 1,
+      "steps": 20,
+      "day": 1,
+      "winner": "survivors",
+      "outcome": "exposed",
+      "ending": "captured",
+      "spyExiled": true,
+      "resources": {
+        "food": 25,
+        "water": 16,
+        "medicine": 10,
+        "parts": 8
+      },
+      "exiles": [
+        {
+          "id": "player",
+          "role": "saboteur"
+        }
+      ],
+      "strategies": {},
+      "lieStatements": 1
+    },
+    {
+      "group": "saboteur",
+      "seed": 100041,
+      "difficulty": "normal",
+      "role": "saboteur",
+      "policy": "spy-divide",
+      "detectedLies": 0,
+      "steps": 20,
+      "day": 1,
+      "winner": "survivors",
+      "outcome": "exposed",
+      "ending": "captured",
+      "spyExiled": true,
+      "resources": {
+        "food": 19,
+        "water": 16,
+        "medicine": 9,
+        "parts": 6
+      },
+      "exiles": [
+        {
+          "id": "player",
+          "role": "saboteur"
+        }
+      ],
+      "strategies": {},
+      "lieStatements": 0
+    },
+    {
+      "group": "saboteur",
+      "seed": 100041,
+      "difficulty": "normal",
+      "role": "saboteur",
+      "policy": "spy-late",
+      "detectedLies": 0,
+      "steps": 43,
+      "day": 3,
+      "winner": "survivors",
+      "outcome": "escape",
+      "ending": "partial",
+      "spyExiled": false,
+      "resources": {
+        "food": 36,
+        "water": 34,
+        "medicine": 15,
+        "parts": 4
+      },
+      "exiles": [
+        {
+          "id": "ji",
+          "role": "engineer"
+        }
+      ],
+      "strategies": {},
+      "lieStatements": 0
+    },
+    {
+      "group": "saboteur",
+      "seed": 100041,
+      "difficulty": "hard",
+      "role": "saboteur",
+      "policy": "spy-aggressive",
+      "detectedLies": 0,
+      "steps": 20,
+      "day": 1,
+      "winner": "survivors",
+      "outcome": "exposed",
+      "ending": "captured",
+      "spyExiled": true,
+      "resources": {
+        "food": 16,
+        "water": 16,
+        "medicine": 8,
+        "parts": 6
+      },
+      "exiles": [
+        {
+          "id": "player",
+          "role": "saboteur"
+        }
+      ],
+      "strategies": {},
+      "lieStatements": 0
+    },
+    {
+      "group": "saboteur",
+      "seed": 100041,
+      "difficulty": "hard",
+      "role": "saboteur",
+      "policy": "spy-cooperate",
+      "detectedLies": 0,
+      "steps": 38,
+      "day": 2,
+      "winner": "survivors",
+      "outcome": "escape",
+      "ending": "unknown",
+      "spyExiled": false,
+      "resources": {
+        "food": 36,
+        "water": 36,
+        "medicine": 9,
+        "parts": 4
+      },
+      "exiles": [
+        {
+          "id": "ji",
+          "role": "engineer"
+        }
+      ],
+      "strategies": {},
+      "lieStatements": 0
+    },
+    {
+      "group": "saboteur",
+      "seed": 100041,
+      "difficulty": "hard",
+      "role": "saboteur",
+      "policy": "spy-misinform",
+      "detectedLies": 1,
+      "steps": 20,
+      "day": 1,
+      "winner": "survivors",
+      "outcome": "exposed",
+      "ending": "captured",
+      "spyExiled": true,
+      "resources": {
+        "food": 20,
+        "water": 16,
+        "medicine": 9,
+        "parts": 6
+      },
+      "exiles": [
+        {
+          "id": "player",
+          "role": "saboteur"
+        }
+      ],
+      "strategies": {},
+      "lieStatements": 1
+    },
+    {
+      "group": "saboteur",
+      "seed": 100041,
+      "difficulty": "hard",
+      "role": "saboteur",
+      "policy": "spy-divide",
+      "detectedLies": 0,
+      "steps": 20,
+      "day": 1,
+      "winner": "survivors",
+      "outcome": "exposed",
+      "ending": "captured",
+      "spyExiled": true,
+      "resources": {
+        "food": 19,
+        "water": 16,
+        "medicine": 9,
+        "parts": 6
+      },
+      "exiles": [
+        {
+          "id": "player",
+          "role": "saboteur"
+        }
+      ],
+      "strategies": {},
+      "lieStatements": 0
+    },
+    {
+      "group": "saboteur",
+      "seed": 100041,
+      "difficulty": "hard",
+      "role": "saboteur",
+      "policy": "spy-late",
+      "detectedLies": 0,
+      "steps": 59,
+      "day": 3,
+      "winner": "survivors",
+      "outcome": "exposed",
+      "ending": "captured",
+      "spyExiled": true,
+      "resources": {
+        "food": 34,
+        "water": 36,
+        "medicine": 14,
+        "parts": 0
+      },
+      "exiles": [
+        {
+          "id": "player",
+          "role": "saboteur"
+        },
+        {
+          "id": "ji",
+          "role": "engineer"
+        }
+      ],
+      "strategies": {},
+      "lieStatements": 0
+    },
+    {
+      "group": "saboteur",
+      "seed": 100050,
+      "difficulty": "easy",
+      "role": "saboteur",
+      "policy": "spy-aggressive",
+      "detectedLies": 0,
+      "steps": 39,
+      "day": 2,
+      "winner": "survivors",
+      "outcome": "exposed",
+      "ending": "captured",
+      "spyExiled": true,
+      "resources": {
+        "food": 12,
+        "water": 17,
+        "medicine": 11,
+        "parts": 5
+      },
+      "exiles": [
+        {
+          "id": "player",
+          "role": "saboteur"
+        },
+        {
+          "id": "ha",
+          "role": "explorer"
+        }
+      ],
+      "strategies": {},
+      "lieStatements": 0
+    },
+    {
+      "group": "saboteur",
+      "seed": 100050,
+      "difficulty": "easy",
+      "role": "saboteur",
+      "policy": "spy-cooperate",
+      "detectedLies": 0,
+      "steps": 24,
+      "day": 2,
+      "winner": "survivors",
+      "outcome": "escape",
+      "ending": "partial",
+      "spyExiled": false,
+      "resources": {
+        "food": 16,
+        "water": 26,
+        "medicine": 11,
+        "parts": 4
+      },
+      "exiles": [
+        {
+          "id": "ha",
+          "role": "explorer"
+        }
+      ],
+      "strategies": {},
+      "lieStatements": 0
+    },
+    {
+      "group": "saboteur",
+      "seed": 100050,
+      "difficulty": "easy",
+      "role": "saboteur",
+      "policy": "spy-misinform",
+      "detectedLies": 1,
+      "steps": 40,
+      "day": 2,
+      "winner": "survivors",
+      "outcome": "exposed",
+      "ending": "captured",
+      "spyExiled": true,
+      "resources": {
+        "food": 17,
+        "water": 18,
+        "medicine": 11,
+        "parts": 6
+      },
+      "exiles": [
+        {
+          "id": "player",
+          "role": "saboteur"
+        },
+        {
+          "id": "ha",
+          "role": "explorer"
+        }
+      ],
+      "strategies": {},
+      "lieStatements": 2
+    },
+    {
+      "group": "saboteur",
+      "seed": 100050,
+      "difficulty": "easy",
+      "role": "saboteur",
+      "policy": "spy-divide",
+      "detectedLies": 0,
+      "steps": 58,
+      "day": 3,
+      "winner": "saboteur",
+      "outcome": "saboteur",
+      "ending": "covert",
+      "spyExiled": false,
+      "resources": {
+        "food": 26,
+        "water": 18,
+        "medicine": 15,
+        "parts": 0
+      },
+      "exiles": [
+        {
+          "id": "ha",
+          "role": "explorer"
+        }
+      ],
+      "strategies": {},
+      "lieStatements": 0
+    },
+    {
+      "group": "saboteur",
+      "seed": 100050,
+      "difficulty": "easy",
+      "role": "saboteur",
+      "policy": "spy-late",
+      "detectedLies": 0,
+      "steps": 60,
+      "day": 3,
+      "winner": "saboteur",
+      "outcome": "saboteur",
+      "ending": "covert",
+      "spyExiled": false,
+      "resources": {
+        "food": 25,
+        "water": 23,
+        "medicine": 16,
+        "parts": 0
+      },
+      "exiles": [
+        {
+          "id": "ha",
+          "role": "explorer"
+        }
+      ],
+      "strategies": {},
+      "lieStatements": 0
+    },
+    {
+      "group": "saboteur",
+      "seed": 100050,
+      "difficulty": "normal",
+      "role": "saboteur",
+      "policy": "spy-aggressive",
+      "detectedLies": 0,
+      "steps": 39,
+      "day": 2,
+      "winner": "survivors",
+      "outcome": "exposed",
+      "ending": "captured",
+      "spyExiled": true,
+      "resources": {
+        "food": 12,
+        "water": 17,
+        "medicine": 11,
+        "parts": 5
+      },
+      "exiles": [
+        {
+          "id": "player",
+          "role": "saboteur"
+        },
+        {
+          "id": "ha",
+          "role": "explorer"
+        }
+      ],
+      "strategies": {},
+      "lieStatements": 0
+    },
+    {
+      "group": "saboteur",
+      "seed": 100050,
+      "difficulty": "normal",
+      "role": "saboteur",
+      "policy": "spy-cooperate",
+      "detectedLies": 0,
+      "steps": 24,
+      "day": 2,
+      "winner": "survivors",
+      "outcome": "escape",
+      "ending": "partial",
+      "spyExiled": false,
+      "resources": {
+        "food": 16,
+        "water": 26,
+        "medicine": 11,
+        "parts": 4
+      },
+      "exiles": [
+        {
+          "id": "ha",
+          "role": "explorer"
+        }
+      ],
+      "strategies": {},
+      "lieStatements": 0
+    },
+    {
+      "group": "saboteur",
+      "seed": 100050,
+      "difficulty": "normal",
+      "role": "saboteur",
+      "policy": "spy-misinform",
+      "detectedLies": 1,
+      "steps": 40,
+      "day": 2,
+      "winner": "survivors",
+      "outcome": "exposed",
+      "ending": "captured",
+      "spyExiled": true,
+      "resources": {
+        "food": 17,
+        "water": 18,
+        "medicine": 11,
+        "parts": 6
+      },
+      "exiles": [
+        {
+          "id": "player",
+          "role": "saboteur"
+        },
+        {
+          "id": "ha",
+          "role": "explorer"
+        }
+      ],
+      "strategies": {},
+      "lieStatements": 2
+    },
+    {
+      "group": "saboteur",
+      "seed": 100050,
+      "difficulty": "normal",
+      "role": "saboteur",
+      "policy": "spy-divide",
+      "detectedLies": 0,
+      "steps": 58,
+      "day": 3,
+      "winner": "survivors",
+      "outcome": "escape",
+      "ending": "research",
+      "spyExiled": true,
+      "resources": {
+        "food": 19,
+        "water": 25,
+        "medicine": 17,
+        "parts": 1
+      },
+      "exiles": [
+        {
+          "id": "player",
+          "role": "saboteur"
+        },
+        {
+          "id": "ha",
+          "role": "explorer"
+        }
+      ],
+      "strategies": {},
+      "lieStatements": 0
+    },
+    {
+      "group": "saboteur",
+      "seed": 100050,
+      "difficulty": "normal",
+      "role": "saboteur",
+      "policy": "spy-late",
+      "detectedLies": 0,
+      "steps": 60,
+      "day": 3,
+      "winner": "saboteur",
+      "outcome": "saboteur",
+      "ending": "covert",
+      "spyExiled": false,
+      "resources": {
+        "food": 25,
+        "water": 23,
+        "medicine": 16,
+        "parts": 0
+      },
+      "exiles": [
+        {
+          "id": "ha",
+          "role": "explorer"
+        }
+      ],
+      "strategies": {},
+      "lieStatements": 0
+    },
+    {
+      "group": "saboteur",
+      "seed": 100050,
+      "difficulty": "hard",
+      "role": "saboteur",
+      "policy": "spy-aggressive",
+      "detectedLies": 0,
+      "steps": 59,
+      "day": 3,
+      "winner": "survivors",
+      "outcome": "escape",
+      "ending": "unknown",
+      "spyExiled": true,
+      "resources": {
+        "food": 25,
+        "water": 17,
+        "medicine": 16,
+        "parts": 1
+      },
+      "exiles": [
+        {
+          "id": "player",
+          "role": "saboteur"
+        },
+        {
+          "id": "ha",
+          "role": "explorer"
+        }
+      ],
+      "strategies": {},
+      "lieStatements": 0
+    },
+    {
+      "group": "saboteur",
+      "seed": 100050,
+      "difficulty": "hard",
+      "role": "saboteur",
+      "policy": "spy-cooperate",
+      "detectedLies": 0,
+      "steps": 39,
+      "day": 2,
+      "winner": "survivors",
+      "outcome": "escape",
+      "ending": "partial",
+      "spyExiled": false,
+      "resources": {
+        "food": 23,
+        "water": 27,
+        "medicine": 10,
+        "parts": 6
+      },
+      "exiles": [
+        {
+          "id": "ha",
+          "role": "explorer"
+        }
+      ],
+      "strategies": {},
+      "lieStatements": 0
+    },
+    {
+      "group": "saboteur",
+      "seed": 100050,
+      "difficulty": "hard",
+      "role": "saboteur",
+      "policy": "spy-misinform",
+      "detectedLies": 1,
+      "steps": 40,
+      "day": 2,
+      "winner": "survivors",
+      "outcome": "exposed",
+      "ending": "captured",
+      "spyExiled": true,
+      "resources": {
+        "food": 10,
+        "water": 13,
+        "medicine": 12,
+        "parts": 0
+      },
+      "exiles": [
+        {
+          "id": "player",
+          "role": "saboteur"
+        },
+        {
+          "id": "ha",
+          "role": "explorer"
+        }
+      ],
+      "strategies": {},
+      "lieStatements": 2
+    },
+    {
+      "group": "saboteur",
+      "seed": 100050,
+      "difficulty": "hard",
+      "role": "saboteur",
+      "policy": "spy-divide",
+      "detectedLies": 0,
+      "steps": 58,
+      "day": 3,
+      "winner": "survivors",
+      "outcome": "escape",
+      "ending": "research",
+      "spyExiled": true,
+      "resources": {
+        "food": 19,
+        "water": 25,
+        "medicine": 17,
+        "parts": 1
+      },
+      "exiles": [
+        {
+          "id": "player",
+          "role": "saboteur"
+        },
+        {
+          "id": "ha",
+          "role": "explorer"
+        }
+      ],
+      "strategies": {},
+      "lieStatements": 0
+    },
+    {
+      "group": "saboteur",
+      "seed": 100050,
+      "difficulty": "hard",
+      "role": "saboteur",
+      "policy": "spy-late",
+      "detectedLies": 0,
+      "steps": 59,
+      "day": 3,
+      "winner": "saboteur",
+      "outcome": "saboteur",
+      "ending": "covert",
+      "spyExiled": false,
+      "resources": {
+        "food": 26,
+        "water": 18,
+        "medicine": 16,
+        "parts": 0
+      },
+      "exiles": [
+        {
+          "id": "ha",
+          "role": "explorer"
+        }
+      ],
+      "strategies": {},
+      "lieStatements": 0
+    },
+    {
+      "group": "saboteur",
+      "seed": 100057,
+      "difficulty": "easy",
+      "role": "saboteur",
+      "policy": "spy-aggressive",
+      "detectedLies": 0,
+      "steps": 23,
+      "day": 2,
+      "winner": "survivors",
+      "outcome": "escape",
+      "ending": "together",
+      "spyExiled": false,
+      "resources": {
+        "food": 16,
+        "water": 23,
+        "medicine": 12,
+        "parts": 4
+      },
+      "exiles": [],
+      "strategies": {},
+      "lieStatements": 0
+    },
+    {
+      "group": "saboteur",
+      "seed": 100057,
+      "difficulty": "easy",
+      "role": "saboteur",
+      "policy": "spy-cooperate",
+      "detectedLies": 0,
+      "steps": 19,
+      "day": 1,
+      "winner": "survivors",
+      "outcome": "escape",
+      "ending": "unknown",
+      "spyExiled": false,
+      "resources": {
+        "food": 16,
+        "water": 21,
+        "medicine": 7,
+        "parts": 4
+      },
+      "exiles": [],
+      "strategies": {},
+      "lieStatements": 0
+    },
+    {
+      "group": "saboteur",
+      "seed": 100057,
+      "difficulty": "easy",
+      "role": "saboteur",
+      "policy": "spy-misinform",
+      "detectedLies": 1,
+      "steps": 38,
+      "day": 2,
+      "winner": "survivors",
+      "outcome": "escape",
+      "ending": "partial",
+      "spyExiled": true,
+      "resources": {
+        "food": 23,
+        "water": 24,
+        "medicine": 11,
+        "parts": 8
+      },
+      "exiles": [
+        {
+          "id": "player",
+          "role": "saboteur"
+        }
+      ],
+      "strategies": {},
+      "lieStatements": 2
+    },
+    {
+      "group": "saboteur",
+      "seed": 100057,
+      "difficulty": "easy",
+      "role": "saboteur",
+      "policy": "spy-divide",
+      "detectedLies": 0,
+      "steps": 23,
+      "day": 2,
+      "winner": "survivors",
+      "outcome": "escape",
+      "ending": "unknown",
+      "spyExiled": false,
+      "resources": {
+        "food": 16,
+        "water": 16,
+        "medicine": 13,
+        "parts": 6
+      },
+      "exiles": [],
+      "strategies": {},
+      "lieStatements": 0
+    },
+    {
+      "group": "saboteur",
+      "seed": 100057,
+      "difficulty": "easy",
+      "role": "saboteur",
+      "policy": "spy-late",
+      "detectedLies": 0,
+      "steps": 19,
+      "day": 1,
+      "winner": "survivors",
+      "outcome": "escape",
+      "ending": "unknown",
+      "spyExiled": false,
+      "resources": {
+        "food": 16,
+        "water": 21,
+        "medicine": 7,
+        "parts": 4
+      },
+      "exiles": [],
+      "strategies": {},
+      "lieStatements": 0
+    },
+    {
+      "group": "saboteur",
+      "seed": 100057,
+      "difficulty": "normal",
+      "role": "saboteur",
+      "policy": "spy-aggressive",
+      "detectedLies": 0,
+      "steps": 23,
+      "day": 2,
+      "winner": "survivors",
+      "outcome": "escape",
+      "ending": "together",
+      "spyExiled": false,
+      "resources": {
+        "food": 16,
+        "water": 23,
+        "medicine": 12,
+        "parts": 4
+      },
+      "exiles": [],
+      "strategies": {},
+      "lieStatements": 0
+    },
+    {
+      "group": "saboteur",
+      "seed": 100057,
+      "difficulty": "normal",
+      "role": "saboteur",
+      "policy": "spy-cooperate",
+      "detectedLies": 0,
+      "steps": 19,
+      "day": 1,
+      "winner": "survivors",
+      "outcome": "escape",
+      "ending": "unknown",
+      "spyExiled": false,
+      "resources": {
+        "food": 16,
+        "water": 21,
+        "medicine": 7,
+        "parts": 4
+      },
+      "exiles": [],
+      "strategies": {},
+      "lieStatements": 0
+    },
+    {
+      "group": "saboteur",
+      "seed": 100057,
+      "difficulty": "normal",
+      "role": "saboteur",
+      "policy": "spy-misinform",
+      "detectedLies": 1,
+      "steps": 38,
+      "day": 2,
+      "winner": "survivors",
+      "outcome": "escape",
+      "ending": "partial",
+      "spyExiled": true,
+      "resources": {
+        "food": 22,
+        "water": 23,
+        "medicine": 11,
+        "parts": 8
+      },
+      "exiles": [
+        {
+          "id": "player",
+          "role": "saboteur"
+        }
+      ],
+      "strategies": {},
+      "lieStatements": 2
+    },
+    {
+      "group": "saboteur",
+      "seed": 100057,
+      "difficulty": "normal",
+      "role": "saboteur",
+      "policy": "spy-divide",
+      "detectedLies": 0,
+      "steps": 38,
+      "day": 2,
+      "winner": "survivors",
+      "outcome": "escape",
+      "ending": "partial",
+      "spyExiled": true,
+      "resources": {
+        "food": 17,
+        "water": 18,
+        "medicine": 13,
+        "parts": 8
+      },
+      "exiles": [
+        {
+          "id": "player",
+          "role": "saboteur"
+        }
+      ],
+      "strategies": {},
+      "lieStatements": 0
+    },
+    {
+      "group": "saboteur",
+      "seed": 100057,
+      "difficulty": "normal",
+      "role": "saboteur",
+      "policy": "spy-late",
+      "detectedLies": 0,
+      "steps": 19,
+      "day": 1,
+      "winner": "survivors",
+      "outcome": "escape",
+      "ending": "unknown",
+      "spyExiled": false,
+      "resources": {
+        "food": 16,
+        "water": 21,
+        "medicine": 7,
+        "parts": 4
+      },
+      "exiles": [],
+      "strategies": {},
+      "lieStatements": 0
+    },
+    {
+      "group": "saboteur",
+      "seed": 100057,
+      "difficulty": "hard",
+      "role": "saboteur",
+      "policy": "spy-aggressive",
+      "detectedLies": 0,
+      "steps": 38,
+      "day": 2,
+      "winner": "survivors",
+      "outcome": "escape",
+      "ending": "partial",
+      "spyExiled": true,
+      "resources": {
+        "food": 32,
+        "water": 22,
+        "medicine": 12,
+        "parts": 2
+      },
+      "exiles": [
+        {
+          "id": "player",
+          "role": "saboteur"
+        }
+      ],
+      "strategies": {},
+      "lieStatements": 0
+    },
+    {
+      "group": "saboteur",
+      "seed": 100057,
+      "difficulty": "hard",
+      "role": "saboteur",
+      "policy": "spy-cooperate",
+      "detectedLies": 0,
+      "steps": 19,
+      "day": 1,
+      "winner": "survivors",
+      "outcome": "escape",
+      "ending": "unknown",
+      "spyExiled": false,
+      "resources": {
+        "food": 16,
+        "water": 21,
+        "medicine": 7,
+        "parts": 4
+      },
+      "exiles": [],
+      "strategies": {},
+      "lieStatements": 0
+    },
+    {
+      "group": "saboteur",
+      "seed": 100057,
+      "difficulty": "hard",
+      "role": "saboteur",
+      "policy": "spy-misinform",
+      "detectedLies": 2,
+      "steps": 38,
+      "day": 2,
+      "winner": "survivors",
+      "outcome": "escape",
+      "ending": "partial",
+      "spyExiled": true,
+      "resources": {
+        "food": 30,
+        "water": 24,
+        "medicine": 14,
+        "parts": 4
+      },
+      "exiles": [
+        {
+          "id": "player",
+          "role": "saboteur"
+        }
+      ],
+      "strategies": {},
+      "lieStatements": 2
+    },
+    {
+      "group": "saboteur",
+      "seed": 100057,
+      "difficulty": "hard",
+      "role": "saboteur",
+      "policy": "spy-divide",
+      "detectedLies": 0,
+      "steps": 37,
+      "day": 2,
+      "winner": "survivors",
+      "outcome": "escape",
+      "ending": "partial",
+      "spyExiled": true,
+      "resources": {
+        "food": 36,
+        "water": 27,
+        "medicine": 12,
+        "parts": 6
+      },
+      "exiles": [
+        {
+          "id": "player",
+          "role": "saboteur"
+        }
+      ],
+      "strategies": {},
+      "lieStatements": 0
+    },
+    {
+      "group": "saboteur",
+      "seed": 100057,
+      "difficulty": "hard",
+      "role": "saboteur",
+      "policy": "spy-late",
+      "detectedLies": 0,
+      "steps": 19,
+      "day": 1,
+      "winner": "survivors",
+      "outcome": "escape",
+      "ending": "unknown",
+      "spyExiled": false,
+      "resources": {
+        "food": 16,
+        "water": 21,
+        "medicine": 7,
+        "parts": 4
+      },
+      "exiles": [],
+      "strategies": {},
+      "lieStatements": 0
+    },
+    {
+      "group": "saboteur",
+      "seed": 100060,
+      "difficulty": "easy",
+      "role": "saboteur",
+      "policy": "spy-aggressive",
+      "detectedLies": 0,
+      "steps": 39,
+      "day": 2,
+      "winner": "survivors",
+      "outcome": "exposed",
+      "ending": "captured",
+      "spyExiled": true,
+      "resources": {
+        "food": 23,
+        "water": 19,
+        "medicine": 13,
+        "parts": 6
+      },
+      "exiles": [
+        {
+          "id": "player",
+          "role": "saboteur"
+        }
+      ],
+      "strategies": {},
+      "lieStatements": 0
+    },
+    {
+      "group": "saboteur",
+      "seed": 100060,
+      "difficulty": "easy",
+      "role": "saboteur",
+      "policy": "spy-cooperate",
+      "detectedLies": 0,
+      "steps": 22,
+      "day": 2,
+      "winner": "survivors",
+      "outcome": "escape",
+      "ending": "together",
+      "spyExiled": false,
+      "resources": {
+        "food": 15,
+        "water": 21,
+        "medicine": 15,
+        "parts": 10
+      },
+      "exiles": [],
+      "strategies": {},
+      "lieStatements": 0
+    },
+    {
+      "group": "saboteur",
+      "seed": 100060,
+      "difficulty": "easy",
+      "role": "saboteur",
+      "policy": "spy-misinform",
+      "detectedLies": 0,
+      "steps": 59,
+      "day": 3,
+      "winner": "saboteur",
+      "outcome": "saboteur",
+      "ending": "covert",
+      "spyExiled": false,
+      "resources": {
+        "food": 25,
+        "water": 15,
+        "medicine": 16,
+        "parts": 0
+      },
+      "exiles": [],
+      "strategies": {},
+      "lieStatements": 3
+    },
+    {
+      "group": "saboteur",
+      "seed": 100060,
+      "difficulty": "easy",
+      "role": "saboteur",
+      "policy": "spy-divide",
+      "detectedLies": 0,
+      "steps": 42,
+      "day": 3,
+      "winner": "survivors",
+      "outcome": "escape",
+      "ending": "together",
+      "spyExiled": false,
+      "resources": {
+        "food": 36,
+        "water": 30,
+        "medicine": 19,
+        "parts": 0
+      },
+      "exiles": [],
+      "strategies": {},
+      "lieStatements": 0
+    },
+    {
+      "group": "saboteur",
+      "seed": 100060,
+      "difficulty": "easy",
+      "role": "saboteur",
+      "policy": "spy-late",
+      "detectedLies": 0,
+      "steps": 37,
+      "day": 2,
+      "winner": "survivors",
+      "outcome": "escape",
+      "ending": "partial",
+      "spyExiled": true,
+      "resources": {
+        "food": 17,
+        "water": 19,
+        "medicine": 15,
+        "parts": 7
+      },
+      "exiles": [
+        {
+          "id": "player",
+          "role": "saboteur"
+        }
+      ],
+      "strategies": {},
+      "lieStatements": 0
+    },
+    {
+      "group": "saboteur",
+      "seed": 100060,
+      "difficulty": "normal",
+      "role": "saboteur",
+      "policy": "spy-aggressive",
+      "detectedLies": 0,
+      "steps": 39,
+      "day": 2,
+      "winner": "survivors",
+      "outcome": "exposed",
+      "ending": "captured",
+      "spyExiled": true,
+      "resources": {
+        "food": 21,
+        "water": 19,
+        "medicine": 13,
+        "parts": 7
+      },
+      "exiles": [
+        {
+          "id": "player",
+          "role": "saboteur"
+        }
+      ],
+      "strategies": {},
+      "lieStatements": 0
+    },
+    {
+      "group": "saboteur",
+      "seed": 100060,
+      "difficulty": "normal",
+      "role": "saboteur",
+      "policy": "spy-cooperate",
+      "detectedLies": 0,
+      "steps": 22,
+      "day": 2,
+      "winner": "survivors",
+      "outcome": "escape",
+      "ending": "together",
+      "spyExiled": false,
+      "resources": {
+        "food": 15,
+        "water": 21,
+        "medicine": 15,
+        "parts": 10
+      },
+      "exiles": [],
+      "strategies": {},
+      "lieStatements": 0
+    },
+    {
+      "group": "saboteur",
+      "seed": 100060,
+      "difficulty": "normal",
+      "role": "saboteur",
+      "policy": "spy-misinform",
+      "detectedLies": 1,
+      "steps": 39,
+      "day": 2,
+      "winner": "survivors",
+      "outcome": "exposed",
+      "ending": "captured",
+      "spyExiled": true,
+      "resources": {
+        "food": 17,
+        "water": 19,
+        "medicine": 12,
+        "parts": 9
+      },
+      "exiles": [
+        {
+          "id": "player",
+          "role": "saboteur"
+        }
+      ],
+      "strategies": {},
+      "lieStatements": 2
+    },
+    {
+      "group": "saboteur",
+      "seed": 100060,
+      "difficulty": "normal",
+      "role": "saboteur",
+      "policy": "spy-divide",
+      "detectedLies": 0,
+      "steps": 42,
+      "day": 3,
+      "winner": "survivors",
+      "outcome": "escape",
+      "ending": "together",
+      "spyExiled": false,
+      "resources": {
+        "food": 23,
+        "water": 22,
+        "medicine": 19,
+        "parts": 5
+      },
+      "exiles": [],
+      "strategies": {},
+      "lieStatements": 0
+    },
+    {
+      "group": "saboteur",
+      "seed": 100060,
+      "difficulty": "normal",
+      "role": "saboteur",
+      "policy": "spy-late",
+      "detectedLies": 0,
+      "steps": 37,
+      "day": 2,
+      "winner": "survivors",
+      "outcome": "escape",
+      "ending": "partial",
+      "spyExiled": true,
+      "resources": {
+        "food": 17,
+        "water": 19,
+        "medicine": 15,
+        "parts": 7
+      },
+      "exiles": [
+        {
+          "id": "player",
+          "role": "saboteur"
+        }
+      ],
+      "strategies": {},
+      "lieStatements": 0
+    },
+    {
+      "group": "saboteur",
+      "seed": 100060,
+      "difficulty": "hard",
+      "role": "saboteur",
+      "policy": "spy-aggressive",
+      "detectedLies": 0,
+      "steps": 39,
+      "day": 2,
+      "winner": "survivors",
+      "outcome": "exposed",
+      "ending": "captured",
+      "spyExiled": true,
+      "resources": {
+        "food": 21,
+        "water": 19,
+        "medicine": 13,
+        "parts": 7
+      },
+      "exiles": [
+        {
+          "id": "player",
+          "role": "saboteur"
+        }
+      ],
+      "strategies": {},
+      "lieStatements": 0
+    },
+    {
+      "group": "saboteur",
+      "seed": 100060,
+      "difficulty": "hard",
+      "role": "saboteur",
+      "policy": "spy-cooperate",
+      "detectedLies": 0,
+      "steps": 22,
+      "day": 2,
+      "winner": "survivors",
+      "outcome": "escape",
+      "ending": "together",
+      "spyExiled": false,
+      "resources": {
+        "food": 15,
+        "water": 21,
+        "medicine": 15,
+        "parts": 10
+      },
+      "exiles": [],
+      "strategies": {},
+      "lieStatements": 0
+    },
+    {
+      "group": "saboteur",
+      "seed": 100060,
+      "difficulty": "hard",
+      "role": "saboteur",
+      "policy": "spy-misinform",
+      "detectedLies": 1,
+      "steps": 39,
+      "day": 2,
+      "winner": "survivors",
+      "outcome": "exposed",
+      "ending": "captured",
+      "spyExiled": true,
+      "resources": {
+        "food": 17,
+        "water": 19,
+        "medicine": 12,
+        "parts": 9
+      },
+      "exiles": [
+        {
+          "id": "player",
+          "role": "saboteur"
+        }
+      ],
+      "strategies": {},
+      "lieStatements": 2
+    },
+    {
+      "group": "saboteur",
+      "seed": 100060,
+      "difficulty": "hard",
+      "role": "saboteur",
+      "policy": "spy-divide",
+      "detectedLies": 0,
+      "steps": 42,
+      "day": 3,
+      "winner": "survivors",
+      "outcome": "escape",
+      "ending": "together",
+      "spyExiled": false,
+      "resources": {
+        "food": 34,
+        "water": 26,
+        "medicine": 20,
+        "parts": 1
+      },
+      "exiles": [],
+      "strategies": {},
+      "lieStatements": 0
+    },
+    {
+      "group": "saboteur",
+      "seed": 100060,
+      "difficulty": "hard",
+      "role": "saboteur",
+      "policy": "spy-late",
+      "detectedLies": 0,
+      "steps": 38,
+      "day": 2,
+      "winner": "survivors",
+      "outcome": "exposed",
+      "ending": "captured",
+      "spyExiled": true,
+      "resources": {
+        "food": 21,
+        "water": 14,
+        "medicine": 16,
+        "parts": 11
+      },
+      "exiles": [
+        {
+          "id": "player",
+          "role": "saboteur"
+        }
+      ],
+      "strategies": {},
+      "lieStatements": 0
+    },
+    {
+      "group": "saboteur",
+      "seed": 100062,
+      "difficulty": "easy",
+      "role": "saboteur",
+      "policy": "spy-aggressive",
+      "detectedLies": 0,
+      "steps": 39,
+      "day": 2,
+      "winner": "survivors",
+      "outcome": "escape",
+      "ending": "research",
+      "spyExiled": true,
+      "resources": {
+        "food": 17,
+        "water": 18,
+        "medicine": 17,
+        "parts": 11
+      },
+      "exiles": [
+        {
+          "id": "player",
+          "role": "saboteur"
+        }
+      ],
+      "strategies": {},
+      "lieStatements": 0
+    },
+    {
+      "group": "saboteur",
+      "seed": 100062,
+      "difficulty": "easy",
+      "role": "saboteur",
+      "policy": "spy-cooperate",
+      "detectedLies": 0,
+      "steps": 23,
+      "day": 2,
+      "winner": "survivors",
+      "outcome": "escape",
+      "ending": "unknown",
+      "spyExiled": false,
+      "resources": {
+        "food": 19,
+        "water": 22,
+        "medicine": 17,
+        "parts": 14
+      },
+      "exiles": [],
+      "strategies": {},
+      "lieStatements": 0
+    },
+    {
+      "group": "saboteur",
+      "seed": 100062,
+      "difficulty": "easy",
+      "role": "saboteur",
+      "policy": "spy-misinform",
+      "detectedLies": 1,
+      "steps": 20,
+      "day": 1,
+      "winner": "survivors",
+      "outcome": "exposed",
+      "ending": "captured",
+      "spyExiled": true,
+      "resources": {
+        "food": 16,
+        "water": 12,
+        "medicine": 12,
+        "parts": 5
+      },
+      "exiles": [
+        {
+          "id": "player",
+          "role": "saboteur"
+        }
+      ],
+      "strategies": {},
+      "lieStatements": 1
+    },
+    {
+      "group": "saboteur",
+      "seed": 100062,
+      "difficulty": "easy",
+      "role": "saboteur",
+      "policy": "spy-divide",
+      "detectedLies": 0,
+      "steps": 57,
+      "day": 3,
+      "winner": "survivors",
+      "outcome": "escape",
+      "ending": "research",
+      "spyExiled": true,
+      "resources": {
+        "food": 31,
+        "water": 28,
+        "medicine": 24,
+        "parts": 6
+      },
+      "exiles": [
+        {
+          "id": "player",
+          "role": "saboteur"
+        }
+      ],
+      "strategies": {},
+      "lieStatements": 0
+    },
+    {
+      "group": "saboteur",
+      "seed": 100062,
+      "difficulty": "easy",
+      "role": "saboteur",
+      "policy": "spy-late",
+      "detectedLies": 0,
+      "steps": 23,
+      "day": 2,
+      "winner": "survivors",
+      "outcome": "escape",
+      "ending": "unknown",
+      "spyExiled": false,
+      "resources": {
+        "food": 19,
+        "water": 20,
+        "medicine": 17,
+        "parts": 10
+      },
+      "exiles": [],
+      "strategies": {},
+      "lieStatements": 0
+    },
+    {
+      "group": "saboteur",
+      "seed": 100062,
+      "difficulty": "normal",
+      "role": "saboteur",
+      "policy": "spy-aggressive",
+      "detectedLies": 0,
+      "steps": 57,
+      "day": 3,
+      "winner": "survivors",
+      "outcome": "escape",
+      "ending": "research",
+      "spyExiled": true,
+      "resources": {
+        "food": 15,
+        "water": 22,
+        "medicine": 19,
+        "parts": 4
+      },
+      "exiles": [
+        {
+          "id": "player",
+          "role": "saboteur"
+        }
+      ],
+      "strategies": {},
+      "lieStatements": 0
+    },
+    {
+      "group": "saboteur",
+      "seed": 100062,
+      "difficulty": "normal",
+      "role": "saboteur",
+      "policy": "spy-cooperate",
+      "detectedLies": 0,
+      "steps": 23,
+      "day": 2,
+      "winner": "survivors",
+      "outcome": "escape",
+      "ending": "unknown",
+      "spyExiled": false,
+      "resources": {
+        "food": 19,
+        "water": 22,
+        "medicine": 17,
+        "parts": 14
+      },
+      "exiles": [],
+      "strategies": {},
+      "lieStatements": 0
+    },
+    {
+      "group": "saboteur",
+      "seed": 100062,
+      "difficulty": "normal",
+      "role": "saboteur",
+      "policy": "spy-misinform",
+      "detectedLies": 1,
+      "steps": 20,
+      "day": 1,
+      "winner": "survivors",
+      "outcome": "exposed",
+      "ending": "captured",
+      "spyExiled": true,
+      "resources": {
+        "food": 16,
+        "water": 12,
+        "medicine": 12,
+        "parts": 5
+      },
+      "exiles": [
+        {
+          "id": "player",
+          "role": "saboteur"
+        }
+      ],
+      "strategies": {},
+      "lieStatements": 1
+    },
+    {
+      "group": "saboteur",
+      "seed": 100062,
+      "difficulty": "normal",
+      "role": "saboteur",
+      "policy": "spy-divide",
+      "detectedLies": 0,
+      "steps": 43,
+      "day": 3,
+      "winner": "survivors",
+      "outcome": "escape",
+      "ending": "research",
+      "spyExiled": false,
+      "resources": {
+        "food": 19,
+        "water": 20,
+        "medicine": 22,
+        "parts": 13
+      },
+      "exiles": [
+        {
+          "id": "ji",
+          "role": "doctor"
+        }
+      ],
+      "strategies": {},
+      "lieStatements": 0
+    },
+    {
+      "group": "saboteur",
+      "seed": 100062,
+      "difficulty": "normal",
+      "role": "saboteur",
+      "policy": "spy-late",
+      "detectedLies": 0,
+      "steps": 23,
+      "day": 2,
+      "winner": "survivors",
+      "outcome": "escape",
+      "ending": "unknown",
+      "spyExiled": false,
+      "resources": {
+        "food": 19,
+        "water": 20,
+        "medicine": 17,
+        "parts": 10
+      },
+      "exiles": [],
+      "strategies": {},
+      "lieStatements": 0
+    },
+    {
+      "group": "saboteur",
+      "seed": 100062,
+      "difficulty": "hard",
+      "role": "saboteur",
+      "policy": "spy-aggressive",
+      "detectedLies": 0,
+      "steps": 57,
+      "day": 3,
+      "winner": "survivors",
+      "outcome": "escape",
+      "ending": "research",
+      "spyExiled": true,
+      "resources": {
+        "food": 15,
+        "water": 22,
+        "medicine": 19,
+        "parts": 4
+      },
+      "exiles": [
+        {
+          "id": "player",
+          "role": "saboteur"
+        }
+      ],
+      "strategies": {},
+      "lieStatements": 0
+    },
+    {
+      "group": "saboteur",
+      "seed": 100062,
+      "difficulty": "hard",
+      "role": "saboteur",
+      "policy": "spy-cooperate",
+      "detectedLies": 0,
+      "steps": 23,
+      "day": 2,
+      "winner": "survivors",
+      "outcome": "escape",
+      "ending": "unknown",
+      "spyExiled": false,
+      "resources": {
+        "food": 19,
+        "water": 22,
+        "medicine": 17,
+        "parts": 14
+      },
+      "exiles": [],
+      "strategies": {},
+      "lieStatements": 0
+    },
+    {
+      "group": "saboteur",
+      "seed": 100062,
+      "difficulty": "hard",
+      "role": "saboteur",
+      "policy": "spy-misinform",
+      "detectedLies": 1,
+      "steps": 20,
+      "day": 1,
+      "winner": "survivors",
+      "outcome": "exposed",
+      "ending": "captured",
+      "spyExiled": true,
+      "resources": {
+        "food": 16,
+        "water": 12,
+        "medicine": 12,
+        "parts": 5
+      },
+      "exiles": [
+        {
+          "id": "player",
+          "role": "saboteur"
+        }
+      ],
+      "strategies": {},
+      "lieStatements": 1
+    },
+    {
+      "group": "saboteur",
+      "seed": 100062,
+      "difficulty": "hard",
+      "role": "saboteur",
+      "policy": "spy-divide",
+      "detectedLies": 0,
+      "steps": 43,
+      "day": 3,
+      "winner": "survivors",
+      "outcome": "escape",
+      "ending": "research",
+      "spyExiled": false,
+      "resources": {
+        "food": 15,
+        "water": 16,
+        "medicine": 21,
+        "parts": 12
+      },
+      "exiles": [
+        {
+          "id": "ji",
+          "role": "doctor"
+        }
+      ],
+      "strategies": {},
+      "lieStatements": 0
+    },
+    {
+      "group": "saboteur",
+      "seed": 100062,
+      "difficulty": "hard",
+      "role": "saboteur",
+      "policy": "spy-late",
+      "detectedLies": 0,
+      "steps": 23,
+      "day": 2,
+      "winner": "survivors",
+      "outcome": "escape",
+      "ending": "unknown",
+      "spyExiled": false,
+      "resources": {
+        "food": 19,
+        "water": 20,
+        "medicine": 17,
+        "parts": 10
+      },
+      "exiles": [],
+      "strategies": {},
+      "lieStatements": 0
+    },
+    {
+      "group": "saboteur",
+      "seed": 100079,
+      "difficulty": "easy",
+      "role": "saboteur",
+      "policy": "spy-aggressive",
+      "detectedLies": 0,
+      "steps": 59,
+      "day": 3,
+      "winner": "survivors",
+      "outcome": "exposed",
+      "ending": "captured",
+      "spyExiled": true,
+      "resources": {
+        "food": 29,
+        "water": 23,
+        "medicine": 16,
+        "parts": 4
+      },
+      "exiles": [
+        {
+          "id": "player",
+          "role": "saboteur"
+        },
+        {
+          "id": "seo",
+          "role": "engineer"
+        }
+      ],
+      "strategies": {},
+      "lieStatements": 0
+    },
+    {
+      "group": "saboteur",
+      "seed": 100079,
+      "difficulty": "easy",
+      "role": "saboteur",
+      "policy": "spy-cooperate",
+      "detectedLies": 0,
+      "steps": 58,
+      "day": 3,
+      "winner": "saboteur",
+      "outcome": "saboteur",
+      "ending": "covert",
+      "spyExiled": false,
+      "resources": {
+        "food": 33,
+        "water": 27,
+        "medicine": 15,
+        "parts": 1
+      },
+      "exiles": [
+        {
+          "id": "seo",
+          "role": "engineer"
+        }
+      ],
+      "strategies": {},
+      "lieStatements": 0
+    },
+    {
+      "group": "saboteur",
+      "seed": 100079,
+      "difficulty": "easy",
+      "role": "saboteur",
+      "policy": "spy-misinform",
+      "detectedLies": 1,
+      "steps": 39,
+      "day": 2,
+      "winner": "survivors",
+      "outcome": "exposed",
+      "ending": "captured",
+      "spyExiled": true,
+      "resources": {
+        "food": 18,
+        "water": 17,
+        "medicine": 12,
+        "parts": 6
+      },
+      "exiles": [
+        {
+          "id": "player",
+          "role": "saboteur"
+        },
+        {
+          "id": "seo",
+          "role": "engineer"
+        }
+      ],
+      "strategies": {},
+      "lieStatements": 2
+    },
+    {
+      "group": "saboteur",
+      "seed": 100079,
+      "difficulty": "easy",
+      "role": "saboteur",
+      "policy": "spy-divide",
+      "detectedLies": 0,
+      "steps": 58,
+      "day": 3,
+      "winner": "saboteur",
+      "outcome": "saboteur",
+      "ending": "covert",
+      "spyExiled": false,
+      "resources": {
+        "food": 20,
+        "water": 16,
+        "medicine": 18,
+        "parts": 2
+      },
+      "exiles": [
+        {
+          "id": "seo",
+          "role": "engineer"
+        }
+      ],
+      "strategies": {},
+      "lieStatements": 0
+    },
+    {
+      "group": "saboteur",
+      "seed": 100079,
+      "difficulty": "easy",
+      "role": "saboteur",
+      "policy": "spy-late",
+      "detectedLies": 0,
+      "steps": 59,
+      "day": 3,
+      "winner": "saboteur",
+      "outcome": "saboteur",
+      "ending": "covert",
+      "spyExiled": false,
+      "resources": {
+        "food": 26,
+        "water": 21,
+        "medicine": 13,
+        "parts": 0
+      },
+      "exiles": [
+        {
+          "id": "seo",
+          "role": "engineer"
+        }
+      ],
+      "strategies": {},
+      "lieStatements": 0
+    },
+    {
+      "group": "saboteur",
+      "seed": 100079,
+      "difficulty": "normal",
+      "role": "saboteur",
+      "policy": "spy-aggressive",
+      "detectedLies": 0,
+      "steps": 39,
+      "day": 2,
+      "winner": "survivors",
+      "outcome": "exposed",
+      "ending": "captured",
+      "spyExiled": true,
+      "resources": {
+        "food": 17,
+        "water": 17,
+        "medicine": 12,
+        "parts": 6
+      },
+      "exiles": [
+        {
+          "id": "player",
+          "role": "saboteur"
+        },
+        {
+          "id": "seo",
+          "role": "engineer"
+        }
+      ],
+      "strategies": {},
+      "lieStatements": 0
+    },
+    {
+      "group": "saboteur",
+      "seed": 100079,
+      "difficulty": "normal",
+      "role": "saboteur",
+      "policy": "spy-cooperate",
+      "detectedLies": 0,
+      "steps": 55,
+      "day": 3,
+      "winner": "survivors",
+      "outcome": "escape",
+      "ending": "partial",
+      "spyExiled": false,
+      "resources": {
+        "food": 21,
+        "water": 28,
+        "medicine": 14,
+        "parts": 3
+      },
+      "exiles": [
+        {
+          "id": "seo",
+          "role": "engineer"
+        }
+      ],
+      "strategies": {},
+      "lieStatements": 0
+    },
+    {
+      "group": "saboteur",
+      "seed": 100079,
+      "difficulty": "normal",
+      "role": "saboteur",
+      "policy": "spy-misinform",
+      "detectedLies": 1,
+      "steps": 58,
+      "day": 3,
+      "winner": "survivors",
+      "outcome": "exposed",
+      "ending": "captured",
+      "spyExiled": true,
+      "resources": {
+        "food": 31,
+        "water": 32,
+        "medicine": 14,
+        "parts": 1
+      },
+      "exiles": [
+        {
+          "id": "player",
+          "role": "saboteur"
+        },
+        {
+          "id": "seo",
+          "role": "engineer"
+        }
+      ],
+      "strategies": {},
+      "lieStatements": 3
+    },
+    {
+      "group": "saboteur",
+      "seed": 100079,
+      "difficulty": "normal",
+      "role": "saboteur",
+      "policy": "spy-divide",
+      "detectedLies": 0,
+      "steps": 58,
+      "day": 3,
+      "winner": "survivors",
+      "outcome": "exposed",
+      "ending": "captured",
+      "spyExiled": true,
+      "resources": {
+        "food": 20,
+        "water": 20,
+        "medicine": 18,
+        "parts": 2
+      },
+      "exiles": [
+        {
+          "id": "player",
+          "role": "saboteur"
+        },
+        {
+          "id": "seo",
+          "role": "engineer"
+        }
+      ],
+      "strategies": {},
+      "lieStatements": 0
+    },
+    {
+      "group": "saboteur",
+      "seed": 100079,
+      "difficulty": "normal",
+      "role": "saboteur",
+      "policy": "spy-late",
+      "detectedLies": 0,
+      "steps": 57,
+      "day": 3,
+      "winner": "survivors",
+      "outcome": "escape",
+      "ending": "partial",
+      "spyExiled": true,
+      "resources": {
+        "food": 21,
+        "water": 30,
+        "medicine": 15,
+        "parts": 0
+      },
+      "exiles": [
+        {
+          "id": "player",
+          "role": "saboteur"
+        },
+        {
+          "id": "seo",
+          "role": "engineer"
+        }
+      ],
+      "strategies": {},
+      "lieStatements": 0
+    },
+    {
+      "group": "saboteur",
+      "seed": 100079,
+      "difficulty": "hard",
+      "role": "saboteur",
+      "policy": "spy-aggressive",
+      "detectedLies": 0,
+      "steps": 58,
+      "day": 3,
+      "winner": "survivors",
+      "outcome": "escape",
+      "ending": "partial",
+      "spyExiled": true,
+      "resources": {
+        "food": 21,
+        "water": 20,
+        "medicine": 14,
+        "parts": 4
+      },
+      "exiles": [
+        {
+          "id": "player",
+          "role": "saboteur"
+        },
+        {
+          "id": "seo",
+          "role": "engineer"
+        }
+      ],
+      "strategies": {},
+      "lieStatements": 0
+    },
+    {
+      "group": "saboteur",
+      "seed": 100079,
+      "difficulty": "hard",
+      "role": "saboteur",
+      "policy": "spy-cooperate",
+      "detectedLies": 0,
+      "steps": 55,
+      "day": 3,
+      "winner": "survivors",
+      "outcome": "escape",
+      "ending": "partial",
+      "spyExiled": false,
+      "resources": {
+        "food": 21,
+        "water": 28,
+        "medicine": 14,
+        "parts": 3
+      },
+      "exiles": [
+        {
+          "id": "seo",
+          "role": "engineer"
+        }
+      ],
+      "strategies": {},
+      "lieStatements": 0
+    },
+    {
+      "group": "saboteur",
+      "seed": 100079,
+      "difficulty": "hard",
+      "role": "saboteur",
+      "policy": "spy-misinform",
+      "detectedLies": 1,
+      "steps": 58,
+      "day": 3,
+      "winner": "survivors",
+      "outcome": "exposed",
+      "ending": "captured",
+      "spyExiled": true,
+      "resources": {
+        "food": 38,
+        "water": 32,
+        "medicine": 14,
+        "parts": 1
+      },
+      "exiles": [
+        {
+          "id": "player",
+          "role": "saboteur"
+        },
+        {
+          "id": "seo",
+          "role": "engineer"
+        }
+      ],
+      "strategies": {},
+      "lieStatements": 3
+    },
+    {
+      "group": "saboteur",
+      "seed": 100079,
+      "difficulty": "hard",
+      "role": "saboteur",
+      "policy": "spy-divide",
+      "detectedLies": 0,
+      "steps": 58,
+      "day": 3,
+      "winner": "survivors",
+      "outcome": "exposed",
+      "ending": "captured",
+      "spyExiled": true,
+      "resources": {
+        "food": 20,
+        "water": 20,
+        "medicine": 18,
+        "parts": 2
+      },
+      "exiles": [
+        {
+          "id": "player",
+          "role": "saboteur"
+        },
+        {
+          "id": "seo",
+          "role": "engineer"
+        }
+      ],
+      "strategies": {},
+      "lieStatements": 0
+    },
+    {
+      "group": "saboteur",
+      "seed": 100079,
+      "difficulty": "hard",
+      "role": "saboteur",
+      "policy": "spy-late",
+      "detectedLies": 0,
+      "steps": 57,
+      "day": 3,
+      "winner": "survivors",
+      "outcome": "escape",
+      "ending": "partial",
+      "spyExiled": true,
+      "resources": {
+        "food": 22,
+        "water": 27,
+        "medicine": 15,
+        "parts": 0
+      },
+      "exiles": [
+        {
+          "id": "player",
+          "role": "saboteur"
+        },
+        {
+          "id": "seo",
+          "role": "engineer"
+        }
+      ],
+      "strategies": {},
+      "lieStatements": 0
+    }
+  ],
+  "timings": {
+    "morning": {
+      "count": 857,
+      "meanMs": 5.576032088681455,
+      "p95Ms": 19.242400000002817,
+      "maxMs": 46.87949999999546
+    },
+    "afternoon": {
+      "count": 868,
+      "meanMs": 6.053158064516277,
+      "p95Ms": 17.9545000000071,
+      "maxMs": 38.55139999999665
+    },
+    "discussion": {
+      "count": 2940,
+      "meanMs": 11.30524829931979,
+      "p95Ms": 29.398700000005192,
+      "maxMs": 64.33550000000105
+    },
+    "voting": {
+      "count": 588,
+      "meanMs": 11.128878741496745,
+      "p95Ms": 23.850900000004913,
+      "maxMs": 54.90790000000561
+    },
+    "night": {
+      "count": 528,
+      "meanMs": 10.918524621212088,
+      "p95Ms": 21.916799999999057,
+      "maxMs": 50.474999999998545
+    }
+  },
+  "maxSaveBytes": 700629,
+  "lieStatements": 54,
+  "detectedLies": 29,
+  "falseContradictions": 0,
+  "unsubstantiatedAIVotes": 0,
+  "totalAIVotes": 280,
+  "elapsedSeconds": 116.4940588,
+  "summary": {
+    "games": 150,
+    "wins": {
+      "survivors": 139,
+      "saboteur": 11,
+      "none": 0
+    },
+    "averageDay": 2.16,
+    "spyExileRate": 0.5533333333333333,
+    "resources": {
+      "food": 20.30666666666667,
+      "water": 21.42,
+      "medicine": 11.953333333333333,
+      "parts": 5.46
+    }
+  },
+  "byGroup": {
+    "survivor": {
+      "games": 0,
+      "wins": {
+        "survivors": 0,
+        "saboteur": 0,
+        "none": 0
+      },
+      "averageDay": 0,
+      "spyExileRate": 0,
+      "resources": {
+        "food": 0,
+        "water": 0,
+        "medicine": 0,
+        "parts": 0
+      }
+    },
+    "saboteur": {
+      "games": 150,
+      "wins": {
+        "survivors": 139,
+        "saboteur": 11,
+        "none": 0
+      },
+      "averageDay": 2.16,
+      "spyExileRate": 0.5533333333333333,
+      "resources": {
+        "food": 20.30666666666667,
+        "water": 21.42,
+        "medicine": 11.953333333333333,
+        "parts": 5.46
+      }
+    },
+    "random": {
+      "games": 0,
+      "wins": {
+        "survivors": 0,
+        "saboteur": 0,
+        "none": 0
+      },
+      "averageDay": 0,
+      "spyExileRate": 0,
+      "resources": {
+        "food": 0,
+        "water": 0,
+        "medicine": 0,
+        "parts": 0
+      }
+    }
+  },
+  "byDifficulty": {
+    "easy": {
+      "games": 50,
+      "wins": {
+        "survivors": 42,
+        "saboteur": 8,
+        "none": 0
+      },
+      "averageDay": 2.2,
+      "spyExileRate": 0.44,
+      "resources": {
+        "food": 21.26,
+        "water": 21.58,
+        "medicine": 12.06,
+        "parts": 5.28
+      }
+    },
+    "normal": {
+      "games": 50,
+      "wins": {
+        "survivors": 48,
+        "saboteur": 2,
+        "none": 0
+      },
+      "averageDay": 2.12,
+      "spyExileRate": 0.58,
+      "resources": {
+        "food": 19.16,
+        "water": 21.34,
+        "medicine": 11.8,
+        "parts": 5.78
+      }
+    },
+    "hard": {
+      "games": 50,
+      "wins": {
+        "survivors": 49,
+        "saboteur": 1,
+        "none": 0
+      },
+      "averageDay": 2.16,
+      "spyExileRate": 0.64,
+      "resources": {
+        "food": 20.5,
+        "water": 21.34,
+        "medicine": 12,
+        "parts": 5.32
+      }
+    }
+  },
+  "byPolicy": {
+    "spy-aggressive": {
+      "games": 30,
+      "wins": {
+        "survivors": 30,
+        "saboteur": 0,
+        "none": 0
+      },
+      "averageDay": 2.1333333333333333,
+      "spyExileRate": 0.8333333333333334,
+      "resources": {
+        "food": 18.833333333333332,
+        "water": 19.9,
+        "medicine": 11.433333333333334,
+        "parts": 4.966666666666667
+      }
+    },
+    "spy-cooperate": {
+      "games": 30,
+      "wins": {
+        "survivors": 29,
+        "saboteur": 1,
+        "none": 0
+      },
+      "averageDay": 1.9,
+      "spyExileRate": 0,
+      "resources": {
+        "food": 20.466666666666665,
+        "water": 25.4,
+        "medicine": 10.1,
+        "parts": 6.2
+      }
+    },
+    "spy-misinform": {
+      "games": 30,
+      "wins": {
+        "survivors": 29,
+        "saboteur": 1,
+        "none": 0
+      },
+      "averageDay": 1.8333333333333333,
+      "spyExileRate": 0.9333333333333333,
+      "resources": {
+        "food": 19.3,
+        "water": 18.133333333333333,
+        "medicine": 11.233333333333333,
+        "parts": 5.1
+      }
+    },
+    "spy-divide": {
+      "games": 30,
+      "wins": {
+        "survivors": 27,
+        "saboteur": 3,
+        "none": 0
+      },
+      "averageDay": 2.533333333333333,
+      "spyExileRate": 0.6666666666666666,
+      "resources": {
+        "food": 21.333333333333332,
+        "water": 20.2,
+        "medicine": 14.3,
+        "parts": 5.966666666666667
+      }
+    },
+    "spy-late": {
+      "games": 30,
+      "wins": {
+        "survivors": 24,
+        "saboteur": 6,
+        "none": 0
+      },
+      "averageDay": 2.4,
+      "spyExileRate": 0.3333333333333333,
+      "resources": {
+        "food": 21.6,
+        "water": 23.466666666666665,
+        "medicine": 12.7,
+        "parts": 5.066666666666666
+      }
+    }
+  }
+}

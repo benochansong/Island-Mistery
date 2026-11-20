@@ -72,7 +72,7 @@
     } catch { return false; }
   }
   // Explicit allowlist: UI and AI never receive another character's role or private log.
-  function viewFor(s, playerId = 'player') {
+  function viewFor(s, playerId = 'player', compact = false) {
     if (!ids.includes(playerId)) throw new Error('알 수 없는 인물입니다.');
     const visible = e => e.audience === 'public' || e.audience === playerId;
     const publicPlayer = p => ({ id: p.id, name: p.name, personality: p.personality, initials: p.initials, isHuman: p.isHuman, isAlive: p.isAlive, isExiled: p.isExiled, health: p.health, location: p.id === playerId ? p.location : null });
@@ -80,7 +80,7 @@
       resources: s.resources, facilities: s.facilities, players: s.players.map(publicPlayer),
       self: { ...publicPlayer(s.players.find(p => p.id === playerId)), ...s.secrets[playerId] },
       acted: s.acted, resolved: s.resolved, votes: s.resolved ? s.votes : {}, outcome: s.outcome,
-      log: s.log.filter(visible), lastResults: s.lastResults.filter(visible), updatedAt: s.updatedAt });
+      log: compact ? [] : s.log.filter(visible), lastResults: compact ? [] : s.lastResults.filter(visible), updatedAt: s.updatedAt });
   }
   function changeResource(s, key, amount, actorId = null, audience = 'public') {
     const before = s.resources[key]; s.resources[key] = Math.max(0, before + amount);
@@ -95,21 +95,21 @@
     const secret = s.secrets[observerId]; const entry = record(s, text, observerId, observerId, 'clue');
     const memoryId = 'clue-' + entry.id;
     secret.information.push({ id: memoryId, memoryId, text, suspectId, weight, shared: false });
-    game.perception.learn(s, observerId, { id: memoryId, eventId: memoryId, kind: suspectId ? 'trace' : 'clue', subjectId: suspectId, text, reliability: .7, source: 'investigation' });
+    game.perception.learn(s, observerId, { id: memoryId, eventId: memoryId, kind: suspectId ? 'trace' : 'clue', subjectId: suspectId, text, reliability: C.mechanics.investigation.reliability, source: 'investigation' });
   }
   function explore(s, p, location) {
     const cfg = C.locations[location], role = s.secrets[p.id].role; p.location = location;
     record(s, `${p.name}: ${game.data.locations.find(item => item.id === location).name} 탐험.`, p.id, 'public', 'explore');
-    const bonus = role === 'explorer' ? C.explorationBonus : role === 'engineer' && ['lab', 'tower'].includes(location) ? 0.1 : 0;
-    if (random(s) < Math.min(0.98, cfg.success + bonus)) {
+    const bonus = role === 'explorer' ? C.explorationBonus : role === 'engineer' && ['lab', 'tower'].includes(location) ? C.mechanics.engineerExplorationBonus : 0;
+    if (random(s) < Math.min(C.mechanics.maxSuccess, cfg.success + bonus)) {
       Object.entries(cfg.loot).forEach(([key, range]) => changeResource(s, key, integer(s, range[0], range[1]), p.id));
     } else record(s, `${p.name}: 수색 경로가 막혀 물자를 얻지 못했다.`, p.id, 'public', 'failure');
-    if (random(s) < Math.min(0.9, cfg.clue + (role === 'investigator' ? C.investigatorBonus : 0))) {
+    if (random(s) < Math.min(C.mechanics.maxClue, cfg.clue + (role === 'investigator' ? C.investigatorBonus : 0))) {
       const messages = { coast: '난파선의 항로가 의도적으로 지워져 있다. 누가 지웠는지는 알 수 없다.', jungle: '숲속에서 연구소로 이어지는 숨겨진 길을 발견했다.', lab: '연구 기록: 무전 간섭 장치가 섬 안에 남아 있다. 누가 사용하는지는 알 수 없다.', tower: '무전 기록에 반복되는 간섭이 있다. 고장과 고의 훼손 모두 가능하다.' };
       clue(s, p.id, messages[location]); record(s, `${p.name}: 새로운 기록을 발견했다. 내용은 아직 공유되지 않았다.`, p.id, 'public', 'discovery');
     }
-    if (random(s) < cfg.injury * (role === 'explorer' && location === 'jungle' ? 0.4 : 1)) health(s, p, -integer(s, 12, 24));
-    if (p.isAlive && random(s) < 0.12) { record(s, `${p.name}: 버려진 비상 보급 상자를 발견했다.`, p.id, 'public', 'special'); changeResource(s, 'water', 2, p.id); }
+    if (random(s) < cfg.injury * (role === 'explorer' && location === 'jungle' ? C.mechanics.explorerJungleRisk : 1)) health(s, p, -integer(s, ...C.mechanics.injury));
+    if (p.isAlive && random(s) < C.mechanics.supplyChance) { record(s, `${p.name}: 버려진 비상 보급 상자를 발견했다.`, p.id, 'public', 'special'); changeResource(s, 'water', C.mechanics.supplyWater, p.id); }
   }
   function availableActions(view) {
     const p = view.self, role = p.role;
@@ -118,7 +118,7 @@
     if (view.phase === 'morning' && !(view.closedLocations?.[view.selectedLocation] > view.day)) add('explore', '선택 지역 탐험', { location: view.selectedLocation });
     if (view.storyEnabled && ['morning','afternoon'].includes(view.phase)) {
       if (view.phase === 'afternoon') add('research', '연구 기록 조사 · 단서의 대체 경로');
-      game.storyData.sites.filter(site => view.unlockedSites.includes(site.id) && site.parent === view.selectedLocation && !p.visitedSites.includes(site.id) && !(view.closedLocations[site.parent] > view.day)).forEach(site => add('explore_hidden', site.name + ' 탐험 · 기록과 희귀 물자', { siteId: site.id }));
+      game.storyData.sites.filter(site => view.unlockedSites.includes(site.id) && (!p.isHuman || site.parent === view.selectedLocation) && !p.visitedSites.includes(site.id) && !(view.closedLocations[site.parent] > view.day)).forEach(site => add('explore_hidden', site.name + ' 탐험 · 기록과 희귀 물자', { siteId: site.id }));
     }
     if (view.phase === 'discussion') return game.discussion.actions(view);
     if (view.phase === 'voting') {
@@ -126,14 +126,14 @@
       add('vote', '기권', { target: null }); return result;
     }
     if (['afternoon', 'night'].includes(view.phase)) {
-      if (view.resources.medicine > 0) view.players.filter(other => active(other) && other.health < 100).forEach(other => add('heal', `${other.name} 치료 (+${role === 'doctor' ? C.doctorHeal : C.normalHeal}, 의약품 1)`, { target: other.id }));
-      const cost = role === 'engineer' ? 1 : 2;
-      if (view.resources.parts >= cost) Object.entries(C.repairGoals).filter(([key, goal]) => view.facilities[key] < goal).forEach(([facility]) => add('repair', `${facility === 'radio' ? '통신탑' : '보트'} 수리 (+${role === 'engineer' ? 3 : 2}, 부품 ${cost})`, { facility }));
+      if (view.resources.medicine >= C.mechanics.medicineCost) view.players.filter(other => active(other) && other.health < 100).forEach(other => add('heal', `${other.name} 치료 (+${role === 'doctor' ? C.doctorHeal : C.normalHeal}, 의약품 ${C.mechanics.medicineCost})`, { target: other.id }));
+      const cost = C.mechanics.repair[role === 'engineer' ? 'engineer' : 'other'].cost;
+      if (view.resources.parts >= cost) Object.entries(C.repairGoals).filter(([key, goal]) => view.facilities[key] < goal).forEach(([facility]) => add('repair', `${facility === 'radio' ? '통신탑' : '보트'} 수리 (+${C.mechanics.repair[role === 'engineer' ? 'engineer' : 'other'].amount}, 부품 ${cost})`, { facility }));
       if (role === 'saboteur') {
-        ['food', 'water'].filter(key => view.resources[key] > 0).forEach(resource => add('hide', `${resource === 'food' ? '식량' : '식수'} 3개 은닉 · 비밀`, { resource }));
-        ['radio', 'boat'].filter(key => view.facilities[key] > 0).forEach(facility => add('sabotage', `${facility === 'radio' ? '통신탑' : '보트'} 파괴 (-4) · 비밀`, { facility }));
+        ['food', 'water'].filter(key => view.resources[key] > 0).forEach(resource => add('hide', `${resource === 'food' ? '식량' : '식수'} ${C.mechanics.hide}개 은닉 · 비밀`, { resource }));
+        ['radio', 'boat'].filter(key => view.facilities[key] > 0).forEach(facility => add('sabotage', `${facility === 'radio' ? '통신탑' : '보트'} 파괴 (-${C.mechanics.sabotage}) · 비밀`, { facility }));
       }
-      if (view.phase === 'afternoon') ['food', 'water'].forEach(resource => add('gather', `${resource === 'food' ? '식량' : '식수'} 2개 확보`, { resource }));
+      if (view.phase === 'afternoon') ['food', 'water'].forEach(resource => add('gather', `${resource === 'food' ? '식량' : '식수'} ${C.mechanics.gather}개 확보`, { resource }));
       if (view.phase === 'night' && role === 'investigator') view.players.filter(other => active(other) && other.id !== p.id).forEach(other => add('investigate', `${other.name}의 흔적 조사 · 비밀`, { target: other.id }));
       if (view.phase === 'night' && role === 'explorer' && !(view.closedLocations?.[view.selectedLocation] > view.day)) add('explore', '선택 지역 야간 탐험', { location: view.selectedLocation });
     }
@@ -141,7 +141,7 @@
   }
   const matches = (a, b) => ['kind', 'target', 'location', 'facility', 'resource', 'clueId', 'historyId', 'memoryId', 'statementId', 'siteId'].every(key => a[key] === b[key]);
   function perform(s, p, action) {
-    const allowed = availableActions(viewFor(s, p.id));
+    const allowed = availableActions(viewFor(s, p.id, true));
     if (action.kind === 'explore' && places.includes(action.location) && !(s.story.closed[action.location] > s.day)) allowed.filter(a => a.kind === 'explore').forEach(a => { a.location = action.location; });
     if (!allowed.some(a => matches(a, action))) throw new Error('현재 단계에서 실행할 수 없는 행동입니다.');
     const secret = s.secrets[p.id], before = { medicine: s.resources.medicine, radio: s.facilities.radio }; s.acted.push(p.id);
@@ -154,15 +154,15 @@
     }
     if (action.kind === 'explore') explore(s, p, action.location);
     if (action.kind === 'rest') { p.location = 'camp'; record(s, `${p.name}: 야영지에서 휴식했다.`, p.id); health(s, p, C.restHeal); }
-    if (action.kind === 'gather') { p.location = 'camp'; record(s, `${p.name}: 야영지 주변에서 물자를 확보했다.`, p.id); changeResource(s, action.resource, 2, p.id); }
+    if (action.kind === 'gather') { p.location = 'camp'; record(s, `${p.name}: 야영지 주변에서 물자를 확보했다.`, p.id); changeResource(s, action.resource, C.mechanics.gather, p.id); }
     if (action.kind === 'heal') {
       p.location = 'camp';
       const target = s.players.find(other => other.id === action.target);
-      record(s, `${p.name}: ${target.name}의 상처를 치료했다.`, p.id); changeResource(s, 'medicine', -1, p.id);
+      record(s, `${p.name}: ${target.name}의 상처를 치료했다.`, p.id); changeResource(s, 'medicine', -C.mechanics.medicineCost, p.id);
       health(s, target, secret.role === 'doctor' ? C.doctorHeal : C.normalHeal);
     }
     if (action.kind === 'repair') {
-      const cost = secret.role === 'engineer' ? 1 : 2, amount = secret.role === 'engineer' ? 3 : 2;
+      const { cost, amount } = C.mechanics.repair[secret.role === 'engineer' ? 'engineer' : 'other'];
       p.location = action.facility === 'radio' ? 'tower' : 'coast'; const before = s.facilities[action.facility];
       s.facilities[action.facility] = Math.min(C.repairGoals[action.facility], before + amount);
       record(s, `${p.name}: ${action.facility === 'radio' ? '통신탑' : '보트'} 수리도 +${s.facilities[action.facility] - before}.`, p.id);
@@ -172,12 +172,12 @@
       // Public cover deliberately omits the actual place and identity of the culprit.
       p.location = 'camp';
       if (action.kind === 'hide') {
-        const amount = Math.min(3, s.resources[action.resource]); changeResource(s, action.resource, -amount, p.id, p.id);
+        const amount = Math.min(C.mechanics.hide, s.resources[action.resource]); changeResource(s, action.resource, -amount, p.id, p.id);
         secret.inventory.push(`${action.resource}:${amount}`);
         s.pendingReports.push(`공동 창고의 ${action.resource === 'food' ? '식량' : '식수'} ${amount}개가 사라졌다. 원인은 확인되지 않았다.`);
         record(s, `${action.resource === 'food' ? '식량' : '식수'} ${amount}개를 몰래 숨겼다.`, p.id, p.id, 'secret');
       } else {
-        const before = s.facilities[action.facility]; s.facilities[action.facility] = Math.max(0, before - 4);
+        const before = s.facilities[action.facility]; s.facilities[action.facility] = Math.max(0, before - C.mechanics.sabotage);
         s.pendingReports.push(`${action.facility === 'radio' ? '통신탑' : '보트'}에 손상이 발견됐다. 수리도 -${before - s.facilities[action.facility]}.`);
         record(s, '장비를 은밀히 훼손했다.', p.id, p.id, 'secret');
       }
@@ -186,9 +186,9 @@
       p.location = 'camp';
       const target = s.players.find(other => other.id === action.target);
       const suspicious = s.secrets[target.id].actionHistory.some(a => a.day === s.day && ['hide', 'sabotage'].includes(a.kind)) || s.story.causes.some(c => c.day === s.day && c.actorId === target.id);
-      const trace = random(s) < (suspicious ? 0.75 : 0.20); // Engine resolves evidence; AI never reads the role.
+      const trace = random(s) < (suspicious ? C.mechanics.investigation.suspicious : C.mechanics.investigation.innocent); // Engine resolves evidence; AI never reads the role.
       record(s, `${p.name}: 주변의 흔적을 살폈다.`, p.id);
-      clue(s, p.id, `${target.name}의 동선 조사: ${trace ? '훼손 현장과 이어지는 흔적. 우연일 수도 있다.' : '뚜렷한 증거 없음. 결백을 보장하지는 않는다.'}`, trace ? target.id : null, trace ? 30 : 0);
+      clue(s, p.id, `${target.name}의 동선 조사: ${trace ? '훼손 현장과 이어지는 흔적. 우연일 수도 있다.' : '뚜렷한 증거 없음. 결백을 보장하지는 않는다.'}`, trace ? target.id : null, trace ? C.mechanics.investigation.weight : 0);
     }
     if (action.kind === 'vote') { s.votes[p.id] = action.target; secret.voteReason = action.reason || (action.target ? '플레이어가 선택한 후보' : '플레이어가 기권을 선택함'); }
     game.story.afterAction(s, p, action, record, () => random(s), before);
@@ -224,7 +224,7 @@
     for (const p of s.players.filter(p => !p.isHuman)) {
       if (s.outcome) break;
       if (!active(p) || s.acted.includes(p.id)) continue;
-      const view = viewFor(s, p.id), options = availableActions(view);
+      const view = viewFor(s, p.id, true), options = availableActions(view);
       const plan = game.ai.plan ? game.ai.plan(view, () => random(s)) : { action: game.ai.decide(view, () => random(s)), reason: '기본 행동' };
       let action = plan.action;
       s.secrets[p.id].decisionHistory.push({ day: s.day, phase: s.phase, round: s.discussionRound, kind: action.kind, reason: plan.reason, strategy: plan.strategy || null });

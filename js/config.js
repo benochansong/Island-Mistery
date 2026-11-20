@@ -1,10 +1,25 @@
 (function (root) {
   'use strict';
-  root.IslandMystery.config = Object.freeze({
+  const freeze = value => { if (value && typeof value === 'object') { Object.values(value).forEach(freeze); Object.freeze(value); } return value; };
+  root.IslandMystery.config = freeze({
     maxDays: 3,
     discussionRounds: ['사건 공유', '의심 제기', '질문과 해명', '증거 검토', '최종 의견'],
     defaultDifficulty: 'normal',
-    difficulty: { easy: { evidenceWeight: 0.8, contradictionThreshold: 0.95 }, normal: { evidenceWeight: 1, contradictionThreshold: 0.85 }, hard: { evidenceWeight: 1.12, contradictionThreshold: 0.8 } },
+    difficulty: {
+      easy: { evidenceWeight: 0.8, contradictionThreshold: 0.95, attention: .75, relationshipWeight: 1.25, judgmentError: 3, memoryDays: 1, planning: 1 },
+      normal: { evidenceWeight: 1, contradictionThreshold: 0.85, attention: 1, relationshipWeight: 1, judgmentError: .8, memoryDays: 3, planning: 2 },
+      hard: { evidenceWeight: 1.12, contradictionThreshold: 0.8, attention: 1.15, relationshipWeight: .65, judgmentError: .2, memoryDays: 3, planning: 3 }
+    },
+    mechanics: {
+      repair: { engineer: { cost: 1, amount: 3 }, other: { cost: 2, amount: 2 } },
+      sabotage: 4, hide: 3, gather: 2, medicineCost: 1,
+      engineerExplorationBonus: .1, maxSuccess: .98, maxClue: .9,
+      explorerJungleRisk: .4, injury: [12, 24], supplyChance: .12, supplyWater: 2,
+      investigation: { suspicious: .75, innocent: .20, reliability: .7, weight: 30 }
+    },
+    reasoning: { evidenceCap: 24, betrayalWeight: 18, traceWeight: 7, contradictionCap: 16, contradictionWeight: 8, voteThreshold: 43, cautionWeight: 12, aggressionWeight: 5, directProofFloor: 55, recordChance: .65, betrayalWitnessChance: .35 },
+    strategy: { dangerHealth: 30, healHealth: 55, patientHealth: 76, supplyDays: 2, partsReserve: 6, urgentProgress: .65, repairChance: .6 },
+    storyBalance: { clueChance: .55, unlockChance: .4, hiddenInjuryChance: .4, followupWeight: 3, eventWeights: { 'event-31': 6, 'event-36': 9 } },
     relationships: {
       initialTrust: 50, initialSuspicion: 20,
       cooperation: [5, -2], sharing: [8, -3], healing: [12, -5],

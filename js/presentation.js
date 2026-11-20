@@ -40,9 +40,9 @@
     function complete(){loaded++;$('asset-status').textContent=loaded<images.length?`화면 준비 ${loaded}/${images.length}`:failed?'일부 그림을 불러오지 못해 기본 화면을 사용합니다.':'화면 준비 완료';}
     document.querySelector('.island-art').addEventListener('error',e=>{e.target.hidden=true;document.querySelector('.map-key').textContent='기본 지도 · 지역 버튼으로 탐험 가능';});
   }
-  function map(v) {
+  function map(v, unlocked = []) {
     const sites=game.storyData.sites;
-    $('map-sites').innerHTML=sites.map((site,i)=>{const known=v.unlockedSites.includes(site.id),visited=v.self.visitedSites.includes(site.id),parent=game.data.locations.find(l=>l.id===site.parent);return `<button class="site-pin ${known?'unlocked':'locked'}" style="--x:${parent.x+(i%2?13:-11)}%;--y:${parent.y+12}%" data-map-site="${site.parent}" ${!known||v.outcome||v.pendingEvent?'disabled':''} title="${known?esc(site.name):'미발견 장소 · 인근 지역에서 단서를 찾으세요'}" aria-label="${known?esc(site.name):'미발견 장소'} · ${visited?'탐험 완료':known?'발견':'잠김'}">${visited?'✓':known?'◇':'?'}<span>${known?esc(site.name):'미발견'}</span></button>`;}).join('');
+    $('map-sites').innerHTML=sites.map((site,i)=>{const known=v.unlockedSites.includes(site.id),visited=v.self.visitedSites.includes(site.id),parent=game.data.locations.find(l=>l.id===site.parent);return `<button class="site-pin ${known?'unlocked':'locked'} ${unlocked.includes(site.id)?'newly-unlocked':''}" style="--x:${parent.x+(i%2?13:-11)}%;--y:${parent.y+12}%" data-map-site="${site.parent}" ${!known||v.outcome||v.pendingEvent?'disabled':''} title="${known?esc(site.name):'미발견 장소 · 인근 지역에서 단서를 찾으세요'}" aria-label="${known?esc(site.name):'미발견 장소'} · ${visited?'탐험 완료':known?'발견':'잠김'}">${visited?'✓':known?'◇':'?'}<span>${known?esc(site.name):'미발견'}</span></button>`;}).join('');
     document.querySelectorAll('[data-location]').forEach(el=>{const l=game.data.locations.find(l=>l.id===el.dataset.location);el.title=`${l.name} · 위험 ${l.risk} · ${l.resources}`;el.disabled=Boolean(v.outcome||v.pendingEvent);});
     // Secret names and contents stay hidden until the location has been unlocked.
     $('hidden-sites').querySelectorAll('article').forEach((el,i)=>{if(!v.unlockedSites.includes(sites[i].id)){el.querySelector('strong').textContent='▧ 미발견 장소';el.querySelector('button').textContent=game.discussion.place(sites[i].parent)+' 주변 조사';}});
@@ -66,7 +66,7 @@
     if(!next.outcome)$('scene-caption').textContent += ' · 개인 목표: ' + game.storyData.missions.find(m=>m.id===next.self.mission.id).title;
     $('scene-party').innerHTML=next.players.map(p=>`<div data-person="${p.id}" class="scene-person ${p.isExiled||!p.isAlive?'eliminated':''}" title="${esc(p.name)} · ${!p.isAlive?'사망':p.isExiled?'추방':'체력 '+p.health}">${portrait(p.id,M.expression(next,p))}<span>${esc(p.name)}${p.isExiled?' · 추방':!p.isAlive?' · 사망':''}</span></div>`).join('');
     document.querySelectorAll('#survivors .survivor').forEach((el,i)=>{const p=next.players[i];el.dataset.person=p.id;el.querySelector('.avatar').outerHTML=portrait(p.id,M.expression(next,p));el.classList.toggle('injured',changes.injuries.includes(p.id));});
-    map(next);event(next);
+    map(next, changes.unlocked);event(next);
     const talk=next.phase==='discussion';$('cinema-dialogue').hidden=!talk;
     if(talk&&(changes.statements.length||!same||before.phase!=='discussion')){queue=next.statements.filter(s=>s.day===next.day);if(queue.length)speaker(changes.statements.length?Math.max(0,queue.length-changes.statements.length):queue.length-1);else{$('speaker-name').textContent='모닥불 회의';$('speaker-context').textContent='발언을 기다립니다';$('cinema-text').textContent='아래에서 당신의 발언을 선택하세요.';$('speaker-portrait').innerHTML=portrait('player');}}
     if(!talk)stopText();

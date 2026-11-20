@@ -1,0 +1,6 @@
+role,actors,resource_units_per_actor_before_after,repair_points_per_actor_before_after,heals,investigations,clues,exiles
+탐험가,421,13.37 → 14.22,3.04 → 3.34,15,0,1598,9
+의사,375,9.17 → 9.41,3.09 → 3.54,84,0,1339,8
+기술자,308,8.23 → 8.54,8.17 → 8.70,5,0,1072,5
+조사관,396,8.46 → 8.91,1.79 → 2.11,4,597,1455,7
+공작원,300,10.70 → 12.57,0.80 → 0.01,0,0,1022,193

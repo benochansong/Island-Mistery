@@ -1,8 +1,8 @@
 # ISLAND MYSTERY · 사라진 섬의 비밀
 
-HTML/CSS/JavaScript로 실행하는 한국어 싱글플레이 생존·추리 게임입니다. **Phase 5: 실제 섬 일러스트·6인 표정·시간대 연출·음악과 효과음을 통합했습니다.** 인간 1명과 AI 5명이 최대 3일 동안 탐험, 물자 확보, 토론, 투표, 밤 행동을 수행하고 엔딩에 도달합니다.
+HTML/CSS/JavaScript로 실행하는 한국어 싱글플레이 생존·추리 게임입니다. **Phase 6: AI 추리 수준·증거 기반 투표·전략·게임 안내를 개선하고 반복 플레이와 실제 브라우저로 검증했습니다.** 인간 1명과 AI 5명이 최대 3일 동안 탐험, 물자 확보, 토론, 투표, 밤 행동을 수행하고 엔딩에 도달합니다.
 
-기존 탐험·직업·자원·네 엔딩과 Phase 3의 성격·기억·토론을 유지합니다. 과거 초안은 `drafts/phase3/`에 보존하고 실제 기능은 `js/`에서 실행합니다. 최신 검증과 한계는 [Phase 5 결과 보고서](docs/PHASE5-REPORT.md), 사건·목표별 설명은 [콘텐츠 목록](docs/PHASE4-CONTENT.md)을 확인하세요.
+기존 탐험·직업·자원·네 엔딩과 Phase 3의 성격·기억·토론을 유지합니다. 과거 초안은 `drafts/phase3/`에 보존하고 실제 기능은 `js/`에서 실행합니다. 최신 검증과 한계는 [Phase 6 결과 보고서](docs/PHASE6-REPORT.md), 사건·목표별 설명은 [콘텐츠 목록](docs/PHASE4-CONTENT.md)을 확인하세요.
 
 ## 실행 방법
 
@@ -90,7 +90,7 @@ AI는 물자 부족, 부상, 부품, 자신의 역할, 자신의 단서·의심�
 
 공작원의 비밀 행동자와 개인 결과는 공개 로그에서 제외하고, 물자·시설 손상 결과만 단계 말에 묶어 알립니다. 로컬 싱글플레이이므로 개발자 도구나 저장 파일 자체에서 모든 비밀을 완벽히 숨기는 보안 구조는 아닙니다.
 
-인물 카드를 펼치면 **내가 알고 있는** 관계 변화·행동·발언을 볼 수 있습니다. 다른 AI의 숨겨진 관계 수치와 거짓말 의도는 노출하지 않습니다. 난이도는 시작 시 선택하며, 보통이 기준입니다. 쉬움/어려움은 증거 가중치와 모순 판단 기준만 변경하고 정보 접근 권한은 동일합니다.
+인물 카드를 펼치면 **내가 알고 있는** 관계 변화·행동·발언을 볼 수 있습니다. 다른 AI의 숨겨진 관계 수치와 거짓말 의도는 노출하지 않습니다. 난이도는 시작 시 선택하며, 보통이 기준입니다. 초급/고급은 관찰 주의력, 기억 활용 기간, 관계 비중, 판단 오차와 마지막 날 계획도 바꾸며 정보 접근 권한은 동일합니다.
 
 ## 저장
 
@@ -149,7 +149,7 @@ npm test
 npm run test:simulation
 ```
 
-단위·통합 테스트와 100회 시뮬레이션은 Node.js 22 이상에서 별도 패키지 설치 없이 실행됩니다. 검증 환경은 Node.js 24.14.0입니다. 실제 Chrome 자동 검증은 개발 의존성 설치와 설치된 Chrome이 필요합니다.
+단위·통합 테스트와 300회 시뮬레이션은 Node.js 22 이상에서 별도 패키지 설치 없이 실행됩니다. 검증 환경은 Node.js 24.14.0입니다. 실제 Chrome 자동 검증은 개발 의존성 설치와 설치된 Chrome이 필요합니다.
 
 ```sh
 npm ci
@@ -159,11 +159,13 @@ npm run test:browser
 # Firefox를 포함한 설정·음향·실패 대체 처리 검사
 npx playwright install firefox
 npm run test:browser:features
-node tests/browser-phase5-scenes.cjs
+npm run test:strategies
 ```
 
 브라우저 테스트는 설치된 Chrome의 독립적인 임시 프로필을 사용합니다. 사용자 브라우저 저장을 건드리지 않습니다. 다른 설치 채널은 `TEST_BROWSER_CHANNEL`로 지정할 수 있으나 전체 완주는 Chrome, 주요 화면·오디오·설정 검사는 Chrome와 Playwright Firefox에서 수행했습니다. 브라우저 테스트 의존성은 게임 실행에 필요하지 않습니다.
 
-최종 결과: [PHASE5-REPORT.md](docs/PHASE5-REPORT.md), [100회 시뮬레이션](docs/phase5-simulation-results.json), [Chrome 3회 완주](docs/phase5-browser-results.json), [Chrome·Firefox 기능 검사](docs/phase5-browser-features.json). 기존 36개 회귀 테스트는 이야기 사건을 끈 모드에서 원래 규칙을 검사하고, 신규 테스트·전체 시뮬레이션·브라우저는 Phase 4를 활성화합니다. 과거 보고서는 [Phase 4](docs/PHASE4-REPORT.md), [Phase 3](docs/PHASE3-REPORT.md), [Phase 2.5](docs/PHASE2-AUDIT.md)에 보존합니다.
+최종 결과: [Phase 6 보고서](docs/PHASE6-REPORT.md), [변경 전 진단](docs/PHASE6-BASELINE.md), [300회 고정 조건 비교](docs/phase6-after.json), [150회 전략 비교](docs/phase6-strategies.json), [브라우저 A~E](docs/phase6-browser-results.json), [Chrome·Firefox 기능 검사](docs/phase6-browser-features.json). 시뮬레이션의 원본 CSV와 시드 목록도 저장소에 있습니다. 과거 보고서와 백업은 보존합니다.
 
-규칙 기반 AI이며 자유 입력을 이해하는 언어 모델은 아닙니다. 생존자 편향 밸런스, 희귀 사건의 노출 빈도, 대사의 자연스러움은 추가 개선 대상입니다. 쉬움·어려움의 별도 대규모 밸런스 검증과 Safari·실기기 검증은 남아 있습니다. 자동 완주는 재미나 난이도 검증을 대신하지 않습니다.
+AI는 자유 입력 언어 모델이 아닌 규칙 기반입니다. 이번 비교는 정해진 행동 정책의 결과이며 인간 승률이나 재미 평가가 아닙니다. 생존자 진영 우세와 의료품 잉여가 남아 있습니다. AI 추리 수준이 높으면 동료와 상대 모두 더 정확하게 판단하므로 인간의 역할에 따라 체감 난이도가 달라집니다. Safari·모바일 실기기와 실제 초보자의 플레이 시간은 측정하지 않았습니다.
+
+첫 실행 안내는 건너뛸 수 있고, 설정에서 행동 결과를 접거나 모든 연출을 줄일 수 있습니다. 주요 밸런스 수치는 `js/config.js`에서 관리합니다. 사건 고유 효과와 숨겨진 장소 보상은 콘텐츠 데이터인 `js/story-data.js`에 유지합니다. 저장 형식은 v4를 유지하고 이전 v2/v3 원본은 마이그레이션 시 보존합니다.

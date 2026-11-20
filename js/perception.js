@@ -19,7 +19,7 @@
       learn(s, observer.id, { id: fact.id + '-help', eventId: fact.id, kind: a.kind === 'heal' ? 'healing' : 'cooperation', subjectId: p.id, relatedIds: [p.id, a.target].filter(Boolean), location, text: `${p.name}: ${a.kind === 'heal' ? '치료' : a.kind === 'repair' ? '시설 수리' : '물자 확보'}를 완료했다.`, source: 'public-receipt' });
     }
     // Later searches can uncover an authentic record, never a fabricated omniscient deduction.
-    if (a.kind === 'explore' && s.day > 1 && ['lab', 'tower'].includes(location) && random() < .65) {
+    if (a.kind === 'explore' && s.day > 1 && ['lab', 'tower'].includes(location) && random() < game.config.reasoning.recordChance) {
       const records = s.facts.filter(f => f.day < s.day && f.location === location && f.actorId !== p.id && !s.secrets[p.id].memory.some(m => m.eventId === f.id && m.direct));
       if (records.length) {
         const found = records[Math.floor(random() * records.length)], who = s.players.find(o => o.id === found.actorId);
@@ -36,10 +36,11 @@
       for (const f of facts.filter(f => f.actorId !== observer.id && f.location === own.location)) {
         const id = f.id + '-witness-' + observer.id;
         if (s.secrets[observer.id].memory.some(m => m.id === id)) continue;
-        if (random() > game.config.observationChance[s.day] + s.secrets[observer.id].traits.caution * .1) continue;
+        const mind = s.secrets[observer.id], attention = observer.isHuman ? 1 : game.config.difficulty[mind.difficulty].attention;
+        if (random() > Math.min(1, (game.config.observationChance[s.day] + mind.traits.caution * .1) * attention)) continue;
         const who = s.players.find(p => p.id === f.actorId);
         learn(s, observer.id, { id, eventId: f.id, kind: 'location', location: f.location, subjectId: f.actorId, text: `직접 목격: ${game.discussion.slot(f)} ${who.name}, ${game.discussion.place(f.location)}.` });
-        if (['hide', 'sabotage'].includes(f.kind) && random() < .35) learn(s, observer.id, { id: id + '-act', eventId: f.id, kind: 'betrayal', subjectId: f.actorId, location: f.location, text: `${who.name}이 ${f.kind === 'hide' ? '공동 물자를 숨기는' : '시설을 훼손하는'} 행동을 직접 보았다.` });
+        if (['hide', 'sabotage'].includes(f.kind) && random() < game.config.reasoning.betrayalWitnessChance) learn(s, observer.id, { id: id + '-act', eventId: f.id, kind: 'betrayal', subjectId: f.actorId, location: f.location, text: `${who.name}이 ${f.kind === 'hide' ? '공동 물자를 숨기는' : '시설을 훼손하는'} 행동을 직접 보았다.` });
       }
       for (const f of facts.filter(f => ['hide', 'sabotage'].includes(f.kind))) {
         learn(s, observer.id, { id: f.id + '-damage', eventId: f.id, kind: 'damage', location: f.location, subjectId: null, source: 'public-damage', text: `${game.discussion.place(f.location)}에서 ${f.kind === 'hide' ? '물자 손실' : '시설 손상'}이 확인됐다. 원인은 미상이다.` });

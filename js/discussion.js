@@ -37,7 +37,7 @@
     const clue = action.clueId ? mind.information.find(c => c.id === action.clueId) : null;
     const prior = s.statements.find(m => m.id === action.statementId);
     const question = s.statements.slice().reverse().find(m => m.mode === 'question' && m.target === p.id && own && m.aboutDay === own.day && m.aboutPhase === own.phase);
-    const ranked = game.social.voteScores(game.state.viewFor(s, p.id)).find(r => r.id === action.target);
+    const ranked = game.social.voteScores(game.state.viewFor(s, p.id, true)).find(r => r.id === action.target);
     let intent = mode, content, claim = null, replyTo = prior?.id || null;
     const slots = { target: name(action.target), reason: ranked?.reason || '아직 검증되지 않은 개인적인 의문', food: s.resources.food, water: s.resources.water };
     if (own) {
@@ -66,7 +66,11 @@
       const targetMind = s.secrets[listener.id], reliability = listener.id === p.id ? 1 : Math.max(.15, targetMind.trust[p.id] / 100);
       let event = { ...base, reliability };
       if (claim) event = { ...event, ...claim, kind: 'claim' };
-      else if (['accuse', 'speculate', 'redirect', 'agree'].includes(mode)) event = { ...event, kind: 'accusation', supported: Boolean(ranked?.supported) };
+      else if (['accuse', 'speculate', 'redirect', 'agree'].includes(mode)) {
+        // Listeners evaluate their own evidence, never the speaker's private score.
+        const supported = targetMind.memory.some(m => m.subjectId === action.target && ['trace', 'betrayal'].includes(m.kind)) || targetMind.memory.some(m => m.speakerId === action.target && m.judgment === '직접 증거와 모순');
+        event = { ...event, kind: 'accusation', supported };
+      }
       else if (mode === 'defend') event.kind = 'defense';
       game.social.remember(targetMind, event);
       if (evidence || clue) {

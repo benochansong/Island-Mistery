@@ -65,30 +65,36 @@
   function voteScores(view) {
     const mind = view.self, p = mind.traits;
     return view.players.filter(other => other.isAlive && !other.isExiled && other.id !== mind.id).map(other => {
-      const traces = mind.memory.filter(m => ['trace', 'betrayal'].includes(m.kind) && m.subjectId === other.id);
-      const unique = [...new Map(traces.map(m => [m.eventId, m])).values()];
-      const evidence = Math.min(24, unique.reduce((sum, m) => sum + m.reliability * (m.kind === 'betrayal' ? 18 : 7), 0));
-      const contradictions = new Set(mind.memory.filter(m => m.speakerId === other.id && m.judgment === '직접 증거와 모순').map(m => `${m.subjectId}:${m.day}:${m.phase}`)).size;
-      const testimony = new Set(mind.memory.filter(m => m.kind === 'accusation' && m.subjectId === other.id).map(m => m.speakerId)).size;
-      const relationship = (50 - mind.trust[other.id]) * (0.12 + p.emotionalSensitivity * 0.25);
+      const difficulty = C.difficulty[mind.difficulty], R = C.reasoning;
+      const memory = mind.memory.filter(m => m.day > view.day - difficulty.memoryDays);
+      const traces = memory.filter(m => ['trace', 'betrayal'].includes(m.kind) && m.subjectId === other.id);
+      const strength = m => m.reliability * (m.kind === 'betrayal' ? R.betrayalWeight : R.traceWeight);
+      const unique = [...new Map(traces.slice().sort((a, b) => strength(a) - strength(b)).map(m => [m.eventId, m])).values()];
+      const evidence = Math.min(R.evidenceCap, unique.reduce((sum, m) => sum + strength(m), 0));
+      const contradictions = new Set(memory.filter(m => m.speakerId === other.id && m.judgment === '직접 증거와 모순').map(m => `${m.subjectId}:${m.day}:${m.phase}`)).size;
+      const testimony = new Set(memory.filter(m => m.kind === 'accusation' && m.subjectId === other.id).map(m => m.speakerId)).size;
+      const relationship = (50 - mind.trust[other.id]) * (0.12 + p.emotionalSensitivity * 0.25) * difficulty.relationshipWeight;
       const goalBias = mind.role === 'saboteur' && view.statements.some(m => m.speakerId === other.id && m.target === mind.id && m.mode === 'accuse') ? 5 : 0;
-      const score = mind.suspicion[other.id] + evidence * p.logicalThinking + Math.min(16, contradictions * 8) + testimony * p.emotionalSensitivity + relationship + goalBias;
+      const rawScore = mind.suspicion[other.id] + evidence * p.logicalThinking * difficulty.evidenceWeight + Math.min(R.contradictionCap, contradictions * R.contradictionWeight) + testimony * p.emotionalSensitivity + relationship + goalBias;
+      const directProof = unique.some(m => m.kind === 'betrayal' && m.direct && m.reliability >= .95);
+      const score = Math.max(rawScore, directProof && difficulty.planning > 1 ? R.directProofFloor : 0);
       return { id: other.id, score, evidence, contradictions, reason: contradictions ? '동일 시점의 직접 목격과 발언 모순' : evidence ? '현장과 관련된 단서' : testimony ? '여러 사람의 의혹 제기와 관계' : '현재 관계와 의심 수준', supported: evidence > 0 || contradictions > 0 };
     }).sort((a, b) => b.score - a.score);
   }
   function chooseVote(view, random) {
     const scores = voteScores(view), p = view.self.traits;
-    const threshold = 43 + p.caution * 12 - p.aggression * 5;
-    const candidates = scores.filter(s => s.score >= threshold);
+    const threshold = C.reasoning.voteThreshold + p.caution * C.reasoning.cautionWeight - p.aggression * C.reasoning.aggressionWeight;
+    const candidates = scores.filter(s => s.supported && s.score >= threshold);
     if (!candidates.length) return { target: null, reason: '추방할 만큼 충분한 근거가 없음', scores };
-    const best = candidates.map(s => ({ ...s, tie: s.score + random() * 0.8 })).sort((a, b) => b.tie - a.tie)[0];
+    const best = candidates.map(s => ({ ...s, tie: s.score + random() * C.difficulty[view.self.difficulty].judgmentError })).sort((a, b) => b.tie - a.tie)[0];
     return { target: best.id, reason: best.reason, scores };
   }
   function strategy(view) {
     const self = view.self;
     const pressure = view.statements.filter(m => m.target === self.id && ['accuse', 'question', 'rebut'].includes(m.mode)).length;
     const progress = Math.max(view.facilities.radio / C.repairGoals.radio, view.facilities.boat / C.repairGoals.boat);
-    if (progress >= 0.65 && view.phase !== 'discussion') return { id: 'disrupt', reason: '공개된 탈출 준비도가 높아 시설 훼손을 우선함' };
+    if (view.phase !== 'discussion' && (progress >= C.strategy.urgentProgress || view.day === C.maxDays && C.difficulty[self.difficulty].planning > 1)) return { id: 'betray', reason: '탈출 임박 또는 마지막 날 · 위장 협력보다 시설·물자 방해를 우선함' };
+    if (self.difficulty === 'easy' && view.phase !== 'discussion') return { id: view.phase === 'night' ? 'disrupt' : 'cooperate', reason: '단순 전략 · 낮에 협력하고 밤에 방해함' };
     if (view.phase === 'discussion' && view.discussionRound === 1 && view.day > 1 && self.memory.some(m => ['healing', 'sharing'].includes(m.kind) && m.subjectId !== self.id)) return { id: 'divide', reason: '직접 들은 공유·치료 관계에 의혹을 제기해 관심을 분산함' };
     if (pressure >= 2) return { id: 'alibi', reason: '공개 질문이 집중되어 실제 협력 이력으로 해명함' };
     if (view.phase === 'discussion' && self.actionHistory.some(a => ['hide', 'sabotage'].includes(a.kind))) return { id: 'misinform', reason: '자신의 방해 동선을 숨기는 알리바이가 필요함' };

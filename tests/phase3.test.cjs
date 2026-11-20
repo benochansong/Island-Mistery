@@ -89,6 +89,8 @@ test('voting uses private evidence and relationships, allowing divergent votes a
   const g = setup(), s = g.state.create(timestamp, 12); s.phase = 'voting';
   let v = g.state.viewFor(s, 'seo'); assert.equal(g.ai.decide(v, () => .5).target, null);
   s.secrets.seo.suspicion.do = 80; s.secrets.min.suspicion.ji = 80;
+  assert.equal(g.ai.decide(g.state.viewFor(s, 'seo'), () => .5).target, null, 'Phase 6: distrust alone is insufficient');
+  for (const [observer, subject] of [['seo', 'do'], ['min', 'ji']]) g.perception.learn(s, observer, { id: 'test-proof-' + observer, eventId: 'test-proof-' + observer, kind: 'trace', subjectId: subject, text: '개별 현장 단서', reliability: .7 });
   const a = g.ai.decide(g.state.viewFor(s, 'seo'), () => .5), b = g.ai.decide(g.state.viewFor(s, 'min'), () => .5);
   assert.equal(a.target, 'do'); assert.equal(b.target, 'ji'); assert.ok(a.reason.length);
   s.players.find(p => p.id === 'do').isExiled = true;
