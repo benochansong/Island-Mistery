@@ -21,7 +21,7 @@
     if (s.log.length > 500) s.log.shift();
     return entry;
   }
-  function create(now = stamp(), seed = Math.floor(Math.random() * 4294967296), difficulty = C.defaultDifficulty, storyEnabled = true, onlineHumans = null) {
+  function create(now = stamp(), seed = Math.floor(Math.random() * 4294967296), difficulty = C.defaultDifficulty, storyEnabled = true, onlineHumans = null, challenge = 'classic') {
     if (!Object.hasOwn(C.difficulty, difficulty)) throw new Error("알 수 없는 난이도입니다.");
     const s = { version: 4, initialSeed: seed >>> 0, difficulty, discussionRound: 0, statements: [], facts: [], invalidDecisions: 0, day: 1, phase: 'morning', rng: seed >>> 0, sequence: 0,
       selectedLocation: 'coast', plannedLocation: null, resources: { ...C.initialResources }, facilities: { radio: 0, boat: 0 },
@@ -39,6 +39,7 @@
       ids.filter(id => id !== p.id).forEach(id => { s.secrets[p.id].trust[id] = C.relationships.initialTrust; s.secrets[p.id].suspicion[id] = C.relationships.initialSuspicion; });
     });
     game.story.initialize(s, () => random(s), storyEnabled);
+    game.challenges?.initialize(s, challenge); game.progression?.initialize(s);
     record(s, '여섯 명이 해안에서 깨어났다. 3일 안에 통신탑이나 탈출 보트를 완성해야 한다.');
     return s;
   }
@@ -82,7 +83,7 @@
     if (!ids.includes(playerId)) throw new Error('알 수 없는 인물입니다.');
     const visible = e => e.audience === 'public' || e.audience === playerId;
     const publicPlayer = p => ({ id: p.id, name: p.name, personality: p.personality, initials: p.initials, isHuman: p.isHuman, isAlive: p.isAlive, isExiled: p.isExiled, health: p.health, location: p.id === playerId ? p.location : null });
-    return clone({ ...game.story.view(s, playerId), day: s.day, phase: s.phase, selectedLocation: s.online ? s.online.locations[playerId] : playerId === 'player' ? s.selectedLocation : 'coast', plannedLocation: playerId === 'player' ? s.plannedLocation : null, difficulty: s.difficulty, discussionRound: s.discussionRound, statements: s.statements,
+    return clone({ ...game.story.view(s, playerId), challenge:s.challenge||null, progressionResult:!compact&&s.outcome?game.progression?.result(s,playerId)||null:null, day: s.day, phase: s.phase, selectedLocation: s.online ? s.online.locations[playerId] : playerId === 'player' ? s.selectedLocation : 'coast', plannedLocation: playerId === 'player' ? s.plannedLocation : null, difficulty: s.difficulty, discussionRound: s.discussionRound, statements: s.statements,
       resources: s.resources, facilities: s.facilities, players: s.players.map(publicPlayer),
       self: { ...publicPlayer(s.players.find(p => p.id === playerId)), ...s.secrets[playerId] },
       acted: s.acted, resolved: s.resolved, votes: s.resolved ? s.votes : {}, outcome: s.outcome,
@@ -101,20 +102,23 @@
     const secret = s.secrets[observerId]; const entry = record(s, text, observerId, observerId, 'clue');
     const memoryId = 'clue-' + entry.id;
     secret.information.push({ id: memoryId, memoryId, text, suspectId, weight, shared: false });
+    if(s.progress&&!s.progress.players[observerId].clueIds.includes(memoryId))s.progress.players[observerId].clueIds.push(memoryId);
     game.perception.learn(s, observerId, { id: memoryId, eventId: memoryId, kind: suspectId ? 'trace' : 'clue', subjectId: suspectId, text, reliability: C.mechanics.investigation.reliability, source: 'investigation' });
   }
   function explore(s, p, location) {
     const cfg = C.locations[location], role = s.secrets[p.id].role; p.location = location;
     record(s, `${p.name}: ${game.data.locations.find(item => item.id === location).name} 탐험.`, p.id, 'public', 'explore');
     const bonus = role === 'explorer' ? C.explorationBonus : role === 'engineer' && ['lab', 'tower'].includes(location) ? C.mechanics.engineerExplorationBonus : 0;
-    if (random(s) < Math.min(C.mechanics.maxSuccess, cfg.success + bonus)) {
+    const success=random(s) < Math.min(C.mechanics.maxSuccess, cfg.success + bonus - (s.challenge?.id==='storm'?.2:0));
+    game.progression?.exploration(s,p,location,success);
+    if (success) {
       Object.entries(cfg.loot).forEach(([key, range]) => changeResource(s, key, integer(s, range[0], range[1]), p.id));
     } else record(s, `${p.name}: 수색 경로가 막혀 물자를 얻지 못했다.`, p.id, 'public', 'failure');
-    if (random(s) < Math.min(C.mechanics.maxClue, cfg.clue + (role === 'investigator' ? C.investigatorBonus : 0))) {
+    if (random(s) < Math.min(C.mechanics.maxClue, cfg.clue + (role === 'investigator' ? C.investigatorBonus : 0))*(s.challenge?.id==='darkness'&&s.day===1?.35:1)) {
       const messages = { coast: '난파선의 항로가 의도적으로 지워져 있다. 누가 지웠는지는 알 수 없다.', jungle: '숲속에서 연구소로 이어지는 숨겨진 길을 발견했다.', lab: '연구 기록: 무전 간섭 장치가 섬 안에 남아 있다. 누가 사용하는지는 알 수 없다.', tower: '무전 기록에 반복되는 간섭이 있다. 고장과 고의 훼손 모두 가능하다.' };
       clue(s, p.id, messages[location]); record(s, `${p.name}: 새로운 기록을 발견했다. 내용은 아직 공유되지 않았다.`, p.id, 'public', 'discovery');
     }
-    if (random(s) < cfg.injury * (role === 'explorer' && location === 'jungle' ? C.mechanics.explorerJungleRisk : 1)) health(s, p, -integer(s, ...C.mechanics.injury));
+    if (random(s) < cfg.injury * (role === 'explorer' && location === 'jungle' ? C.mechanics.explorerJungleRisk : 1)*(s.challenge?.id==='storm'&&['jungle','tower'].includes(location)?1.5:1)) health(s, p, -integer(s, ...C.mechanics.injury));
     if (p.isAlive && random(s) < C.mechanics.supplyChance) { record(s, `${p.name}: 버려진 비상 보급 상자를 발견했다.`, p.id, 'public', 'special'); changeResource(s, 'water', C.mechanics.supplyWater, p.id); }
   }
   function availableActions(view) {
@@ -164,13 +168,16 @@
     if (action.kind === 'heal') {
       p.location = 'camp';
       const target = s.players.find(other => other.id === action.target);
+      if(target.id!==p.id&&target.health<100){game.progression?.add(s,p.id,'heals');game.progression?.add(s,p.id,'supports');}
       record(s, `${p.name}: ${target.name}의 상처를 치료했다.`, p.id); changeResource(s, 'medicine', -C.mechanics.medicineCost, p.id);
       health(s, target, secret.role === 'doctor' ? C.doctorHeal : C.normalHeal);
     }
     if (action.kind === 'repair') {
       const { cost, amount } = C.mechanics.repair[secret.role === 'engineer' ? 'engineer' : 'other'];
       p.location = action.facility === 'radio' ? 'tower' : 'coast'; const before = s.facilities[action.facility];
-      s.facilities[action.facility] = Math.min(C.repairGoals[action.facility], before + amount);
+      const effective=game.challenges?game.challenges.repair(s,action.facility,amount):amount;
+      s.facilities[action.facility] = Math.min(C.repairGoals[action.facility], before + effective);
+      game.progression?.add(s,p.id,'repairs');game.progression?.add(s,p.id,action.facility==='radio'?'radioWork':'boatWork');
       record(s, `${p.name}: ${action.facility === 'radio' ? '통신탑' : '보트'} 수리도 +${s.facilities[action.facility] - before}.`, p.id);
       changeResource(s, 'parts', -cost, p.id);
     }
@@ -223,6 +230,7 @@
     const highest = Math.max(0, ...Object.values(counts)), winners = Object.keys(counts).filter(id => counts[id] === highest);
     if (highest > 0 && winners.length === 1) {
       const person = s.players.find(p => p.id === winners[0]); person.isExiled = true;
+      if(s.secrets[person.id].role==='saboteur')for(const [voter,target]of Object.entries(s.votes))if(target===person.id)game.progression?.add(s,voter,'exposures');
       record(s, `${person.name}: ${highest}표로 추방되었다. 직업은 공개되지 않는다.`, person.id, 'public', 'exile');
     } else record(s, '동률 또는 전원 기권으로 추방 없이 밤을 맞는다.', null, 'public', 'vote');
   }
@@ -241,6 +249,7 @@
   function settleTurn(s) {
     if (s.outcome) return;
     game.perception.observe(s, () => random(s));
+    game.progression?.observations(s);
     s.resolved = true;
     if (s.phase === 'voting') tally(s);
     checkEnd(s);
@@ -263,12 +272,14 @@
     if (s.settledDays.includes(s.day)) throw new Error('이미 정산한 날짜입니다.');
     s.settledDays.push(s.day);
     const people = s.players.filter(active), demand = people.length; let penalty = 0;
+    if(s.progress&&(s.resources.food<demand||s.resources.water<demand))s.progress.shortage=true;
     for (const key of ['food', 'water']) {
       const missing = Math.max(0, demand - s.resources[key]); changeResource(s, key, -demand);
       if (demand) penalty += Math.ceil(C.shortageDamage[key] * missing / demand);
     }
     record(s, `${demand}명에게 하루 식량·식수를 배급했다.${penalty ? ' 부족한 몫은 공평하게 나누며 전원 체력 -' + penalty + '.' : ''}`, null, 'public', 'settlement');
     if (penalty) people.forEach(p => health(s, p, -penalty));
+    game.challenges?.night(s,()=>random(s),record);
     checkEnd(s);
     if (!s.outcome) { if (!s.story.enabled) dailyEvent(s); checkEnd(s, true, s.day === C.maxDays); }
     if (!s.outcome) {
@@ -330,7 +341,7 @@
     if (!valid(s)) throw new Error('상태 전이 검증 실패. 이전 기록은 유지됩니다.');
     return s;
   }
-  function valid(s) { return coreValid(s) && s.version === 4 && game.schema.valid(s) && game.story.valid(s); }
+  function valid(s) { return coreValid(s) && s.version === 4 && game.schema.valid(s) && game.story.valid(s) && (!game.challenges||game.challenges.valid(s)) && (!game.progression||game.progression.validState(s)); }
   function migrate(old) {
     if (!coreValid(old) || ![2,3].includes(old.version) || old.version === 3 && !game.schema.valid(old)) return null;
     const s = clone(old);

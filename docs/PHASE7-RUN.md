@@ -1,5 +1,7 @@
 # Phase 7 · Windows 실행 설명서
 
+현재 Phase 8에서는 완료한 온라인 전적·성장이 SQLite에 보존됩니다. 최신 Node.js 요구 버전, 게스트 토큰과 DB 백업은 [Phase 8 실행 안내](PHASE8-RUN.md)를 우선 확인하세요. 아래 방 접속과 LAN 안내는 계속 사용할 수 있습니다.
+
 ## 1. 필요한 프로그램과 설치
 
 Windows용 Node.js **22 이상**과 최신 Chrome 또는 Firefox가 필요합니다. [Node.js 공식 다운로드](https://nodejs.org/en/download)에서 Windows 설치 프로그램을 받아 설치하세요. 설치 후 새 터미널에서 `node --version`을 실행하면 버전이 표시됩니다.

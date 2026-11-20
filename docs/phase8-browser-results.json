@@ -1,0 +1,163 @@
+{
+  "browser": "157.0.8103.79",
+  "games": [
+    {
+      "mode": "classic",
+      "steps": 38,
+      "xp": 180,
+      "totalXP": 180,
+      "role": "doctor",
+      "outcome": "escape",
+      "achievements": [
+        "footstep",
+        "coast",
+        "survive",
+        "perfect",
+        "evidence",
+        "cooperate",
+        "trust",
+        "together",
+        "teamwork",
+        "door"
+      ]
+    },
+    {
+      "mode": "storm",
+      "steps": 58,
+      "xp": 285,
+      "totalXP": 465,
+      "role": "doctor",
+      "outcome": "exposed",
+      "achievements": [
+        "footstep",
+        "coast",
+        "survive",
+        "perfect",
+        "evidence",
+        "cooperate",
+        "trust",
+        "together",
+        "teamwork",
+        "door",
+        "past"
+      ]
+    },
+    {
+      "mode": "scarcity",
+      "steps": 58,
+      "xp": 310,
+      "totalXP": 775,
+      "role": "explorer",
+      "outcome": "exposed",
+      "achievements": [
+        "footstep",
+        "coast",
+        "survive",
+        "perfect",
+        "evidence",
+        "cooperate",
+        "trust",
+        "together",
+        "teamwork",
+        "door",
+        "past"
+      ]
+    },
+    {
+      "mode": "darkness",
+      "steps": 43,
+      "xp": 190,
+      "totalXP": 965,
+      "role": "explorer",
+      "outcome": "escape",
+      "achievements": [
+        "footstep",
+        "coast",
+        "survive",
+        "perfect",
+        "evidence",
+        "cooperate",
+        "trust",
+        "together",
+        "teamwork",
+        "door",
+        "past"
+      ]
+    },
+    {
+      "mode": "broken",
+      "steps": 22,
+      "xp": 115,
+      "totalXP": 1080,
+      "role": "saboteur",
+      "outcome": "escape",
+      "achievements": [
+        "footstep",
+        "coast",
+        "survive",
+        "perfect",
+        "evidence",
+        "cooperate",
+        "trust",
+        "together",
+        "teamwork",
+        "door",
+        "past",
+        "truthseeker"
+      ]
+    },
+    {
+      "mode": "distrust",
+      "steps": 38,
+      "xp": 210,
+      "totalXP": 1290,
+      "role": "engineer",
+      "outcome": "exposed",
+      "achievements": [
+        "footstep",
+        "coast",
+        "survive",
+        "perfect",
+        "evidence",
+        "cooperate",
+        "trust",
+        "together",
+        "teamwork",
+        "door",
+        "past",
+        "truthseeker",
+        "expert"
+      ]
+    },
+    {
+      "mode": "deadline",
+      "steps": 39,
+      "xp": 235,
+      "totalXP": 1525,
+      "role": "engineer",
+      "outcome": "escape",
+      "achievements": [
+        "footstep",
+        "coast",
+        "survive",
+        "perfect",
+        "evidence",
+        "cooperate",
+        "trust",
+        "together",
+        "teamwork",
+        "door",
+        "past",
+        "truthseeker",
+        "expert",
+        "engineer"
+      ]
+    }
+  ],
+  "errors": [],
+  "restored": true,
+  "duplicate": true,
+  "rewards": true,
+  "hidden": true,
+  "mobile": true
+}

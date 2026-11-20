@@ -1,0 +1,34 @@
+
+> island-mystery@0.7.0 test:online
+> node --test tests/online.test.cjs
+
+(node:33188) ExperimentalWarning: SQLite is an experimental feature and might change at any time
+(Use `node --trace-warnings ...` to show where the warning was created)
+✔ M1: private rooms, host authorization, ready gate, capacity and host transfer (128.0925ms)
+✔ M2/F: 2 human socket clients + 4 AI complete a real game (872.1237ms)
+✔ M2/F: 3 human socket clients + 3 AI complete a real game (3160.2057ms)
+✔ M2/F: 4 human socket clients + 2 AI complete a real game (995.8164ms)
+✔ M2/F: 5 human socket clients + 1 AI complete a real game (1258.5064ms)
+✔ M2/F: 6 human socket clients + 0 AI complete a real game (5934.6864ms)
+✔ M2 security: scoped packets exclude seed, roles, AI memories and private clues (71.2392ms)
+✔ M2 idempotency: duplicate request does not grant resources, old turns and impersonation fail (37.5882ms)
+✔ M3 secret voting, exact single tally, spectator rejection and synchronized result (90.5779ms)
+✔ M3 chat: order, literal HTML, limits, block/report hooks and no semantic AI claims (19.7939ms)
+✔ M4 reconnect tokens preserve roles and queued actions; nickname cannot steal a seat (51.8065ms)
+✔ M4 timers progress disconnected players, abandoned rooms expire, rematch resets secrets (195.1922ms)
+✔ production config rejects missing/insecure origin and static server denies private files (56.1543ms)
+✔ explicit AI saboteur scenario completes; server-only starting fixture (1456.6935ms)
+✔ explicit human saboteur scenario completes; server-only starting fixture (655.0356ms)
+✔ AI planner exceptions use a legal fallback rather than hanging a room (3.0428ms)
+✔ AI-disabled lobby requires six humans; full room and stale reconnect tokens are refused (18.5674ms)
+✔ night actions apply once in seat order, investigation stays private, deadline ends day three (5.0244ms)
+✔ all human spectators automatically watch the remaining AI reach an ending (1317.2573ms)
+✔ public lobby discovery works and foreign browser origins cannot connect (20.0945ms)
+ℹ tests 20
+ℹ suites 0
+ℹ pass 20
+ℹ fail 0
+ℹ cancelled 0
+ℹ skipped 0
+ℹ todo 0
+ℹ duration_ms 16831.1578

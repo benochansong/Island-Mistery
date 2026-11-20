@@ -8,6 +8,7 @@
   function guidance(view) {
     const self = view.self, demand = view.players.filter(p => p.isAlive && !p.isExiled).length;
     const notes = [];
+    if(view.challenge&&view.challenge.id!=='classic'){const mode=game.challenges.modes.find(m=>m.id===view.challenge.id);notes.push(`${mode.name}: ${mode.description}${view.challenge.id==='broken'?' 남은 통신탑 추가 손상: '+view.challenge.radioDebt:''}`);}
     if (view.pendingEvent) notes.push('사건 선택을 완료하면 다음 행동이 열립니다.');
     if (view.resources.food < demand || view.resources.water < demand) notes.push(`오늘 밤 ${demand}명분이 필요합니다. 식량 부족 ${Math.max(0, demand-view.resources.food)}, 식수 부족 ${Math.max(0, demand-view.resources.water)} — 부족하면 모두의 체력이 감소합니다.`);
     if (view.phase === 'night') notes.push(C.roles[self.role].description + ' 행동 후 정산은 하루에 한 번 적용됩니다.');

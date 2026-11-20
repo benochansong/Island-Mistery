@@ -16,6 +16,8 @@
   <script defer src="js/discussion.js"></script>
   <script defer src="js/perception.js"></script>
   <script defer src="js/schema.js"></script>
+  <script defer src="js/challenges.js"></script>
+  <script defer src="js/progression.js"></script>
   <script defer src="js/story-data.js"></script>
   <script defer src="js/story.js"></script>
   <script defer src="js/missions.js"></script>
@@ -23,6 +25,7 @@
   <script defer src="js/ai.js"></script>
   <script defer src="js/state.js"></script>
   <script defer src="js/storage.js"></script>
+  <script defer src="js/growth-store.js"></script>
   <script defer src="js/ui.js"></script>
   <script defer src="js/story-ui.js"></script>
   <script defer src="js/assets.js"></script>
@@ -32,6 +35,8 @@
   <script defer src="js/presentation.js"></script>
   <script defer src="js/app.js"></script>
   <script defer src="js/online.js"></script>
+  <script defer src="js/growth-ui.js"></script>
+  <link rel="stylesheet" href="css/growth.css">
   <link rel="stylesheet" href="css/online.css">
 </head>
 <body>
@@ -41,6 +46,7 @@
     <div class="header-right"><span class="edition">사라진 섬의 기록</span><button class="quiet" id="codex-button">미스터리 도감</button><button class="quiet" id="settings-button">설정</button><button class="quiet" id="help-button">게임 소개</button></div>
   </header>
 
+  <nav class="growth-nav" aria-label="성장과 기록"><button class="quiet" data-growth="profile">내 프로필</button><button class="quiet" data-growth="achievements">도전과제</button><button class="quiet" data-growth="history">게임 전적</button><button class="quiet" data-growth="leaderboard">랭킹</button><button class="quiet" data-growth="challenges">특별 도전</button><button class="quiet" data-growth="rewards">보상 및 꾸미기</button></nav>
   <main id="main">
     <section id="welcome" class="welcome" aria-labelledby="welcome-title">
       <div class="welcome-art" aria-hidden="true"></div><div class="mist-layer" aria-hidden="true"></div>
@@ -48,7 +54,7 @@
         <p class="eyebrow">이 섬은 지도에 없었다</p>
         <h1 id="welcome-title">ISLAND<br><span>MYSTERY</span></h1>
         <p class="subtitle">사라진 섬의 비밀</p>
-        <div class="short-rule"></div>
+        <div class="short-rule"></div><label class="small">게임 모드 <select id="challenge-select"></select></label><p id="challenge-note" class="small">특별 도전 기록은 기본 게임과 구분됩니다.</p>
         <p class="intro">여섯 명의 생존자. 사라진 기억.<br>파도 너머에서, 낯선 무전 신호가 들려온다.</p>
         <p class="muted welcome-note">누구를 믿을 것인가. 무엇을 발견할 것인가.<br>당신의 첫 번째 기록은 여기에서 시작된다.</p>
         <label class="difficulty-label" for="difficulty">AI 추리 수준 <select id="difficulty"><option value="easy">초급 · 단순한 관찰과 전략</option><option value="normal" selected>보통 · 증거와 관계의 균형</option><option value="hard">고급 · 증거와 장기 계획</option></select></label><label class="seed-label" for="seed-input">재현 시드 (선택)<input id="seed-input" type="number" min="0" max="4294967295" step="1" placeholder="비워 두면 새로운 이야기"></label><div class="welcome-actions"><button class="secondary" id="online-button">온라인 멀티플레이</button><button class="primary" id="new-button">새로운 기록 시작</button><button class="secondary" id="continue-button" disabled>이어하기</button></div>
@@ -104,5 +110,6 @@
     <fieldset><legend>화면과 대화</legend><label><input type="checkbox" data-setting="compactResults"> 행동 결과 간단히 보기</label><label><input type="checkbox" data-setting="reducedMotion"> 애니메이션 효과 감소</label><label><input type="checkbox" data-setting="shake"> 화면 흔들림 허용</label><label>텍스트 표시 속도<select data-setting="textSpeed" aria-label="텍스트 표시 속도"><option value="instant">즉시</option><option value="normal">보통</option><option value="slow">느리게</option></select></label><label><input type="checkbox" data-setting="autoDialogue"> 공개 대사 자동 재생</label><p class="small muted">운영체제의 효과 감소 설정도 따릅니다. 자동 재생은 발언 기록만 넘기며 당신의 행동을 대신 선택하지 않습니다.</p></fieldset>
   </form><div class="dialog-actions"><button id="fullscreen-button" class="secondary">전체화면 전환</button><button id="reset-settings" class="quiet">설정 초기화</button></div><p id="fullscreen-status" class="small" role="status"></p><p id="settings-status" class="small" role="status"></p></dialog>
   <dialog id="online-role-dialog"><p class="eyebrow">당신에게만 전달된 정보</p><h2 id="online-role-title"></h2><p id="online-role-description"></p><button id="online-role-close" class="primary">확인 · 비밀을 지키기</button></dialog><dialog id="online-leave-dialog"><h2>방을 나갈까요?</h2><p>명시적으로 나가면 재접속 권한이 해제됩니다. 접속 중인 동료는 계속 진행하며 빈 행동은 시간 초과 후 기본 처리됩니다.</p><button id="online-leave-confirm" class="primary">방 나가기</button><button id="online-leave-cancel" class="secondary">머무르기</button></dialog><noscript><p class="notice">게임을 실행하려면 브라우저에서 JavaScript를 허용해 주세요.</p></noscript>
+<dialog id="growth-dialog" class="growth-dialog"><div class="dialog-top"><h2 id="growth-title">내 프로필</h2><select id="growth-source" aria-label="기록 구분"><option value="single">싱글플레이 · 이 브라우저</option><option value="online">온라인 · 서버 게스트</option></select><button class="quiet" id="growth-close">닫기</button></div><div id="ranking-filters" hidden><label>구분 <select id="ranking-kind"><option value="casual">캐주얼 · AI 혼합 포함</option><option value="competitive">경쟁 조건 · 인간 6명</option></select></label><label>역할 <select id="ranking-role"></select></label></div><p id="growth-error" class="error" role="alert"></p><div id="growth-content"></div></dialog><div id="growth-toast" role="status" hidden></div>
 </body>
 </html>

@@ -1,0 +1,191 @@
+25/350; errors=0
+50/350; errors=0
+75/350; errors=0
+100/350; errors=0
+125/350; errors=0
+150/350; errors=0
+175/350; errors=0
+200/350; errors=0
+225/350; errors=0
+250/350; errors=0
+275/350; errors=0
+300/350; errors=0
+325/350; errors=0
+350/350; errors=0
+{
+  "games": 350,
+  "completed": 350,
+  "errors": [],
+  "wins": {
+    "survivors": 336,
+    "saboteur": 14,
+    "none": 0
+  },
+  "byChallenge": {
+    "classic": {
+      "games": 50,
+      "wins": {
+        "survivors": 49,
+        "saboteur": 1,
+        "none": 0
+      },
+      "days": 107,
+      "xp": 11000
+    },
+    "storm": {
+      "games": 50,
+      "wins": {
+        "survivors": 46,
+        "saboteur": 4,
+        "none": 0
+      },
+      "days": 106,
+      "xp": 10405
+    },
+    "scarcity": {
+      "games": 50,
+      "wins": {
+        "survivors": 46,
+        "saboteur": 4,
+        "none": 0
+      },
+      "days": 112,
+      "xp": 11400
+    },
+    "darkness": {
+      "games": 50,
+      "wins": {
+        "survivors": 49,
+        "saboteur": 1,
+        "none": 0
+      },
+      "days": 110,
+      "xp": 9075
+    },
+    "broken": {
+      "games": 50,
+      "wins": {
+        "survivors": 48,
+        "saboteur": 2,
+        "none": 0
+      },
+      "days": 118,
+      "xp": 10990
+    },
+    "distrust": {
+      "games": 50,
+      "wins": {
+        "survivors": 50,
+        "saboteur": 0,
+        "none": 0
+      },
+      "days": 105,
+      "xp": 10560
+    },
+    "deadline": {
+      "games": 50,
+      "wins": {
+        "survivors": 48,
+        "saboteur": 2,
+        "none": 0
+      },
+      "days": 114,
+      "xp": 11525
+    }
+  },
+  "achievements": {
+    "footstep": 1,
+    "coast": 1,
+    "survive": 1,
+    "evidence": 1,
+    "cooperate": 1,
+    "together": 1,
+    "teamwork": 1,
+    "door": 1,
+    "past": 1,
+    "perfect": 1,
+    "trust": 1,
+    "island": 1,
+    "ending": 1,
+    "expert": 1,
+    "truthseeker": 1,
+    "engineer": 1,
+    "lab": 1,
+    "detective": 1,
+    "jungle": 1,
+    "manipulator": 1,
+    "observer": 1,
+    "healer": 1,
+    "betrayal": 1,
+    "shadow": 1,
+    "mask": 1,
+    "master": 1,
+    "investigator": 1
+  },
+  "events": {
+    "event-11": 109,
+    "event-01": 26,
+    "event-10": 51,
+    "event-35": 18,
+    "event-07": 83,
+    "event-24": 68,
+    "event-39": 48,
+    "event-30": 38,
+    "event-02": 15,
+    "event-33": 7,
+    "event-04": 18,
+    "event-21": 85,
+    "event-32": 15,
+    "event-05": 81,
+    "event-25": 27,
+    "event-46": 87,
+    "event-03": 61,
+    "event-38": 20,
+    "event-28": 18,
+    "event-13": 29,
+    "event-08": 85,
+    "event-20": 78,
+    "event-17": 9,
+    "event-26": 45,
+    "event-15": 15,
+    "event-18": 22,
+    "event-06": 14,
+    "event-16": 16,
+    "event-34": 19,
+    "event-29": 25,
+    "event-09": 40,
+    "event-45": 4,
+    "event-14": 45,
+    "event-19": 7,
+    "event-27": 26,
+    "event-12": 19,
+    "event-44": 14,
+    "event-31": 7,
+    "event-23": 8,
+    "event-42": 1,
+    "event-48": 1
+  },
+  "xpErrors": 0,
+  "duplicateRewards": 0,
+  "saveErrors": 0,
+  "informationViolations": 0,
+  "invalidDecisions": 0,
+  "elapsedSeconds": 209.7294165,
+  "finalXP": 74955,
+  "finalLevel": 30,
+  "profileBytes": 81383,
+  "newEvents": {
+    "event-37": 0,
+    "event-38": 20,
+    "event-39": 48,
+    "event-40": 0,
+    "event-41": 0,
+    "event-42": 1,
+    "event-43": 0,
+    "event-44": 14,
+    "event-45": 4,
+    "event-46": 87,
+    "event-47": 0,
+    "event-48": 1
+  }
+}

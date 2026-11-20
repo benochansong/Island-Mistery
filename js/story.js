@@ -44,6 +44,7 @@
       if (mind.storyClues.some(x => x.id === clueId)) continue;
       const entry = { id: clueId, day: s.day, shared: audience === 'public', source: audience === 'public' ? 'public-record' : 'field-record' };
       mind.storyClues.push(entry);
+      if(id===who)game.progression?.discovered(s,id,clueId,s.players.find(p=>p.id===id).location);
       const memoryId = `story-clue-${clueId}-${id}`;
       game.perception.learn(s, id, { id: memoryId, eventId: `story-clue-${clueId}`, kind: 'clue', subjectId: null, text: `${c.title}: ${c.text}`, source: entry.source, direct: audience !== 'public' || who === id, reliability: .9 });
       mind.information.push({ id: memoryId, memoryId, storyId: clueId, text: `${c.title}: ${c.text}`, suspectId: null, weight: 0, shared: audience === 'public' });
@@ -61,9 +62,10 @@
       if (!s.story.publicClues.includes('final')) grant(s, who, 'final', record, 'public');
     }
   }
-  function unlock(s, site, record) {
+  function unlock(s, site, record, who = null) {
     if (!s.story.unlocked.includes(site)) {
       s.story.unlocked.push(site); record(s, `숨겨진 장소 개방 · ${byId(D.sites, site).name}`, null, 'public', 'unlock');
+      if(who)game.progression?.add(s,who,'unlocks');
     }
   }
   function resource(s, key, amount, who, record, audience = 'public') {
@@ -76,6 +78,8 @@
     record(s, `사건 정산 · ${p.name} 체력 ${p.health - before >= 0 ? '+' : ''}${p.health - before} → ${p.health}`, p.id, audience, 'health');
   }
   function facility(s, key, amount, who, record) {
+    if(amount>0&&who){game.progression?.add(s,who,'repairs');game.progression?.add(s,who,key==='radio'?'radioWork':'boatWork');}
+    if(game.challenges)amount=game.challenges.repair(s,key,amount);
     const before = s.facilities[key]; s.facilities[key] = Math.max(0, Math.min(game.config.repairGoals[key], before + amount));
     if (key === 'radio' && amount > 0) s.secrets[who].missionStats.radio += s.facilities[key] - before;
     record(s, `사건 정산 · ${key === 'radio' ? '통신탑' : '보트'} ${s.facilities[key] - before >= 0 ? '+' : ''}${s.facilities[key] - before}`, who, 'public', 'facility');
@@ -104,11 +108,11 @@
     if (action.kind === 'explore') {
       const revisited = mind.visited.includes(action.location);
       if (!revisited) mind.visited.push(action.location);
-      if (!mind.storyClues.length) grant(s,p.id,'orientation',record);
+      if (!mind.storyClues.length&&!(s.challenge?.id==='darkness'&&s.day===1)) grant(s,p.id,'orientation',record);
       const candidates = Object.keys(s.story.placements).filter(id => s.story.placements[id] === action.location && !mind.storyClues.some(c => c.id === id));
-      if (candidates.length && random() < game.config.storyBalance.clueChance) grant(s,p.id,pick(candidates,random),record);
+      if (candidates.length && random() < game.config.storyBalance.clueChance*(s.challenge?.id==='darkness'&&s.day===1?.35:1)) grant(s,p.id,pick(candidates,random),record);
       const site = D.sites.find(site => site.parent === action.location);
-      if (site && (revisited || random() < game.config.storyBalance.unlockChance)) unlock(s,site.id,record);
+      if (site && (revisited || random() < game.config.storyBalance.unlockChance)) unlock(s,site.id,record,p.id);
     }
     if (action.kind === 'research') {
       p.location = 'camp';
@@ -196,10 +200,11 @@
       if (effect.type==='damagedRepair') facility(s,pending.damagedFacility,effect.amount,actor.id,record);
       if (effect.type==='health') damage(s,actor,effect.amount,record,audience);
       if (effect.type==='clue') grant(s,actor.id,effect.key,record,effect.audience==='public'||c.delegate&&audience==='public'?'public':'actor');
-      if (effect.type==='unlock') unlock(s,effect.key,record);
+      if (effect.type==='unlock') unlock(s,effect.key,record,actor.id);
       if (effect.type==='close') s.story.closed[effect.key]=s.day+effect.amount;
       if (effect.type==='flag') s.story.flags[effect.key==='declined'?`declined:${e.id}`:effect.key]=true;
       if (effect.type==='relation') {
+        if(effect.amount>0&&pending.subjectId!==actor.id)game.progression?.add(s,actor.id,'supports');
         const ev={id:pending.instance,eventId:pending.instance,day:s.day,phase:s.phase};
         game.social.adjust(s.secrets[actor.id],pending.subjectId,effect.amount,effect.suspicion,e.name,ev,`story-relation:${pending.instance}`);
         game.social.adjust(s.secrets[pending.subjectId],actor.id,effect.amount,effect.suspicion,e.name,ev,`story-relation:${pending.instance}`);
@@ -259,7 +264,7 @@
     try {
       const st=s.story, ids=s.players.map(p=>p.id), text=v=>typeof v==='string', unique=a=>new Set(a).size===a.length;
       if(!st||typeof st.enabled!=='boolean'||!text(st.runId)||(st.initialSeed !== null && !Number.isInteger(st.initialSeed))||!Number.isInteger(st.serial)||st.serial<0) return false;
-      if(!Array.isArray(st.seen)||st.seen.length>36||!unique(st.seen)||!st.seen.every(id=>byId(D.events,id)))return false;
+      if(!Array.isArray(st.seen)||st.seen.length>D.events.length||!unique(st.seen)||!st.seen.every(id=>byId(D.events,id)))return false;
       if(!Array.isArray(st.unlocked)||!unique(st.unlocked)||!st.unlocked.every(id=>byId(D.sites,id)))return false;
       if(!st.closed||!Object.entries(st.closed).every(([k,v])=>game.data.locations.some(l=>l.id===k)&&Number.isInteger(v)&&v>=1&&v<=4))return false;
       if(!st.flags||!Object.values(st.flags).every(v=>typeof v==='boolean')||!st.counts||!Object.entries(st.counts).every(([d,n])=>['1','2','3'].includes(d)&&Number.isInteger(n)&&n>=0&&n<=3))return false;

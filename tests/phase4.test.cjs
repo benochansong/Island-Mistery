@@ -6,16 +6,16 @@ const json=v=>JSON.stringify(v), fresh=()=>setup(undefined,true);
 function record(s,text,actorId=null,audience='public',kind='event'){const entry={id:++s.sequence,day:s.day,phase:s.phase,actorId,audience,kind,text,time:s.updatedAt};s.log.push(entry);return entry;}
 function prepared(g,e,seed=8){
   const s=g.state.create(timestamp,seed);s.day=e.days.at(-1);s.phase='morning';s.resources={food:20,water:20,medicine:10,parts:10};s.facilities={radio:e.condition.nearEscape?13:5,boat:5};
-  s.story.flags={generator:true,doorOpened:true,truthLinked:true,'resolved:event-13':true};
+  s.story.flags={generator:true,doorOpened:true,truthLinked:true,'resolved:event-13':true};for(const key of e.condition.anyFlags||[])s.story.flags[key]=true;
   s.facts=[{id:'fixture-location',day:s.day,phase:s.phase,actorId:'player',location:e.location==='camp'?'lab':e.location,kind:'explore'}];
   s.statements=[{id:'claim-a',day:s.day,round:0,speakerId:'seo',mode:'claim',target:null,text:'야영지에 있었다.',replyTo:null,aboutDay:1,aboutPhase:'night',aboutLocation:'camp'},{id:'claim-b',day:s.day,round:1,speakerId:'seo',mode:'claim',target:null,text:'연구소에 있었다.',replyTo:null,aboutDay:1,aboutPhase:'night',aboutLocation:'lab'}];
   s.secrets.seo.claimHistory=[{statementId:'claim-a',mode:'lie',intent:'lie',reason:'시험용 허위 진술',evidenceId:null,replyTo:null}];
   if(e.terminal)s.outcome={code:'escape',winner:'survivors',day:s.day,title:'탈출',description:'시험 결과'};
   return s;
 }
-test('36 unique events, six categories of six, and 12 goals have complete data',()=>{
-  const g=fresh(),d=g.storyData;assert.equal(d.events.length,36);assert.equal(new Set(d.events.map(e=>e.id)).size,36);
-  for(const c of new Set(d.events.map(e=>e.category)))assert.equal(d.events.filter(e=>e.category===c).length,6);
+test('48 unique events preserve the original six categories of six and 12 goals',()=>{
+  const g=fresh(),d=g.storyData;assert.equal(d.events.length,48);assert.equal(new Set(d.events.map(e=>e.id)).size,48);
+  for(const c of new Set(d.events.map(e=>e.category)))assert.equal(d.events.slice(0,36).filter(e=>e.category===c).length,6);
   assert.equal(d.missions.length,12);assert.equal(d.sites.length,4);
   for(const e of d.events){assert.ok(e.choices.length>=2&&e.choices.length<=4);assert.ok(e.weight>0);assert.ok(e.choices.every(c=>c.effects.length));assert.ok(e.followUps.every(id=>d.events.some(x=>x.id===id)));}
 });

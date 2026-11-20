@@ -1,0 +1,32 @@
+
+> island-mystery@0.7.0 test:online
+> node --test tests/online.test.cjs
+
+✔ M1: private rooms, host authorization, ready gate, capacity and host transfer (119.5156ms)
+✔ M2/F: 2 human socket clients + 4 AI complete a real game (1595.6367ms)
+✔ M2/F: 3 human socket clients + 3 AI complete a real game (827.8418ms)
+✔ M2/F: 4 human socket clients + 2 AI complete a real game (4024.146ms)
+✔ M2/F: 5 human socket clients + 1 AI complete a real game (3003.7248ms)
+✔ M2/F: 6 human socket clients + 0 AI complete a real game (6298.0098ms)
+✔ M2 security: scoped packets exclude seed, roles, AI memories and private clues (75.2369ms)
+✔ M2 idempotency: duplicate request does not grant resources, old turns and impersonation fail (45.0111ms)
+✔ M3 secret voting, exact single tally, spectator rejection and synchronized result (97.4019ms)
+✔ M3 chat: order, literal HTML, limits, block/report hooks and no semantic AI claims (15.5711ms)
+✔ M4 reconnect tokens preserve roles and queued actions; nickname cannot steal a seat (50.4733ms)
+✔ M4 timers progress disconnected players, abandoned rooms expire, rematch resets secrets (212.9418ms)
+✔ production config rejects missing/insecure origin and static server denies private files (68.1248ms)
+✔ explicit AI saboteur scenario completes; server-only starting fixture (2322.2871ms)
+✔ explicit human saboteur scenario completes; server-only starting fixture (733.1891ms)
+✔ AI planner exceptions use a legal fallback rather than hanging a room (4.6119ms)
+✔ AI-disabled lobby requires six humans; full room and stale reconnect tokens are refused (24.1854ms)
+✔ night actions apply once in seat order, investigation stays private, deadline ends day three (4.8493ms)
+✔ all human spectators automatically watch the remaining AI reach an ending (1797.4902ms)
+✔ public lobby discovery works and foreign browser origins cannot connect (22.6224ms)
+ℹ tests 20
+ℹ suites 0
+ℹ pass 20
+ℹ fail 0
+ℹ cancelled 0
+ℹ skipped 0
+ℹ todo 0
+ℹ duration_ms 21807.456

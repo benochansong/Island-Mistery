@@ -1,0 +1,36 @@
+{
+  "browsers": [
+    "157.0.8103.79",
+    "159.0"
+  ],
+  "errors": [],
+  "runs": [
+    {
+      "roles": [
+        "기술자",
+        "공작원"
+      ],
+      "steps": 38,
+      "chat": true,
+      "started": 1795154892124,
+      "ending": "엔딩 B · 간섭이 멎은 새벽",
+      "seconds": 60.242
+    },
+    {
+      "roles": [
+        "조사관",
+        "탐험가"
+      ],
+      "steps": 43,
+      "chat": true,
+      "started": 1795154974000,
+      "ending": "엔딩 B · 간섭이 멎은 새벽",
+      "seconds": 142.969
+    }
+  ],
+  "reconnect": true,
+  "chat": true,
+  "privatePackets": true,
+  "rematch": true,
+  "serverRecords": true
+}

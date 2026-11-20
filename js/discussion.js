@@ -38,6 +38,9 @@
     const prior = s.statements.find(m => m.id === action.statementId);
     const question = s.statements.slice().reverse().find(m => m.mode === 'question' && m.target === p.id && own && m.aboutDay === own.day && m.aboutPhase === own.phase);
     const ranked = game.social.voteScores(game.state.viewFor(s, p.id, true)).find(r => r.id === action.target);
+    const evidenceKey=clue?.id||evidence?.eventId||evidence?.id,metrics=s.progress?.players[p.id];
+    if(metrics&&evidenceKey&&['share','evidence','rebut'].includes(mode)&&!metrics.evidenceIds.includes(evidenceKey)){metrics.evidenceIds.push(evidenceKey);metrics.evidence++;metrics.supports++;}
+    const suspicions=Object.fromEntries(s.players.filter(o=>o.id!==p.id&&o.id!==action.target).map(o=>[o.id,s.secrets[o.id].suspicion[action.target]]));
     let intent = mode, content, claim = null, replyTo = prior?.id || null;
     const slots = { target: name(action.target), reason: ranked?.reason || '아직 검증되지 않은 개인적인 의문', food: s.resources.food, water: s.resources.water };
     if (own) {
@@ -73,6 +76,7 @@
       }
       else if (mode === 'defend') event.kind = 'defense';
       game.social.remember(targetMind, event);
+      if(mind.role==='saboteur'&&mode==='redirect'&&action.target!==p.id&&s.secrets[action.target]?.role!=='saboteur'&&!event.supported&&targetMind.suspicion[action.target]>suspicions[listener.id])game.progression?.add(s,p.id,'manipulations');
       if (evidence || clue) {
         const known = evidence || mind.memory.find(m => m.id === clue.memoryId);
         if (known && listener.id !== p.id) game.social.remember(targetMind, { ...known, id: statement.id + '-evidence', eventId: known.eventId, speakerId: p.id, source: `testimony:${p.id}`, direct: false, reliability: Math.min(known.reliability, reliability), updatedAt: s.updatedAt });

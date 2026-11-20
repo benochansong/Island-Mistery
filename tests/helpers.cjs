@@ -5,7 +5,7 @@ const timestamp = '2026-11-20T04:00:00.000Z';
 function storage() { const data = {}; return { data, getItem(key) { return data[key] ?? null; }, setItem(key, value) { data[key] = value; } }; }
 function setup(backing = storage(), storyEnabled = false) {
   const context = vm.createContext({ localStorage: backing });
-  for (const file of ['data', 'config', 'social', 'dialogue', 'discussion', 'perception', 'schema', 'story-data', 'story', 'missions', 'codex', 'ai', 'state', 'storage']) vm.runInContext(fs.readFileSync(path.join(__dirname, '../js/' + file + '.js'), 'utf8'), context);
+  for (const file of ['data', 'config', 'social', 'dialogue', 'discussion', 'perception', 'schema', 'challenges', 'progression', 'story-data', 'story', 'missions', 'codex', 'ai', 'state', 'storage']) vm.runInContext(fs.readFileSync(path.join(__dirname, '../js/' + file + '.js'), 'utf8'), context);
   const game = context.IslandMystery;
   const create = game.state.create; game.state = { ...game.state, create: (now, seed, difficulty) => create(now, seed, difficulty, storyEnabled) };
   return game;

@@ -1,0 +1,6175 @@
+{
+  "games": 350,
+  "completed": 350,
+  "errors": [],
+  "wins": {
+    "survivors": 336,
+    "saboteur": 14,
+    "none": 0
+  },
+  "byChallenge": {
+    "classic": {
+      "games": 50,
+      "wins": {
+        "survivors": 49,
+        "saboteur": 1,
+        "none": 0
+      },
+      "days": 107,
+      "xp": 11000
+    },
+    "storm": {
+      "games": 50,
+      "wins": {
+        "survivors": 46,
+        "saboteur": 4,
+        "none": 0
+      },
+      "days": 106,
+      "xp": 10405
+    },
+    "scarcity": {
+      "games": 50,
+      "wins": {
+        "survivors": 46,
+        "saboteur": 4,
+        "none": 0
+      },
+      "days": 112,
+      "xp": 11400
+    },
+    "darkness": {
+      "games": 50,
+      "wins": {
+        "survivors": 49,
+        "saboteur": 1,
+        "none": 0
+      },
+      "days": 110,
+      "xp": 9075
+    },
+    "broken": {
+      "games": 50,
+      "wins": {
+        "survivors": 48,
+        "saboteur": 2,
+        "none": 0
+      },
+      "days": 118,
+      "xp": 10990
+    },
+    "distrust": {
+      "games": 50,
+      "wins": {
+        "survivors": 50,
+        "saboteur": 0,
+        "none": 0
+      },
+      "days": 105,
+      "xp": 10560
+    },
+    "deadline": {
+      "games": 50,
+      "wins": {
+        "survivors": 48,
+        "saboteur": 2,
+        "none": 0
+      },
+      "days": 114,
+      "xp": 11525
+    }
+  },
+  "achievements": {
+    "footstep": 1,
+    "coast": 1,
+    "survive": 1,
+    "evidence": 1,
+    "cooperate": 1,
+    "together": 1,
+    "teamwork": 1,
+    "door": 1,
+    "past": 1,
+    "perfect": 1,
+    "trust": 1,
+    "island": 1,
+    "ending": 1,
+    "expert": 1,
+    "truthseeker": 1,
+    "engineer": 1,
+    "lab": 1,
+    "detective": 1,
+    "jungle": 1,
+    "manipulator": 1,
+    "observer": 1,
+    "healer": 1,
+    "betrayal": 1,
+    "shadow": 1,
+    "mask": 1,
+    "master": 1,
+    "investigator": 1
+  },
+  "events": {
+    "event-11": 109,
+    "event-01": 26,
+    "event-10": 51,
+    "event-35": 18,
+    "event-07": 83,
+    "event-24": 68,
+    "event-39": 48,
+    "event-30": 38,
+    "event-02": 15,
+    "event-33": 7,
+    "event-04": 18,
+    "event-21": 85,
+    "event-32": 15,
+    "event-05": 81,
+    "event-25": 27,
+    "event-46": 87,
+    "event-03": 61,
+    "event-38": 20,
+    "event-28": 18,
+    "event-13": 29,
+    "event-08": 85,
+    "event-20": 78,
+    "event-17": 9,
+    "event-26": 45,
+    "event-15": 15,
+    "event-18": 22,
+    "event-06": 14,
+    "event-16": 16,
+    "event-34": 19,
+    "event-29": 25,
+    "event-09": 40,
+    "event-45": 4,
+    "event-14": 45,
+    "event-19": 7,
+    "event-27": 26,
+    "event-12": 19,
+    "event-44": 14,
+    "event-31": 7,
+    "event-23": 8,
+    "event-42": 1,
+    "event-48": 1
+  },
+  "xpErrors": 0,
+  "duplicateRewards": 0,
+  "saveErrors": 0,
+  "informationViolations": 0,
+  "invalidDecisions": 0,
+  "runs": [
+    {
+      "seed": 800001,
+      "challenge": "classic",
+      "difficulty": "easy",
+      "role": "doctor",
+      "day": 2,
+      "winner": "survivors",
+      "outcome": "escape",
+      "xp": 235,
+      "achievements": [
+        "footstep",
+        "coast",
+        "survive",
+        "evidence",
+        "cooperate",
+        "together",
+        "teamwork",
+        "door",
+        "past"
+      ],
+      "events": [
+        "event-11",
+        "event-01",
+        "event-10",
+        "event-35"
+      ]
+    },
+    {
+      "seed": 800002,
+      "challenge": "storm",
+      "difficulty": "easy",
+      "role": "explorer",
+      "day": 2,
+      "winner": "survivors",
+      "outcome": "escape",
+      "xp": 365,
+      "achievements": [
+        "perfect",
+        "trust"
+      ],
+      "events": [
+        "event-07",
+        "event-24",
+        "event-39",
+        "event-30"
+      ]
+    },
+    {
+      "seed": 800003,
+      "challenge": "scarcity",
+      "difficulty": "easy",
+      "role": "explorer",
+      "day": 2,
+      "winner": "survivors",
+      "outcome": "escape",
+      "xp": 250,
+      "achievements": [
+        "island",
+        "ending"
+      ],
+      "events": [
+        "event-02",
+        "event-24",
+        "event-33"
+      ]
+    },
+    {
+      "seed": 800004,
+      "challenge": "darkness",
+      "difficulty": "easy",
+      "role": "doctor",
+      "day": 1,
+      "winner": "survivors",
+      "outcome": "escape",
+      "xp": 140,
+      "achievements": [],
+      "events": [
+        "event-07",
+        "event-11"
+      ]
+    },
+    {
+      "seed": 800005,
+      "challenge": "broken",
+      "difficulty": "easy",
+      "role": "doctor",
+      "day": 2,
+      "winner": "survivors",
+      "outcome": "escape",
+      "xp": 195,
+      "achievements": [
+        "expert"
+      ],
+      "events": [
+        "event-11",
+        "event-39",
+        "event-04",
+        "event-21"
+      ]
+    },
+    {
+      "seed": 800006,
+      "challenge": "distrust",
+      "difficulty": "easy",
+      "role": "explorer",
+      "day": 2,
+      "winner": "survivors",
+      "outcome": "escape",
+      "xp": 305,
+      "achievements": [
+        "truthseeker"
+      ],
+      "events": [
+        "event-07",
+        "event-11",
+        "event-32",
+        "event-24"
+      ]
+    },
+    {
+      "seed": 800007,
+      "challenge": "deadline",
+      "difficulty": "easy",
+      "role": "engineer",
+      "day": 1,
+      "winner": "survivors",
+      "outcome": "escape",
+      "xp": 180,
+      "achievements": [
+        "engineer"
+      ],
+      "events": [
+        "event-05",
+        "event-25"
+      ]
+    },
+    {
+      "seed": 800008,
+      "challenge": "classic",
+      "difficulty": "normal",
+      "role": "doctor",
+      "day": 2,
+      "winner": "survivors",
+      "outcome": "escape",
+      "xp": 215,
+      "achievements": [],
+      "events": [
+        "event-24",
+        "event-21",
+        "event-11",
+        "event-46"
+      ]
+    },
+    {
+      "seed": 800009,
+      "challenge": "storm",
+      "difficulty": "normal",
+      "role": "doctor",
+      "day": 2,
+      "winner": "survivors",
+      "outcome": "escape",
+      "xp": 235,
+      "achievements": [],
+      "events": [
+        "event-03",
+        "event-21",
+        "event-38",
+        "event-10"
+      ]
+    },
+    {
+      "seed": 800010,
+      "challenge": "scarcity",
+      "difficulty": "normal",
+      "role": "engineer",
+      "day": 2,
+      "winner": "survivors",
+      "outcome": "escape",
+      "xp": 220,
+      "achievements": [],
+      "events": [
+        "event-05",
+        "event-46",
+        "event-28",
+        "event-07"
+      ]
+    },
+    {
+      "seed": 800011,
+      "challenge": "darkness",
+      "difficulty": "normal",
+      "role": "investigator",
+      "day": 2,
+      "winner": "survivors",
+      "outcome": "escape",
+      "xp": 155,
+      "achievements": [],
+      "events": [
+        "event-39",
+        "event-03",
+        "event-13"
+      ]
+    },
+    {
+      "seed": 800012,
+      "challenge": "broken",
+      "difficulty": "normal",
+      "role": "saboteur",
+      "day": 2,
+      "winner": "survivors",
+      "outcome": "escape",
+      "xp": 140,
+      "achievements": [],
+      "events": [
+        "event-08",
+        "event-20",
+        "event-17"
+      ]
+    },
+    {
+      "seed": 800013,
+      "challenge": "distrust",
+      "difficulty": "normal",
+      "role": "doctor",
+      "day": 2,
+      "winner": "survivors",
+      "outcome": "escape",
+      "xp": 285,
+      "achievements": [],
+      "events": [
+        "event-38",
+        "event-46",
+        "event-10",
+        "event-03"
+      ]
+    },
+    {
+      "seed": 800014,
+      "challenge": "deadline",
+      "difficulty": "normal",
+      "role": "doctor",
+      "day": 2,
+      "winner": "survivors",
+      "outcome": "escape",
+      "xp": 275,
+      "achievements": [
+        "lab"
+      ],
+      "events": [
+        "event-24",
+        "event-26",
+        "event-15"
+      ]
+    },
+    {
+      "seed": 800015,
+      "challenge": "classic",
+      "difficulty": "hard",
+      "role": "explorer",
+      "day": 2,
+      "winner": "survivors",
+      "outcome": "escape",
+      "xp": 230,
+      "achievements": [],
+      "events": [
+        "event-24",
+        "event-21",
+        "event-05",
+        "event-18"
+      ]
+    },
+    {
+      "seed": 800016,
+      "challenge": "storm",
+      "difficulty": "hard",
+      "role": "investigator",
+      "day": 3,
+      "winner": "survivors",
+      "outcome": "escape",
+      "xp": 255,
+      "achievements": [],
+      "events": [
+        "event-06",
+        "event-08",
+        "event-16",
+        "event-07",
+        "event-34"
+      ]
+    },
+    {
+      "seed": 800017,
+      "challenge": "scarcity",
+      "difficulty": "hard",
+      "role": "investigator",
+      "day": 2,
+      "winner": "survivors",
+      "outcome": "escape",
+      "xp": 225,
+      "achievements": [],
+      "events": [
+        "event-11",
+        "event-20",
+        "event-33",
+        "event-07"
+      ]
+    },
+    {
+      "seed": 800018,
+      "challenge": "darkness",
+      "difficulty": "hard",
+      "role": "explorer",
+      "day": 2,
+      "winner": "survivors",
+      "outcome": "escape",
+      "xp": 205,
+      "achievements": [],
+      "events": [
+        "event-21",
+        "event-46",
+        "event-29"
+      ]
+    },
+    {
+      "seed": 800019,
+      "challenge": "broken",
+      "difficulty": "hard",
+      "role": "doctor",
+      "day": 2,
+      "winner": "survivors",
+      "outcome": "exposed",
+      "xp": 295,
+      "achievements": [],
+      "events": [
+        "event-08",
+        "event-07",
+        "event-18",
+        "event-24"
+      ]
+    },
+    {
+      "seed": 800020,
+      "challenge": "distrust",
+      "difficulty": "hard",
+      "role": "doctor",
+      "day": 3,
+      "winner": "survivors",
+      "outcome": "escape",
+      "xp": 305,
+      "achievements": [
+        "detective"
+      ],
+      "events": [
+        "event-03",
+        "event-07",
+        "event-26",
+        "event-11",
+        "event-46",
+        "event-29"
+      ]
+    },
+    {
+      "seed": 800021,
+      "challenge": "deadline",
+      "difficulty": "hard",
+      "role": "investigator",
+      "day": 3,
+      "winner": "survivors",
+      "outcome": "escape",
+      "xp": 280,
+      "achievements": [],
+      "events": [
+        "event-21",
+        "event-11",
+        "event-08",
+        "event-07",
+        "event-09"
+      ]
+    },
+    {
+      "seed": 800022,
+      "challenge": "classic",
+      "difficulty": "easy",
+      "role": "investigator",
+      "day": 3,
+      "winner": "survivors",
+      "outcome": "escape",
+      "xp": 310,
+      "achievements": [],
+      "events": [
+        "event-05",
+        "event-39",
+        "event-20",
+        "event-24",
+        "event-45",
+        "event-21"
+      ]
+    },
+    {
+      "seed": 800023,
+      "challenge": "storm",
+      "difficulty": "easy",
+      "role": "doctor",
+      "day": 3,
+      "winner": "saboteur",
+      "outcome": "saboteur",
+      "xp": 170,
+      "achievements": [],
+      "events": [
+        "event-21",
+        "event-14",
+        "event-39",
+        "event-26",
+        "event-19",
+        "event-29"
+      ]
+    },
+    {
+      "seed": 800024,
+      "challenge": "scarcity",
+      "difficulty": "easy",
+      "role": "investigator",
+      "day": 3,
+      "winner": "survivors",
+      "outcome": "escape",
+      "xp": 275,
+      "achievements": [],
+      "events": [
+        "event-10",
+        "event-07",
+        "event-46",
+        "event-05",
+        "event-27"
+      ]
+    },
+    {
+      "seed": 800025,
+      "challenge": "darkness",
+      "difficulty": "easy",
+      "role": "doctor",
+      "day": 2,
+      "winner": "survivors",
+      "outcome": "escape",
+      "xp": 225,
+      "achievements": [],
+      "events": [
+        "event-20",
+        "event-03",
+        "event-15"
+      ]
+    },
+    {
+      "seed": 800026,
+      "challenge": "broken",
+      "difficulty": "easy",
+      "role": "explorer",
+      "day": 2,
+      "winner": "survivors",
+      "outcome": "escape",
+      "xp": 260,
+      "achievements": [],
+      "events": [
+        "event-08",
+        "event-11",
+        "event-29",
+        "event-35"
+      ]
+    },
+    {
+      "seed": 800027,
+      "challenge": "distrust",
+      "difficulty": "easy",
+      "role": "explorer",
+      "day": 2,
+      "winner": "survivors",
+      "outcome": "escape",
+      "xp": 230,
+      "achievements": [],
+      "events": [
+        "event-13",
+        "event-08",
+        "event-29",
+        "event-07"
+      ]
+    },
+    {
+      "seed": 800028,
+      "challenge": "deadline",
+      "difficulty": "easy",
+      "role": "doctor",
+      "day": 3,
+      "winner": "survivors",
+      "outcome": "exposed",
+      "xp": 210,
+      "achievements": [],
+      "events": [
+        "event-10",
+        "event-46",
+        "event-15",
+        "event-05",
+        "event-14",
+        "event-19"
+      ]
+    },
+    {
+      "seed": 800029,
+      "challenge": "classic",
+      "difficulty": "normal",
+      "role": "explorer",
+      "day": 2,
+      "winner": "survivors",
+      "outcome": "escape",
+      "xp": 255,
+      "achievements": [
+        "jungle"
+      ],
+      "events": [
+        "event-46",
+        "event-11",
+        "event-18",
+        "event-27"
+      ]
+    },
+    {
+      "seed": 800030,
+      "challenge": "storm",
+      "difficulty": "normal",
+      "role": "saboteur",
+      "day": 2,
+      "winner": "survivors",
+      "outcome": "escape",
+      "xp": 90,
+      "achievements": [],
+      "events": [
+        "event-21",
+        "event-24",
+        "event-10"
+      ]
+    },
+    {
+      "seed": 800031,
+      "challenge": "scarcity",
+      "difficulty": "normal",
+      "role": "doctor",
+      "day": 1,
+      "winner": "survivors",
+      "outcome": "escape",
+      "xp": 185,
+      "achievements": [],
+      "events": [
+        "event-03",
+        "event-11"
+      ]
+    },
+    {
+      "seed": 800032,
+      "challenge": "darkness",
+      "difficulty": "normal",
+      "role": "doctor",
+      "day": 3,
+      "winner": "survivors",
+      "outcome": "escape",
+      "xp": 310,
+      "achievements": [],
+      "events": [
+        "event-20",
+        "event-25",
+        "event-34",
+        "event-05",
+        "event-01",
+        "event-07"
+      ]
+    },
+    {
+      "seed": 800033,
+      "challenge": "broken",
+      "difficulty": "normal",
+      "role": "doctor",
+      "day": 2,
+      "winner": "survivors",
+      "outcome": "escape",
+      "xp": 215,
+      "achievements": [],
+      "events": [
+        "event-02",
+        "event-24",
+        "event-04",
+        "event-03"
+      ]
+    },
+    {
+      "seed": 800034,
+      "challenge": "distrust",
+      "difficulty": "normal",
+      "role": "saboteur",
+      "day": 2,
+      "winner": "survivors",
+      "outcome": "exposed",
+      "xp": 175,
+      "achievements": [
+        "manipulator"
+      ],
+      "events": [
+        "event-13",
+        "event-05",
+        "event-16",
+        "event-25"
+      ]
+    },
+    {
+      "seed": 800035,
+      "challenge": "deadline",
+      "difficulty": "normal",
+      "role": "doctor",
+      "day": 2,
+      "winner": "survivors",
+      "outcome": "escape",
+      "xp": 240,
+      "achievements": [],
+      "events": [
+        "event-24",
+        "event-26",
+        "event-03"
+      ]
+    },
+    {
+      "seed": 800036,
+      "challenge": "classic",
+      "difficulty": "hard",
+      "role": "engineer",
+      "day": 2,
+      "winner": "survivors",
+      "outcome": "exposed",
+      "xp": 220,
+      "achievements": [],
+      "events": [
+        "event-08",
+        "event-11",
+        "event-04",
+        "event-46"
+      ]
+    },
+    {
+      "seed": 800037,
+      "challenge": "storm",
+      "difficulty": "hard",
+      "role": "engineer",
+      "day": 2,
+      "winner": "survivors",
+      "outcome": "escape",
+      "xp": 210,
+      "achievements": [],
+      "events": [
+        "event-46",
+        "event-07",
+        "event-15"
+      ]
+    },
+    {
+      "seed": 800038,
+      "challenge": "scarcity",
+      "difficulty": "hard",
+      "role": "investigator",
+      "day": 2,
+      "winner": "survivors",
+      "outcome": "escape",
+      "xp": 300,
+      "achievements": [],
+      "events": [
+        "event-06",
+        "event-20",
+        "event-27",
+        "event-18"
+      ]
+    },
+    {
+      "seed": 800039,
+      "challenge": "darkness",
+      "difficulty": "hard",
+      "role": "engineer",
+      "day": 2,
+      "winner": "survivors",
+      "outcome": "escape",
+      "xp": 205,
+      "achievements": [],
+      "events": [
+        "event-21",
+        "event-26",
+        "event-04"
+      ]
+    },
+    {
+      "seed": 800040,
+      "challenge": "broken",
+      "difficulty": "hard",
+      "role": "doctor",
+      "day": 1,
+      "winner": "survivors",
+      "outcome": "escape",
+      "xp": 160,
+      "achievements": [],
+      "events": [
+        "event-13",
+        "event-11"
+      ]
+    },
+    {
+      "seed": 800041,
+      "challenge": "distrust",
+      "difficulty": "hard",
+      "role": "saboteur",
+      "day": 3,
+      "winner": "survivors",
+      "outcome": "escape",
+      "xp": 130,
+      "achievements": [
+        "observer"
+      ],
+      "events": [
+        "event-21",
+        "event-26",
+        "event-29",
+        "event-35",
+        "event-07",
+        "event-19"
+      ]
+    },
+    {
+      "seed": 800042,
+      "challenge": "deadline",
+      "difficulty": "hard",
+      "role": "doctor",
+      "day": 1,
+      "winner": "survivors",
+      "outcome": "escape",
+      "xp": 185,
+      "achievements": [],
+      "events": [
+        "event-38",
+        "event-46"
+      ]
+    },
+    {
+      "seed": 800043,
+      "challenge": "classic",
+      "difficulty": "easy",
+      "role": "investigator",
+      "day": 2,
+      "winner": "survivors",
+      "outcome": "escape",
+      "xp": 265,
+      "achievements": [],
+      "events": [
+        "event-07",
+        "event-46",
+        "event-18"
+      ]
+    },
+    {
+      "seed": 800044,
+      "challenge": "storm",
+      "difficulty": "easy",
+      "role": "investigator",
+      "day": 2,
+      "winner": "survivors",
+      "outcome": "escape",
+      "xp": 230,
+      "achievements": [],
+      "events": [
+        "event-07",
+        "event-46",
+        "event-18"
+      ]
+    },
+    {
+      "seed": 800045,
+      "challenge": "scarcity",
+      "difficulty": "easy",
+      "role": "explorer",
+      "day": 3,
+      "winner": "saboteur",
+      "outcome": "saboteur",
+      "xp": 185,
+      "achievements": [],
+      "events": [
+        "event-16",
+        "event-11",
+        "event-05",
+        "event-07",
+        "event-09",
+        "event-24"
+      ]
+    },
+    {
+      "seed": 800046,
+      "challenge": "darkness",
+      "difficulty": "easy",
+      "role": "saboteur",
+      "day": 3,
+      "winner": "survivors",
+      "outcome": "escape",
+      "xp": 125,
+      "achievements": [],
+      "events": [
+        "event-09",
+        "event-11",
+        "event-18",
+        "event-24",
+        "event-01"
+      ]
+    },
+    {
+      "seed": 800047,
+      "challenge": "broken",
+      "difficulty": "easy",
+      "role": "doctor",
+      "day": 2,
+      "winner": "survivors",
+      "outcome": "escape",
+      "xp": 240,
+      "achievements": [],
+      "events": [
+        "event-05",
+        "event-24",
+        "event-46",
+        "event-01"
+      ]
+    },
+    {
+      "seed": 800048,
+      "challenge": "distrust",
+      "difficulty": "easy",
+      "role": "saboteur",
+      "day": 2,
+      "winner": "survivors",
+      "outcome": "escape",
+      "xp": 140,
+      "achievements": [],
+      "events": [
+        "event-05",
+        "event-11",
+        "event-14"
+      ]
+    },
+    {
+      "seed": 800049,
+      "challenge": "deadline",
+      "difficulty": "easy",
+      "role": "investigator",
+      "day": 3,
+      "winner": "saboteur",
+      "outcome": "saboteur",
+      "xp": 300,
+      "achievements": [],
+      "events": [
+        "event-38",
+        "event-05",
+        "event-12",
+        "event-46",
+        "event-19",
+        "event-20"
+      ]
+    },
+    {
+      "seed": 800050,
+      "challenge": "classic",
+      "difficulty": "normal",
+      "role": "explorer",
+      "day": 2,
+      "winner": "survivors",
+      "outcome": "escape",
+      "xp": 230,
+      "achievements": [],
+      "events": [
+        "event-20",
+        "event-08",
+        "event-09",
+        "event-11"
+      ]
+    },
+    {
+      "seed": 800051,
+      "challenge": "storm",
+      "difficulty": "normal",
+      "role": "investigator",
+      "day": 2,
+      "winner": "survivors",
+      "outcome": "escape",
+      "xp": 215,
+      "achievements": [],
+      "events": [
+        "event-21",
+        "event-24",
+        "event-13"
+      ]
+    },
+    {
+      "seed": 800052,
+      "challenge": "scarcity",
+      "difficulty": "normal",
+      "role": "doctor",
+      "day": 2,
+      "winner": "survivors",
+      "outcome": "escape",
+      "xp": 235,
+      "achievements": [],
+      "events": [
+        "event-10",
+        "event-07",
+        "event-14",
+        "event-46"
+      ]
+    },
+    {
+      "seed": 800053,
+      "challenge": "darkness",
+      "difficulty": "normal",
+      "role": "saboteur",
+      "day": 3,
+      "winner": "survivors",
+      "outcome": "escape",
+      "xp": 140,
+      "achievements": [],
+      "events": [
+        "event-05",
+        "event-21",
+        "event-10",
+        "event-46",
+        "event-30"
+      ]
+    },
+    {
+      "seed": 800054,
+      "challenge": "broken",
+      "difficulty": "normal",
+      "role": "explorer",
+      "day": 2,
+      "winner": "survivors",
+      "outcome": "escape",
+      "xp": 180,
+      "achievements": [],
+      "events": [
+        "event-09",
+        "event-39",
+        "event-16"
+      ]
+    },
+    {
+      "seed": 800055,
+      "challenge": "distrust",
+      "difficulty": "normal",
+      "role": "saboteur",
+      "day": 3,
+      "winner": "survivors",
+      "outcome": "exposed",
+      "xp": 145,
+      "achievements": [],
+      "events": [
+        "event-06",
+        "event-05",
+        "event-11",
+        "event-03",
+        "event-07",
+        "event-30"
+      ]
+    },
+    {
+      "seed": 800056,
+      "challenge": "deadline",
+      "difficulty": "normal",
+      "role": "doctor",
+      "day": 3,
+      "winner": "survivors",
+      "outcome": "exposed",
+      "xp": 220,
+      "achievements": [],
+      "events": [
+        "event-10",
+        "event-46",
+        "event-44",
+        "event-20",
+        "event-27",
+        "event-35"
+      ]
+    },
+    {
+      "seed": 800057,
+      "challenge": "classic",
+      "difficulty": "hard",
+      "role": "explorer",
+      "day": 2,
+      "winner": "survivors",
+      "outcome": "escape",
+      "xp": 230,
+      "achievements": [],
+      "events": [
+        "event-11",
+        "event-07",
+        "event-10",
+        "event-08"
+      ]
+    },
+    {
+      "seed": 800058,
+      "challenge": "storm",
+      "difficulty": "hard",
+      "role": "engineer",
+      "day": 1,
+      "winner": "survivors",
+      "outcome": "escape",
+      "xp": 170,
+      "achievements": [],
+      "events": [
+        "event-13",
+        "event-10"
+      ]
+    },
+    {
+      "seed": 800059,
+      "challenge": "scarcity",
+      "difficulty": "hard",
+      "role": "doctor",
+      "day": 2,
+      "winner": "survivors",
+      "outcome": "escape",
+      "xp": 195,
+      "achievements": [],
+      "events": [
+        "event-24",
+        "event-05",
+        "event-32"
+      ]
+    },
+    {
+      "seed": 800060,
+      "challenge": "darkness",
+      "difficulty": "hard",
+      "role": "saboteur",
+      "day": 2,
+      "winner": "survivors",
+      "outcome": "escape",
+      "xp": 100,
+      "achievements": [],
+      "events": [
+        "event-20",
+        "event-03",
+        "event-27"
+      ]
+    },
+    {
+      "seed": 800061,
+      "challenge": "broken",
+      "difficulty": "hard",
+      "role": "engineer",
+      "day": 2,
+      "winner": "survivors",
+      "outcome": "escape",
+      "xp": 250,
+      "achievements": [],
+      "events": [
+        "event-06",
+        "event-39",
+        "event-45",
+        "event-20"
+      ]
+    },
+    {
+      "seed": 800062,
+      "challenge": "distrust",
+      "difficulty": "hard",
+      "role": "investigator",
+      "day": 1,
+      "winner": "survivors",
+      "outcome": "escape",
+      "xp": 155,
+      "achievements": [],
+      "events": [
+        "event-08",
+        "event-21"
+      ]
+    },
+    {
+      "seed": 800063,
+      "challenge": "deadline",
+      "difficulty": "hard",
+      "role": "doctor",
+      "day": 3,
+      "winner": "survivors",
+      "outcome": "escape",
+      "xp": 220,
+      "achievements": [],
+      "events": [
+        "event-13",
+        "event-14",
+        "event-10",
+        "event-11",
+        "event-06"
+      ]
+    },
+    {
+      "seed": 800064,
+      "challenge": "classic",
+      "difficulty": "easy",
+      "role": "doctor",
+      "day": 2,
+      "winner": "survivors",
+      "outcome": "escape",
+      "xp": 210,
+      "achievements": [],
+      "events": [
+        "event-11",
+        "event-05",
+        "event-04",
+        "event-44"
+      ]
+    },
+    {
+      "seed": 800065,
+      "challenge": "storm",
+      "difficulty": "easy",
+      "role": "investigator",
+      "day": 3,
+      "winner": "survivors",
+      "outcome": "escape",
+      "xp": 240,
+      "achievements": [],
+      "events": [
+        "event-14",
+        "event-21",
+        "event-03",
+        "event-35",
+        "event-24"
+      ]
+    },
+    {
+      "seed": 800066,
+      "challenge": "scarcity",
+      "difficulty": "easy",
+      "role": "doctor",
+      "day": 2,
+      "winner": "survivors",
+      "outcome": "escape",
+      "xp": 225,
+      "achievements": [],
+      "events": [
+        "event-11",
+        "event-20",
+        "event-25",
+        "event-27"
+      ]
+    },
+    {
+      "seed": 800067,
+      "challenge": "darkness",
+      "difficulty": "easy",
+      "role": "doctor",
+      "day": 3,
+      "winner": "survivors",
+      "outcome": "escape",
+      "xp": 235,
+      "achievements": [],
+      "events": [
+        "event-07",
+        "event-46",
+        "event-08",
+        "event-21",
+        "event-33",
+        "event-30"
+      ]
+    },
+    {
+      "seed": 800068,
+      "challenge": "broken",
+      "difficulty": "easy",
+      "role": "investigator",
+      "day": 3,
+      "winner": "survivors",
+      "outcome": "escape",
+      "xp": 295,
+      "achievements": [],
+      "events": [
+        "event-21",
+        "event-11",
+        "event-13",
+        "event-18",
+        "event-35"
+      ]
+    },
+    {
+      "seed": 800069,
+      "challenge": "distrust",
+      "difficulty": "easy",
+      "role": "explorer",
+      "day": 3,
+      "winner": "survivors",
+      "outcome": "escape",
+      "xp": 255,
+      "achievements": [],
+      "events": [
+        "event-02",
+        "event-07",
+        "event-28",
+        "event-05",
+        "event-11"
+      ]
+    },
+    {
+      "seed": 800070,
+      "challenge": "deadline",
+      "difficulty": "easy",
+      "role": "engineer",
+      "day": 3,
+      "winner": "survivors",
+      "outcome": "escape",
+      "xp": 265,
+      "achievements": [],
+      "events": [
+        "event-21",
+        "event-01",
+        "event-33",
+        "event-14",
+        "event-24"
+      ]
+    },
+    {
+      "seed": 800071,
+      "challenge": "classic",
+      "difficulty": "normal",
+      "role": "investigator",
+      "day": 3,
+      "winner": "survivors",
+      "outcome": "escape",
+      "xp": 250,
+      "achievements": [],
+      "events": [
+        "event-02",
+        "event-26",
+        "event-10",
+        "event-44",
+        "event-28",
+        "event-21"
+      ]
+    },
+    {
+      "seed": 800072,
+      "challenge": "storm",
+      "difficulty": "normal",
+      "role": "engineer",
+      "day": 2,
+      "winner": "survivors",
+      "outcome": "exposed",
+      "xp": 220,
+      "achievements": [],
+      "events": [
+        "event-10",
+        "event-21",
+        "event-06",
+        "event-01"
+      ]
+    },
+    {
+      "seed": 800073,
+      "challenge": "scarcity",
+      "difficulty": "normal",
+      "role": "doctor",
+      "day": 2,
+      "winner": "survivors",
+      "outcome": "escape",
+      "xp": 210,
+      "achievements": [],
+      "events": [
+        "event-03",
+        "event-21",
+        "event-07",
+        "event-29"
+      ]
+    },
+    {
+      "seed": 800074,
+      "challenge": "darkness",
+      "difficulty": "normal",
+      "role": "doctor",
+      "day": 2,
+      "winner": "survivors",
+      "outcome": "escape",
+      "xp": 235,
+      "achievements": [],
+      "events": [
+        "event-39",
+        "event-10",
+        "event-08",
+        "event-21"
+      ]
+    },
+    {
+      "seed": 800075,
+      "challenge": "broken",
+      "difficulty": "normal",
+      "role": "doctor",
+      "day": 3,
+      "winner": "survivors",
+      "outcome": "escape",
+      "xp": 260,
+      "achievements": [],
+      "events": [
+        "event-16",
+        "event-26",
+        "event-04",
+        "event-01",
+        "event-08"
+      ]
+    },
+    {
+      "seed": 800076,
+      "challenge": "distrust",
+      "difficulty": "normal",
+      "role": "saboteur",
+      "day": 1,
+      "winner": "survivors",
+      "outcome": "escape",
+      "xp": 105,
+      "achievements": [],
+      "events": [
+        "event-46",
+        "event-10"
+      ]
+    },
+    {
+      "seed": 800077,
+      "challenge": "deadline",
+      "difficulty": "normal",
+      "role": "doctor",
+      "day": 2,
+      "winner": "survivors",
+      "outcome": "escape",
+      "xp": 270,
+      "achievements": [],
+      "events": [
+        "event-08",
+        "event-05",
+        "event-39",
+        "event-21"
+      ]
+    },
+    {
+      "seed": 800078,
+      "challenge": "classic",
+      "difficulty": "hard",
+      "role": "explorer",
+      "day": 2,
+      "winner": "survivors",
+      "outcome": "escape",
+      "xp": 235,
+      "achievements": [],
+      "events": [
+        "event-20",
+        "event-39",
+        "event-29"
+      ]
+    },
+    {
+      "seed": 800079,
+      "challenge": "storm",
+      "difficulty": "hard",
+      "role": "doctor",
+      "day": 2,
+      "winner": "survivors",
+      "outcome": "escape",
+      "xp": 200,
+      "achievements": [],
+      "events": [
+        "event-46",
+        "event-21",
+        "event-08"
+      ]
+    },
+    {
+      "seed": 800080,
+      "challenge": "scarcity",
+      "difficulty": "hard",
+      "role": "doctor",
+      "day": 2,
+      "winner": "survivors",
+      "outcome": "escape",
+      "xp": 235,
+      "achievements": [],
+      "events": [
+        "event-20",
+        "event-24",
+        "event-05"
+      ]
+    },
+    {
+      "seed": 800081,
+      "challenge": "darkness",
+      "difficulty": "hard",
+      "role": "explorer",
+      "day": 3,
+      "winner": "survivors",
+      "outcome": "escape",
+      "xp": 315,
+      "achievements": [],
+      "events": [
+        "event-05",
+        "event-03",
+        "event-39",
+        "event-11",
+        "event-21",
+        "event-10"
+      ]
+    },
+    {
+      "seed": 800082,
+      "challenge": "broken",
+      "difficulty": "hard",
+      "role": "saboteur",
+      "day": 3,
+      "winner": "survivors",
+      "outcome": "escape",
+      "xp": 130,
+      "achievements": [],
+      "events": [
+        "event-05",
+        "event-11",
+        "event-24",
+        "event-46",
+        "event-32",
+        "event-44"
+      ]
+    },
+    {
+      "seed": 800083,
+      "challenge": "distrust",
+      "difficulty": "hard",
+      "role": "saboteur",
+      "day": 3,
+      "winner": "survivors",
+      "outcome": "escape",
+      "xp": 155,
+      "achievements": [],
+      "events": [
+        "event-11",
+        "event-21",
+        "event-09",
+        "event-08",
+        "event-44"
+      ]
+    },
+    {
+      "seed": 800084,
+      "challenge": "deadline",
+      "difficulty": "hard",
+      "role": "engineer",
+      "day": 2,
+      "winner": "survivors",
+      "outcome": "escape",
+      "xp": 180,
+      "achievements": [],
+      "events": [
+        "event-09",
+        "event-05",
+        "event-15",
+        "event-08"
+      ]
+    },
+    {
+      "seed": 800085,
+      "challenge": "classic",
+      "difficulty": "easy",
+      "role": "engineer",
+      "day": 2,
+      "winner": "survivors",
+      "outcome": "escape",
+      "xp": 220,
+      "achievements": [],
+      "events": [
+        "event-39",
+        "event-05",
+        "event-12",
+        "event-18"
+      ]
+    },
+    {
+      "seed": 800086,
+      "challenge": "storm",
+      "difficulty": "easy",
+      "role": "saboteur",
+      "day": 2,
+      "winner": "survivors",
+      "outcome": "escape",
+      "xp": 105,
+      "achievements": [],
+      "events": [
+        "event-21",
+        "event-10",
+        "event-05"
+      ]
+    },
+    {
+      "seed": 800087,
+      "challenge": "scarcity",
+      "difficulty": "easy",
+      "role": "engineer",
+      "day": 3,
+      "winner": "survivors",
+      "outcome": "escape",
+      "xp": 245,
+      "achievements": [],
+      "events": [
+        "event-24",
+        "event-21",
+        "event-28",
+        "event-46",
+        "event-31"
+      ]
+    },
+    {
+      "seed": 800088,
+      "challenge": "darkness",
+      "difficulty": "easy",
+      "role": "saboteur",
+      "day": 3,
+      "winner": "survivors",
+      "outcome": "escape",
+      "xp": 105,
+      "achievements": [],
+      "events": [
+        "event-03",
+        "event-07",
+        "event-17",
+        "event-01",
+        "event-08"
+      ]
+    },
+    {
+      "seed": 800089,
+      "challenge": "broken",
+      "difficulty": "easy",
+      "role": "investigator",
+      "day": 3,
+      "winner": "survivors",
+      "outcome": "escape",
+      "xp": 255,
+      "achievements": [],
+      "events": [
+        "event-09",
+        "event-05",
+        "event-18",
+        "event-08",
+        "event-04"
+      ]
+    },
+    {
+      "seed": 800090,
+      "challenge": "distrust",
+      "difficulty": "easy",
+      "role": "investigator",
+      "day": 3,
+      "winner": "survivors",
+      "outcome": "escape",
+      "xp": 280,
+      "achievements": [],
+      "events": [
+        "event-11",
+        "event-05",
+        "event-30",
+        "event-14",
+        "event-39"
+      ]
+    },
+    {
+      "seed": 800091,
+      "challenge": "deadline",
+      "difficulty": "easy",
+      "role": "doctor",
+      "day": 2,
+      "winner": "survivors",
+      "outcome": "escape",
+      "xp": 220,
+      "achievements": [
+        "healer"
+      ],
+      "events": [
+        "event-09",
+        "event-03",
+        "event-27"
+      ]
+    },
+    {
+      "seed": 800092,
+      "challenge": "classic",
+      "difficulty": "normal",
+      "role": "doctor",
+      "day": 3,
+      "winner": "survivors",
+      "outcome": "escape",
+      "xp": 235,
+      "achievements": [],
+      "events": [
+        "event-05",
+        "event-25",
+        "event-27",
+        "event-07",
+        "event-14"
+      ]
+    },
+    {
+      "seed": 800093,
+      "challenge": "storm",
+      "difficulty": "normal",
+      "role": "investigator",
+      "day": 2,
+      "winner": "survivors",
+      "outcome": "escape",
+      "xp": 255,
+      "achievements": [],
+      "events": [
+        "event-03",
+        "event-26",
+        "event-20",
+        "event-34"
+      ]
+    },
+    {
+      "seed": 800094,
+      "challenge": "scarcity",
+      "difficulty": "normal",
+      "role": "engineer",
+      "day": 3,
+      "winner": "saboteur",
+      "outcome": "saboteur",
+      "xp": 200,
+      "achievements": [],
+      "events": [
+        "event-39",
+        "event-01",
+        "event-34",
+        "event-20",
+        "event-46",
+        "event-08"
+      ]
+    },
+    {
+      "seed": 800095,
+      "challenge": "darkness",
+      "difficulty": "normal",
+      "role": "investigator",
+      "day": 2,
+      "winner": "survivors",
+      "outcome": "escape",
+      "xp": 255,
+      "achievements": [],
+      "events": [
+        "event-05",
+        "event-10",
+        "event-29",
+        "event-30"
+      ]
+    },
+    {
+      "seed": 800096,
+      "challenge": "broken",
+      "difficulty": "normal",
+      "role": "engineer",
+      "day": 3,
+      "winner": "survivors",
+      "outcome": "escape",
+      "xp": 205,
+      "achievements": [],
+      "events": [
+        "event-03",
+        "event-11",
+        "event-13",
+        "event-14",
+        "event-15"
+      ]
+    },
+    {
+      "seed": 800097,
+      "challenge": "distrust",
+      "difficulty": "normal",
+      "role": "engineer",
+      "day": 2,
+      "winner": "survivors",
+      "outcome": "escape",
+      "xp": 205,
+      "achievements": [],
+      "events": [
+        "event-05",
+        "event-20",
+        "event-18",
+        "event-46"
+      ]
+    },
+    {
+      "seed": 800098,
+      "challenge": "deadline",
+      "difficulty": "normal",
+      "role": "explorer",
+      "day": 2,
+      "winner": "survivors",
+      "outcome": "escape",
+      "xp": 245,
+      "achievements": [],
+      "events": [
+        "event-20",
+        "event-11",
+        "event-35"
+      ]
+    },
+    {
+      "seed": 800099,
+      "challenge": "classic",
+      "difficulty": "hard",
+      "role": "engineer",
+      "day": 2,
+      "winner": "survivors",
+      "outcome": "escape",
+      "xp": 165,
+      "achievements": [],
+      "events": [
+        "event-03",
+        "event-07",
+        "event-08"
+      ]
+    },
+    {
+      "seed": 800100,
+      "challenge": "storm",
+      "difficulty": "hard",
+      "role": "investigator",
+      "day": 3,
+      "winner": "survivors",
+      "outcome": "escape",
+      "xp": 380,
+      "achievements": [],
+      "events": [
+        "event-03",
+        "event-39",
+        "event-33",
+        "event-14",
+        "event-15",
+        "event-01"
+      ]
+    },
+    {
+      "seed": 800101,
+      "challenge": "scarcity",
+      "difficulty": "hard",
+      "role": "explorer",
+      "day": 2,
+      "winner": "survivors",
+      "outcome": "escape",
+      "xp": 245,
+      "achievements": [],
+      "events": [
+        "event-12",
+        "event-10",
+        "event-11"
+      ]
+    },
+    {
+      "seed": 800102,
+      "challenge": "darkness",
+      "difficulty": "hard",
+      "role": "explorer",
+      "day": 2,
+      "winner": "survivors",
+      "outcome": "escape",
+      "xp": 190,
+      "achievements": [],
+      "events": [
+        "event-24",
+        "event-14",
+        "event-34"
+      ]
+    },
+    {
+      "seed": 800103,
+      "challenge": "broken",
+      "difficulty": "hard",
+      "role": "doctor",
+      "day": 3,
+      "winner": "survivors",
+      "outcome": "escape",
+      "xp": 235,
+      "achievements": [],
+      "events": [
+        "event-20",
+        "event-46",
+        "event-27",
+        "event-08",
+        "event-25"
+      ]
+    },
+    {
+      "seed": 800104,
+      "challenge": "distrust",
+      "difficulty": "hard",
+      "role": "doctor",
+      "day": 2,
+      "winner": "survivors",
+      "outcome": "escape",
+      "xp": 205,
+      "achievements": [],
+      "events": [
+        "event-11",
+        "event-26",
+        "event-21",
+        "event-20"
+      ]
+    },
+    {
+      "seed": 800105,
+      "challenge": "deadline",
+      "difficulty": "hard",
+      "role": "explorer",
+      "day": 3,
+      "winner": "survivors",
+      "outcome": "escape",
+      "xp": 270,
+      "achievements": [],
+      "events": [
+        "event-11",
+        "event-46",
+        "event-14",
+        "event-07",
+        "event-28"
+      ]
+    },
+    {
+      "seed": 800106,
+      "challenge": "classic",
+      "difficulty": "easy",
+      "role": "investigator",
+      "day": 2,
+      "winner": "survivors",
+      "outcome": "escape",
+      "xp": 260,
+      "achievements": [],
+      "events": [
+        "event-21",
+        "event-46",
+        "event-20"
+      ]
+    },
+    {
+      "seed": 800107,
+      "challenge": "storm",
+      "difficulty": "easy",
+      "role": "doctor",
+      "day": 2,
+      "winner": "survivors",
+      "outcome": "escape",
+      "xp": 210,
+      "achievements": [],
+      "events": [
+        "event-20",
+        "event-26",
+        "event-12",
+        "event-07"
+      ]
+    },
+    {
+      "seed": 800108,
+      "challenge": "scarcity",
+      "difficulty": "easy",
+      "role": "engineer",
+      "day": 2,
+      "winner": "survivors",
+      "outcome": "escape",
+      "xp": 220,
+      "achievements": [],
+      "events": [
+        "event-07",
+        "event-26",
+        "event-18",
+        "event-05"
+      ]
+    },
+    {
+      "seed": 800109,
+      "challenge": "darkness",
+      "difficulty": "easy",
+      "role": "engineer",
+      "day": 2,
+      "winner": "survivors",
+      "outcome": "exposed",
+      "xp": 165,
+      "achievements": [],
+      "events": [
+        "event-20",
+        "event-14",
+        "event-07",
+        "event-30"
+      ]
+    },
+    {
+      "seed": 800110,
+      "challenge": "broken",
+      "difficulty": "easy",
+      "role": "explorer",
+      "day": 3,
+      "winner": "survivors",
+      "outcome": "escape",
+      "xp": 340,
+      "achievements": [],
+      "events": [
+        "event-05",
+        "event-21",
+        "event-03",
+        "event-20",
+        "event-15"
+      ]
+    },
+    {
+      "seed": 800111,
+      "challenge": "distrust",
+      "difficulty": "easy",
+      "role": "doctor",
+      "day": 1,
+      "winner": "survivors",
+      "outcome": "escape",
+      "xp": 210,
+      "achievements": [],
+      "events": [
+        "event-46",
+        "event-26"
+      ]
+    },
+    {
+      "seed": 800112,
+      "challenge": "deadline",
+      "difficulty": "easy",
+      "role": "doctor",
+      "day": 2,
+      "winner": "survivors",
+      "outcome": "escape",
+      "xp": 180,
+      "achievements": [],
+      "events": [
+        "event-21",
+        "event-10",
+        "event-06",
+        "event-08"
+      ]
+    },
+    {
+      "seed": 800113,
+      "challenge": "classic",
+      "difficulty": "normal",
+      "role": "explorer",
+      "day": 3,
+      "winner": "survivors",
+      "outcome": "escape",
+      "xp": 280,
+      "achievements": [],
+      "events": [
+        "event-38",
+        "event-11",
+        "event-30",
+        "event-20",
+        "event-08"
+      ]
+    },
+    {
+      "seed": 800114,
+      "challenge": "storm",
+      "difficulty": "normal",
+      "role": "explorer",
+      "day": 2,
+      "winner": "survivors",
+      "outcome": "escape",
+      "xp": 255,
+      "achievements": [],
+      "events": [
+        "event-11",
+        "event-21",
+        "event-03",
+        "event-46"
+      ]
+    },
+    {
+      "seed": 800115,
+      "challenge": "scarcity",
+      "difficulty": "normal",
+      "role": "doctor",
+      "day": 3,
+      "winner": "survivors",
+      "outcome": "escape",
+      "xp": 280,
+      "achievements": [],
+      "events": [
+        "event-03",
+        "event-11",
+        "event-27",
+        "event-14",
+        "event-38"
+      ]
+    },
+    {
+      "seed": 800116,
+      "challenge": "darkness",
+      "difficulty": "normal",
+      "role": "doctor",
+      "day": 2,
+      "winner": "survivors",
+      "outcome": "escape",
+      "xp": 235,
+      "achievements": [],
+      "events": [
+        "event-24",
+        "event-07",
+        "event-23"
+      ]
+    },
+    {
+      "seed": 800117,
+      "challenge": "broken",
+      "difficulty": "normal",
+      "role": "investigator",
+      "day": 2,
+      "winner": "survivors",
+      "outcome": "escape",
+      "xp": 240,
+      "achievements": [],
+      "events": [
+        "event-16",
+        "event-05",
+        "event-30",
+        "event-03"
+      ]
+    },
+    {
+      "seed": 800118,
+      "challenge": "distrust",
+      "difficulty": "normal",
+      "role": "engineer",
+      "day": 2,
+      "winner": "survivors",
+      "outcome": "exposed",
+      "xp": 220,
+      "achievements": [],
+      "events": [
+        "event-07",
+        "event-21",
+        "event-10",
+        "event-24"
+      ]
+    },
+    {
+      "seed": 800119,
+      "challenge": "deadline",
+      "difficulty": "normal",
+      "role": "doctor",
+      "day": 2,
+      "winner": "survivors",
+      "outcome": "escape",
+      "xp": 195,
+      "achievements": [],
+      "events": [
+        "event-20",
+        "event-39",
+        "event-15"
+      ]
+    },
+    {
+      "seed": 800120,
+      "challenge": "classic",
+      "difficulty": "hard",
+      "role": "engineer",
+      "day": 1,
+      "winner": "survivors",
+      "outcome": "escape",
+      "xp": 195,
+      "achievements": [],
+      "events": [
+        "event-11",
+        "event-46"
+      ]
+    },
+    {
+      "seed": 800121,
+      "challenge": "storm",
+      "difficulty": "hard",
+      "role": "engineer",
+      "day": 2,
+      "winner": "survivors",
+      "outcome": "escape",
+      "xp": 230,
+      "achievements": [],
+      "events": [
+        "event-11",
+        "event-39",
+        "event-21",
+        "event-45"
+      ]
+    },
+    {
+      "seed": 800122,
+      "challenge": "scarcity",
+      "difficulty": "hard",
+      "role": "explorer",
+      "day": 2,
+      "winner": "survivors",
+      "outcome": "escape",
+      "xp": 290,
+      "achievements": [],
+      "events": [
+        "event-08",
+        "event-11",
+        "event-21",
+        "event-10"
+      ]
+    },
+    {
+      "seed": 800123,
+      "challenge": "darkness",
+      "difficulty": "hard",
+      "role": "saboteur",
+      "day": 2,
+      "winner": "survivors",
+      "outcome": "escape",
+      "xp": 100,
+      "achievements": [],
+      "events": [
+        "event-11",
+        "event-08",
+        "event-15"
+      ]
+    },
+    {
+      "seed": 800124,
+      "challenge": "broken",
+      "difficulty": "hard",
+      "role": "saboteur",
+      "day": 3,
+      "winner": "survivors",
+      "outcome": "escape",
+      "xp": 180,
+      "achievements": [],
+      "events": [
+        "event-11",
+        "event-46",
+        "event-21",
+        "event-10",
+        "event-23",
+        "event-24"
+      ]
+    },
+    {
+      "seed": 800125,
+      "challenge": "distrust",
+      "difficulty": "hard",
+      "role": "doctor",
+      "day": 3,
+      "winner": "survivors",
+      "outcome": "exposed",
+      "xp": 175,
+      "achievements": [],
+      "events": [
+        "event-38",
+        "event-11",
+        "event-34",
+        "event-08",
+        "event-21",
+        "event-01"
+      ]
+    },
+    {
+      "seed": 800126,
+      "challenge": "deadline",
+      "difficulty": "hard",
+      "role": "explorer",
+      "day": 2,
+      "winner": "survivors",
+      "outcome": "escape",
+      "xp": 270,
+      "achievements": [],
+      "events": [
+        "event-20",
+        "event-05",
+        "event-26",
+        "event-21"
+      ]
+    },
+    {
+      "seed": 800127,
+      "challenge": "classic",
+      "difficulty": "easy",
+      "role": "investigator",
+      "day": 1,
+      "winner": "survivors",
+      "outcome": "escape",
+      "xp": 185,
+      "achievements": [],
+      "events": [
+        "event-05",
+        "event-26"
+      ]
+    },
+    {
+      "seed": 800128,
+      "challenge": "storm",
+      "difficulty": "easy",
+      "role": "investigator",
+      "day": 2,
+      "winner": "survivors",
+      "outcome": "escape",
+      "xp": 215,
+      "achievements": [],
+      "events": [
+        "event-11",
+        "event-10",
+        "event-04",
+        "event-20"
+      ]
+    },
+    {
+      "seed": 800129,
+      "challenge": "scarcity",
+      "difficulty": "easy",
+      "role": "explorer",
+      "day": 3,
+      "winner": "saboteur",
+      "outcome": "saboteur",
+      "xp": 285,
+      "achievements": [],
+      "events": [
+        "event-02",
+        "event-05",
+        "event-09",
+        "event-21",
+        "event-14",
+        "event-20"
+      ]
+    },
+    {
+      "seed": 800130,
+      "challenge": "darkness",
+      "difficulty": "easy",
+      "role": "investigator",
+      "day": 3,
+      "winner": "survivors",
+      "outcome": "escape",
+      "xp": 295,
+      "achievements": [],
+      "events": [
+        "event-09",
+        "event-10",
+        "event-17",
+        "event-05",
+        "event-35"
+      ]
+    },
+    {
+      "seed": 800131,
+      "challenge": "broken",
+      "difficulty": "easy",
+      "role": "saboteur",
+      "day": 3,
+      "winner": "saboteur",
+      "outcome": "saboteur",
+      "xp": 195,
+      "achievements": [
+        "betrayal",
+        "shadow"
+      ],
+      "events": [
+        "event-05",
+        "event-20",
+        "event-32",
+        "event-14",
+        "event-24",
+        "event-07"
+      ]
+    },
+    {
+      "seed": 800132,
+      "challenge": "distrust",
+      "difficulty": "easy",
+      "role": "investigator",
+      "day": 2,
+      "winner": "survivors",
+      "outcome": "escape",
+      "xp": 200,
+      "achievements": [],
+      "events": [
+        "event-39",
+        "event-24",
+        "event-27"
+      ]
+    },
+    {
+      "seed": 800133,
+      "challenge": "deadline",
+      "difficulty": "easy",
+      "role": "investigator",
+      "day": 2,
+      "winner": "survivors",
+      "outcome": "escape",
+      "xp": 250,
+      "achievements": [],
+      "events": [
+        "event-10",
+        "event-39",
+        "event-07"
+      ]
+    },
+    {
+      "seed": 800134,
+      "challenge": "classic",
+      "difficulty": "normal",
+      "role": "doctor",
+      "day": 3,
+      "winner": "survivors",
+      "outcome": "escape",
+      "xp": 295,
+      "achievements": [],
+      "events": [
+        "event-09",
+        "event-11",
+        "event-27",
+        "event-25",
+        "event-29",
+        "event-44"
+      ]
+    },
+    {
+      "seed": 800135,
+      "challenge": "storm",
+      "difficulty": "normal",
+      "role": "engineer",
+      "day": 2,
+      "winner": "survivors",
+      "outcome": "escape",
+      "xp": 170,
+      "achievements": [],
+      "events": [
+        "event-24",
+        "event-46",
+        "event-07",
+        "event-20"
+      ]
+    },
+    {
+      "seed": 800136,
+      "challenge": "scarcity",
+      "difficulty": "normal",
+      "role": "doctor",
+      "day": 2,
+      "winner": "survivors",
+      "outcome": "exposed",
+      "xp": 245,
+      "achievements": [],
+      "events": [
+        "event-08",
+        "event-11",
+        "event-16",
+        "event-25"
+      ]
+    },
+    {
+      "seed": 800137,
+      "challenge": "darkness",
+      "difficulty": "normal",
+      "role": "explorer",
+      "day": 2,
+      "winner": "survivors",
+      "outcome": "escape",
+      "xp": 225,
+      "achievements": [],
+      "events": [
+        "event-46",
+        "event-14",
+        "event-29",
+        "event-34"
+      ]
+    },
+    {
+      "seed": 800138,
+      "challenge": "broken",
+      "difficulty": "normal",
+      "role": "engineer",
+      "day": 3,
+      "winner": "survivors",
+      "outcome": "escape",
+      "xp": 220,
+      "achievements": [],
+      "events": [
+        "event-46",
+        "event-25",
+        "event-21",
+        "event-20",
+        "event-11"
+      ]
+    },
+    {
+      "seed": 800139,
+      "challenge": "distrust",
+      "difficulty": "normal",
+      "role": "doctor",
+      "day": 1,
+      "winner": "survivors",
+      "outcome": "escape",
+      "xp": 185,
+      "achievements": [],
+      "events": [
+        "event-13",
+        "event-39"
+      ]
+    },
+    {
+      "seed": 800140,
+      "challenge": "deadline",
+      "difficulty": "normal",
+      "role": "explorer",
+      "day": 2,
+      "winner": "survivors",
+      "outcome": "escape",
+      "xp": 270,
+      "achievements": [],
+      "events": [
+        "event-24",
+        "event-14",
+        "event-28",
+        "event-08"
+      ]
+    },
+    {
+      "seed": 800141,
+      "challenge": "classic",
+      "difficulty": "hard",
+      "role": "saboteur",
+      "day": 2,
+      "winner": "survivors",
+      "outcome": "escape",
+      "xp": 75,
+      "achievements": [],
+      "events": [
+        "event-12",
+        "event-26",
+        "event-20"
+      ]
+    },
+    {
+      "seed": 800142,
+      "challenge": "storm",
+      "difficulty": "hard",
+      "role": "saboteur",
+      "day": 2,
+      "winner": "survivors",
+      "outcome": "exposed",
+      "xp": 100,
+      "achievements": [],
+      "events": [
+        "event-09",
+        "event-21",
+        "event-01",
+        "event-30"
+      ]
+    },
+    {
+      "seed": 800143,
+      "challenge": "scarcity",
+      "difficulty": "hard",
+      "role": "doctor",
+      "day": 1,
+      "winner": "survivors",
+      "outcome": "escape",
+      "xp": 195,
+      "achievements": [],
+      "events": [
+        "event-11",
+        "event-05"
+      ]
+    },
+    {
+      "seed": 800144,
+      "challenge": "darkness",
+      "difficulty": "hard",
+      "role": "investigator",
+      "day": 2,
+      "winner": "survivors",
+      "outcome": "escape",
+      "xp": 225,
+      "achievements": [],
+      "events": [
+        "event-07",
+        "event-08",
+        "event-17",
+        "event-35"
+      ]
+    },
+    {
+      "seed": 800145,
+      "challenge": "broken",
+      "difficulty": "hard",
+      "role": "saboteur",
+      "day": 2,
+      "winner": "survivors",
+      "outcome": "escape",
+      "xp": 145,
+      "achievements": [],
+      "events": [
+        "event-11",
+        "event-46",
+        "event-28",
+        "event-39"
+      ]
+    },
+    {
+      "seed": 800146,
+      "challenge": "distrust",
+      "difficulty": "hard",
+      "role": "doctor",
+      "day": 2,
+      "winner": "survivors",
+      "outcome": "escape",
+      "xp": 265,
+      "achievements": [],
+      "events": [
+        "event-11",
+        "event-03",
+        "event-46",
+        "event-30"
+      ]
+    },
+    {
+      "seed": 800147,
+      "challenge": "deadline",
+      "difficulty": "hard",
+      "role": "engineer",
+      "day": 2,
+      "winner": "survivors",
+      "outcome": "escape",
+      "xp": 210,
+      "achievements": [],
+      "events": [
+        "event-20",
+        "event-03",
+        "event-16",
+        "event-26"
+      ]
+    },
+    {
+      "seed": 800148,
+      "challenge": "classic",
+      "difficulty": "easy",
+      "role": "engineer",
+      "day": 2,
+      "winner": "survivors",
+      "outcome": "escape",
+      "xp": 210,
+      "achievements": [],
+      "events": [
+        "event-39",
+        "event-26",
+        "event-38"
+      ]
+    },
+    {
+      "seed": 800149,
+      "challenge": "storm",
+      "difficulty": "easy",
+      "role": "explorer",
+      "day": 3,
+      "winner": "survivors",
+      "outcome": "escape",
+      "xp": 390,
+      "achievements": [],
+      "events": [
+        "event-05",
+        "event-20",
+        "event-32",
+        "event-30",
+        "event-38",
+        "event-01"
+      ]
+    },
+    {
+      "seed": 800150,
+      "challenge": "scarcity",
+      "difficulty": "easy",
+      "role": "engineer",
+      "day": 3,
+      "winner": "survivors",
+      "outcome": "escape",
+      "xp": 250,
+      "achievements": [],
+      "events": [
+        "event-13",
+        "event-03",
+        "event-32",
+        "event-26",
+        "event-09"
+      ]
+    },
+    {
+      "seed": 800151,
+      "challenge": "darkness",
+      "difficulty": "easy",
+      "role": "investigator",
+      "day": 2,
+      "winner": "survivors",
+      "outcome": "escape",
+      "xp": 220,
+      "achievements": [],
+      "events": [
+        "event-38",
+        "event-25",
+        "event-33",
+        "event-08"
+      ]
+    },
+    {
+      "seed": 800152,
+      "challenge": "broken",
+      "difficulty": "easy",
+      "role": "saboteur",
+      "day": 3,
+      "winner": "saboteur",
+      "outcome": "saboteur",
+      "xp": 205,
+      "achievements": [
+        "mask",
+        "master"
+      ],
+      "events": [
+        "event-02",
+        "event-46",
+        "event-13",
+        "event-30",
+        "event-15",
+        "event-07"
+      ]
+    },
+    {
+      "seed": 800153,
+      "challenge": "distrust",
+      "difficulty": "easy",
+      "role": "doctor",
+      "day": 2,
+      "winner": "survivors",
+      "outcome": "escape",
+      "xp": 235,
+      "achievements": [],
+      "events": [
+        "event-21",
+        "event-24",
+        "event-46"
+      ]
+    },
+    {
+      "seed": 800154,
+      "challenge": "deadline",
+      "difficulty": "easy",
+      "role": "investigator",
+      "day": 2,
+      "winner": "survivors",
+      "outcome": "escape",
+      "xp": 225,
+      "achievements": [],
+      "events": [
+        "event-24",
+        "event-46",
+        "event-30"
+      ]
+    },
+    {
+      "seed": 800155,
+      "challenge": "classic",
+      "difficulty": "normal",
+      "role": "investigator",
+      "day": 2,
+      "winner": "survivors",
+      "outcome": "exposed",
+      "xp": 250,
+      "achievements": [
+        "investigator"
+      ],
+      "events": [
+        "event-08",
+        "event-07",
+        "event-16",
+        "event-30"
+      ]
+    },
+    {
+      "seed": 800156,
+      "challenge": "storm",
+      "difficulty": "normal",
+      "role": "explorer",
+      "day": 2,
+      "winner": "survivors",
+      "outcome": "exposed",
+      "xp": 275,
+      "achievements": [],
+      "events": [
+        "event-07",
+        "event-10",
+        "event-21",
+        "event-03"
+      ]
+    },
+    {
+      "seed": 800157,
+      "challenge": "scarcity",
+      "difficulty": "normal",
+      "role": "saboteur",
+      "day": 3,
+      "winner": "survivors",
+      "outcome": "escape",
+      "xp": 145,
+      "achievements": [],
+      "events": [
+        "event-06",
+        "event-03",
+        "event-32",
+        "event-21",
+        "event-07"
+      ]
+    },
+    {
+      "seed": 800158,
+      "challenge": "darkness",
+      "difficulty": "normal",
+      "role": "doctor",
+      "day": 3,
+      "winner": "survivors",
+      "outcome": "escape",
+      "xp": 220,
+      "achievements": [],
+      "events": [
+        "event-11",
+        "event-14",
+        "event-04",
+        "event-46",
+        "event-18",
+        "event-24"
+      ]
+    },
+    {
+      "seed": 800159,
+      "challenge": "broken",
+      "difficulty": "normal",
+      "role": "investigator",
+      "day": 2,
+      "winner": "survivors",
+      "outcome": "escape",
+      "xp": 240,
+      "achievements": [],
+      "events": [
+        "event-11",
+        "event-21",
+        "event-18",
+        "event-08"
+      ]
+    },
+    {
+      "seed": 800160,
+      "challenge": "distrust",
+      "difficulty": "normal",
+      "role": "investigator",
+      "day": 2,
+      "winner": "survivors",
+      "outcome": "escape",
+      "xp": 240,
+      "achievements": [],
+      "events": [
+        "event-03",
+        "event-08",
+        "event-30",
+        "event-07"
+      ]
+    },
+    {
+      "seed": 800161,
+      "challenge": "deadline",
+      "difficulty": "normal",
+      "role": "explorer",
+      "day": 2,
+      "winner": "survivors",
+      "outcome": "exposed",
+      "xp": 290,
+      "achievements": [],
+      "events": [
+        "event-21",
+        "event-20",
+        "event-23",
+        "event-05"
+      ]
+    },
+    {
+      "seed": 800162,
+      "challenge": "classic",
+      "difficulty": "hard",
+      "role": "engineer",
+      "day": 2,
+      "winner": "survivors",
+      "outcome": "escape",
+      "xp": 195,
+      "achievements": [],
+      "events": [
+        "event-11",
+        "event-26",
+        "event-33"
+      ]
+    },
+    {
+      "seed": 800163,
+      "challenge": "storm",
+      "difficulty": "hard",
+      "role": "doctor",
+      "day": 2,
+      "winner": "survivors",
+      "outcome": "exposed",
+      "xp": 185,
+      "achievements": [],
+      "events": [
+        "event-11",
+        "event-20",
+        "event-29",
+        "event-18"
+      ]
+    },
+    {
+      "seed": 800164,
+      "challenge": "scarcity",
+      "difficulty": "hard",
+      "role": "saboteur",
+      "day": 2,
+      "winner": "survivors",
+      "outcome": "escape",
+      "xp": 120,
+      "achievements": [],
+      "events": [
+        "event-24",
+        "event-01",
+        "event-12",
+        "event-27"
+      ]
+    },
+    {
+      "seed": 800165,
+      "challenge": "darkness",
+      "difficulty": "hard",
+      "role": "explorer",
+      "day": 2,
+      "winner": "survivors",
+      "outcome": "escape",
+      "xp": 230,
+      "achievements": [],
+      "events": [
+        "event-08",
+        "event-20",
+        "event-09",
+        "event-03"
+      ]
+    },
+    {
+      "seed": 800166,
+      "challenge": "broken",
+      "difficulty": "hard",
+      "role": "doctor",
+      "day": 1,
+      "winner": "survivors",
+      "outcome": "escape",
+      "xp": 210,
+      "achievements": [],
+      "events": [
+        "event-24",
+        "event-08"
+      ]
+    },
+    {
+      "seed": 800167,
+      "challenge": "distrust",
+      "difficulty": "hard",
+      "role": "doctor",
+      "day": 2,
+      "winner": "survivors",
+      "outcome": "escape",
+      "xp": 195,
+      "achievements": [],
+      "events": [
+        "event-46",
+        "event-21",
+        "event-11"
+      ]
+    },
+    {
+      "seed": 800168,
+      "challenge": "deadline",
+      "difficulty": "hard",
+      "role": "explorer",
+      "day": 2,
+      "winner": "survivors",
+      "outcome": "escape",
+      "xp": 220,
+      "achievements": [],
+      "events": [
+        "event-08",
+        "event-46",
+        "event-14"
+      ]
+    },
+    {
+      "seed": 800169,
+      "challenge": "classic",
+      "difficulty": "easy",
+      "role": "engineer",
+      "day": 3,
+      "winner": "survivors",
+      "outcome": "exposed",
+      "xp": 305,
+      "achievements": [],
+      "events": [
+        "event-46",
+        "event-24",
+        "event-05",
+        "event-34",
+        "event-29",
+        "event-35"
+      ]
+    },
+    {
+      "seed": 800170,
+      "challenge": "storm",
+      "difficulty": "easy",
+      "role": "doctor",
+      "day": 2,
+      "winner": "survivors",
+      "outcome": "escape",
+      "xp": 225,
+      "achievements": [],
+      "events": [
+        "event-39",
+        "event-24",
+        "event-21"
+      ]
+    },
+    {
+      "seed": 800171,
+      "challenge": "scarcity",
+      "difficulty": "easy",
+      "role": "saboteur",
+      "day": 3,
+      "winner": "survivors",
+      "outcome": "escape",
+      "xp": 145,
+      "achievements": [],
+      "events": [
+        "event-46",
+        "event-07",
+        "event-10",
+        "event-20",
+        "event-21"
+      ]
+    },
+    {
+      "seed": 800172,
+      "challenge": "darkness",
+      "difficulty": "easy",
+      "role": "engineer",
+      "day": 2,
+      "winner": "survivors",
+      "outcome": "escape",
+      "xp": 205,
+      "achievements": [],
+      "events": [
+        "event-03",
+        "event-01",
+        "event-02"
+      ]
+    },
+    {
+      "seed": 800173,
+      "challenge": "broken",
+      "difficulty": "easy",
+      "role": "investigator",
+      "day": 2,
+      "winner": "survivors",
+      "outcome": "escape",
+      "xp": 235,
+      "achievements": [],
+      "events": [
+        "event-02",
+        "event-26",
+        "event-10"
+      ]
+    },
+    {
+      "seed": 800174,
+      "challenge": "distrust",
+      "difficulty": "easy",
+      "role": "doctor",
+      "day": 2,
+      "winner": "survivors",
+      "outcome": "escape",
+      "xp": 180,
+      "achievements": [],
+      "events": [
+        "event-46",
+        "event-05",
+        "event-34"
+      ]
+    },
+    {
+      "seed": 800175,
+      "challenge": "deadline",
+      "difficulty": "easy",
+      "role": "doctor",
+      "day": 3,
+      "winner": "saboteur",
+      "outcome": "saboteur",
+      "xp": 170,
+      "achievements": [],
+      "events": [
+        "event-14",
+        "event-11",
+        "event-29",
+        "event-07",
+        "event-25",
+        "event-42"
+      ]
+    },
+    {
+      "seed": 800176,
+      "challenge": "classic",
+      "difficulty": "normal",
+      "role": "explorer",
+      "day": 3,
+      "winner": "saboteur",
+      "outcome": "saboteur",
+      "xp": 255,
+      "achievements": [],
+      "events": [
+        "event-11",
+        "event-05",
+        "event-28",
+        "event-20",
+        "event-31",
+        "event-18"
+      ]
+    },
+    {
+      "seed": 800177,
+      "challenge": "storm",
+      "difficulty": "normal",
+      "role": "explorer",
+      "day": 2,
+      "winner": "survivors",
+      "outcome": "escape",
+      "xp": 235,
+      "achievements": [],
+      "events": [
+        "event-11",
+        "event-26",
+        "event-24"
+      ]
+    },
+    {
+      "seed": 800178,
+      "challenge": "scarcity",
+      "difficulty": "normal",
+      "role": "investigator",
+      "day": 3,
+      "winner": "survivors",
+      "outcome": "escape",
+      "xp": 320,
+      "achievements": [],
+      "events": [
+        "event-07",
+        "event-14",
+        "event-04",
+        "event-08",
+        "event-05"
+      ]
+    },
+    {
+      "seed": 800179,
+      "challenge": "darkness",
+      "difficulty": "normal",
+      "role": "saboteur",
+      "day": 2,
+      "winner": "survivors",
+      "outcome": "escape",
+      "xp": 85,
+      "achievements": [],
+      "events": [
+        "event-24",
+        "event-25",
+        "event-07"
+      ]
+    },
+    {
+      "seed": 800180,
+      "challenge": "broken",
+      "difficulty": "normal",
+      "role": "explorer",
+      "day": 2,
+      "winner": "survivors",
+      "outcome": "escape",
+      "xp": 185,
+      "achievements": [],
+      "events": [
+        "event-39",
+        "event-10",
+        "event-17",
+        "event-11"
+      ]
+    },
+    {
+      "seed": 800181,
+      "challenge": "distrust",
+      "difficulty": "normal",
+      "role": "engineer",
+      "day": 2,
+      "winner": "survivors",
+      "outcome": "escape",
+      "xp": 235,
+      "achievements": [],
+      "events": [
+        "event-13",
+        "event-05",
+        "event-06",
+        "event-08"
+      ]
+    },
+    {
+      "seed": 800182,
+      "challenge": "deadline",
+      "difficulty": "normal",
+      "role": "investigator",
+      "day": 3,
+      "winner": "survivors",
+      "outcome": "exposed",
+      "xp": 300,
+      "achievements": [],
+      "events": [
+        "event-38",
+        "event-08",
+        "event-03",
+        "event-24",
+        "event-39",
+        "event-20"
+      ]
+    },
+    {
+      "seed": 800183,
+      "challenge": "classic",
+      "difficulty": "hard",
+      "role": "doctor",
+      "day": 1,
+      "winner": "survivors",
+      "outcome": "escape",
+      "xp": 200,
+      "achievements": [],
+      "events": [
+        "event-03",
+        "event-24"
+      ]
+    },
+    {
+      "seed": 800184,
+      "challenge": "storm",
+      "difficulty": "hard",
+      "role": "investigator",
+      "day": 1,
+      "winner": "survivors",
+      "outcome": "escape",
+      "xp": 195,
+      "achievements": [],
+      "events": [
+        "event-05",
+        "event-08"
+      ]
+    },
+    {
+      "seed": 800185,
+      "challenge": "scarcity",
+      "difficulty": "hard",
+      "role": "doctor",
+      "day": 3,
+      "winner": "survivors",
+      "outcome": "escape",
+      "xp": 285,
+      "achievements": [],
+      "events": [
+        "event-07",
+        "event-24",
+        "event-38",
+        "event-39",
+        "event-34",
+        "event-26"
+      ]
+    },
+    {
+      "seed": 800186,
+      "challenge": "darkness",
+      "difficulty": "hard",
+      "role": "doctor",
+      "day": 2,
+      "winner": "survivors",
+      "outcome": "escape",
+      "xp": 190,
+      "achievements": [],
+      "events": [
+        "event-14",
+        "event-39",
+        "event-11"
+      ]
+    },
+    {
+      "seed": 800187,
+      "challenge": "broken",
+      "difficulty": "hard",
+      "role": "saboteur",
+      "day": 2,
+      "winner": "survivors",
+      "outcome": "escape",
+      "xp": 125,
+      "achievements": [],
+      "events": [
+        "event-09",
+        "event-14",
+        "event-29",
+        "event-20"
+      ]
+    },
+    {
+      "seed": 800188,
+      "challenge": "distrust",
+      "difficulty": "hard",
+      "role": "doctor",
+      "day": 2,
+      "winner": "survivors",
+      "outcome": "escape",
+      "xp": 225,
+      "achievements": [],
+      "events": [
+        "event-39",
+        "event-11",
+        "event-27",
+        "event-35"
+      ]
+    },
+    {
+      "seed": 800189,
+      "challenge": "deadline",
+      "difficulty": "hard",
+      "role": "explorer",
+      "day": 3,
+      "winner": "survivors",
+      "outcome": "escape",
+      "xp": 270,
+      "achievements": [],
+      "events": [
+        "event-20",
+        "event-10",
+        "event-21",
+        "event-05",
+        "event-14"
+      ]
+    },
+    {
+      "seed": 800190,
+      "challenge": "classic",
+      "difficulty": "easy",
+      "role": "doctor",
+      "day": 1,
+      "winner": "survivors",
+      "outcome": "exposed",
+      "xp": 160,
+      "achievements": [],
+      "events": [
+        "event-13",
+        "event-11"
+      ]
+    },
+    {
+      "seed": 800191,
+      "challenge": "storm",
+      "difficulty": "easy",
+      "role": "doctor",
+      "day": 3,
+      "winner": "saboteur",
+      "outcome": "saboteur",
+      "xp": 165,
+      "achievements": [],
+      "events": [
+        "event-11",
+        "event-25",
+        "event-29",
+        "event-30",
+        "event-06",
+        "event-26"
+      ]
+    },
+    {
+      "seed": 800192,
+      "challenge": "scarcity",
+      "difficulty": "easy",
+      "role": "explorer",
+      "day": 3,
+      "winner": "survivors",
+      "outcome": "escape",
+      "xp": 295,
+      "achievements": [],
+      "events": [
+        "event-21",
+        "event-10",
+        "event-05",
+        "event-44",
+        "event-06"
+      ]
+    },
+    {
+      "seed": 800193,
+      "challenge": "darkness",
+      "difficulty": "easy",
+      "role": "saboteur",
+      "day": 2,
+      "winner": "survivors",
+      "outcome": "escape",
+      "xp": 115,
+      "achievements": [],
+      "events": [
+        "event-14",
+        "event-39",
+        "event-05"
+      ]
+    },
+    {
+      "seed": 800194,
+      "challenge": "broken",
+      "difficulty": "easy",
+      "role": "doctor",
+      "day": 2,
+      "winner": "survivors",
+      "outcome": "escape",
+      "xp": 195,
+      "achievements": [],
+      "events": [
+        "event-20",
+        "event-39",
+        "event-18",
+        "event-03"
+      ]
+    },
+    {
+      "seed": 800195,
+      "challenge": "distrust",
+      "difficulty": "easy",
+      "role": "engineer",
+      "day": 1,
+      "winner": "survivors",
+      "outcome": "escape",
+      "xp": 195,
+      "achievements": [],
+      "events": [
+        "event-07",
+        "event-01"
+      ]
+    },
+    {
+      "seed": 800196,
+      "challenge": "deadline",
+      "difficulty": "easy",
+      "role": "engineer",
+      "day": 2,
+      "winner": "survivors",
+      "outcome": "escape",
+      "xp": 225,
+      "achievements": [],
+      "events": [
+        "event-46",
+        "event-03",
+        "event-23",
+        "event-26"
+      ]
+    },
+    {
+      "seed": 800197,
+      "challenge": "classic",
+      "difficulty": "normal",
+      "role": "investigator",
+      "day": 3,
+      "winner": "survivors",
+      "outcome": "escape",
+      "xp": 320,
+      "achievements": [],
+      "events": [
+        "event-20",
+        "event-05",
+        "event-27",
+        "event-30",
+        "event-09"
+      ]
+    },
+    {
+      "seed": 800198,
+      "challenge": "storm",
+      "difficulty": "normal",
+      "role": "engineer",
+      "day": 2,
+      "winner": "survivors",
+      "outcome": "exposed",
+      "xp": 220,
+      "achievements": [],
+      "events": [
+        "event-11",
+        "event-05",
+        "event-07",
+        "event-44"
+      ]
+    },
+    {
+      "seed": 800199,
+      "challenge": "scarcity",
+      "difficulty": "normal",
+      "role": "doctor",
+      "day": 2,
+      "winner": "survivors",
+      "outcome": "escape",
+      "xp": 240,
+      "achievements": [],
+      "events": [
+        "event-10",
+        "event-11",
+        "event-24",
+        "event-34"
+      ]
+    },
+    {
+      "seed": 800200,
+      "challenge": "darkness",
+      "difficulty": "normal",
+      "role": "investigator",
+      "day": 3,
+      "winner": "saboteur",
+      "outcome": "saboteur",
+      "xp": 190,
+      "achievements": [],
+      "events": [
+        "event-24",
+        "event-25",
+        "event-32",
+        "event-46",
+        "event-05",
+        "event-08"
+      ]
+    },
+    {
+      "seed": 800201,
+      "challenge": "broken",
+      "difficulty": "normal",
+      "role": "saboteur",
+      "day": 2,
+      "winner": "survivors",
+      "outcome": "escape",
+      "xp": 140,
+      "achievements": [],
+      "events": [
+        "event-08",
+        "event-11",
+        "event-23",
+        "event-01"
+      ]
+    },
+    {
+      "seed": 800202,
+      "challenge": "distrust",
+      "difficulty": "normal",
+      "role": "doctor",
+      "day": 2,
+      "winner": "survivors",
+      "outcome": "exposed",
+      "xp": 185,
+      "achievements": [],
+      "events": [
+        "event-07",
+        "event-05",
+        "event-32",
+        "event-27"
+      ]
+    },
+    {
+      "seed": 800203,
+      "challenge": "deadline",
+      "difficulty": "normal",
+      "role": "investigator",
+      "day": 3,
+      "winner": "survivors",
+      "outcome": "escape",
+      "xp": 295,
+      "achievements": [],
+      "events": [
+        "event-20",
+        "event-21",
+        "event-06",
+        "event-27",
+        "event-46",
+        "event-08"
+      ]
+    },
+    {
+      "seed": 800204,
+      "challenge": "classic",
+      "difficulty": "hard",
+      "role": "saboteur",
+      "day": 2,
+      "winner": "survivors",
+      "outcome": "exposed",
+      "xp": 65,
+      "achievements": [],
+      "events": [
+        "event-07",
+        "event-46",
+        "event-09",
+        "event-25"
+      ]
+    },
+    {
+      "seed": 800205,
+      "challenge": "storm",
+      "difficulty": "hard",
+      "role": "engineer",
+      "day": 2,
+      "winner": "survivors",
+      "outcome": "exposed",
+      "xp": 215,
+      "achievements": [],
+      "events": [
+        "event-46",
+        "event-21",
+        "event-05",
+        "event-24"
+      ]
+    },
+    {
+      "seed": 800206,
+      "challenge": "scarcity",
+      "difficulty": "hard",
+      "role": "investigator",
+      "day": 2,
+      "winner": "survivors",
+      "outcome": "escape",
+      "xp": 295,
+      "achievements": [],
+      "events": [
+        "event-20",
+        "event-08",
+        "event-11",
+        "event-05"
+      ]
+    },
+    {
+      "seed": 800207,
+      "challenge": "darkness",
+      "difficulty": "hard",
+      "role": "engineer",
+      "day": 2,
+      "winner": "survivors",
+      "outcome": "escape",
+      "xp": 185,
+      "achievements": [],
+      "events": [
+        "event-13",
+        "event-20",
+        "event-12",
+        "event-26"
+      ]
+    },
+    {
+      "seed": 800208,
+      "challenge": "broken",
+      "difficulty": "hard",
+      "role": "engineer",
+      "day": 3,
+      "winner": "survivors",
+      "outcome": "escape",
+      "xp": 230,
+      "achievements": [],
+      "events": [
+        "event-20",
+        "event-07",
+        "event-15",
+        "event-46",
+        "event-09"
+      ]
+    },
+    {
+      "seed": 800209,
+      "challenge": "distrust",
+      "difficulty": "hard",
+      "role": "explorer",
+      "day": 3,
+      "winner": "survivors",
+      "outcome": "escape",
+      "xp": 255,
+      "achievements": [],
+      "events": [
+        "event-07",
+        "event-24",
+        "event-21",
+        "event-46",
+        "event-30"
+      ]
+    },
+    {
+      "seed": 800210,
+      "challenge": "deadline",
+      "difficulty": "hard",
+      "role": "investigator",
+      "day": 3,
+      "winner": "survivors",
+      "outcome": "escape",
+      "xp": 305,
+      "achievements": [],
+      "events": [
+        "event-09",
+        "event-08",
+        "event-29",
+        "event-30",
+        "event-19"
+      ]
+    },
+    {
+      "seed": 800211,
+      "challenge": "classic",
+      "difficulty": "easy",
+      "role": "doctor",
+      "day": 2,
+      "winner": "survivors",
+      "outcome": "escape",
+      "xp": 205,
+      "achievements": [],
+      "events": [
+        "event-08",
+        "event-10",
+        "event-07"
+      ]
+    },
+    {
+      "seed": 800212,
+      "challenge": "storm",
+      "difficulty": "easy",
+      "role": "explorer",
+      "day": 2,
+      "winner": "survivors",
+      "outcome": "escape",
+      "xp": 195,
+      "achievements": [],
+      "events": [
+        "event-46",
+        "event-08",
+        "event-12"
+      ]
+    },
+    {
+      "seed": 800213,
+      "challenge": "scarcity",
+      "difficulty": "easy",
+      "role": "explorer",
+      "day": 2,
+      "winner": "survivors",
+      "outcome": "escape",
+      "xp": 285,
+      "achievements": [],
+      "events": [
+        "event-39",
+        "event-05",
+        "event-27",
+        "event-35"
+      ]
+    },
+    {
+      "seed": 800214,
+      "challenge": "darkness",
+      "difficulty": "easy",
+      "role": "doctor",
+      "day": 2,
+      "winner": "survivors",
+      "outcome": "exposed",
+      "xp": 205,
+      "achievements": [],
+      "events": [
+        "event-07",
+        "event-11",
+        "event-01",
+        "event-27"
+      ]
+    },
+    {
+      "seed": 800215,
+      "challenge": "broken",
+      "difficulty": "easy",
+      "role": "doctor",
+      "day": 2,
+      "winner": "survivors",
+      "outcome": "escape",
+      "xp": 205,
+      "achievements": [],
+      "events": [
+        "event-11",
+        "event-39",
+        "event-26"
+      ]
+    },
+    {
+      "seed": 800216,
+      "challenge": "distrust",
+      "difficulty": "easy",
+      "role": "explorer",
+      "day": 2,
+      "winner": "survivors",
+      "outcome": "escape",
+      "xp": 215,
+      "achievements": [],
+      "events": [
+        "event-08",
+        "event-21",
+        "event-16",
+        "event-46"
+      ]
+    },
+    {
+      "seed": 800217,
+      "challenge": "deadline",
+      "difficulty": "easy",
+      "role": "engineer",
+      "day": 3,
+      "winner": "survivors",
+      "outcome": "escape",
+      "xp": 295,
+      "achievements": [],
+      "events": [
+        "event-06",
+        "event-24",
+        "event-46",
+        "event-05",
+        "event-34",
+        "event-48"
+      ]
+    },
+    {
+      "seed": 800218,
+      "challenge": "classic",
+      "difficulty": "normal",
+      "role": "doctor",
+      "day": 2,
+      "winner": "survivors",
+      "outcome": "escape",
+      "xp": 240,
+      "achievements": [],
+      "events": [
+        "event-03",
+        "event-25",
+        "event-24",
+        "event-08"
+      ]
+    },
+    {
+      "seed": 800219,
+      "challenge": "storm",
+      "difficulty": "normal",
+      "role": "engineer",
+      "day": 2,
+      "winner": "survivors",
+      "outcome": "escape",
+      "xp": 195,
+      "achievements": [],
+      "events": [
+        "event-14",
+        "event-07",
+        "event-09",
+        "event-44"
+      ]
+    },
+    {
+      "seed": 800220,
+      "challenge": "scarcity",
+      "difficulty": "normal",
+      "role": "engineer",
+      "day": 2,
+      "winner": "survivors",
+      "outcome": "escape",
+      "xp": 195,
+      "achievements": [],
+      "events": [
+        "event-39",
+        "event-46",
+        "event-24"
+      ]
+    },
+    {
+      "seed": 800221,
+      "challenge": "darkness",
+      "difficulty": "normal",
+      "role": "explorer",
+      "day": 3,
+      "winner": "survivors",
+      "outcome": "escape",
+      "xp": 265,
+      "achievements": [],
+      "events": [
+        "event-21",
+        "event-11",
+        "event-03",
+        "event-08",
+        "event-30"
+      ]
+    },
+    {
+      "seed": 800222,
+      "challenge": "broken",
+      "difficulty": "normal",
+      "role": "doctor",
+      "day": 2,
+      "winner": "survivors",
+      "outcome": "escape",
+      "xp": 195,
+      "achievements": [],
+      "events": [
+        "event-39",
+        "event-46",
+        "event-24"
+      ]
+    },
+    {
+      "seed": 800223,
+      "challenge": "distrust",
+      "difficulty": "normal",
+      "role": "doctor",
+      "day": 2,
+      "winner": "survivors",
+      "outcome": "escape",
+      "xp": 265,
+      "achievements": [],
+      "events": [
+        "event-16",
+        "event-08",
+        "event-29"
+      ]
+    },
+    {
+      "seed": 800224,
+      "challenge": "deadline",
+      "difficulty": "normal",
+      "role": "saboteur",
+      "day": 2,
+      "winner": "survivors",
+      "outcome": "escape",
+      "xp": 90,
+      "achievements": [],
+      "events": [
+        "event-11",
+        "event-01",
+        "event-39"
+      ]
+    },
+    {
+      "seed": 800225,
+      "challenge": "classic",
+      "difficulty": "hard",
+      "role": "investigator",
+      "day": 2,
+      "winner": "survivors",
+      "outcome": "escape",
+      "xp": 225,
+      "achievements": [],
+      "events": [
+        "event-08",
+        "event-11",
+        "event-38"
+      ]
+    },
+    {
+      "seed": 800226,
+      "challenge": "storm",
+      "difficulty": "hard",
+      "role": "doctor",
+      "day": 3,
+      "winner": "survivors",
+      "outcome": "escape",
+      "xp": 215,
+      "achievements": [],
+      "events": [
+        "event-08",
+        "event-03",
+        "event-04",
+        "event-07",
+        "event-25"
+      ]
+    },
+    {
+      "seed": 800227,
+      "challenge": "scarcity",
+      "difficulty": "hard",
+      "role": "doctor",
+      "day": 1,
+      "winner": "survivors",
+      "outcome": "escape",
+      "xp": 180,
+      "achievements": [],
+      "events": [
+        "event-03",
+        "event-21"
+      ]
+    },
+    {
+      "seed": 800228,
+      "challenge": "darkness",
+      "difficulty": "hard",
+      "role": "investigator",
+      "day": 2,
+      "winner": "survivors",
+      "outcome": "escape",
+      "xp": 220,
+      "achievements": [],
+      "events": [
+        "event-39",
+        "event-26",
+        "event-28"
+      ]
+    },
+    {
+      "seed": 800229,
+      "challenge": "broken",
+      "difficulty": "hard",
+      "role": "engineer",
+      "day": 3,
+      "winner": "survivors",
+      "outcome": "escape",
+      "xp": 290,
+      "achievements": [],
+      "events": [
+        "event-16",
+        "event-11",
+        "event-17",
+        "event-24",
+        "event-46"
+      ]
+    },
+    {
+      "seed": 800230,
+      "challenge": "distrust",
+      "difficulty": "hard",
+      "role": "investigator",
+      "day": 3,
+      "winner": "survivors",
+      "outcome": "exposed",
+      "xp": 240,
+      "achievements": [],
+      "events": [
+        "event-12",
+        "event-26",
+        "event-07",
+        "event-24",
+        "event-11",
+        "event-08"
+      ]
+    },
+    {
+      "seed": 800231,
+      "challenge": "deadline",
+      "difficulty": "hard",
+      "role": "engineer",
+      "day": 3,
+      "winner": "survivors",
+      "outcome": "escape",
+      "xp": 235,
+      "achievements": [],
+      "events": [
+        "event-09",
+        "event-01",
+        "event-38",
+        "event-21",
+        "event-19"
+      ]
+    },
+    {
+      "seed": 800232,
+      "challenge": "classic",
+      "difficulty": "easy",
+      "role": "saboteur",
+      "day": 3,
+      "winner": "survivors",
+      "outcome": "escape",
+      "xp": 160,
+      "achievements": [],
+      "events": [
+        "event-05",
+        "event-08",
+        "event-28",
+        "event-26",
+        "event-03",
+        "event-30"
+      ]
+    },
+    {
+      "seed": 800233,
+      "challenge": "storm",
+      "difficulty": "easy",
+      "role": "explorer",
+      "day": 3,
+      "winner": "saboteur",
+      "outcome": "saboteur",
+      "xp": 220,
+      "achievements": [],
+      "events": [
+        "event-13",
+        "event-24",
+        "event-07",
+        "event-14",
+        "event-31",
+        "event-08"
+      ]
+    },
+    {
+      "seed": 800234,
+      "challenge": "scarcity",
+      "difficulty": "easy",
+      "role": "engineer",
+      "day": 2,
+      "winner": "survivors",
+      "outcome": "escape",
+      "xp": 205,
+      "achievements": [],
+      "events": [
+        "event-02",
+        "event-01",
+        "event-09",
+        "event-46"
+      ]
+    },
+    {
+      "seed": 800235,
+      "challenge": "darkness",
+      "difficulty": "easy",
+      "role": "saboteur",
+      "day": 1,
+      "winner": "survivors",
+      "outcome": "escape",
+      "xp": 60,
+      "achievements": [],
+      "events": [
+        "event-20",
+        "event-39"
+      ]
+    },
+    {
+      "seed": 800236,
+      "challenge": "broken",
+      "difficulty": "easy",
+      "role": "saboteur",
+      "day": 3,
+      "winner": "survivors",
+      "outcome": "escape",
+      "xp": 185,
+      "achievements": [],
+      "events": [
+        "event-05",
+        "event-26",
+        "event-17",
+        "event-21",
+        "event-39"
+      ]
+    },
+    {
+      "seed": 800237,
+      "challenge": "distrust",
+      "difficulty": "easy",
+      "role": "explorer",
+      "day": 2,
+      "winner": "survivors",
+      "outcome": "escape",
+      "xp": 260,
+      "achievements": [],
+      "events": [
+        "event-05",
+        "event-07",
+        "event-15"
+      ]
+    },
+    {
+      "seed": 800238,
+      "challenge": "deadline",
+      "difficulty": "easy",
+      "role": "doctor",
+      "day": 1,
+      "winner": "survivors",
+      "outcome": "escape",
+      "xp": 200,
+      "achievements": [],
+      "events": [
+        "event-11",
+        "event-20"
+      ]
+    },
+    {
+      "seed": 800239,
+      "challenge": "classic",
+      "difficulty": "normal",
+      "role": "doctor",
+      "day": 2,
+      "winner": "survivors",
+      "outcome": "escape",
+      "xp": 265,
+      "achievements": [],
+      "events": [
+        "event-07",
+        "event-05",
+        "event-12"
+      ]
+    },
+    {
+      "seed": 800240,
+      "challenge": "storm",
+      "difficulty": "normal",
+      "role": "saboteur",
+      "day": 3,
+      "winner": "survivors",
+      "outcome": "escape",
+      "xp": 150,
+      "achievements": [],
+      "events": [
+        "event-11",
+        "event-26",
+        "event-17",
+        "event-20",
+        "event-46"
+      ]
+    },
+    {
+      "seed": 800241,
+      "challenge": "scarcity",
+      "difficulty": "normal",
+      "role": "investigator",
+      "day": 3,
+      "winner": "survivors",
+      "outcome": "escape",
+      "xp": 275,
+      "achievements": [],
+      "events": [
+        "event-08",
+        "event-01",
+        "event-07",
+        "event-11",
+        "event-03"
+      ]
+    },
+    {
+      "seed": 800242,
+      "challenge": "darkness",
+      "difficulty": "normal",
+      "role": "saboteur",
+      "day": 2,
+      "winner": "survivors",
+      "outcome": "exposed",
+      "xp": 85,
+      "achievements": [],
+      "events": [
+        "event-08",
+        "event-14",
+        "event-07",
+        "event-11"
+      ]
+    },
+    {
+      "seed": 800243,
+      "challenge": "broken",
+      "difficulty": "normal",
+      "role": "engineer",
+      "day": 2,
+      "winner": "survivors",
+      "outcome": "exposed",
+      "xp": 195,
+      "achievements": [],
+      "events": [
+        "event-16",
+        "event-21",
+        "event-26",
+        "event-11"
+      ]
+    },
+    {
+      "seed": 800244,
+      "challenge": "distrust",
+      "difficulty": "normal",
+      "role": "doctor",
+      "day": 2,
+      "winner": "survivors",
+      "outcome": "escape",
+      "xp": 265,
+      "achievements": [],
+      "events": [
+        "event-46",
+        "event-25",
+        "event-13"
+      ]
+    },
+    {
+      "seed": 800245,
+      "challenge": "deadline",
+      "difficulty": "normal",
+      "role": "doctor",
+      "day": 2,
+      "winner": "survivors",
+      "outcome": "exposed",
+      "xp": 170,
+      "achievements": [],
+      "events": [
+        "event-24",
+        "event-11",
+        "event-20",
+        "event-34"
+      ]
+    },
+    {
+      "seed": 800246,
+      "challenge": "classic",
+      "difficulty": "hard",
+      "role": "engineer",
+      "day": 3,
+      "winner": "survivors",
+      "outcome": "exposed",
+      "xp": 265,
+      "achievements": [],
+      "events": [
+        "event-46",
+        "event-20",
+        "event-25",
+        "event-34",
+        "event-30",
+        "event-14"
+      ]
+    },
+    {
+      "seed": 800247,
+      "challenge": "storm",
+      "difficulty": "hard",
+      "role": "doctor",
+      "day": 2,
+      "winner": "survivors",
+      "outcome": "escape",
+      "xp": 210,
+      "achievements": [],
+      "events": [
+        "event-07",
+        "event-46",
+        "event-11"
+      ]
+    },
+    {
+      "seed": 800248,
+      "challenge": "scarcity",
+      "difficulty": "hard",
+      "role": "explorer",
+      "day": 2,
+      "winner": "survivors",
+      "outcome": "exposed",
+      "xp": 260,
+      "achievements": [],
+      "events": [
+        "event-07",
+        "event-05",
+        "event-46",
+        "event-34"
+      ]
+    },
+    {
+      "seed": 800249,
+      "challenge": "darkness",
+      "difficulty": "hard",
+      "role": "engineer",
+      "day": 1,
+      "winner": "survivors",
+      "outcome": "escape",
+      "xp": 140,
+      "achievements": [],
+      "events": [
+        "event-16",
+        "event-26"
+      ]
+    },
+    {
+      "seed": 800250,
+      "challenge": "broken",
+      "difficulty": "hard",
+      "role": "doctor",
+      "day": 1,
+      "winner": "survivors",
+      "outcome": "escape",
+      "xp": 195,
+      "achievements": [],
+      "events": [
+        "event-09",
+        "event-26"
+      ]
+    },
+    {
+      "seed": 800251,
+      "challenge": "distrust",
+      "difficulty": "hard",
+      "role": "investigator",
+      "day": 3,
+      "winner": "survivors",
+      "outcome": "escape",
+      "xp": 280,
+      "achievements": [],
+      "events": [
+        "event-11",
+        "event-21",
+        "event-30",
+        "event-14",
+        "event-35"
+      ]
+    },
+    {
+      "seed": 800252,
+      "challenge": "deadline",
+      "difficulty": "hard",
+      "role": "investigator",
+      "day": 1,
+      "winner": "survivors",
+      "outcome": "escape",
+      "xp": 195,
+      "achievements": [],
+      "events": [
+        "event-21",
+        "event-39"
+      ]
+    },
+    {
+      "seed": 800253,
+      "challenge": "classic",
+      "difficulty": "easy",
+      "role": "saboteur",
+      "day": 3,
+      "winner": "survivors",
+      "outcome": "escape",
+      "xp": 165,
+      "achievements": [],
+      "events": [
+        "event-38",
+        "event-39",
+        "event-27",
+        "event-46",
+        "event-45"
+      ]
+    },
+    {
+      "seed": 800254,
+      "challenge": "storm",
+      "difficulty": "easy",
+      "role": "doctor",
+      "day": 2,
+      "winner": "survivors",
+      "outcome": "escape",
+      "xp": 215,
+      "achievements": [],
+      "events": [
+        "event-09",
+        "event-39",
+        "event-46",
+        "event-30"
+      ]
+    },
+    {
+      "seed": 800255,
+      "challenge": "scarcity",
+      "difficulty": "easy",
+      "role": "investigator",
+      "day": 3,
+      "winner": "survivors",
+      "outcome": "escape",
+      "xp": 240,
+      "achievements": [],
+      "events": [
+        "event-08",
+        "event-20",
+        "event-21",
+        "event-35",
+        "event-27"
+      ]
+    },
+    {
+      "seed": 800256,
+      "challenge": "darkness",
+      "difficulty": "easy",
+      "role": "engineer",
+      "day": 3,
+      "winner": "survivors",
+      "outcome": "escape",
+      "xp": 215,
+      "achievements": [],
+      "events": [
+        "event-13",
+        "event-46",
+        "event-31",
+        "event-24",
+        "event-30",
+        "event-10"
+      ]
+    },
+    {
+      "seed": 800257,
+      "challenge": "broken",
+      "difficulty": "easy",
+      "role": "saboteur",
+      "day": 3,
+      "winner": "survivors",
+      "outcome": "escape",
+      "xp": 110,
+      "achievements": [],
+      "events": [
+        "event-13",
+        "event-20",
+        "event-04",
+        "event-03",
+        "event-30",
+        "event-08"
+      ]
+    },
+    {
+      "seed": 800258,
+      "challenge": "distrust",
+      "difficulty": "easy",
+      "role": "engineer",
+      "day": 3,
+      "winner": "survivors",
+      "outcome": "escape",
+      "xp": 210,
+      "achievements": [],
+      "events": [
+        "event-13",
+        "event-26",
+        "event-31",
+        "event-05",
+        "event-25"
+      ]
+    },
+    {
+      "seed": 800259,
+      "challenge": "deadline",
+      "difficulty": "easy",
+      "role": "engineer",
+      "day": 3,
+      "winner": "survivors",
+      "outcome": "escape",
+      "xp": 240,
+      "achievements": [],
+      "events": [
+        "event-46",
+        "event-03",
+        "event-08",
+        "event-20",
+        "event-12"
+      ]
+    },
+    {
+      "seed": 800260,
+      "challenge": "classic",
+      "difficulty": "normal",
+      "role": "explorer",
+      "day": 2,
+      "winner": "survivors",
+      "outcome": "exposed",
+      "xp": 215,
+      "achievements": [],
+      "events": [
+        "event-08",
+        "event-14",
+        "event-07",
+        "event-11"
+      ]
+    },
+    {
+      "seed": 800261,
+      "challenge": "storm",
+      "difficulty": "normal",
+      "role": "engineer",
+      "day": 2,
+      "winner": "survivors",
+      "outcome": "exposed",
+      "xp": 225,
+      "achievements": [],
+      "events": [
+        "event-38",
+        "event-21",
+        "event-32",
+        "event-11"
+      ]
+    },
+    {
+      "seed": 800262,
+      "challenge": "scarcity",
+      "difficulty": "normal",
+      "role": "investigator",
+      "day": 2,
+      "winner": "survivors",
+      "outcome": "escape",
+      "xp": 265,
+      "achievements": [],
+      "events": [
+        "event-09",
+        "event-21",
+        "event-20",
+        "event-18"
+      ]
+    },
+    {
+      "seed": 800263,
+      "challenge": "darkness",
+      "difficulty": "normal",
+      "role": "saboteur",
+      "day": 2,
+      "winner": "survivors",
+      "outcome": "escape",
+      "xp": 85,
+      "achievements": [],
+      "events": [
+        "event-07",
+        "event-03",
+        "event-32"
+      ]
+    },
+    {
+      "seed": 800264,
+      "challenge": "broken",
+      "difficulty": "normal",
+      "role": "explorer",
+      "day": 2,
+      "winner": "survivors",
+      "outcome": "exposed",
+      "xp": 230,
+      "achievements": [],
+      "events": [
+        "event-13",
+        "event-11",
+        "event-04",
+        "event-46"
+      ]
+    },
+    {
+      "seed": 800265,
+      "challenge": "distrust",
+      "difficulty": "normal",
+      "role": "saboteur",
+      "day": 2,
+      "winner": "survivors",
+      "outcome": "escape",
+      "xp": 140,
+      "achievements": [],
+      "events": [
+        "event-08",
+        "event-24",
+        "event-38"
+      ]
+    },
+    {
+      "seed": 800266,
+      "challenge": "deadline",
+      "difficulty": "normal",
+      "role": "doctor",
+      "day": 2,
+      "winner": "survivors",
+      "outcome": "escape",
+      "xp": 235,
+      "achievements": [],
+      "events": [
+        "event-24",
+        "event-08",
+        "event-21",
+        "event-35"
+      ]
+    },
+    {
+      "seed": 800267,
+      "challenge": "classic",
+      "difficulty": "hard",
+      "role": "explorer",
+      "day": 2,
+      "winner": "survivors",
+      "outcome": "escape",
+      "xp": 260,
+      "achievements": [],
+      "events": [
+        "event-13",
+        "event-20",
+        "event-05",
+        "event-03"
+      ]
+    },
+    {
+      "seed": 800268,
+      "challenge": "storm",
+      "difficulty": "hard",
+      "role": "saboteur",
+      "day": 3,
+      "winner": "survivors",
+      "outcome": "escape",
+      "xp": 115,
+      "achievements": [],
+      "events": [
+        "event-10",
+        "event-21",
+        "event-09",
+        "event-34",
+        "event-19",
+        "event-08"
+      ]
+    },
+    {
+      "seed": 800269,
+      "challenge": "scarcity",
+      "difficulty": "hard",
+      "role": "doctor",
+      "day": 2,
+      "winner": "survivors",
+      "outcome": "escape",
+      "xp": 250,
+      "achievements": [],
+      "events": [
+        "event-46",
+        "event-03",
+        "event-30"
+      ]
+    },
+    {
+      "seed": 800270,
+      "challenge": "darkness",
+      "difficulty": "hard",
+      "role": "engineer",
+      "day": 3,
+      "winner": "survivors",
+      "outcome": "escape",
+      "xp": 200,
+      "achievements": [],
+      "events": [
+        "event-07",
+        "event-08",
+        "event-10",
+        "event-29",
+        "event-28"
+      ]
+    },
+    {
+      "seed": 800271,
+      "challenge": "broken",
+      "difficulty": "hard",
+      "role": "engineer",
+      "day": 2,
+      "winner": "survivors",
+      "outcome": "escape",
+      "xp": 195,
+      "achievements": [],
+      "events": [
+        "event-46",
+        "event-05",
+        "event-26"
+      ]
+    },
+    {
+      "seed": 800272,
+      "challenge": "distrust",
+      "difficulty": "hard",
+      "role": "explorer",
+      "day": 2,
+      "winner": "survivors",
+      "outcome": "exposed",
+      "xp": 210,
+      "achievements": [],
+      "events": [
+        "event-07",
+        "event-46",
+        "event-30",
+        "event-44"
+      ]
+    },
+    {
+      "seed": 800273,
+      "challenge": "deadline",
+      "difficulty": "hard",
+      "role": "engineer",
+      "day": 3,
+      "winner": "survivors",
+      "outcome": "escape",
+      "xp": 240,
+      "achievements": [],
+      "events": [
+        "event-16",
+        "event-07",
+        "event-10",
+        "event-44",
+        "event-25"
+      ]
+    },
+    {
+      "seed": 800274,
+      "challenge": "classic",
+      "difficulty": "easy",
+      "role": "doctor",
+      "day": 2,
+      "winner": "survivors",
+      "outcome": "escape",
+      "xp": 235,
+      "achievements": [],
+      "events": [
+        "event-05",
+        "event-08",
+        "event-14",
+        "event-34"
+      ]
+    },
+    {
+      "seed": 800275,
+      "challenge": "storm",
+      "difficulty": "easy",
+      "role": "explorer",
+      "day": 2,
+      "winner": "survivors",
+      "outcome": "escape",
+      "xp": 285,
+      "achievements": [],
+      "events": [
+        "event-03",
+        "event-11",
+        "event-15",
+        "event-21"
+      ]
+    },
+    {
+      "seed": 800276,
+      "challenge": "scarcity",
+      "difficulty": "easy",
+      "role": "explorer",
+      "day": 3,
+      "winner": "saboteur",
+      "outcome": "saboteur",
+      "xp": 215,
+      "achievements": [],
+      "events": [
+        "event-21",
+        "event-46",
+        "event-04",
+        "event-25",
+        "event-27",
+        "event-34"
+      ]
+    },
+    {
+      "seed": 800277,
+      "challenge": "darkness",
+      "difficulty": "easy",
+      "role": "doctor",
+      "day": 1,
+      "winner": "survivors",
+      "outcome": "exposed",
+      "xp": 125,
+      "achievements": [],
+      "events": [
+        "event-11",
+        "event-08"
+      ]
+    },
+    {
+      "seed": 800278,
+      "challenge": "broken",
+      "difficulty": "easy",
+      "role": "doctor",
+      "day": 1,
+      "winner": "survivors",
+      "outcome": "escape",
+      "xp": 210,
+      "achievements": [],
+      "events": [
+        "event-02",
+        "event-21"
+      ]
+    },
+    {
+      "seed": 800279,
+      "challenge": "distrust",
+      "difficulty": "easy",
+      "role": "saboteur",
+      "day": 2,
+      "winner": "survivors",
+      "outcome": "escape",
+      "xp": 115,
+      "achievements": [],
+      "events": [
+        "event-13",
+        "event-24",
+        "event-08"
+      ]
+    },
+    {
+      "seed": 800280,
+      "challenge": "deadline",
+      "difficulty": "easy",
+      "role": "engineer",
+      "day": 1,
+      "winner": "survivors",
+      "outcome": "exposed",
+      "xp": 155,
+      "achievements": [],
+      "events": [
+        "event-11",
+        "event-03"
+      ]
+    },
+    {
+      "seed": 800281,
+      "challenge": "classic",
+      "difficulty": "normal",
+      "role": "doctor",
+      "day": 2,
+      "winner": "survivors",
+      "outcome": "escape",
+      "xp": 300,
+      "achievements": [],
+      "events": [
+        "event-10",
+        "event-05",
+        "event-02",
+        "event-21"
+      ]
+    },
+    {
+      "seed": 800282,
+      "challenge": "storm",
+      "difficulty": "normal",
+      "role": "doctor",
+      "day": 2,
+      "winner": "survivors",
+      "outcome": "escape",
+      "xp": 210,
+      "achievements": [],
+      "events": [
+        "event-03",
+        "event-26",
+        "event-07"
+      ]
+    },
+    {
+      "seed": 800283,
+      "challenge": "scarcity",
+      "difficulty": "normal",
+      "role": "engineer",
+      "day": 1,
+      "winner": "survivors",
+      "outcome": "escape",
+      "xp": 180,
+      "achievements": [],
+      "events": [
+        "event-08",
+        "event-21"
+      ]
+    },
+    {
+      "seed": 800284,
+      "challenge": "darkness",
+      "difficulty": "normal",
+      "role": "saboteur",
+      "day": 2,
+      "winner": "survivors",
+      "outcome": "exposed",
+      "xp": 125,
+      "achievements": [],
+      "events": [
+        "event-11",
+        "event-46",
+        "event-23",
+        "event-20"
+      ]
+    },
+    {
+      "seed": 800285,
+      "challenge": "broken",
+      "difficulty": "normal",
+      "role": "investigator",
+      "day": 3,
+      "winner": "survivors",
+      "outcome": "escape",
+      "xp": 310,
+      "achievements": [],
+      "events": [
+        "event-38",
+        "event-11",
+        "event-21",
+        "event-29",
+        "event-27"
+      ]
+    },
+    {
+      "seed": 800286,
+      "challenge": "distrust",
+      "difficulty": "normal",
+      "role": "investigator",
+      "day": 2,
+      "winner": "survivors",
+      "outcome": "exposed",
+      "xp": 270,
+      "achievements": [],
+      "events": [
+        "event-14",
+        "event-21",
+        "event-30",
+        "event-11"
+      ]
+    },
+    {
+      "seed": 800287,
+      "challenge": "deadline",
+      "difficulty": "normal",
+      "role": "explorer",
+      "day": 2,
+      "winner": "survivors",
+      "outcome": "escape",
+      "xp": 195,
+      "achievements": [],
+      "events": [
+        "event-08",
+        "event-39",
+        "event-11"
+      ]
+    },
+    {
+      "seed": 800288,
+      "challenge": "classic",
+      "difficulty": "hard",
+      "role": "saboteur",
+      "day": 2,
+      "winner": "survivors",
+      "outcome": "escape",
+      "xp": 85,
+      "achievements": [],
+      "events": [
+        "event-16",
+        "event-07",
+        "event-20",
+        "event-05"
+      ]
+    },
+    {
+      "seed": 800289,
+      "challenge": "storm",
+      "difficulty": "hard",
+      "role": "saboteur",
+      "day": 2,
+      "winner": "survivors",
+      "outcome": "exposed",
+      "xp": 90,
+      "achievements": [],
+      "events": [
+        "event-12",
+        "event-20",
+        "event-05",
+        "event-30"
+      ]
+    },
+    {
+      "seed": 800290,
+      "challenge": "scarcity",
+      "difficulty": "hard",
+      "role": "engineer",
+      "day": 2,
+      "winner": "survivors",
+      "outcome": "escape",
+      "xp": 195,
+      "achievements": [],
+      "events": [
+        "event-07",
+        "event-24",
+        "event-11",
+        "event-30"
+      ]
+    },
+    {
+      "seed": 800291,
+      "challenge": "darkness",
+      "difficulty": "hard",
+      "role": "saboteur",
+      "day": 1,
+      "winner": "survivors",
+      "outcome": "escape",
+      "xp": 85,
+      "achievements": [],
+      "events": [
+        "event-03",
+        "event-20"
+      ]
+    },
+    {
+      "seed": 800292,
+      "challenge": "broken",
+      "difficulty": "hard",
+      "role": "explorer",
+      "day": 3,
+      "winner": "survivors",
+      "outcome": "escape",
+      "xp": 280,
+      "achievements": [],
+      "events": [
+        "event-13",
+        "event-26",
+        "event-28",
+        "event-05",
+        "event-31"
+      ]
+    },
+    {
+      "seed": 800293,
+      "challenge": "distrust",
+      "difficulty": "hard",
+      "role": "investigator",
+      "day": 2,
+      "winner": "survivors",
+      "outcome": "escape",
+      "xp": 255,
+      "achievements": [],
+      "events": [
+        "event-14",
+        "event-05",
+        "event-09",
+        "event-24"
+      ]
+    },
+    {
+      "seed": 800294,
+      "challenge": "deadline",
+      "difficulty": "hard",
+      "role": "doctor",
+      "day": 3,
+      "winner": "survivors",
+      "outcome": "escape",
+      "xp": 245,
+      "achievements": [],
+      "events": [
+        "event-11",
+        "event-24",
+        "event-30",
+        "event-03",
+        "event-18"
+      ]
+    },
+    {
+      "seed": 800295,
+      "challenge": "classic",
+      "difficulty": "easy",
+      "role": "saboteur",
+      "day": 2,
+      "winner": "survivors",
+      "outcome": "escape",
+      "xp": 115,
+      "achievements": [],
+      "events": [
+        "event-11",
+        "event-24",
+        "event-01"
+      ]
+    },
+    {
+      "seed": 800296,
+      "challenge": "storm",
+      "difficulty": "easy",
+      "role": "doctor",
+      "day": 2,
+      "winner": "survivors",
+      "outcome": "escape",
+      "xp": 195,
+      "achievements": [],
+      "events": [
+        "event-13",
+        "event-11",
+        "event-31"
+      ]
+    },
+    {
+      "seed": 800297,
+      "challenge": "scarcity",
+      "difficulty": "easy",
+      "role": "saboteur",
+      "day": 2,
+      "winner": "survivors",
+      "outcome": "escape",
+      "xp": 155,
+      "achievements": [],
+      "events": [
+        "event-11",
+        "event-14",
+        "event-44"
+      ]
+    },
+    {
+      "seed": 800298,
+      "challenge": "darkness",
+      "difficulty": "easy",
+      "role": "saboteur",
+      "day": 3,
+      "winner": "survivors",
+      "outcome": "escape",
+      "xp": 155,
+      "achievements": [],
+      "events": [
+        "event-12",
+        "event-21",
+        "event-05",
+        "event-18",
+        "event-14"
+      ]
+    },
+    {
+      "seed": 800299,
+      "challenge": "broken",
+      "difficulty": "easy",
+      "role": "doctor",
+      "day": 3,
+      "winner": "survivors",
+      "outcome": "escape",
+      "xp": 265,
+      "achievements": [],
+      "events": [
+        "event-14",
+        "event-08",
+        "event-29",
+        "event-30",
+        "event-46",
+        "event-44"
+      ]
+    },
+    {
+      "seed": 800300,
+      "challenge": "distrust",
+      "difficulty": "easy",
+      "role": "engineer",
+      "day": 2,
+      "winner": "survivors",
+      "outcome": "escape",
+      "xp": 200,
+      "achievements": [],
+      "events": [
+        "event-46",
+        "event-25",
+        "event-28",
+        "event-35"
+      ]
+    },
+    {
+      "seed": 800301,
+      "challenge": "deadline",
+      "difficulty": "easy",
+      "role": "doctor",
+      "day": 2,
+      "winner": "survivors",
+      "outcome": "escape",
+      "xp": 250,
+      "achievements": [],
+      "events": [
+        "event-06",
+        "event-07",
+        "event-13",
+        "event-25"
+      ]
+    },
+    {
+      "seed": 800302,
+      "challenge": "classic",
+      "difficulty": "normal",
+      "role": "engineer",
+      "day": 2,
+      "winner": "survivors",
+      "outcome": "escape",
+      "xp": 250,
+      "achievements": [],
+      "events": [
+        "event-05",
+        "event-10",
+        "event-20",
+        "event-07"
+      ]
+    },
+    {
+      "seed": 800303,
+      "challenge": "storm",
+      "difficulty": "normal",
+      "role": "engineer",
+      "day": 1,
+      "winner": "survivors",
+      "outcome": "escape",
+      "xp": 170,
+      "achievements": [],
+      "events": [
+        "event-39",
+        "event-10"
+      ]
+    },
+    {
+      "seed": 800304,
+      "challenge": "scarcity",
+      "difficulty": "normal",
+      "role": "investigator",
+      "day": 2,
+      "winner": "survivors",
+      "outcome": "escape",
+      "xp": 210,
+      "achievements": [],
+      "events": [
+        "event-10",
+        "event-21",
+        "event-30"
+      ]
+    },
+    {
+      "seed": 800305,
+      "challenge": "darkness",
+      "difficulty": "normal",
+      "role": "engineer",
+      "day": 3,
+      "winner": "survivors",
+      "outcome": "escape",
+      "xp": 235,
+      "achievements": [],
+      "events": [
+        "event-02",
+        "event-21",
+        "event-09",
+        "event-05",
+        "event-20"
+      ]
+    },
+    {
+      "seed": 800306,
+      "challenge": "broken",
+      "difficulty": "normal",
+      "role": "doctor",
+      "day": 3,
+      "winner": "survivors",
+      "outcome": "escape",
+      "xp": 290,
+      "achievements": [],
+      "events": [
+        "event-11",
+        "event-26",
+        "event-28",
+        "event-30",
+        "event-13"
+      ]
+    },
+    {
+      "seed": 800307,
+      "challenge": "distrust",
+      "difficulty": "normal",
+      "role": "doctor",
+      "day": 2,
+      "winner": "survivors",
+      "outcome": "escape",
+      "xp": 265,
+      "achievements": [],
+      "events": [
+        "event-20",
+        "event-08",
+        "event-11",
+        "event-39"
+      ]
+    },
+    {
+      "seed": 800308,
+      "challenge": "deadline",
+      "difficulty": "normal",
+      "role": "investigator",
+      "day": 2,
+      "winner": "survivors",
+      "outcome": "escape",
+      "xp": 225,
+      "achievements": [],
+      "events": [
+        "event-20",
+        "event-07",
+        "event-02",
+        "event-24"
+      ]
+    },
+    {
+      "seed": 800309,
+      "challenge": "classic",
+      "difficulty": "hard",
+      "role": "saboteur",
+      "day": 2,
+      "winner": "survivors",
+      "outcome": "escape",
+      "xp": 115,
+      "achievements": [],
+      "events": [
+        "event-39",
+        "event-05",
+        "event-44",
+        "event-11"
+      ]
+    },
+    {
+      "seed": 800310,
+      "challenge": "storm",
+      "difficulty": "hard",
+      "role": "doctor",
+      "day": 2,
+      "winner": "survivors",
+      "outcome": "escape",
+      "xp": 170,
+      "achievements": [],
+      "events": [
+        "event-21",
+        "event-08",
+        "event-29"
+      ]
+    },
+    {
+      "seed": 800311,
+      "challenge": "scarcity",
+      "difficulty": "hard",
+      "role": "explorer",
+      "day": 3,
+      "winner": "survivors",
+      "outcome": "escape",
+      "xp": 295,
+      "achievements": [],
+      "events": [
+        "event-20",
+        "event-10",
+        "event-24",
+        "event-07",
+        "event-17"
+      ]
+    },
+    {
+      "seed": 800312,
+      "challenge": "darkness",
+      "difficulty": "hard",
+      "role": "engineer",
+      "day": 2,
+      "winner": "survivors",
+      "outcome": "escape",
+      "xp": 225,
+      "achievements": [],
+      "events": [
+        "event-12",
+        "event-03",
+        "event-15",
+        "event-10"
+      ]
+    },
+    {
+      "seed": 800313,
+      "challenge": "broken",
+      "difficulty": "hard",
+      "role": "saboteur",
+      "day": 3,
+      "winner": "survivors",
+      "outcome": "exposed",
+      "xp": 170,
+      "achievements": [],
+      "events": [
+        "event-12",
+        "event-03",
+        "event-04",
+        "event-18",
+        "event-25",
+        "event-30"
+      ]
+    },
+    {
+      "seed": 800314,
+      "challenge": "distrust",
+      "difficulty": "hard",
+      "role": "saboteur",
+      "day": 2,
+      "winner": "survivors",
+      "outcome": "escape",
+      "xp": 130,
+      "achievements": [],
+      "events": [
+        "event-21",
+        "event-14",
+        "event-02"
+      ]
+    },
+    {
+      "seed": 800315,
+      "challenge": "deadline",
+      "difficulty": "hard",
+      "role": "engineer",
+      "day": 2,
+      "winner": "survivors",
+      "outcome": "escape",
+      "xp": 220,
+      "achievements": [],
+      "events": [
+        "event-46",
+        "event-10",
+        "event-05",
+        "event-20"
+      ]
+    },
+    {
+      "seed": 800316,
+      "challenge": "classic",
+      "difficulty": "easy",
+      "role": "explorer",
+      "day": 2,
+      "winner": "survivors",
+      "outcome": "escape",
+      "xp": 205,
+      "achievements": [],
+      "events": [
+        "event-09",
+        "event-07",
+        "event-03"
+      ]
+    },
+    {
+      "seed": 800317,
+      "challenge": "storm",
+      "difficulty": "easy",
+      "role": "doctor",
+      "day": 3,
+      "winner": "saboteur",
+      "outcome": "saboteur",
+      "xp": 160,
+      "achievements": [],
+      "events": [
+        "event-12",
+        "event-46",
+        "event-26",
+        "event-24",
+        "event-09",
+        "event-01"
+      ]
+    },
+    {
+      "seed": 800318,
+      "challenge": "scarcity",
+      "difficulty": "easy",
+      "role": "doctor",
+      "day": 2,
+      "winner": "survivors",
+      "outcome": "escape",
+      "xp": 210,
+      "achievements": [],
+      "events": [
+        "event-39",
+        "event-03",
+        "event-07",
+        "event-10"
+      ]
+    },
+    {
+      "seed": 800319,
+      "challenge": "darkness",
+      "difficulty": "easy",
+      "role": "explorer",
+      "day": 3,
+      "winner": "survivors",
+      "outcome": "escape",
+      "xp": 245,
+      "achievements": [],
+      "events": [
+        "event-21",
+        "event-07",
+        "event-08",
+        "event-34",
+        "event-23",
+        "event-25"
+      ]
+    },
+    {
+      "seed": 800320,
+      "challenge": "broken",
+      "difficulty": "easy",
+      "role": "explorer",
+      "day": 3,
+      "winner": "survivors",
+      "outcome": "escape",
+      "xp": 310,
+      "achievements": [],
+      "events": [
+        "event-08",
+        "event-10",
+        "event-23",
+        "event-26",
+        "event-03"
+      ]
+    },
+    {
+      "seed": 800321,
+      "challenge": "distrust",
+      "difficulty": "easy",
+      "role": "doctor",
+      "day": 2,
+      "winner": "survivors",
+      "outcome": "escape",
+      "xp": 195,
+      "achievements": [],
+      "events": [
+        "event-46",
+        "event-11",
+        "event-29"
+      ]
+    },
+    {
+      "seed": 800322,
+      "challenge": "deadline",
+      "difficulty": "easy",
+      "role": "doctor",
+      "day": 3,
+      "winner": "survivors",
+      "outcome": "escape",
+      "xp": 215,
+      "achievements": [],
+      "events": [
+        "event-09",
+        "event-11",
+        "event-35",
+        "event-29",
+        "event-28",
+        "event-08"
+      ]
+    },
+    {
+      "seed": 800323,
+      "challenge": "classic",
+      "difficulty": "normal",
+      "role": "explorer",
+      "day": 2,
+      "winner": "survivors",
+      "outcome": "escape",
+      "xp": 245,
+      "achievements": [],
+      "events": [
+        "event-20",
+        "event-24",
+        "event-39",
+        "event-03"
+      ]
+    },
+    {
+      "seed": 800324,
+      "challenge": "storm",
+      "difficulty": "normal",
+      "role": "engineer",
+      "day": 2,
+      "winner": "survivors",
+      "outcome": "escape",
+      "xp": 220,
+      "achievements": [],
+      "events": [
+        "event-10",
+        "event-20",
+        "event-32",
+        "event-08"
+      ]
+    },
+    {
+      "seed": 800325,
+      "challenge": "scarcity",
+      "difficulty": "normal",
+      "role": "doctor",
+      "day": 2,
+      "winner": "survivors",
+      "outcome": "escape",
+      "xp": 280,
+      "achievements": [],
+      "events": [
+        "event-08",
+        "event-11",
+        "event-03",
+        "event-46"
+      ]
+    },
+    {
+      "seed": 800326,
+      "challenge": "darkness",
+      "difficulty": "normal",
+      "role": "engineer",
+      "day": 1,
+      "winner": "survivors",
+      "outcome": "escape",
+      "xp": 155,
+      "achievements": [],
+      "events": [
+        "event-09",
+        "event-07"
+      ]
+    },
+    {
+      "seed": 800327,
+      "challenge": "broken",
+      "difficulty": "normal",
+      "role": "engineer",
+      "day": 2,
+      "winner": "survivors",
+      "outcome": "exposed",
+      "xp": 240,
+      "achievements": [],
+      "events": [
+        "event-24",
+        "event-11",
+        "event-28",
+        "event-08"
+      ]
+    },
+    {
+      "seed": 800328,
+      "challenge": "distrust",
+      "difficulty": "normal",
+      "role": "doctor",
+      "day": 1,
+      "winner": "survivors",
+      "outcome": "escape",
+      "xp": 170,
+      "achievements": [],
+      "events": [
+        "event-03",
+        "event-26"
+      ]
+    },
+    {
+      "seed": 800329,
+      "challenge": "deadline",
+      "difficulty": "normal",
+      "role": "engineer",
+      "day": 2,
+      "winner": "survivors",
+      "outcome": "exposed",
+      "xp": 175,
+      "achievements": [],
+      "events": [
+        "event-09",
+        "event-01",
+        "event-20",
+        "event-14"
+      ]
+    },
+    {
+      "seed": 800330,
+      "challenge": "classic",
+      "difficulty": "hard",
+      "role": "doctor",
+      "day": 1,
+      "winner": "survivors",
+      "outcome": "escape",
+      "xp": 155,
+      "achievements": [],
+      "events": [
+        "event-09",
+        "event-11"
+      ]
+    },
+    {
+      "seed": 800331,
+      "challenge": "storm",
+      "difficulty": "hard",
+      "role": "investigator",
+      "day": 1,
+      "winner": "survivors",
+      "outcome": "escape",
+      "xp": 170,
+      "achievements": [],
+      "events": [
+        "event-38",
+        "event-10"
+      ]
+    },
+    {
+      "seed": 800332,
+      "challenge": "scarcity",
+      "difficulty": "hard",
+      "role": "doctor",
+      "day": 2,
+      "winner": "survivors",
+      "outcome": "escape",
+      "xp": 195,
+      "achievements": [],
+      "events": [
+        "event-13",
+        "event-20",
+        "event-12"
+      ]
+    },
+    {
+      "seed": 800333,
+      "challenge": "darkness",
+      "difficulty": "hard",
+      "role": "doctor",
+      "day": 2,
+      "winner": "survivors",
+      "outcome": "escape",
+      "xp": 195,
+      "achievements": [],
+      "events": [
+        "event-02",
+        "event-20",
+        "event-21",
+        "event-11"
+      ]
+    },
+    {
+      "seed": 800334,
+      "challenge": "broken",
+      "difficulty": "hard",
+      "role": "doctor",
+      "day": 3,
+      "winner": "survivors",
+      "outcome": "escape",
+      "xp": 260,
+      "achievements": [],
+      "events": [
+        "event-09",
+        "event-07",
+        "event-28",
+        "event-14",
+        "event-39"
+      ]
+    },
+    {
+      "seed": 800335,
+      "challenge": "distrust",
+      "difficulty": "hard",
+      "role": "investigator",
+      "day": 2,
+      "winner": "survivors",
+      "outcome": "escape",
+      "xp": 210,
+      "achievements": [],
+      "events": [
+        "event-24",
+        "event-25",
+        "event-08"
+      ]
+    },
+    {
+      "seed": 800336,
+      "challenge": "deadline",
+      "difficulty": "hard",
+      "role": "saboteur",
+      "day": 2,
+      "winner": "survivors",
+      "outcome": "escape",
+      "xp": 130,
+      "achievements": [],
+      "events": [
+        "event-11",
+        "event-14",
+        "event-13",
+        "event-20"
+      ]
+    },
+    {
+      "seed": 800337,
+      "challenge": "classic",
+      "difficulty": "easy",
+      "role": "doctor",
+      "day": 2,
+      "winner": "survivors",
+      "outcome": "exposed",
+      "xp": 235,
+      "achievements": [],
+      "events": [
+        "event-12",
+        "event-26",
+        "event-32",
+        "event-29"
+      ]
+    },
+    {
+      "seed": 800338,
+      "challenge": "storm",
+      "difficulty": "easy",
+      "role": "engineer",
+      "day": 1,
+      "winner": "survivors",
+      "outcome": "escape",
+      "xp": 200,
+      "achievements": [],
+      "events": [
+        "event-05",
+        "event-08"
+      ]
+    },
+    {
+      "seed": 800339,
+      "challenge": "scarcity",
+      "difficulty": "easy",
+      "role": "doctor",
+      "day": 2,
+      "winner": "survivors",
+      "outcome": "exposed",
+      "xp": 130,
+      "achievements": [],
+      "events": [
+        "event-09",
+        "event-46",
+        "event-28",
+        "event-20"
+      ]
+    },
+    {
+      "seed": 800340,
+      "challenge": "darkness",
+      "difficulty": "easy",
+      "role": "saboteur",
+      "day": 2,
+      "winner": "survivors",
+      "outcome": "escape",
+      "xp": 95,
+      "achievements": [],
+      "events": [
+        "event-14",
+        "event-24",
+        "event-05"
+      ]
+    },
+    {
+      "seed": 800341,
+      "challenge": "broken",
+      "difficulty": "easy",
+      "role": "engineer",
+      "day": 2,
+      "winner": "survivors",
+      "outcome": "escape",
+      "xp": 230,
+      "achievements": [],
+      "events": [
+        "event-09",
+        "event-26",
+        "event-38",
+        "event-10"
+      ]
+    },
+    {
+      "seed": 800342,
+      "challenge": "distrust",
+      "difficulty": "easy",
+      "role": "doctor",
+      "day": 2,
+      "winner": "survivors",
+      "outcome": "escape",
+      "xp": 220,
+      "achievements": [],
+      "events": [
+        "event-09",
+        "event-05",
+        "event-04",
+        "event-21"
+      ]
+    },
+    {
+      "seed": 800343,
+      "challenge": "deadline",
+      "difficulty": "easy",
+      "role": "explorer",
+      "day": 3,
+      "winner": "survivors",
+      "outcome": "escape",
+      "xp": 355,
+      "achievements": [],
+      "events": [
+        "event-46",
+        "event-05",
+        "event-11",
+        "event-21",
+        "event-27"
+      ]
+    },
+    {
+      "seed": 800344,
+      "challenge": "classic",
+      "difficulty": "normal",
+      "role": "explorer",
+      "day": 3,
+      "winner": "survivors",
+      "outcome": "exposed",
+      "xp": 305,
+      "achievements": [],
+      "events": [
+        "event-11",
+        "event-20",
+        "event-04",
+        "event-27",
+        "event-32",
+        "event-46"
+      ]
+    },
+    {
+      "seed": 800345,
+      "challenge": "storm",
+      "difficulty": "normal",
+      "role": "doctor",
+      "day": 2,
+      "winner": "survivors",
+      "outcome": "escape",
+      "xp": 170,
+      "achievements": [],
+      "events": [
+        "event-46",
+        "event-03",
+        "event-32"
+      ]
+    },
+    {
+      "seed": 800346,
+      "challenge": "scarcity",
+      "difficulty": "normal",
+      "role": "saboteur",
+      "day": 2,
+      "winner": "survivors",
+      "outcome": "escape",
+      "xp": 140,
+      "achievements": [],
+      "events": [
+        "event-07",
+        "event-03",
+        "event-04"
+      ]
+    },
+    {
+      "seed": 800347,
+      "challenge": "darkness",
+      "difficulty": "normal",
+      "role": "saboteur",
+      "day": 3,
+      "winner": "survivors",
+      "outcome": "escape",
+      "xp": 135,
+      "achievements": [],
+      "events": [
+        "event-05",
+        "event-21",
+        "event-46",
+        "event-11",
+        "event-08"
+      ]
+    },
+    {
+      "seed": 800348,
+      "challenge": "broken",
+      "difficulty": "normal",
+      "role": "doctor",
+      "day": 2,
+      "winner": "survivors",
+      "outcome": "escape",
+      "xp": 225,
+      "achievements": [],
+      "events": [
+        "event-09",
+        "event-20",
+        "event-18",
+        "event-46"
+      ]
+    },
+    {
+      "seed": 800349,
+      "challenge": "distrust",
+      "difficulty": "normal",
+      "role": "doctor",
+      "day": 2,
+      "winner": "survivors",
+      "outcome": "exposed",
+      "xp": 170,
+      "achievements": [],
+      "events": [
+        "event-08",
+        "event-07",
+        "event-27",
+        "event-30"
+      ]
+    },
+    {
+      "seed": 800350,
+      "challenge": "deadline",
+      "difficulty": "normal",
+      "role": "investigator",
+      "day": 2,
+      "winner": "survivors",
+      "outcome": "escape",
+      "xp": 225,
+      "achievements": [],
+      "events": [
+        "event-14",
+        "event-01",
+        "event-12",
+        "event-35"
+      ]
+    }
+  ],
+  "elapsedSeconds": 209.7294165,
+  "finalXP": 74955,
+  "finalLevel": 30,
+  "profileBytes": 81383,
+  "newEvents": {
+    "event-37": 0,
+    "event-38": 20,
+    "event-39": 48,
+    "event-40": 0,
+    "event-41": 0,
+    "event-42": 1,
+    "event-43": 0,
+    "event-44": 14,
+    "event-45": 4,
+    "event-46": 87,
+    "event-47": 0,
+    "event-48": 1
+  }
+}
