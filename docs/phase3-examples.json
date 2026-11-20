@@ -1,0 +1,240 @@
+[
+  {
+    "seed": 1,
+    "observer": "민재",
+    "claim": {
+      "id": "statement-137",
+      "eventId": "statement-137",
+      "statementId": "statement-137",
+      "day": 1,
+      "phase": "night",
+      "location": "camp",
+      "subjectId": "min",
+      "speakerId": "min",
+      "text": "야영지에서 시간을 보냈어요. 시점은 1일차 밤 · 직업 행동입니다.",
+      "source": "public-statement",
+      "direct": false,
+      "reliability": 1,
+      "updatedAt": "2026-11-20T04:00:00.000Z",
+      "kind": "claim",
+      "relatedIds": [
+        "min"
+      ],
+      "judgment": "직접 증거와 모순",
+      "revisions": [
+        {
+          "from": "미검증 주장",
+          "to": "직접 증거와 모순",
+          "evidenceId": "fact-91-16-own",
+          "updatedAt": "2026-11-20T04:00:00.000Z"
+        }
+      ]
+    },
+    "changes": [],
+    "replies": [
+      {
+        "id": "statement-138",
+        "day": 2,
+        "round": 0,
+        "speakerId": "ji",
+        "mode": "rebut",
+        "target": "min",
+        "text": "발언 #statement-137에 답합니다. 제 기록에는 직접 목격: 1일차 밤 · 직업 행동 민재, 통신탑.라고 남아 있습니다. 시점을 함께 확인합시다.",
+        "replyTo": "statement-137",
+        "aboutDay": 2,
+        "aboutPhase": "morning"
+      }
+    ]
+  },
+  {
+    "seed": 1,
+    "observer": "지우",
+    "claim": {
+      "id": "statement-137",
+      "eventId": "statement-137",
+      "statementId": "statement-137",
+      "day": 1,
+      "phase": "night",
+      "location": "camp",
+      "subjectId": "min",
+      "speakerId": "min",
+      "text": "야영지에서 시간을 보냈어요. 시점은 1일차 밤 · 직업 행동입니다.",
+      "source": "public-statement",
+      "direct": false,
+      "reliability": 0.56,
+      "updatedAt": "2026-11-20T04:00:00.000Z",
+      "kind": "claim",
+      "relatedIds": [
+        "min"
+      ],
+      "judgment": "직접 증거와 모순",
+      "revisions": [
+        {
+          "from": "미검증 주장",
+          "to": "직접 증거와 모순",
+          "evidenceId": "fact-91-16-witness-ji",
+          "updatedAt": "2026-11-20T04:00:00.000Z"
+        }
+      ]
+    },
+    "changes": [
+      {
+        "eventId": "fact-35-10",
+        "day": 1,
+        "phase": "afternoon",
+        "target": "min",
+        "reason": "민재: 시설 수리를 완료했다.",
+        "before": {
+          "trust": 50,
+          "suspicion": 20
+        },
+        "after": {
+          "trust": 53,
+          "suspicion": 18
+        }
+      },
+      {
+        "eventId": "statement-64",
+        "day": 1,
+        "phase": "discussion",
+        "target": "min",
+        "reason": "이 단서를 함께 검토해 주세요. 직접 목격: 1일차 낮 · 비밀 임무 서윤, 통신탑.",
+        "before": {
+          "trust": 53,
+          "suspicion": 18
+        },
+        "after": {
+          "trust": 56,
+          "suspicion": 16
+        }
+      },
+      {
+        "eventId": "statement-137",
+        "day": 1,
+        "phase": "night",
+        "target": "min",
+        "reason": "같은 시점의 직접 목격과 발언이 모순됨",
+        "before": {
+          "trust": 56,
+          "suspicion": 16
+        },
+        "after": {
+          "trust": 43,
+          "suspicion": 38
+        }
+      },
+      {
+        "eventId": "statement-144",
+        "day": 2,
+        "phase": "discussion",
+        "target": "min",
+        "reason": "근거 없는 고발을 경계함",
+        "before": {
+          "trust": 43,
+          "suspicion": 38
+        },
+        "after": {
+          "trust": 41,
+          "suspicion": 41
+        }
+      },
+      {
+        "eventId": "statement-145",
+        "day": 2,
+        "phase": "discussion",
+        "target": "min",
+        "reason": "의혹 제기를 들음 · 아직 추측",
+        "before": {
+          "trust": 41,
+          "suspicion": 41
+        },
+        "after": {
+          "trust": 41,
+          "suspicion": 45
+        }
+      }
+    ],
+    "replies": [
+      {
+        "id": "statement-138",
+        "day": 2,
+        "round": 0,
+        "speakerId": "ji",
+        "mode": "rebut",
+        "target": "min",
+        "text": "발언 #statement-137에 답합니다. 제 기록에는 직접 목격: 1일차 밤 · 직업 행동 민재, 통신탑.라고 남아 있습니다. 시점을 함께 확인합시다.",
+        "replyTo": "statement-137",
+        "aboutDay": 2,
+        "aboutPhase": "morning"
+      }
+    ]
+  },
+  {
+    "seed": 3,
+    "observer": "하린",
+    "claim": {
+      "id": "statement-135",
+      "eventId": "statement-135",
+      "statementId": "statement-135",
+      "day": 1,
+      "phase": "night",
+      "location": "camp",
+      "subjectId": "ha",
+      "speakerId": "ha",
+      "text": "1일차 밤 · 직업 행동에 제 위치는 야영지였다고 기억합니다.",
+      "source": "public-statement",
+      "direct": false,
+      "reliability": 1,
+      "updatedAt": "2026-11-20T04:00:00.000Z",
+      "kind": "claim",
+      "relatedIds": [
+        "ha"
+      ],
+      "judgment": "직접 증거와 모순",
+      "revisions": [
+        {
+          "from": "미검증 주장",
+          "to": "직접 증거와 모순",
+          "evidenceId": "fact-84-15-own",
+          "updatedAt": "2026-11-20T04:00:00.000Z"
+        }
+      ]
+    },
+    "changes": [],
+    "replies": []
+  },
+  {
+    "seed": 4,
+    "observer": "하린",
+    "claim": {
+      "id": "statement-153",
+      "eventId": "statement-153",
+      "statementId": "statement-153",
+      "day": 1,
+      "phase": "night",
+      "location": "camp",
+      "subjectId": "ha",
+      "speakerId": "ha",
+      "text": "1일차 밤 · 직업 행동에 제 위치는 야영지였다고 기억합니다.",
+      "source": "public-statement",
+      "direct": false,
+      "reliability": 1,
+      "updatedAt": "2026-11-20T04:00:00.000Z",
+      "kind": "claim",
+      "relatedIds": [
+        "ha"
+      ],
+      "judgment": "직접 증거와 모순",
+      "revisions": [
+        {
+          "from": "미검증 주장",
+          "to": "직접 증거와 모순",
+          "evidenceId": "fact-93-15-own",
+          "updatedAt": "2026-11-20T04:00:00.000Z"
+        }
+      ]
+    },
+    "changes": [],
+    "replies": []
+  }
+]

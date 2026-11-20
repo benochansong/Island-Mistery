@@ -789,3 +789,16 @@ progress::-webkit-progress-value { background:var(--green); border-radius:5px; }
   .map-pin[data-location="tower"] { left:72%; top:24%; }
 }
 
+/* Phase 3: grounded records, progressive disclosure, deliberate voting. */
+.social-panel { padding: 24px; margin-top: 20px; }
+.social-panel h2 { margin: 0 0 12px; }
+.character-details { grid-column: 1 / -1; width: 100%; font-size: .82rem; line-height: 1.65; }
+.character-details ul { padding-left: 18px; }
+summary { cursor: pointer; color: var(--accent, #c5b787); padding: 10px 0; }
+.action-list details { border-top: 1px solid #344447; }
+.action-list details .action-button { width: 100%; margin: 4px 0; text-align: left; }
+.difficulty-label { display: block; margin: 18px 0; }
+.difficulty-label select { margin-left: 8px; max-width: 100%; }
+#skip-discussion { margin: 12px 0; }
+.survivor { flex-wrap: wrap; }
+@media (max-width: 600px) { .social-panel { padding: 16px; } .difficulty-label select { display: block; margin: 8px 0; } }

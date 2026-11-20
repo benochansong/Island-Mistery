@@ -3,7 +3,7 @@ const http = require('node:http');
 const fs = require('node:fs');
 const path = require('node:path');
 const root = path.resolve(__dirname, '..');
-const allowed = new Set(['index.html', 'css/styles.css', 'assets/island.svg', 'assets/compass.svg', ...['data', 'config', 'ai', 'state', 'storage', 'ui', 'app'].map(name => `js/${name}.js`)]);
+const allowed = new Set(['index.html', 'css/styles.css', 'assets/island.svg', 'assets/compass.svg', ...['data', 'config', 'social', 'dialogue', 'discussion', 'perception', 'schema', 'ai', 'state', 'storage', 'ui', 'app'].map(name => `js/${name}.js`)]);
 const types = { '.html': 'text/html; charset=utf-8', '.css': 'text/css; charset=utf-8', '.js': 'text/javascript; charset=utf-8', '.svg': 'image/svg+xml' };
 http.createServer((req, res) => {
   let requested;

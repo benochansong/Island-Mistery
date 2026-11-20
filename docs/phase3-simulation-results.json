@@ -1,0 +1,58 @@
+{
+  "games": 300,
+  "seeds": "1–300",
+  "endings": {
+    "exposed": 78,
+    "escape": 200,
+    "saboteur": 22
+  },
+  "endingDays": {
+    "1": 10,
+    "2": 202,
+    "3": 88
+  },
+  "humanSaboteur": 47,
+  "humanSurvivor": 253,
+  "maxTransitions": 54,
+  "completed": 300,
+  "wins": {
+    "survivors": 278,
+    "saboteur": 22
+  },
+  "averageDay": 2.26,
+  "exiles": 147,
+  "invalidDecisions": 0,
+  "informationViolations": 0,
+  "auditedDecisions": 26877,
+  "statementModes": {
+    "discuss": 6743,
+    "evidence": 3187,
+    "claim": 1598,
+    "cooperate": 323,
+    "question": 2656,
+    "defend": 535,
+    "conceal": 543,
+    "rebut": 55,
+    "speculate": 285,
+    "accuse": 749,
+    "explain": 826,
+    "agree": 166,
+    "share": 34
+  },
+  "strategies": {
+    "cooperate": 2109,
+    "disrupt": 774,
+    "misinform": 322,
+    "divide": 276,
+    "alibi": 1189
+  },
+  "verifiedContradictions": 194,
+  "privateLies": 458,
+  "falseAlibis": 135,
+  "failures": [],
+  "policies": [
+    "규칙 기반 선택",
+    "탐험·보급·기권·휴식",
+    "직업 능력 우선"
+  ]
+}

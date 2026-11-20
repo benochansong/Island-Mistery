@@ -1,0 +1,235 @@
+{
+  "version": 2,
+  "day": 1,
+  "phase": "morning",
+  "rng": 3662699134,
+  "sequence": 1,
+  "selectedLocation": "coast",
+  "plannedLocation": null,
+  "resources": {
+    "food": 12,
+    "water": 12,
+    "medicine": 2,
+    "parts": 2
+  },
+  "facilities": {
+    "radio": 0,
+    "boat": 0
+  },
+  "players": [
+    {
+      "id": "player",
+      "name": "당신",
+      "personality": "기억을 잃은 생존자",
+      "initials": "나",
+      "isHuman": true,
+      "isAlive": true,
+      "isExiled": false,
+      "health": 100,
+      "location": "camp"
+    },
+    {
+      "id": "seo",
+      "name": "서윤",
+      "personality": "논리적인 분석가",
+      "initials": "서",
+      "isHuman": false,
+      "isAlive": true,
+      "isExiled": false,
+      "health": 100,
+      "location": "camp"
+    },
+    {
+      "id": "do",
+      "name": "도현",
+      "personality": "공격적인 리더",
+      "initials": "도",
+      "isHuman": false,
+      "isAlive": true,
+      "isExiled": false,
+      "health": 100,
+      "location": "camp"
+    },
+    {
+      "id": "ha",
+      "name": "하린",
+      "personality": "신중한 협력가",
+      "initials": "하",
+      "isHuman": false,
+      "isAlive": true,
+      "isExiled": false,
+      "health": 100,
+      "location": "camp"
+    },
+    {
+      "id": "min",
+      "name": "민재",
+      "personality": "감정적인 생존자",
+      "initials": "민",
+      "isHuman": false,
+      "isAlive": true,
+      "isExiled": false,
+      "health": 100,
+      "location": "camp"
+    },
+    {
+      "id": "ji",
+      "name": "지우",
+      "personality": "비밀이 많은 인물",
+      "initials": "지",
+      "isHuman": false,
+      "isAlive": true,
+      "isExiled": false,
+      "health": 100,
+      "location": "camp"
+    }
+  ],
+  "secrets": {
+    "player": {
+      "role": "saboteur",
+      "inventory": [],
+      "trust": {
+        "seo": 53,
+        "do": 56,
+        "ha": 52,
+        "min": 43,
+        "ji": 47
+      },
+      "suspicion": {
+        "seo": 0,
+        "do": 0,
+        "ha": 0,
+        "min": 0,
+        "ji": 0
+      },
+      "secretGoal": "자신의 추방을 피하고 3일 밤까지 탈출을 저지하세요.",
+      "actionHistory": [],
+      "information": []
+    },
+    "seo": {
+      "role": "engineer",
+      "inventory": [],
+      "trust": {
+        "player": 52,
+        "do": 48,
+        "ha": 48,
+        "min": 46,
+        "ji": 43
+      },
+      "suspicion": {
+        "player": 0,
+        "do": 0,
+        "ha": 0,
+        "min": 0,
+        "ji": 0
+      },
+      "secretGoal": "통신탑이나 보트를 완성하여 탈출 경로를 확보하세요.",
+      "actionHistory": [],
+      "information": []
+    },
+    "do": {
+      "role": "explorer",
+      "inventory": [],
+      "trust": {
+        "player": 45,
+        "seo": 49,
+        "ha": 47,
+        "min": 50,
+        "ji": 49
+      },
+      "suspicion": {
+        "player": 0,
+        "seo": 0,
+        "ha": 0,
+        "min": 0,
+        "ji": 0
+      },
+      "secretGoal": "숨겨진 기록을 찾아 생존자들과 탈출하세요.",
+      "actionHistory": [],
+      "information": []
+    },
+    "ha": {
+      "role": "explorer",
+      "inventory": [],
+      "trust": {
+        "player": 43,
+        "seo": 42,
+        "do": 60,
+        "min": 43,
+        "ji": 54
+      },
+      "suspicion": {
+        "player": 0,
+        "seo": 0,
+        "do": 0,
+        "min": 0,
+        "ji": 0
+      },
+      "secretGoal": "숨겨진 기록을 찾아 생존자들과 탈출하세요.",
+      "actionHistory": [],
+      "information": []
+    },
+    "min": {
+      "role": "investigator",
+      "inventory": [],
+      "trust": {
+        "player": 60,
+        "seo": 45,
+        "do": 51,
+        "ha": 46,
+        "ji": 44
+      },
+      "suspicion": {
+        "player": 0,
+        "seo": 0,
+        "do": 0,
+        "ha": 0,
+        "ji": 0
+      },
+      "secretGoal": "불확실한 단서를 모아 공작원을 찾아내세요.",
+      "actionHistory": [],
+      "information": []
+    },
+    "ji": {
+      "role": "doctor",
+      "inventory": [],
+      "trust": {
+        "player": 52,
+        "seo": 40,
+        "do": 49,
+        "ha": 60,
+        "min": 57
+      },
+      "suspicion": {
+        "player": 0,
+        "seo": 0,
+        "do": 0,
+        "ha": 0,
+        "min": 0
+      },
+      "secretGoal": "부상자를 치료하고 생존자들의 탈출을 도우세요.",
+      "actionHistory": [],
+      "information": []
+    }
+  },
+  "log": [
+    {
+      "id": 1,
+      "day": 1,
+      "phase": "morning",
+      "actorId": null,
+      "audience": "public",
+      "kind": "event",
+      "text": "여섯 명이 해안에서 깨어났다. 3일 안에 통신탑이나 탈출 보트를 완성해야 한다.",
+      "time": "2026-11-20T04:00:00.000Z"
+    }
+  ],
+  "acted": [],
+  "resolved": false,
+  "votes": {},
+  "outcome": null,
+  "lastResults": [],
+  "eventsSeen": [],
+  "settledDays": [],
+  "updatedAt": "2026-11-20T04:00:00.000Z"
+}

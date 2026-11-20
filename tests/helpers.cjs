@@ -5,7 +5,7 @@ const timestamp = '2026-11-20T04:00:00.000Z';
 function storage() { const data = {}; return { data, getItem(key) { return data[key] ?? null; }, setItem(key, value) { data[key] = value; } }; }
 function setup(backing = storage()) {
   const context = vm.createContext({ localStorage: backing });
-  for (const file of ['data', 'config', 'ai', 'state', 'storage']) vm.runInContext(fs.readFileSync(path.join(__dirname, '../js/' + file + '.js'), 'utf8'), context);
+  for (const file of ['data', 'config', 'social', 'dialogue', 'discussion', 'perception', 'schema', 'ai', 'state', 'storage']) vm.runInContext(fs.readFileSync(path.join(__dirname, '../js/' + file + '.js'), 'utf8'), context);
   return context.IslandMystery;
 }
 function withRole(game, role, seed = 1) {

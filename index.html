@@ -10,6 +10,11 @@
   <link rel="stylesheet" href="css/styles.css">
   <script defer src="js/data.js"></script>
   <script defer src="js/config.js"></script>
+  <script defer src="js/social.js"></script>
+  <script defer src="js/dialogue.js"></script>
+  <script defer src="js/discussion.js"></script>
+  <script defer src="js/perception.js"></script>
+  <script defer src="js/schema.js"></script>
   <script defer src="js/ai.js"></script>
   <script defer src="js/state.js"></script>
   <script defer src="js/storage.js"></script>
@@ -20,7 +25,7 @@
   <a class="skip-link" href="#main">본문으로 건너뛰기</a>
   <header class="topbar">
     <a class="brand" href="#" id="home-link" aria-label="시작 화면으로"><img src="assets/compass.svg" alt="" width="34" height="34"><span>ISLAND MYSTERY<small>사라진 섬의 비밀</small></span></a>
-    <div class="header-right"><span class="edition">PHASE 2 · 생존 기록</span><button class="quiet" id="help-button">플레이 안내</button></div>
+    <div class="header-right"><span class="edition">PHASE 3 · 기억과 의심</span><button class="quiet" id="help-button">플레이 안내</button></div>
   </header>
 
   <main id="main">
@@ -33,7 +38,7 @@
         <div class="short-rule"></div>
         <p class="intro">여섯 명의 생존자. 사라진 기억.<br>파도 너머에서, 낯선 무전 신호가 들려온다.</p>
         <p class="muted welcome-note">누구를 믿을 것인가. 무엇을 발견할 것인가.<br>당신의 첫 번째 기록은 여기에서 시작된다.</p>
-        <div class="welcome-actions"><button class="primary" id="new-button">새로운 기록 시작</button><button class="secondary" id="continue-button" disabled>이어하기</button></div>
+        <label class="difficulty-label" for="difficulty">난이도 <select id="difficulty"><option value="easy">쉬움 · 신중한 판단</option><option value="normal" selected>보통 · 기본 규칙</option><option value="hard">어려움 · 증거에 민감</option></select></label><div class="welcome-actions"><button class="primary" id="new-button">새로운 기록 시작</button><button class="secondary" id="continue-button" disabled>이어하기</button></div>
         <p id="save-description" class="small muted">저장된 기록을 확인하는 중입니다.</p>
       </div>
       <div class="welcome-caption"><span>미확인 군도</span><span>좌표 불명 / 수신 불안정</span></div>
@@ -53,15 +58,18 @@
           <div class="island-map"><img class="island-art" src="assets/island.svg" alt="중앙 정글을 둘러싸고 북서쪽 연구소, 북동쪽 통신탑, 남서쪽 해안가가 있는 섬 지도"><div class="map-grid" aria-hidden="true"></div><span class="map-coordinate">해도 001 / 위치 미상</span><span class="north" aria-hidden="true">N<br>╋</span><div id="map-locations"></div><span class="map-scale" aria-hidden="true">├────────┤<br>축척 불명</span><div class="map-key"><i></i> 탐사 가능 지역</div></div>
           <div class="map-bottom"><span>목적지를 선택해 탐사 계획을 세우세요.</span><span>지도에 표시된 경로는 추정입니다.</span></div>
         </section>
-        <aside class="action-panel panel" aria-labelledby="location-title"><p class="eyebrow">선택한 목적지</p><div id="location-details"></div><button class="quiet full" id="plan-button">탐사 계획에 기록</button><div class="event-card turn-controls"><h3 id="action-title">이번 단계의 행동</h3><p id="action-hint"></p><div id="action-list" class="action-list"></div><button class="primary full" id="next-button" disabled>다음 단계</button><p id="action-error" class="error" role="alert"></p></div></aside>
+        <aside class="action-panel panel" aria-labelledby="location-title"><p class="eyebrow">선택한 목적지</p><div id="location-details"></div><button class="quiet full" id="plan-button">탐사 계획에 기록</button><div class="event-card turn-controls"><h3 id="action-title">이번 단계의 행동</h3><p id="action-hint"></p><div id="action-list" class="action-list"></div><button class="secondary full" id="skip-discussion" hidden>남은 토론 자동 진행 (나는 판단 유보)</button><button class="primary full" id="next-button" disabled>다음 단계</button><p id="action-error" class="error" role="alert"></p></div></aside>
       </div>
+      <section id="discussion-panel" class="panel social-panel" hidden aria-labelledby="discussion-title"><h2 id="discussion-title">토론</h2><p id="discussion-stage"></p><ol id="statements" class="journal"></ol></section>
+      <section class="panel social-panel" aria-labelledby="evidence-title"><h2 id="evidence-title">나의 기억과 증거</h2><p class="small muted">직접 목격과 전달된 정보를 구분합니다. 의심 수치는 나의 판단이며 정체를 뜻하지 않습니다.</p><details><summary id="evidence-count">기억 펼치기</summary><ol id="evidence-list" class="journal"></ol></details></section>
       <section class="panel results-panel" aria-labelledby="results-title"><div class="panel-heading"><h2 id="results-title">이번 행동의 결과</h2><span class="tag">공개 기록 + 나의 비밀 기록</span></div><div id="turn-results" class="turn-results" aria-live="polite"></div></section>
       <div class="lower-grid"><section class="panel survivors-panel" aria-labelledby="survivors-title"><div class="panel-heading"><h2 id="survivors-title">함께 깨어난 사람들</h2><span class="tag" id="survivor-count"></span></div><div id="survivors" class="survivors"></div><p class="small muted">다른 사람의 직업은 비공개입니다. 추방·사망 후에는 관전으로 게임을 마칠 수 있습니다.</p></section><section class="panel journal-panel" aria-labelledby="journal-title"><div class="panel-heading"><h2 id="journal-title">수색 기록</h2><span class="tag" id="log-count"></span></div><label class="journal-filter" for="log-filter">기록 보기 <select id="log-filter"><option value="all">전체</option><option value="public">공개 사건</option><option value="private">나의 비밀 기록</option><option value="discussion">토론·투표</option></select></label><ol id="journal" class="journal"></ol></section></div>
       <footer class="game-footer"><span id="save-status" role="status"></span><div><button class="quiet" id="menu-button">시작 화면</button><button class="quiet" id="restart-button">새 기록 시작</button></div></footer>
     </section>
   </main>
-  <dialog id="help-dialog" aria-labelledby="help-title"><button class="dialog-close quiet" id="close-help" aria-label="안내 닫기">닫기</button><p class="eyebrow">현장 안내서</p><h2 id="help-title">세 번의 밤을 버티세요</h2><p>아침에는 지도를 고르고 <strong>탐험</strong>하세요. 낮에는 물자 확보·치료·수리 중 하나를, 저녁에는 발언을, 투표에서는 후보 또는 기권을 선택합니다. 밤에는 직업 능력이나 휴식을 사용하세요.</p><p>각 단계에서 당신의 행동 뒤 AI가 한 번씩 행동합니다. <strong>다음 단계</strong>로 이동하고, 밤에는 정산 버튼으로 다음 날을 시작합니다. 체력 0 또는 추방 후에는 관전으로 끝까지 진행할 수 있습니다.</p><div class="notice"><strong>승리 조건</strong><p>통신탑 18 또는 보트 14 완성 시 탈출. 공작원을 추방하고 그날 밤을 버티면 구조. 3일째 밤까지 탈출하지 못하거나 생존자 진영이 붕괴하면 공작원 승리. 야영지 전원이 사망하면 생존 실패입니다.</p></div><p>식량·식수는 밤에 남은 인원당 1개씩 소비됩니다. 부족하면 체력이 감소합니다. 수리는 일반 직업 부품 2개 / +2, 기술자 부품 1개 / +3입니다. 의사는 의약품 1개로 체력 45, 다른 직업은 25를 회복합니다.</p><p class="small muted">선택과 행동 결과는 자동 저장됩니다. 공작원의 비밀 행동과 조사 단서는 해당 인물만 볼 수 있습니다. 조사 결과는 확정적인 직업 판별이 아닙니다. 고급 AI 심리전은 이번 버전에 포함하지 않습니다.</p></dialog>
+  <dialog id="help-dialog" aria-labelledby="help-title"><button class="dialog-close quiet" id="close-help" aria-label="안내 닫기">닫기</button><p class="eyebrow">현장 안내서</p><h2 id="help-title">세 번의 밤을 버티세요</h2><p>아침에는 지도를 고르고 <strong>탐험</strong>하세요. 낮에는 물자 확보·치료·수리 중 하나를, 저녁에는 발언을, 투표에서는 후보 또는 기권을 선택합니다. 밤에는 직업 능력이나 휴식을 사용하세요.</p><p>각 단계에서 당신의 행동 뒤 AI가 한 번씩 행동합니다. <strong>다음 단계</strong>로 이동하고, 밤에는 정산 버튼으로 다음 날을 시작합니다. 체력 0 또는 추방 후에는 관전으로 끝까지 진행할 수 있습니다.</p><div class="notice"><strong>승리 조건</strong><p>통신탑 18 또는 보트 14 완성 시 탈출. 공작원을 추방하고 그날 밤을 버티면 구조. 3일째 밤까지 탈출하지 못하거나 생존자 진영이 붕괴하면 공작원 승리. 야영지 전원이 사망하면 생존 실패입니다.</p></div><p>식량·식수는 밤에 남은 인원당 1개씩 소비됩니다. 부족하면 체력이 감소합니다. 수리는 일반 직업 부품 2개 / +2, 기술자 부품 1개 / +3입니다. 의사는 의약품 1개로 체력 45, 다른 직업은 25를 회복합니다.</p><p class="small muted">선택과 행동 결과는 자동 저장됩니다. 공작원의 비밀 행동과 조사 단서는 해당 인물만 볼 수 있습니다. 조사 결과는 확정적인 직업 판별이 아닙니다. 토론은 사건 공유 → 의심 → 질문·해명 → 증거 검토 → 최종 의견의 5회입니다. 발언 방식별 목록을 펼쳐 선택하세요. 건너뛰면 나는 판단을 유보하고 AI는 같은 규칙으로 토론합니다. 후보를 선택한 뒤 확인해야 투표됩니다. 인물 카드를 펼치면 내가 알고 있는 관계와 발언을 볼 수 있습니다. 난이도는 증거 가중치와 모순 판단 기준만 바꾸며 숨겨진 정보를 제공하지 않습니다.</p></dialog>
   <dialog id="restart-dialog" aria-labelledby="restart-title"><p class="eyebrow">새로운 시작</p><h2 id="restart-title">새 기록으로 시작할까요?</h2><p>이 브라우저에 저장된 탐사 계획과 수색 기록이 새 기록으로 교체됩니다.</p><div class="dialog-actions"><button class="secondary" id="cancel-restart">돌아가기</button><button class="primary" id="confirm-restart">새 기록 시작</button></div></dialog>
+  <dialog id="vote-dialog" aria-labelledby="vote-title"><h2 id="vote-title">투표를 확정할까요?</h2><p id="vote-choice"></p><p>확정 후에는 이번 투표를 바꿀 수 없습니다.</p><div class="dialog-actions"><button class="secondary" id="cancel-vote">돌아가기</button><button class="primary" id="confirm-vote">투표 확정</button></div></dialog>
   <noscript><p class="notice">게임을 실행하려면 브라우저에서 JavaScript를 허용해 주세요.</p></noscript>
 </body>
 </html>

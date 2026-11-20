@@ -2,6 +2,23 @@
   'use strict';
   root.IslandMystery.config = Object.freeze({
     maxDays: 3,
+    discussionRounds: ['사건 공유', '의심 제기', '질문과 해명', '증거 검토', '최종 의견'],
+    defaultDifficulty: 'normal',
+    difficulty: { easy: { evidenceWeight: 0.8, contradictionThreshold: 0.95 }, normal: { evidenceWeight: 1, contradictionThreshold: 0.85 }, hard: { evidenceWeight: 1.12, contradictionThreshold: 0.8 } },
+    relationships: {
+      initialTrust: 50, initialSuspicion: 20,
+      cooperation: [5, -2], sharing: [8, -3], healing: [12, -5],
+      verifiedLie: [-20, 20], betrayal: [-30, 30], suspicious: [-5, 10], alibi: [5, -20]
+    },
+    observationChance: [0, 0.25, 0.5, 0.75],
+    personalities: {
+      seo: { logicalThinking: 0.95, aggression: 0.25, cooperation: 0.6, caution: 0.9, emotionalSensitivity: 0.1, deceptionTendency: 0.15 },
+      min: { logicalThinking: 0.35, aggression: 0.65, cooperation: 0.65, caution: 0.25, emotionalSensitivity: 0.95, deceptionTendency: 0.35 },
+      ha: { logicalThinking: 0.7, aggression: 0.15, cooperation: 0.95, caution: 0.95, emotionalSensitivity: 0.3, deceptionTendency: 0.1 },
+      do: { logicalThinking: 0.65, aggression: 0.95, cooperation: 0.45, caution: 0.25, emotionalSensitivity: 0.55, deceptionTendency: 0.45 },
+      ji: { logicalThinking: 0.8, aggression: 0.3, cooperation: 0.25, caution: 0.85, emotionalSensitivity: 0.2, deceptionTendency: 0.75 },
+      player: { logicalThinking: 0.7, aggression: 0.5, cooperation: 0.6, caution: 0.65, emotionalSensitivity: 0.4, deceptionTendency: 0.4 }
+    },
     initialResources: { food: 12, water: 12, medicine: 2, parts: 2 },
     phases: ['morning', 'afternoon', 'discussion', 'voting', 'night'],
     phaseNames: { morning: '아침 · 탐험', afternoon: '낮 · 비밀 임무', discussion: '저녁 · 토론', voting: '투표 · 추방 결정', night: '밤 · 직업 행동' },

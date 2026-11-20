@@ -30,12 +30,19 @@
     $('plan-button').textContent = planned ? '이 지역으로 계획됨' : '탐사 계획에 기록';
     $('plan-button').disabled = planned || !playing || Boolean(view.outcome);
     actions = game.state.availableActions(view);
-    $('action-title').textContent = C.phaseNames[view.phase];
-    $('action-hint').textContent = view.outcome ? '이 기록은 끝났습니다. 결과와 사건 기록을 확인할 수 있습니다.' : !playing ? '직접 행동할 수 없습니다. 아래 버튼으로 생존자들의 행동을 진행하세요.' : view.resolved ? '모두의 행동이 처리되었습니다. 결과를 확인하고 다음 단계로 이동하세요.' : view.phase === 'voting' ? '후보 버튼을 누르면 즉시 투표합니다. 최다 득표자 1명을 추방하며 동률이면 추방하지 않습니다.' : '한 가지 행동을 선택하세요. 이후 AI가 차례로 행동합니다.';
+    $('action-title').textContent = view.phase === 'discussion' ? `토론 ${view.discussionRound + 1}/5 · ${C.discussionRounds[view.discussionRound]}` : C.phaseNames[view.phase];
+    $('action-hint').textContent = view.outcome ? '이 기록은 끝났습니다. 결과와 사건 기록을 확인할 수 있습니다.' : !playing ? '직접 행동할 수 없습니다. 아래 버튼으로 생존자들의 행동을 진행하세요.' : view.resolved ? '모두의 행동이 처리되었습니다. 결과를 확인하고 다음 단계로 이동하세요.' : view.phase === 'voting' ? '후보를 선택한 뒤 확인 창에서 투표를 확정하세요. 최다 득표자 1명을 추방하며 동률이면 추방하지 않습니다.' : '한 가지 행동을 선택하세요. 이후 AI가 차례로 행동합니다.';
     $('action-list').innerHTML = actions.map((action, index) => `<button class="${action.kind === 'explore' ? 'primary' : 'secondary'} action-button" data-action-index="${index}">${escape(action.label)}</button>`).join('');
+    if (view.phase === 'discussion' && actions.length) {
+      const groups = [ ['사실과 단서', ['truth', 'share', 'evidence', 'partial']], ['질문과 의혹', ['question', 'accuse', 'speculate', 'agree']], ['해명과 반박', ['explain', 'defend', 'rebut']], ['거짓말과 정보 통제', ['lie', 'conceal', 'redirect', 'feign']] ];
+      const button = (a, i) => '<button class="secondary action-button" data-action-index="' + i + '">' + escape(a.label) + '</button>';
+      $('action-list').innerHTML = actions.map((a, i) => a.kind === 'discuss' ? button(a, i) : '').join('') + groups.map(([title, kinds]) => '<details><summary>' + title + '</summary>' + actions.map((a, i) => kinds.includes(a.kind) ? button(a, i) : '').join('') + '</details>').join('');
+    }
+    $('skip-discussion').hidden = view.phase !== 'discussion' || Boolean(view.outcome);
+    renderSocial(view);
     $('next-button').disabled = Boolean(view.outcome) || playing && !view.resolved;
-    $('next-button').textContent = !playing && !view.resolved ? '관전 · 생존자 행동 진행' : view.phase === 'night' ? `${view.day === 3 ? '마지막 밤' : '하루'} 정산` : '다음 단계';
-    $('survivors').innerHTML = view.players.map((p, i) => `<article class="survivor ${!p.isAlive || p.isExiled ? 'inactive' : ''}"><div class="avatar avatar-${i}" aria-hidden="true">${escape(p.initials)}</div><div><h3>${escape(p.name)}${p.isHuman ? '<span class="you">나</span>' : ''}</h3><p>${escape(p.personality)}</p><span class="health">${!p.isAlive ? '사망' : p.isExiled ? '추방됨' : `체력 ${p.health} / 100`}</span><progress aria-label="${escape(p.name)} 체력" value="${p.health}" max="100"></progress></div></article>`).join('');
+    $('next-button').textContent = !playing && !view.resolved ? '관전 · 생존자 행동 진행' : view.phase === 'discussion' && view.discussionRound < 4 ? '다음 토론 순서' : view.phase === 'night' ? `${view.day === 3 ? '마지막 밤' : '하루'} 정산` : '다음 단계';
+    $('survivors').innerHTML = view.players.map((p, i) => `<article class="survivor ${!p.isAlive || p.isExiled ? 'inactive' : ''}"><div class="avatar avatar-${i}" aria-hidden="true">${escape(p.initials)}</div><div><h3>${escape(p.name)}${p.isHuman ? '<span class="you">나</span>' : ''}</h3><p>${escape(p.personality)}</p><span class="health">${!p.isAlive ? '사망' : p.isExiled ? '추방됨' : `체력 ${p.health} / 100`}</span><progress aria-label="${escape(p.name)} 체력" value="${p.health}" max="100"></progress></div>${characterDetails(view, p)}</article>`).join('');
     $('survivor-count').textContent = view.players.filter(p => p.isAlive && !p.isExiled).length + '명 활동 중';
     $('turn-results').innerHTML = view.lastResults.length ? `<ol class="result-list">${entries(view.lastResults)}</ol>` : '<p class="muted">지도에서 첫 탐험 지역을 선택하세요.</p>';
     $('results-title').textContent = view.phase === 'voting' && view.resolved ? '투표 결과' : view.phase === 'discussion' ? '토론 기록' : '이번 행동의 결과';
@@ -45,6 +52,20 @@
       const won = view.outcome.winner === (self.role === 'saboteur' ? 'saboteur' : 'survivors');
       $('ending-panel').innerHTML = `<p class="eyebrow">${view.day}일차 · 생존 기록 종료</p><h2 id="ending-title">${escape(view.outcome.title)}</h2><p>${escape(view.outcome.description)}</p><strong>${view.outcome.winner === 'none' ? '어느 진영도 승리하지 못했습니다.' : won ? '당신의 진영이 승리했습니다.' : '당신의 진영이 패배했습니다.'}</strong><p class="small muted">나의 상태: ${!self.isAlive ? '사망' : self.isExiled ? '추방' : '생존'} · 나의 직업: ${C.roles[self.role].name}</p><button class="primary" id="ending-new-button">새 기록 시작</button>`;
     }
+  }
+  function characterDetails(view, p) {
+    if (p.id === view.self.id) return '<details class="character-details"><summary>나의 목표</summary><p>' + escape(view.self.personalGoal) + '</p></details>';
+    const mind = view.self, known = mind.memory.filter(m => m.subjectId === p.id && m.kind !== 'claim').slice(-3), speech = view.statements.filter(m => m.speakerId === p.id).slice(-2);
+    const changes = mind.relationshipHistory.filter(r => r.target === p.id).slice(-3);
+    return '<details class="character-details"><summary>' + escape(p.name) + ' · 내가 아는 기록</summary><p>나의 신뢰 ' + mind.trust[p.id] + ' / 의심 ' + mind.suspicion[p.id] + '</p><ul>' + changes.map(r => '<li>' + escape(r.reason) + ' · 신뢰 ' + r.before.trust + '→' + r.after.trust + ', 의심 ' + r.before.suspicion + '→' + r.after.suspicion + '</li>').join('') + '</ul><p>' + (known.map(m => escape(m.text)).join('<br>') || '관찰 기록 없음') + '</p><p>' + (speech.map(m => escape(m.text)).join('<br>') || '공개 발언 없음') + '</p></details>';
+  }
+  function renderSocial(view) {
+    $('discussion-panel').hidden = view.phase !== 'discussion' && !view.statements.length;
+    $('discussion-stage').textContent = view.phase === 'discussion' ? view.day + '일차 · ' + (view.discussionRound + 1) + '/5 · ' + C.discussionRounds[view.discussionRound] : '최근 공개 발언';
+    $('statements').innerHTML = view.statements.slice(-12).reverse().map(m => '<li><span class="log-time">' + m.day + '일차 · ' + C.discussionRounds[m.round] + ' · #' + escape(m.id) + '</span><p>' + escape(game.data.survivors.find(p => p.id === m.speakerId).name) + ': ' + escape(m.text) + '</p></li>').join('') || '<li>첫 발언을 기다립니다.</li>';
+    const evidence = view.self.memory.filter(m => !['cooperation', 'healing', 'sharing', 'statement'].includes(m.kind));
+    $('evidence-count').textContent = evidence.length + '개 기억 · 펼쳐서 근거 확인';
+    $('evidence-list').innerHTML = evidence.slice().reverse().map(m => '<li><span class="log-time">' + m.day + '일차 · ' + C.phaseNames[m.phase] + ' · ' + (m.direct ? '직접 확인' : '전달 / 주장') + ' · 신뢰도 ' + Math.round(m.reliability * 100) + '%</span><p>' + escape(m.text) + '</p><strong>' + escape(m.judgment) + '</strong>' + m.revisions.map(r => '<p class="small">판단 수정: ' + escape(r.from) + ' → ' + escape(r.to) + '</p>').join('') + '</li>').join('') || '<li>아직 확인한 단서가 없습니다.</li>';
   }
   function screen(name) {
     $('welcome').hidden = name !== 'welcome'; $('game').hidden = name !== 'game';
@@ -58,6 +79,7 @@
       empty: '아직 저장된 기록이 없습니다.', legacy: 'Phase 1 기록은 보존되어 있습니다. 새 규칙으로 새 기록을 시작해 주세요.',
       invalid: '저장된 기록의 형식이 올바르지 않습니다. 새 기록 시작 시 교체 여부를 확인합니다.',
       unavailable: '저장소에 접근할 수 없습니다. 이번 실행 중에는 플레이할 수 있습니다.',
+      migrated: 'Phase 2 기록을 이어갈 수 있습니다. 기존 원본은 보존하고, 새 기억은 이어하기 이후부터 쌓입니다.',
       loaded: result.state ? `${dateLabel(result.state.updatedAt)} · ${result.state.day}일차 · ${result.state.outcome ? '엔딩 확인' : C.phaseNames[result.state.phase]}` : ''
     })[result.status];
   }

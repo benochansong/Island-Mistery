@@ -2,7 +2,7 @@
   'use strict';
   const game = root.IslandMystery = root.IslandMystery || {};
   game.data = Object.freeze({
-    version: 2,
+    version: 3,
     locations: [
       { id: 'coast', name: '해안가', label: '난파선이 밀려온 곳', marker: '≈', x: 32, y: 73, risk: '낮음', resources: '식량 · 식수', description: '젖은 모래 위로 배의 잔해가 흩어져 있다. 파도에 떠밀려온 물자와 우리가 이곳에 온 흔적을 찾을 수 있을지도 모른다.' },
       { id: 'jungle', name: '정글', label: '빛이 닿지 않는 숲', marker: '♧', x: 49, y: 52, risk: '높음', resources: '식량 · 의약품', description: '빽빽한 나무 사이로 좁은 길이 이어진다. 먹을 수 있는 열매와 약초가 있을 법하지만, 수풀 너머에서 무언가 움직인다.' },

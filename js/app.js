@@ -1,15 +1,15 @@
 (function (root) {
   'use strict';
   const game = root.IslandMystery, { $ } = game.ui;
-  let state = null, busy = false;
+  let state = null, busy = false, pendingVote = null;
   function refreshWelcome() { game.ui.welcome(game.storage.load(), Boolean(state)); }
   function render() { game.ui.render(game.state.viewFor(state)); }
   function persist() { game.ui.saveStatus(game.storage.save(state)); }
   function openGame() { render(); game.ui.screen('game'); if (state.outcome) $('ending-panel').focus(); }
-  function newGame() { state = game.state.create(); $('log-filter').value = 'all'; $('action-error').textContent = ''; persist(); openGame(); }
+  function newGame() { state = game.state.create(undefined, undefined, $('difficulty').value); $('log-filter').value = 'all'; $('action-error').textContent = ''; persist(); openGame(); }
   function requestNew() {
     const saved = game.storage.load();
-    if (state || ['loaded', 'invalid'].includes(saved.status)) $('restart-dialog').showModal(); else newGame();
+    if (state || ['loaded', 'migrated', 'invalid'].includes(saved.status)) $('restart-dialog').showModal(); else newGame();
   }
   function dispatch(action) {
     if (!state || busy) return;
@@ -29,7 +29,7 @@
   $('cancel-restart').addEventListener('click', () => $('restart-dialog').close());
   $('continue-button').addEventListener('click', () => {
     const result = game.storage.load(); state = state || result.state;
-    if (state) { openGame(); game.ui.saveStatus(result.status === 'loaded' && JSON.stringify(result.state) === JSON.stringify(state)); } else refreshWelcome();
+    if (state) { openGame(); if (result.status === 'migrated') persist(); else game.ui.saveStatus(result.status === 'loaded' && JSON.stringify(result.state) === JSON.stringify(state)); } else refreshWelcome();
   });
   $('map-locations').addEventListener('click', event => {
     const button = event.target.closest('[data-location]');
@@ -40,8 +40,12 @@
     const button = event.target.closest('[data-action-index]');
     if (!button || button.disabled) return;
     const action = game.ui.actionAt(Number(button.dataset.actionIndex));
-    if (action) dispatch({ type: 'ACT', ...action });
+    if (action?.kind === 'vote') { pendingVote = action; $('vote-choice').textContent = action.label; $('vote-dialog').showModal(); }
+    else if (action) dispatch({ type: 'ACT', ...action });
   });
+  $('confirm-vote').addEventListener('click', () => { const vote = pendingVote; pendingVote = null; $('vote-dialog').close(); if (vote) dispatch({ type: 'ACT', ...vote }); });
+  $('cancel-vote').addEventListener('click', () => { pendingVote = null; $('vote-dialog').close(); });
+  $('skip-discussion').addEventListener('click', () => dispatch({ type: 'SKIP_DISCUSSION' }));
   $('next-button').addEventListener('click', () => dispatch({ type: 'NEXT' }));
   $('log-filter').addEventListener('change', () => { if (state) game.ui.renderJournal(game.state.viewFor(state)); });
   $('menu-button').addEventListener('click', menu);

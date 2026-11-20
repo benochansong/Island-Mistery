@@ -166,13 +166,13 @@ test('human exile and death allow spectator completion; eliminated AI cannot act
     if (type === 'death') { s.players[0].health = 0; s.players[0].isAlive = false; }
     s.players[2].isExiled = true; let steps = 0;
     assert.throws(() => act(g, s, { kind: 'rest' }));
-    while (!s.outcome && steps++ < 35) { s = next(g, s); assert.equal(s.secrets.do.actionHistory.length, 0); assert.equal(Object.hasOwn(s.votes, 'do'), false); }
+    while (!s.outcome && steps++ < 60) { s = next(g, s); assert.equal(s.secrets.do.actionHistory.length, 0); assert.equal(Object.hasOwn(s.votes, 'do'), false); }
     assert.ok(s.outcome); assert.ok(s.day <= 3); assert.equal(s.secrets.player.actionHistory.length, 0);
   }
 });
 test('save restores every phase including deterministic next outcome and ended games', () => {
   const backing = storage(), g = setup(backing); let s = withRole(g, 'explorer', 18); quietAI(g);
-  for (let step = 0; !s.outcome && step < 35; step++) {
+  for (let step = 0; !s.outcome && step < 60; step++) {
     assert.equal(g.storage.save(s), true); const fresh = setup(backing); quietAI(fresh);
     const restored = fresh.storage.load(); assert.equal(restored.status, 'loaded'); assert.equal(serial(restored.state), serial(s));
     const v = g.state.viewFor(s), options = g.state.availableActions(v);
@@ -185,7 +185,7 @@ test('legacy saves remain untouched; malformed saves and denied storage fail saf
   const backing = storage(); backing.setItem('island-mystery.save.v1', '{legacy}'); const g = setup(backing);
   assert.equal(g.storage.load().status, 'legacy'); assert.equal(g.storage.save(g.state.create(timestamp, 1)), true);
   assert.equal(backing.getItem('island-mystery.save.v1'), '{legacy}');
-  for (const raw of ['{', 'null', '{}', 'x'.repeat(1000001)]) { backing.setItem('island-mystery.save.v2', raw); assert.equal(g.storage.load().status, 'invalid'); }
+  for (const raw of ['{', 'null', '{}', 'x'.repeat(5000001)]) { backing.setItem('island-mystery.save.v3', raw); assert.equal(g.storage.load().status, 'invalid'); }
   for (const mutate of [s => s.version = 1, s => s.players.pop(), s => s.resources.food = -1, s => s.secrets.player = null, s => s.acted.push('invalid'), s => s.secrets.player.trust.seo = 101, s => s.log[0].text = {}, s => s.outcome = {}]) {
     const s = g.state.create(timestamp, 1); mutate(s); assert.equal(g.state.valid(s), false); assert.equal(g.storage.save(s), false);
   }
