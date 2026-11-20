@@ -3,7 +3,7 @@
     "@playwright/test": "1.65.1"
   },
   "name": "island-mystery",
-  "version": "0.4.0",
+  "version": "0.5.0",
   "private": true,
   "description": "Offline Korean social deduction and mystery survival game",
   "engines": {
@@ -11,8 +11,11 @@
   },
   "scripts": {
     "dev": "node tests/serve.cjs",
-    "test": "node --test tests/state.test.cjs tests/social.test.cjs tests/phase3.test.cjs tests/phase4.test.cjs",
-    "test:simulation": "node tests/simulate-phase4.cjs",
-    "test:browser": "node tests/browser-phase4.cjs"
+    "test": "node --test tests/state.test.cjs tests/social.test.cjs tests/phase3.test.cjs tests/phase4.test.cjs tests/phase5.test.cjs",
+    "test:simulation": "node tests/simulate-phase5.cjs",
+    "test:browser": "node tests/browser-phase5.cjs",
+    "test:browser:features": "node tests/browser-phase5-features.cjs",
+    "assets:audio": "node scripts/generate-audio.cjs",
+    "test:browser:scenes": "node tests/browser-phase5-scenes.cjs"
   }
 }

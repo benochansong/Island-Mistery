@@ -1,0 +1,426 @@
+{
+  "games": 100,
+  "seeds": "1–100",
+  "completed": 100,
+  "errors": [],
+  "stalls": 0,
+  "events": {
+    "event-01": 24,
+    "event-02": 2,
+    "event-03": 12,
+    "event-04": 8,
+    "event-05": 37,
+    "event-06": 2,
+    "event-07": 35,
+    "event-08": 37,
+    "event-09": 12,
+    "event-10": 14,
+    "event-11": 30,
+    "event-12": 5,
+    "event-13": 13,
+    "event-14": 19,
+    "event-15": 6,
+    "event-16": 5,
+    "event-17": 2,
+    "event-18": 7,
+    "event-19": 2,
+    "event-20": 28,
+    "event-21": 23,
+    "event-22": 0,
+    "event-23": 2,
+    "event-24": 34,
+    "event-25": 18,
+    "event-26": 0,
+    "event-27": 14,
+    "event-28": 6,
+    "event-29": 10,
+    "event-30": 18,
+    "event-31": 3,
+    "event-32": 2,
+    "event-33": 1,
+    "event-34": 10,
+    "event-35": 12,
+    "event-36": 0
+  },
+  "clues": 2730,
+  "wins": {
+    "survivors": 96,
+    "saboteur": 4
+  },
+  "endings": {
+    "together": 33,
+    "captured": 28,
+    "unknown": 13,
+    "research": 8,
+    "covert": 4,
+    "partial": 13,
+    "truth": 1
+  },
+  "days": {
+    "1": 2,
+    "2": 57,
+    "3": 41
+  },
+  "maxTransitions": 59,
+  "informationViolations": 0,
+  "aiDecisions": 9318,
+  "invalidDecisions": 0,
+  "missions": {
+    "conceal": 58,
+    "trust": 23,
+    "archive": 45,
+    "escapeTogether": 30,
+    "radio": 39,
+    "medicine": 26,
+    "access": 5,
+    "document": 51,
+    "cover": 48,
+    "protect": 50,
+    "risk": 19,
+    "truth": 10
+  },
+  "unlockedSites": {
+    "cave": 81,
+    "observatory": 59,
+    "basement": 98,
+    "equipment": 50
+  },
+  "humanRoles": {
+    "doctor": 27,
+    "explorer": 23,
+    "saboteur": 14,
+    "engineer": 18,
+    "investigator": 18
+  },
+  "samples": [
+    {
+      "seed": 1,
+      "role": "doctor",
+      "outcome": {
+        "code": "escape",
+        "winner": "survivors",
+        "title": "엔딩 A · 바다 너머로",
+        "description": "통신탑 또는 탈출 보트를 완성했다. 생존자들은 공작원의 방해를 이겨내고 섬을 탈출했다.",
+        "day": 3
+      },
+      "ending": "together",
+      "events": [
+        {
+          "id": "event-instance-1",
+          "eventId": "event-20",
+          "day": 1,
+          "phase": "morning",
+          "actorId": "player",
+          "delegateId": null,
+          "audience": "player",
+          "choiceId": "read",
+          "text": "익명의 고발장 — 불확실한 고발 내용을 개인적으로 검토"
+        },
+        {
+          "id": "event-instance-4",
+          "eventId": "event-07",
+          "day": 1,
+          "phase": "afternoon",
+          "actorId": "player",
+          "delegateId": null,
+          "audience": "public",
+          "choiceId": "fix",
+          "text": "식량 저장고 파손 — 부품 1개로 수리 · 저장고 보호"
+        },
+        {
+          "id": "event-instance-11",
+          "eventId": "event-04",
+          "day": 2,
+          "phase": "morning",
+          "actorId": "min",
+          "delegateId": null,
+          "audience": "public",
+          "choiceId": "rescue",
+          "text": "연구시설의 붕괴 — 의약품 1개로 부상 예방 · 사고 기록 확보"
+        },
+        {
+          "id": "event-instance-18",
+          "eventId": "event-35",
+          "day": 2,
+          "phase": "afternoon",
+          "actorId": "player",
+          "delegateId": null,
+          "audience": "public",
+          "choiceId": "read",
+          "text": "탈출 직전의 진실 — 출항 기록을 확인한다"
+        },
+        {
+          "id": "event-instance-25",
+          "eventId": "event-18",
+          "day": 3,
+          "phase": "morning",
+          "actorId": "player",
+          "delegateId": null,
+          "audience": "public",
+          "choiceId": "recover",
+          "text": "과거 사고 기록 — 식수 1개를 쓰며 기록 복원"
+        }
+      ],
+      "clues": [
+        {
+          "id": "orientation",
+          "day": 1,
+          "shared": true,
+          "source": "field-record"
+        },
+        {
+          "id": "exitRisk",
+          "day": 1,
+          "shared": true,
+          "source": "field-record"
+        },
+        {
+          "id": "cipher",
+          "day": 1,
+          "shared": true,
+          "source": "field-record"
+        },
+        {
+          "id": "equipment",
+          "day": 1,
+          "shared": true,
+          "source": "public-record"
+        },
+        {
+          "id": "cave",
+          "day": 2,
+          "shared": true,
+          "source": "field-record"
+        },
+        {
+          "id": "protocol",
+          "day": 2,
+          "shared": true,
+          "source": "field-record"
+        },
+        {
+          "id": "accident",
+          "day": 2,
+          "shared": true,
+          "source": "public-record"
+        },
+        {
+          "id": "manifest",
+          "day": 3,
+          "shared": false,
+          "source": "field-record"
+        }
+      ],
+      "mission": {
+        "id": "conceal",
+        "target": "seo",
+        "progress": 1,
+        "complete": true,
+        "score": 100
+      }
+    },
+    {
+      "seed": 2,
+      "role": "doctor",
+      "outcome": {
+        "code": "exposed",
+        "winner": "survivors",
+        "title": "엔딩 B · 간섭이 멎은 새벽",
+        "description": "공작원 추방 후 비상 신호가 연결됐다. 밤을 버틴 생존자들에게 구조정이 도착했다.",
+        "day": 2
+      },
+      "ending": "captured",
+      "events": [
+        {
+          "id": "event-instance-1",
+          "eventId": "event-05",
+          "day": 1,
+          "phase": "morning",
+          "actorId": "player",
+          "delegateId": null,
+          "audience": "public",
+          "choiceId": "mark",
+          "text": "짙은 안개 — 표식 설치 · 부품 1, 전원 식수 +3"
+        },
+        {
+          "id": "event-instance-8",
+          "eventId": "event-08",
+          "day": 1,
+          "phase": "afternoon",
+          "actorId": "player",
+          "delegateId": null,
+          "audience": "public",
+          "choiceId": "purify",
+          "text": "식수 오염 의심 — 의약품 1개로 정수 · 식수 +1"
+        },
+        {
+          "id": "event-instance-15",
+          "eventId": "event-25",
+          "day": 2,
+          "phase": "morning",
+          "actorId": "ha",
+          "delegateId": null,
+          "audience": "public",
+          "choiceId": "stop",
+          "text": "통신탑 전력 중단 — 전원을 차단 · 수리도 -2, 부품 +1"
+        },
+        {
+          "id": "event-instance-22",
+          "eventId": "event-30",
+          "day": 2,
+          "phase": "afternoon",
+          "actorId": "player",
+          "delegateId": null,
+          "audience": "public",
+          "choiceId": "inspect",
+          "text": "고의로 손상된 탈출 장비 — 손상 흔적 조사 · 범인의 역할은 알 수 없음"
+        }
+      ],
+      "clues": [
+        {
+          "id": "orientation",
+          "day": 1,
+          "shared": true,
+          "source": "field-record"
+        },
+        {
+          "id": "protocol",
+          "day": 1,
+          "shared": true,
+          "source": "field-record"
+        },
+        {
+          "id": "cipher",
+          "day": 2,
+          "shared": true,
+          "source": "field-record"
+        },
+        {
+          "id": "cave",
+          "day": 2,
+          "shared": true,
+          "source": "field-record"
+        }
+      ],
+      "mission": {
+        "id": "medicine",
+        "target": "min",
+        "progress": 0,
+        "complete": false,
+        "score": 0
+      }
+    },
+    {
+      "seed": 3,
+      "role": "explorer",
+      "outcome": {
+        "code": "escape",
+        "winner": "survivors",
+        "title": "엔딩 A · 바다 너머로",
+        "description": "통신탑 또는 탈출 보트를 완성했다. 생존자들은 공작원의 방해를 이겨내고 섬을 탈출했다.",
+        "day": 3
+      },
+      "ending": "unknown",
+      "events": [
+        {
+          "id": "event-instance-1",
+          "eventId": "event-09",
+          "day": 1,
+          "phase": "morning",
+          "actorId": "ha",
+          "delegateId": null,
+          "audience": "public",
+          "choiceId": "share",
+          "text": "숨겨진 의료 상자 — 공동 의료품 +3 · 협력 기록"
+        },
+        {
+          "id": "event-instance-8",
+          "eventId": "event-05",
+          "day": 1,
+          "phase": "afternoon",
+          "actorId": "player",
+          "delegateId": null,
+          "audience": "public",
+          "choiceId": "mark",
+          "text": "짙은 안개 — 표식 설치 · 부품 1, 전원 식수 +3"
+        },
+        {
+          "id": "event-instance-15",
+          "eventId": "event-21",
+          "day": 2,
+          "phase": "morning",
+          "actorId": "player",
+          "delegateId": null,
+          "audience": "public",
+          "choiceId": "help",
+          "text": "생존자의 물건 실종 — 식량 1개를 쓰며 함께 수색 · 신뢰 상승"
+        },
+        {
+          "id": "event-instance-22",
+          "eventId": "event-20",
+          "day": 2,
+          "phase": "afternoon",
+          "actorId": "player",
+          "delegateId": null,
+          "audience": "player",
+          "choiceId": "read",
+          "text": "익명의 고발장 — 불확실한 고발 내용을 개인적으로 검토"
+        },
+        {
+          "id": "event-instance-25",
+          "eventId": "event-35",
+          "day": 3,
+          "phase": "morning",
+          "actorId": "player",
+          "delegateId": null,
+          "audience": "public",
+          "choiceId": "read",
+          "text": "탈출 직전의 진실 — 출항 기록을 확인한다"
+        },
+        {
+          "id": "event-instance-32",
+          "eventId": "event-01",
+          "day": 3,
+          "phase": "afternoon",
+          "actorId": "min",
+          "delegateId": null,
+          "audience": "public",
+          "choiceId": "brace",
+          "text": "열대 폭풍 — 부품 1개로 통신탑 보강 · 수리도 +1"
+        }
+      ],
+      "clues": [
+        {
+          "id": "exitRisk",
+          "day": 3,
+          "shared": true,
+          "source": "public-record"
+        }
+      ],
+      "mission": {
+        "id": "risk",
+        "target": "do",
+        "progress": 0,
+        "complete": false,
+        "score": 0
+      }
+    }
+  ],
+  "rareEvents": [
+    {
+      "id": "event-22",
+      "name": "서로 충돌하는 증언",
+      "verification": "tests/phase4.test.cjs conditional execution"
+    },
+    {
+      "id": "event-26",
+      "name": "보트 엔진 고장",
+      "verification": "tests/phase4.test.cjs conditional execution"
+    },
+    {
+      "id": "event-36",
+      "name": "연구시설의 마지막 기록",
+      "verification": "tests/phase4.test.cjs conditional execution"
+    }
+  ]
+}

@@ -1,0 +1,125 @@
+{
+  "browsers": [
+    {
+      "name": "Chrome",
+      "version": "157.0.8103.79",
+      "settings": true,
+      "audio": true,
+      "map": true,
+      "reducedMotion": true,
+      "skipDoesNotMutateSave": true,
+      "mobileWidth": 390,
+      "errors": []
+    },
+    {
+      "name": "Firefox",
+      "version": "159.0",
+      "settings": true,
+      "audio": true,
+      "map": true,
+      "reducedMotion": true,
+      "skipDoesNotMutateSave": true,
+      "mobileWidth": 390,
+      "errors": []
+    }
+  ],
+  "audioTracks": [
+    {
+      "browser": "Chrome",
+      "track": "menu",
+      "time": 0.48645
+    },
+    {
+      "browser": "Chrome",
+      "track": "morning",
+      "time": 0.621651
+    },
+    {
+      "browser": "Chrome",
+      "track": "afternoon",
+      "time": 0.641791
+    },
+    {
+      "browser": "Chrome",
+      "track": "discussion",
+      "time": 0.632014
+    },
+    {
+      "browser": "Chrome",
+      "track": "voting",
+      "time": 0.6314
+    },
+    {
+      "browser": "Chrome",
+      "track": "night",
+      "time": 0.647529
+    },
+    {
+      "browser": "Chrome",
+      "track": "survivors",
+      "time": 0.631316
+    },
+    {
+      "browser": "Chrome",
+      "track": "saboteur",
+      "time": 0.647975
+    },
+    {
+      "browser": "Chrome",
+      "track": "none",
+      "time": 0.626897
+    },
+    {
+      "browser": "Firefox",
+      "track": "menu",
+      "time": 0.345041
+    },
+    {
+      "browser": "Firefox",
+      "track": "morning",
+      "time": 0.345041
+    },
+    {
+      "browser": "Firefox",
+      "track": "afternoon",
+      "time": 0.379479
+    },
+    {
+      "browser": "Firefox",
+      "track": "discussion",
+      "time": 0.34252
+    },
+    {
+      "browser": "Firefox",
+      "track": "voting",
+      "time": 0.342729
+    },
+    {
+      "browser": "Firefox",
+      "track": "night",
+      "time": 0.350916
+    },
+    {
+      "browser": "Firefox",
+      "track": "survivors",
+      "time": 0.342562
+    },
+    {
+      "browser": "Firefox",
+      "track": "saboteur",
+      "time": 0.34477
+    },
+    {
+      "browser": "Firefox",
+      "track": "none",
+      "time": 0.348958
+    }
+  ],
+  "fallbacks": [
+    "images unavailable",
+    "all audio unavailable",
+    "storage denied",
+    "fullscreen unsupported"
+  ],
+  "errors": []
+}

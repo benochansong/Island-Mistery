@@ -1,0 +1,9 @@
+{
+  "type": "conditional render fixtures",
+  "voteLeader": "서윤 5표",
+  "exileVisual": true,
+  "autoDialogue": true,
+  "historyNavigation": true,
+  "presentationDoesNotMutateSave": true,
+  "errors": []
+}
