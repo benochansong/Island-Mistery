@@ -1,0 +1,1172 @@
+{
+  "browser": "157.0.8103.79",
+  "scenarios": [
+    {
+      "name": "A",
+      "type": "full game, no injected state",
+      "steps": 38,
+      "actions": [
+        "explore",
+        "research",
+        "share",
+        "share",
+        "share",
+        "evidence",
+        "evidence",
+        "vote",
+        "repair",
+        "explore",
+        "research",
+        "share",
+        "share",
+        "evidence",
+        "evidence",
+        "evidence",
+        "vote",
+        "repair"
+      ],
+      "days": [
+        1,
+        2
+      ],
+      "phases": [
+        "morning",
+        "afternoon",
+        "discussion",
+        "voting",
+        "night"
+      ],
+      "start": 1795156349758,
+      "startupMs": 226.59999999962747,
+      "role": "doctor",
+      "outcome": {
+        "code": "escape",
+        "winner": "survivors",
+        "title": "엔딩 A · 바다 너머로",
+        "description": "통신탑 또는 탈출 보트를 완성했다. 생존자들은 공작원의 방해를 이겨내고 섬을 탈출했다.",
+        "day": 2
+      },
+      "ending": "research",
+      "resources": {
+        "food": 19,
+        "water": 18,
+        "medicine": 9,
+        "parts": 4
+      },
+      "elapsedSeconds": 30.318,
+      "audio": {
+        "unlocked": true,
+        "desired": "survivors",
+        "playing": true,
+        "currentTime": 0.927339,
+        "volume": 0.29250000000000004,
+        "activeEffects": 1,
+        "failures": [],
+        "activeTracks": 1
+      }
+    },
+    {
+      "name": "B",
+      "type": "full game, no injected state",
+      "steps": 38,
+      "actions": [
+        "explore",
+        "hide",
+        "lie",
+        "lie",
+        "lie",
+        "lie",
+        "lie",
+        "vote",
+        "sabotage",
+        "explore",
+        "sabotage",
+        "lie",
+        "lie",
+        "lie",
+        "lie",
+        "lie",
+        "vote"
+      ],
+      "days": [
+        1,
+        2
+      ],
+      "phases": [
+        "morning",
+        "afternoon",
+        "discussion",
+        "voting",
+        "night"
+      ],
+      "start": 1795156382980,
+      "startupMs": 181,
+      "role": "saboteur",
+      "outcome": {
+        "code": "escape",
+        "winner": "survivors",
+        "title": "엔딩 A · 바다 너머로",
+        "description": "통신탑 또는 탈출 보트를 완성했다. 생존자들은 공작원의 방해를 이겨내고 섬을 탈출했다.",
+        "day": 2
+      },
+      "ending": "partial",
+      "resources": {
+        "food": 24,
+        "water": 27,
+        "medicine": 9,
+        "parts": 12
+      },
+      "elapsedSeconds": 26.329,
+      "audio": {
+        "unlocked": true,
+        "desired": "survivors",
+        "playing": true,
+        "currentTime": 2.979566,
+        "volume": 0.29250000000000004,
+        "activeEffects": 0,
+        "failures": [],
+        "activeTracks": 1
+      }
+    },
+    {
+      "name": "C",
+      "type": "conditional save, real UI and engine afterward",
+      "steps": 40,
+      "actions": [
+        "vote"
+      ],
+      "days": [
+        1,
+        2,
+        3
+      ],
+      "phases": [
+        "voting",
+        "night",
+        "morning",
+        "afternoon",
+        "discussion"
+      ],
+      "start": 1795156418359,
+      "startupMs": 198.40000000037253,
+      "exiledDay": 1,
+      "role": "engineer",
+      "outcome": {
+        "code": "saboteur",
+        "winner": "saboteur",
+        "title": "엔딩 C · 끊어진 마지막 신호",
+        "description": "3일째 밤이 지났다. 탈출 경로를 완성하지 못해 공작원 진영이 승리했다.",
+        "day": 3
+      },
+      "ending": "interference",
+      "resources": {
+        "food": 31,
+        "water": 28,
+        "medicine": 19,
+        "parts": 8
+      },
+      "elapsedSeconds": 40.452,
+      "audio": {
+        "unlocked": true,
+        "desired": "saboteur",
+        "playing": true,
+        "currentTime": 0.959515,
+        "volume": 0.29250000000000004,
+        "activeEffects": 1,
+        "failures": [],
+        "activeTracks": 1
+      }
+    },
+    {
+      "name": "D",
+      "type": "conditional save, real UI and engine afterward",
+      "steps": 1,
+      "actions": [],
+      "days": [
+        1
+      ],
+      "phases": [
+        "night"
+      ],
+      "start": 1795156461316,
+      "startupMs": 175.5,
+      "role": "engineer",
+      "outcome": {
+        "code": "extinction",
+        "winner": "none",
+        "title": "엔딩 D · 생존 실패",
+        "description": "야영지의 생존자가 모두 쓰러졌다. 더 이상 탈출을 이어갈 사람이 없다.",
+        "day": 1
+      },
+      "ending": "stranded",
+      "resources": {
+        "food": 0,
+        "water": 0,
+        "medicine": 3,
+        "parts": 10
+      },
+      "elapsedSeconds": 0.802,
+      "audio": {
+        "unlocked": true,
+        "desired": "none",
+        "playing": true,
+        "currentTime": 0.396978,
+        "volume": 0.2023682142857143,
+        "activeEffects": 2,
+        "failures": [],
+        "activeTracks": 2
+      }
+    },
+    {
+      "name": "E",
+      "type": "conditional save, real UI and engine afterward",
+      "steps": 1,
+      "actions": [
+        "explore_hidden"
+      ],
+      "days": [
+        3
+      ],
+      "phases": [
+        "afternoon"
+      ],
+      "start": 1795156464408,
+      "startupMs": 187.5,
+      "hiddenFound": true,
+      "role": "engineer",
+      "outcome": {
+        "code": "escape",
+        "winner": "survivors",
+        "title": "엔딩 A · 바다 너머로",
+        "description": "통신탑 또는 탈출 보트를 완성했다. 생존자들은 공작원의 방해를 이겨내고 섬을 탈출했다.",
+        "day": 3
+      },
+      "ending": "truth",
+      "resources": {
+        "food": 30,
+        "water": 30,
+        "medicine": 5,
+        "parts": 10
+      },
+      "elapsedSeconds": 1.261,
+      "audio": {
+        "unlocked": true,
+        "desired": "survivors",
+        "playing": true,
+        "currentTime": 0.443842,
+        "volume": 0.22338642857158428,
+        "activeEffects": 1,
+        "failures": [],
+        "activeTracks": 2
+      }
+    }
+  ],
+  "errors": [],
+  "failures": [],
+  "timings": [
+    {
+      "day": 1,
+      "phase": "morning",
+      "type": "SELECT_LOCATION",
+      "ending": false,
+      "ms": 1
+    },
+    {
+      "day": 1,
+      "phase": "morning",
+      "type": "ACT",
+      "ending": false,
+      "ms": 13
+    },
+    {
+      "day": 1,
+      "phase": "morning",
+      "type": "EVENT_CHOICE",
+      "ending": false,
+      "ms": 4.400000000372529
+    },
+    {
+      "day": 1,
+      "phase": "morning",
+      "type": "NEXT",
+      "ending": false,
+      "ms": 2.600000001490116
+    },
+    {
+      "day": 1,
+      "phase": "afternoon",
+      "type": "ACT",
+      "ending": false,
+      "ms": 6.899999998509884
+    },
+    {
+      "day": 1,
+      "phase": "afternoon",
+      "type": "NEXT",
+      "ending": false,
+      "ms": 2.300000000745058
+    },
+    {
+      "day": 1,
+      "phase": "discussion",
+      "type": "ACT",
+      "ending": false,
+      "ms": 14.200000001117587
+    },
+    {
+      "day": 1,
+      "phase": "discussion",
+      "type": "NEXT",
+      "ending": false,
+      "ms": 4.699999999254942
+    },
+    {
+      "day": 1,
+      "phase": "discussion",
+      "type": "ACT",
+      "ending": false,
+      "ms": 15.599999999627471
+    },
+    {
+      "day": 1,
+      "phase": "discussion",
+      "type": "NEXT",
+      "ending": false,
+      "ms": 4.200000001117587
+    },
+    {
+      "day": 1,
+      "phase": "discussion",
+      "type": "ACT",
+      "ending": false,
+      "ms": 12.099999999627471
+    },
+    {
+      "day": 1,
+      "phase": "discussion",
+      "type": "NEXT",
+      "ending": false,
+      "ms": 5.800000000745058
+    },
+    {
+      "day": 1,
+      "phase": "discussion",
+      "type": "ACT",
+      "ending": false,
+      "ms": 20.799999998882413
+    },
+    {
+      "day": 1,
+      "phase": "discussion",
+      "type": "NEXT",
+      "ending": false,
+      "ms": 5.900000000372529
+    },
+    {
+      "day": 1,
+      "phase": "discussion",
+      "type": "ACT",
+      "ending": false,
+      "ms": 16.800000000745058
+    },
+    {
+      "day": 1,
+      "phase": "discussion",
+      "type": "NEXT",
+      "ending": false,
+      "ms": 5
+    },
+    {
+      "day": 1,
+      "phase": "voting",
+      "type": "ACT",
+      "ending": false,
+      "ms": 15.199999999254942
+    },
+    {
+      "day": 1,
+      "phase": "voting",
+      "type": "NEXT",
+      "ending": false,
+      "ms": 7.5
+    },
+    {
+      "day": 1,
+      "phase": "night",
+      "type": "ACT",
+      "ending": false,
+      "ms": 15.799999998882413
+    },
+    {
+      "day": 1,
+      "phase": "night",
+      "type": "NEXT",
+      "ending": false,
+      "ms": 6.599999999627471
+    },
+    {
+      "day": 2,
+      "phase": "morning",
+      "type": "SELECT_LOCATION",
+      "ending": false,
+      "ms": 7.300000000745058
+    },
+    {
+      "day": 2,
+      "phase": "morning",
+      "type": "ACT",
+      "ending": false,
+      "ms": 16.100000001490116
+    },
+    {
+      "day": 2,
+      "phase": "morning",
+      "type": "EVENT_CHOICE",
+      "ending": false,
+      "ms": 11
+    },
+    {
+      "day": 2,
+      "phase": "morning",
+      "type": "NEXT",
+      "ending": false,
+      "ms": 7.400000000372529
+    },
+    {
+      "day": 2,
+      "phase": "afternoon",
+      "type": "ACT",
+      "ending": false,
+      "ms": 17.899999998509884
+    },
+    {
+      "day": 2,
+      "phase": "afternoon",
+      "type": "EVENT_CHOICE",
+      "ending": false,
+      "ms": 9.900000000372529
+    },
+    {
+      "day": 2,
+      "phase": "afternoon",
+      "type": "NEXT",
+      "ending": false,
+      "ms": 8.900000000372529
+    },
+    {
+      "day": 2,
+      "phase": "discussion",
+      "type": "ACT",
+      "ending": false,
+      "ms": 29.699999999254942
+    },
+    {
+      "day": 2,
+      "phase": "discussion",
+      "type": "NEXT",
+      "ending": false,
+      "ms": 11.300000000745058
+    },
+    {
+      "day": 2,
+      "phase": "discussion",
+      "type": "ACT",
+      "ending": false,
+      "ms": 31.199999999254942
+    },
+    {
+      "day": 2,
+      "phase": "discussion",
+      "type": "NEXT",
+      "ending": false,
+      "ms": 8.5
+    },
+    {
+      "day": 2,
+      "phase": "discussion",
+      "type": "ACT",
+      "ending": false,
+      "ms": 27.40000000037253
+    },
+    {
+      "day": 2,
+      "phase": "discussion",
+      "type": "NEXT",
+      "ending": false,
+      "ms": 8.099999999627471
+    },
+    {
+      "day": 2,
+      "phase": "discussion",
+      "type": "ACT",
+      "ending": false,
+      "ms": 29.5
+    },
+    {
+      "day": 2,
+      "phase": "discussion",
+      "type": "NEXT",
+      "ending": false,
+      "ms": 7.599999999627471
+    },
+    {
+      "day": 2,
+      "phase": "discussion",
+      "type": "ACT",
+      "ending": false,
+      "ms": 27.5
+    },
+    {
+      "day": 2,
+      "phase": "discussion",
+      "type": "NEXT",
+      "ending": false,
+      "ms": 8.400000000372529
+    },
+    {
+      "day": 2,
+      "phase": "voting",
+      "type": "ACT",
+      "ending": false,
+      "ms": 23.5
+    },
+    {
+      "day": 2,
+      "phase": "voting",
+      "type": "NEXT",
+      "ending": false,
+      "ms": 14.200000001117587
+    },
+    {
+      "day": 2,
+      "phase": "night",
+      "type": "ACT",
+      "ending": true,
+      "ms": 14.099999999627471
+    },
+    {
+      "day": 1,
+      "phase": "morning",
+      "type": "SELECT_LOCATION",
+      "ending": false,
+      "ms": 1.200000001117587
+    },
+    {
+      "day": 1,
+      "phase": "morning",
+      "type": "ACT",
+      "ending": false,
+      "ms": 9.900000000372529
+    },
+    {
+      "day": 1,
+      "phase": "morning",
+      "type": "EVENT_CHOICE",
+      "ending": false,
+      "ms": 2.300000000745058
+    },
+    {
+      "day": 1,
+      "phase": "morning",
+      "type": "NEXT",
+      "ending": false,
+      "ms": 1.699999999254942
+    },
+    {
+      "day": 1,
+      "phase": "afternoon",
+      "type": "ACT",
+      "ending": false,
+      "ms": 5.5
+    },
+    {
+      "day": 1,
+      "phase": "afternoon",
+      "type": "NEXT",
+      "ending": false,
+      "ms": 2.699999999254942
+    },
+    {
+      "day": 1,
+      "phase": "discussion",
+      "type": "ACT",
+      "ending": false,
+      "ms": 10
+    },
+    {
+      "day": 1,
+      "phase": "discussion",
+      "type": "NEXT",
+      "ending": false,
+      "ms": 2.900000000372529
+    },
+    {
+      "day": 1,
+      "phase": "discussion",
+      "type": "ACT",
+      "ending": false,
+      "ms": 7.900000000372529
+    },
+    {
+      "day": 1,
+      "phase": "discussion",
+      "type": "NEXT",
+      "ending": false,
+      "ms": 3.400000000372529
+    },
+    {
+      "day": 1,
+      "phase": "discussion",
+      "type": "ACT",
+      "ending": false,
+      "ms": 12.799999998882413
+    },
+    {
+      "day": 1,
+      "phase": "discussion",
+      "type": "NEXT",
+      "ending": false,
+      "ms": 3.300000000745058
+    },
+    {
+      "day": 1,
+      "phase": "discussion",
+      "type": "ACT",
+      "ending": false,
+      "ms": 15.099999999627471
+    },
+    {
+      "day": 1,
+      "phase": "discussion",
+      "type": "NEXT",
+      "ending": false,
+      "ms": 4.799999998882413
+    },
+    {
+      "day": 1,
+      "phase": "discussion",
+      "type": "ACT",
+      "ending": false,
+      "ms": 20.59999999962747
+    },
+    {
+      "day": 1,
+      "phase": "discussion",
+      "type": "NEXT",
+      "ending": false,
+      "ms": 6.199999999254942
+    },
+    {
+      "day": 1,
+      "phase": "voting",
+      "type": "ACT",
+      "ending": false,
+      "ms": 11.900000000372529
+    },
+    {
+      "day": 1,
+      "phase": "voting",
+      "type": "NEXT",
+      "ending": false,
+      "ms": 6
+    },
+    {
+      "day": 1,
+      "phase": "night",
+      "type": "ACT",
+      "ending": false,
+      "ms": 17.09999999962747
+    },
+    {
+      "day": 1,
+      "phase": "night",
+      "type": "NEXT",
+      "ending": false,
+      "ms": 7.5
+    },
+    {
+      "day": 2,
+      "phase": "morning",
+      "type": "SELECT_LOCATION",
+      "ending": false,
+      "ms": 6.200000001117587
+    },
+    {
+      "day": 2,
+      "phase": "morning",
+      "type": "ACT",
+      "ending": false,
+      "ms": 16.199999999254942
+    },
+    {
+      "day": 2,
+      "phase": "morning",
+      "type": "EVENT_CHOICE",
+      "ending": false,
+      "ms": 7.800000000745058
+    },
+    {
+      "day": 2,
+      "phase": "morning",
+      "type": "NEXT",
+      "ending": false,
+      "ms": 6.799999998882413
+    },
+    {
+      "day": 2,
+      "phase": "afternoon",
+      "type": "ACT",
+      "ending": false,
+      "ms": 18
+    },
+    {
+      "day": 2,
+      "phase": "afternoon",
+      "type": "EVENT_CHOICE",
+      "ending": false,
+      "ms": 9
+    },
+    {
+      "day": 2,
+      "phase": "afternoon",
+      "type": "NEXT",
+      "ending": false,
+      "ms": 7
+    },
+    {
+      "day": 2,
+      "phase": "discussion",
+      "type": "ACT",
+      "ending": false,
+      "ms": 26
+    },
+    {
+      "day": 2,
+      "phase": "discussion",
+      "type": "NEXT",
+      "ending": false,
+      "ms": 11.200000001117587
+    },
+    {
+      "day": 2,
+      "phase": "discussion",
+      "type": "ACT",
+      "ending": false,
+      "ms": 27.100000001490116
+    },
+    {
+      "day": 2,
+      "phase": "discussion",
+      "type": "NEXT",
+      "ending": false,
+      "ms": 8.899999998509884
+    },
+    {
+      "day": 2,
+      "phase": "discussion",
+      "type": "ACT",
+      "ending": false,
+      "ms": 24.199999999254942
+    },
+    {
+      "day": 2,
+      "phase": "discussion",
+      "type": "NEXT",
+      "ending": false,
+      "ms": 6.699999999254942
+    },
+    {
+      "day": 2,
+      "phase": "discussion",
+      "type": "ACT",
+      "ending": false,
+      "ms": 26.800000000745058
+    },
+    {
+      "day": 2,
+      "phase": "discussion",
+      "type": "NEXT",
+      "ending": false,
+      "ms": 7.5
+    },
+    {
+      "day": 2,
+      "phase": "discussion",
+      "type": "ACT",
+      "ending": false,
+      "ms": 31.09999999962747
+    },
+    {
+      "day": 2,
+      "phase": "discussion",
+      "type": "NEXT",
+      "ending": false,
+      "ms": 8.100000001490116
+    },
+    {
+      "day": 2,
+      "phase": "voting",
+      "type": "ACT",
+      "ending": false,
+      "ms": 22.199999999254942
+    },
+    {
+      "day": 2,
+      "phase": "voting",
+      "type": "NEXT",
+      "ending": false,
+      "ms": 13.799999998882413
+    },
+    {
+      "day": 2,
+      "phase": "night",
+      "type": "NEXT",
+      "ending": true,
+      "ms": 16.90000000037253
+    },
+    {
+      "day": 1,
+      "phase": "voting",
+      "type": "ACT",
+      "ending": false,
+      "ms": 9.200000001117587
+    },
+    {
+      "day": 1,
+      "phase": "voting",
+      "type": "NEXT",
+      "ending": false,
+      "ms": 0.7000000011175871
+    },
+    {
+      "day": 1,
+      "phase": "night",
+      "type": "NEXT",
+      "ending": false,
+      "ms": 8
+    },
+    {
+      "day": 1,
+      "phase": "night",
+      "type": "NEXT",
+      "ending": false,
+      "ms": 1.900000000372529
+    },
+    {
+      "day": 2,
+      "phase": "morning",
+      "type": "NEXT",
+      "ending": false,
+      "ms": 11.099999999627471
+    },
+    {
+      "day": 2,
+      "phase": "morning",
+      "type": "NEXT",
+      "ending": false,
+      "ms": 3.5
+    },
+    {
+      "day": 2,
+      "phase": "afternoon",
+      "type": "NEXT",
+      "ending": false,
+      "ms": 7.899999998509884
+    },
+    {
+      "day": 2,
+      "phase": "afternoon",
+      "type": "NEXT",
+      "ending": false,
+      "ms": 3.5
+    },
+    {
+      "day": 2,
+      "phase": "discussion",
+      "type": "NEXT",
+      "ending": false,
+      "ms": 14
+    },
+    {
+      "day": 2,
+      "phase": "discussion",
+      "type": "NEXT",
+      "ending": false,
+      "ms": 4.199999999254942
+    },
+    {
+      "day": 2,
+      "phase": "discussion",
+      "type": "NEXT",
+      "ending": false,
+      "ms": 14.400000000372529
+    },
+    {
+      "day": 2,
+      "phase": "discussion",
+      "type": "NEXT",
+      "ending": false,
+      "ms": 3.099999999627471
+    },
+    {
+      "day": 2,
+      "phase": "discussion",
+      "type": "NEXT",
+      "ending": false,
+      "ms": 10.900000000372529
+    },
+    {
+      "day": 2,
+      "phase": "discussion",
+      "type": "NEXT",
+      "ending": false,
+      "ms": 3.200000001117587
+    },
+    {
+      "day": 2,
+      "phase": "discussion",
+      "type": "NEXT",
+      "ending": false,
+      "ms": 11.699999999254942
+    },
+    {
+      "day": 2,
+      "phase": "discussion",
+      "type": "NEXT",
+      "ending": false,
+      "ms": 3.299999998882413
+    },
+    {
+      "day": 2,
+      "phase": "discussion",
+      "type": "NEXT",
+      "ending": false,
+      "ms": 13.099999999627471
+    },
+    {
+      "day": 2,
+      "phase": "discussion",
+      "type": "NEXT",
+      "ending": false,
+      "ms": 3.400000000372529
+    },
+    {
+      "day": 2,
+      "phase": "voting",
+      "type": "NEXT",
+      "ending": false,
+      "ms": 12
+    },
+    {
+      "day": 2,
+      "phase": "voting",
+      "type": "NEXT",
+      "ending": false,
+      "ms": 6.900000000372529
+    },
+    {
+      "day": 2,
+      "phase": "night",
+      "type": "NEXT",
+      "ending": false,
+      "ms": 11.699999999254942
+    },
+    {
+      "day": 2,
+      "phase": "night",
+      "type": "NEXT",
+      "ending": false,
+      "ms": 6.099999999627471
+    },
+    {
+      "day": 3,
+      "phase": "morning",
+      "type": "NEXT",
+      "ending": false,
+      "ms": 18.200000001117587
+    },
+    {
+      "day": 3,
+      "phase": "morning",
+      "type": "NEXT",
+      "ending": false,
+      "ms": 7.5
+    },
+    {
+      "day": 3,
+      "phase": "afternoon",
+      "type": "NEXT",
+      "ending": false,
+      "ms": 16.40000000037253
+    },
+    {
+      "day": 3,
+      "phase": "afternoon",
+      "type": "NEXT",
+      "ending": false,
+      "ms": 8
+    },
+    {
+      "day": 3,
+      "phase": "discussion",
+      "type": "NEXT",
+      "ending": false,
+      "ms": 23.5
+    },
+    {
+      "day": 3,
+      "phase": "discussion",
+      "type": "NEXT",
+      "ending": false,
+      "ms": 7.5
+    },
+    {
+      "day": 3,
+      "phase": "discussion",
+      "type": "NEXT",
+      "ending": false,
+      "ms": 19.300000000745058
+    },
+    {
+      "day": 3,
+      "phase": "discussion",
+      "type": "NEXT",
+      "ending": false,
+      "ms": 4.699999999254942
+    },
+    {
+      "day": 3,
+      "phase": "discussion",
+      "type": "NEXT",
+      "ending": false,
+      "ms": 16.800000000745058
+    },
+    {
+      "day": 3,
+      "phase": "discussion",
+      "type": "NEXT",
+      "ending": false,
+      "ms": 6.099999999627471
+    },
+    {
+      "day": 3,
+      "phase": "discussion",
+      "type": "NEXT",
+      "ending": false,
+      "ms": 19.899999998509884
+    },
+    {
+      "day": 3,
+      "phase": "discussion",
+      "type": "NEXT",
+      "ending": false,
+      "ms": 6.299999998882413
+    },
+    {
+      "day": 3,
+      "phase": "discussion",
+      "type": "NEXT",
+      "ending": false,
+      "ms": 19.300000000745058
+    },
+    {
+      "day": 3,
+      "phase": "discussion",
+      "type": "NEXT",
+      "ending": false,
+      "ms": 7
+    },
+    {
+      "day": 3,
+      "phase": "voting",
+      "type": "NEXT",
+      "ending": false,
+      "ms": 18.5
+    },
+    {
+      "day": 3,
+      "phase": "voting",
+      "type": "NEXT",
+      "ending": false,
+      "ms": 8.400000000372529
+    },
+    {
+      "day": 3,
+      "phase": "night",
+      "type": "NEXT",
+      "ending": false,
+      "ms": 22.399999998509884
+    },
+    {
+      "day": 3,
+      "phase": "night",
+      "type": "NEXT",
+      "ending": true,
+      "ms": 11.600000001490116
+    },
+    {
+      "day": 1,
+      "phase": "night",
+      "type": "NEXT",
+      "ending": true,
+      "ms": 3
+    },
+    {
+      "day": 3,
+      "phase": "afternoon",
+      "type": "ACT",
+      "ending": true,
+      "ms": 6.300000000745058
+    }
+  ],
+  "restored": [
+    "A:1:discussion:false",
+    "A:1:discussion:true",
+    "A:1:voting:true",
+    "A:2:morning:false",
+    "A:2:morning:true",
+    "A:2:afternoon:false",
+    "A:2:afternoon:true",
+    "A:2:discussion:false",
+    "A:2:discussion:true",
+    "A:2:voting:false",
+    "A:2:voting:true",
+    "A:2:night:false",
+    "B:1:discussion:false",
+    "B:1:discussion:true",
+    "B:1:voting:true",
+    "B:2:morning:false",
+    "B:2:morning:true",
+    "B:2:afternoon:false",
+    "B:2:afternoon:true",
+    "B:2:discussion:false",
+    "B:2:discussion:true",
+    "B:2:voting:false",
+    "B:2:voting:true",
+    "B:2:night:false",
+    "C:1:voting:true",
+    "C:2:morning:false",
+    "C:2:morning:true",
+    "C:2:afternoon:false",
+    "C:2:afternoon:true",
+    "C:2:discussion:false",
+    "C:2:discussion:true",
+    "C:2:voting:false",
+    "C:2:voting:true",
+    "C:2:night:false",
+    "C:2:night:true",
+    "C:3:morning:false",
+    "C:3:morning:true",
+    "C:3:afternoon:false",
+    "C:3:afternoon:true",
+    "C:3:discussion:false",
+    "C:3:discussion:true",
+    "C:3:voting:false",
+    "C:3:voting:true",
+    "C:3:night:false",
+    "C:3:night:true",
+    "E:3:afternoon:false"
+  ],
+  "tutorial": true,
+  "compactResults": true
+}

@@ -123,3 +123,39 @@ test('public lobby discovery works and foreign browser origins cannot connect',a
   const rejected=io(f.url,{transports:['websocket'],forceNew:true,reconnection:false,extraHeaders:{Origin:'https://untrusted.example'}});
   t.after(()=>rejected.disconnect());await new Promise((resolve,reject)=>{rejected.once('connect',()=>reject(Error('Cross-origin connection accepted')));rejected.once('connect_error',resolve);});
 });
+
+test('unstartable AI-disabled room settings and failed joins never leave orphan rooms',async t=>{
+  const f=await fixture(t,2),outsider=await f.client(),before=f.app.rooms.rooms.size;
+  const invalid=await emit(outsider,'room:create',{...options,maxHumans:2,allowAI:false});
+  assert.equal(invalid.ok,false);assert.equal(f.app.rooms.rooms.size,before);
+  const original=f.app.profiles.customize;
+  try{f.app.profiles.customize=()=>{throw Error('Injected profile write failure');};
+    const failed=await emit(outsider,'room:create',{...options,nickname:'Failure'});
+    assert.equal(failed.ok,false);assert.equal(f.app.rooms.rooms.size,before);
+  }finally{f.app.profiles.customize=original;}
+  const valid=await emit(outsider,'room:create',{...options,allowAI:false,maxHumans:6});assert.ok(valid.ok,valid.error);await wait(()=>outsider.latest?.room.code===valid.code);assert.equal(outsider.latest.room.aiCount,0);
+});
+
+test('lobby reconnect grace preserves a seat, expires abandoned seats, and permits a replacement to start',async t=>{
+  const f=await fixture(t,2,{lobbyReconnectMs:120000}),[host,guest]=f.clients;
+  host.disconnect();await wait(()=>!f.room.members[0].socketId);
+  assert.equal(f.room.host,f.auth[1].memberId);
+  const restored=await f.client();assert.ok((await emit(restored,'session:resume',f.auth[0])).ok);
+  await wait(()=>restored.latest?.room);assert.equal(restored.latest.seat,'player');assert.equal(f.room.members[0].disconnectedAt,null);
+  restored.disconnect();await wait(()=>!f.room.members[0].socketId);
+  // Advance only the disconnected seat's timestamp: deterministic expiry boundary.
+  f.room.members[0].disconnectedAt=Date.now()-120001;f.app.rooms.sweep();
+  await wait(()=>guest.latest.room.participants.length===1);assert.equal(f.room.members.length,1);
+  const replacement=await f.client();assert.equal((await emit(replacement,'session:resume',f.auth[0])).ok,false);
+  assert.ok((await emit(replacement,'room:join',{code:f.room.code,nickname:'Replacement'})).ok);
+  for(const s of [guest,replacement])assert.ok((await emit(s,'room:ready',{ready:true})).ok);
+  assert.ok((await emit(guest,'room:start')).ok);assert.equal(f.room.state.players.filter(p=>p.isHuman).length,2);
+});
+
+test('active game disconnects retain their seat and role beyond lobby grace',async t=>{
+  const f=await fixture(t,2,{lobbyReconnectMs:120000});await f.start();const role=f.room.state.secrets.player.role;
+  f.clients[0].disconnect();await wait(()=>!f.room.members[0].socketId);
+  f.room.members[0].disconnectedAt=Date.now()-120001;f.app.rooms.sweep();assert.equal(f.room.members.length,2);
+  const restored=await f.client();assert.ok((await emit(restored,'session:resume',f.auth[0])).ok);
+  await wait(()=>restored.latest?.view);assert.equal(restored.latest.view.self.role,role);
+});

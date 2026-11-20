@@ -25,7 +25,7 @@ function fixture(name){
       page.on('pageerror',e=>report.errors.push({name,message:e.message}));
       const run={name,type:['A','B'].includes(name)?'full game, no injected state':'conditional save, real UI and engine afterward',steps:0,actions:[],days:[],phases:[],start:Date.now()};
       try{
-        await page.goto('http://127.0.0.1:4174');run.startupMs=await page.evaluate(()=>performance.getEntriesByType('navigation')[0].domContentLoadedEventEnd);
+        await page.goto(process.env.TEST_ONLINE_URL||'http://127.0.0.1:4174');run.startupMs=await page.evaluate(()=>performance.getEntriesByType('navigation')[0].domContentLoadedEventEnd);
         const inject=['C','D','E'].includes(name);
         if(inject){await page.evaluate(({s,key})=>localStorage.setItem(key,JSON.stringify(s)),{s:fixture(name),key});await page.reload();await page.locator('#continue-button').click();}
         else{
@@ -70,7 +70,7 @@ function fixture(name){
           if(choice.kind==='vote'){
             if(name==='A'){await page.locator('#cancel-vote').click();assert.equal(await page.locator('#action-list button').count()>0,true);await button.click();}
             await page.locator('#confirm-vote').click();
-            if(name==='C'){const saved=await page.evaluate(k=>JSON.parse(localStorage.getItem(k)),key);assert.equal(saved.players[0].isExiled,true);run.exiledDay=saved.day;await page.screenshot({path:path.join(root,'docs/phase7-offline-browser-C-exile.png')});}
+            if(name==='C'){const saved=await page.evaluate(k=>JSON.parse(localStorage.getItem(k)),key);assert.equal(saved.players[0].isExiled,true);run.exiledDay=saved.day;await page.screenshot({path:path.join(root,'docs/'+(process.env.TEST_ARTIFACT_PREFIX||'phase7-offline-browser')+'-C-exile.png')});}
           }
           if(await page.locator('#turn-results details').count())report.compactResults=true;
           if(name==='E'&&choice.kind==='explore_hidden'){const saved=await page.evaluate(k=>JSON.parse(localStorage.getItem(k)),key);assert.ok(saved.secrets.player.visitedSites.includes('basement'));assert.ok(saved.secrets.player.storyClues.some(c=>c.id==='archive'));run.hiddenFound=true;}
@@ -83,14 +83,14 @@ function fixture(name){
         if(name==='E'){assert.ok(run.hiddenFound);assert.equal(final.endingDetail.id,'truth');}
         assert.equal(await page.locator('#next-button').isEnabled(),false);
         await page.waitForTimeout(850);run.audio=await page.evaluate(()=>IslandMystery.audio.diagnostics());assert.ok(run.audio.unlocked);
-        await page.screenshot({path:path.join(root,`docs/phase7-offline-browser-${name}.png`)});
+        await page.screenshot({path:path.join(root,`docs/${process.env.TEST_ARTIFACT_PREFIX||'phase7-offline-browser'}-${name}.png`)});
         const raw=await page.evaluate(k=>localStorage.getItem(k),key);await page.reload();await page.locator('#continue-button').click();assert.equal(await page.evaluate(k=>localStorage.getItem(k),key),raw);
         await page.locator('#codex-button').click();assert.match(await page.locator('#codex-content').innerText(),/완료한 이야기 1회/);await page.locator('#close-codex').click();
-        if(name==='A'){assert.equal(await page.locator('#onboarding').isVisible(),false);await page.setViewportSize({width:390,height:844});assert.ok(await page.evaluate(()=>document.documentElement.scrollWidth<=innerWidth));await page.screenshot({path:path.join(root,'docs/phase7-offline-browser-mobile.png')});}
+        if(name==='A'){assert.equal(await page.locator('#onboarding').isVisible(),false);await page.setViewportSize({width:390,height:844});assert.ok(await page.evaluate(()=>document.documentElement.scrollWidth<=innerWidth));await page.screenshot({path:path.join(root,'docs/'+(process.env.TEST_ARTIFACT_PREFIX||'phase7-offline-browser')+'-mobile.png')});}
         report.scenarios.push(run);console.log(`Scenario ${name}: ${run.outcome.code}/${run.ending}, ${run.steps} UI steps`);
-      }catch(e){report.failures.push({name,error:e.stack});await page.screenshot({path:path.join(root,`docs/phase7-offline-browser-${name}-failure.png`)});throw e;}
+      }catch(e){report.failures.push({name,error:e.stack});await page.screenshot({path:path.join(root,`docs/${process.env.TEST_ARTIFACT_PREFIX||'phase7-offline-browser'}-${name}-failure.png`)});throw e;}
       finally{await context.close();}
     }
     assert.deepEqual(report.errors,[]);assert.equal(report.scenarios.length,5);
-  }finally{fs.writeFileSync(path.join(root,'docs/phase7-offline-browser-results.json'),JSON.stringify(report,null,2)+'\n');await browser.close();}
+  }finally{fs.writeFileSync(path.join(root,'docs/'+(process.env.TEST_ARTIFACT_PREFIX||'phase7-offline-browser')+'-results.json'),JSON.stringify(report,null,2)+'\n');await browser.close();}
 })().catch(e=>{console.error(e);process.exitCode=1;});

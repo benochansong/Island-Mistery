@@ -1,0 +1,36 @@
+{
+  "browsers": [
+    "157.0.8103.79",
+    "159.0"
+  ],
+  "errors": [],
+  "runs": [
+    {
+      "roles": [
+        "의사",
+        "기술자"
+      ],
+      "steps": 66,
+      "chat": true,
+      "started": 1795156318751,
+      "ending": "엔딩 C · 끊어진 마지막 신호",
+      "seconds": 38.89
+    },
+    {
+      "roles": [
+        "의사",
+        "의사"
+      ],
+      "steps": 33,
+      "chat": true,
+      "started": 1795156387160,
+      "ending": "엔딩 B · 간섭이 멎은 새벽",
+      "seconds": 47.272
+    }
+  ],
+  "reconnect": true,
+  "chat": true,
+  "privatePackets": true,
+  "rematch": true,
+  "serverRecords": true
+}

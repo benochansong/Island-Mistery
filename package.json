@@ -25,7 +25,8 @@
     "test:browser:offline-regression": "node tests/browser-phase7-offline.cjs",
     "test:simulation:phase6": "node tests/simulate-phase6.cjs after 300",
     "test:browser:phase8": "node tests/browser-phase8.cjs",
-    "test:browser:phase8-online": "node tests/browser-phase8-online.cjs"
+    "test:browser:phase8-online": "node tests/browser-phase8-online.cjs",
+    "test:browser:online-repair": "node tests/browser-phase7-repair.cjs"
   },
   "dependencies": {
     "socket.io": "4.8.3",

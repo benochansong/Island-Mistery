@@ -1,0 +1,12 @@
+{
+  "browser": "157.0.8103.79",
+  "errors": [],
+  "capacity": true,
+  "invite": true,
+  "hostTransfer": true,
+  "graceResume": true,
+  "expiredSeat": true,
+  "expiredRecoveryForm": true,
+  "replacementStart": true,
+  "activeGameResume": true
+}

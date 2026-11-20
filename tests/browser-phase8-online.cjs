@@ -8,7 +8,7 @@ const url=process.env.TEST_ONLINE_URL||'http://127.0.0.1:4175',root=path.resolve
     const [host,guest]=pages;
     await host.locator('#create-nickname').fill('바다친구');await host.locator('#create-room-name').fill('두 브라우저의 섬');await host.locator('#room-discussion').selectOption('30');await host.locator('#create-room-form button[type=submit]').click();await host.locator('#online-lobby').waitFor({state:'visible'});const code=await host.locator('#room-code').innerText();
     await guest.locator('#join-nickname').fill('숲친구');await guest.locator('#join-room-code').fill(code);await guest.locator('#join-room-form button').click();await guest.locator('#online-lobby').waitFor({state:'visible'});await host.waitForFunction(()=>document.getElementById('lobby-players').children.length===2);
-    assert.equal(await guest.locator('#room-start').isVisible(),false);await host.screenshot({path:path.join(root,'docs/phase8-online-lobby.png')});
+    assert.equal(await guest.locator('#room-start').isVisible(),false);await host.screenshot({path:path.join(root,'docs/'+(process.env.TEST_ARTIFACT_PREFIX||'phase8-online')+'-lobby.png')});
     // Capture only server-authorized snapshots via a browser-side UI diagnostic interception.
     // No server engine, secret state, role editing, or fake packet injection is used.
     for(const p of pages)await p.evaluate(()=>{window.onlineViews=[];const old=IslandMystery.ui.render;IslandMystery.ui={...IslandMystery.ui,render(v){if(v.mode==='online')window.onlineViews.push(JSON.parse(JSON.stringify(v)));return old(v);}};});
@@ -26,7 +26,7 @@ const url=process.env.TEST_ONLINE_URL||'http://127.0.0.1:4175',root=path.resolve
           const phase=await p.evaluate(()=>document.body.dataset.phase);
           if(phase==='discussion'&&!run.chat&&i===0&&await p.locator('#online-send').isEnabled()){
             await p.locator('#online-message').fill('<img src=x onerror=alert(1)> 함께 증거를 확인해요');await p.locator('#online-send').click();await guest.waitForFunction(()=>document.getElementById('online-messages').textContent.includes('함께 증거를 확인해요'));assert.equal(await guest.locator('#online-messages img').count(),0);report.chat=true;run.chat=true;
-            await p.locator('#online-chat').screenshot({path:path.join(root,'docs/phase8-online-chat.png')});
+            await p.locator('#online-chat').screenshot({path:path.join(root,'docs/'+(process.env.TEST_ARTIFACT_PREFIX||'phase8-online')+'-chat.png')});
           }
           const buttons=p.locator('#action-list button:enabled');if(!await buttons.count())continue;
           const pick=await p.evaluate(()=>{const list=[...document.querySelectorAll('#action-list button:enabled')];let b=list.find(b=>/파괴|은닉/.test(b.textContent))||list.find(b=>/통신탑 수리|보트 수리/.test(b.textContent))||list.find(b=>b.textContent==='선택 지역 탐험')||list.find(b=>b.textContent==='기권')||list.find(b=>/물자 상황 공유/.test(b.textContent))||list.find(b=>/^휴식/.test(b.textContent))||list[0];return b?.dataset.actionIndex;});
@@ -41,13 +41,13 @@ const url=process.env.TEST_ONLINE_URL||'http://127.0.0.1:4175',root=path.resolve
       for(const p of pages)await p.locator('#ending-panel').waitFor({state:'visible',timeout:15000});run.ending=await host.locator('#ending-title').innerText();assert.equal(await guest.locator('#ending-title').innerText(),run.ending);run.seconds=(Date.now()-run.started)/1000;report.runs.push(run);
       for(const p of pages){await p.locator('#growth-result .growth-xp').waitFor();await p.locator('[data-growth=profile]').first().click();await p.locator('#growth-source').selectOption('online');await p.locator('#profile-nickname').waitFor();assert.equal(await p.locator('#growth-error').innerText(),'');await p.locator('#growth-close').click();const profile=await p.evaluate(()=>IslandMystery.online.service('profile:get'));assert.equal(profile.profile.totals.completed,runIndex+1);assert.ok(profile.profile.xp>=50);}
       const boards=await Promise.all(pages.map(p=>p.evaluate(()=>IslandMystery.online.service('leaderboard:list',{kind:'casual'}))));assert.deepEqual(boards[0].rows,boards[1].rows);assert.equal(boards[0].global,false);assert.ok(boards[0].rows.length>=2);report.serverRecords=true;
-      await guest.locator('[data-growth=leaderboard]').first().click();await guest.waitForFunction(()=>document.getElementById('growth-content').textContent.includes('글로벌 랭킹 비활성'));await guest.screenshot({path:path.join(root,'docs/phase8-online-ranking.png')});await guest.locator('#growth-close').click();
-      await host.screenshot({path:path.join(root,`docs/phase8-online-ending-${runIndex}.png`)});
+      await guest.locator('[data-growth=leaderboard]').first().click();await guest.waitForFunction(()=>document.getElementById('growth-content').textContent.includes('글로벌 랭킹 비활성'));await guest.screenshot({path:path.join(root,'docs/'+(process.env.TEST_ARTIFACT_PREFIX||'phase8-online')+'-ranking.png')});await guest.locator('#growth-close').click();
+      await host.screenshot({path:path.join(root,`docs/${process.env.TEST_ARTIFACT_PREFIX||'phase8-online'}-ending-${runIndex}.png`)});
       for(const p of pages){const views=await p.evaluate(()=>window.onlineViews||[]);assert.ok(views.length);for(const v of views){assert.ok(!('secrets'in v)&&!('rng'in v)&&!('replaySeed'in v));assert.ok(v.players.every(p=>!('role'in p)&&!('memory'in p)));}assert.equal(await p.evaluate(()=>localStorage.getItem('island-mystery.save.v4')),null);}
       if(runIndex===0){for(const p of pages)if(await p.locator('#online-rematch').isVisible())await p.locator('#online-rematch').click();for(const p of pages)await p.locator('#online-lobby').waitFor({state:'visible'});report.rematch=true;}
     }
-    await guest.setViewportSize({width:390,height:844});assert.ok(await guest.evaluate(()=>document.documentElement.scrollWidth<=innerWidth));await guest.screenshot({path:path.join(root,'docs/phase8-online-mobile.png')});
+    await guest.setViewportSize({width:390,height:844});assert.ok(await guest.evaluate(()=>document.documentElement.scrollWidth<=innerWidth));await guest.screenshot({path:path.join(root,'docs/'+(process.env.TEST_ARTIFACT_PREFIX||'phase8-online')+'-mobile.png')});
     assert.deepEqual(report.errors,[]);
-  }catch(e){report.failure=e.stack;for(let i=0;i<pages.length;i++)await pages[i].screenshot({path:path.join(root,`docs/phase8-online-failure-${i}.png`)});throw e;}
-  finally{fs.writeFileSync(path.join(root,'docs/phase8-online-browser-results.json'),JSON.stringify(report,null,2)+'\n');for(const b of browsers)await b.close();}
+  }catch(e){report.failure=e.stack;for(let i=0;i<pages.length;i++)await pages[i].screenshot({path:path.join(root,`docs/${process.env.TEST_ARTIFACT_PREFIX||'phase8-online'}-failure-${i}.png`)});throw e;}
+  finally{fs.writeFileSync(path.join(root,'docs/'+(process.env.TEST_ARTIFACT_PREFIX||'phase8-online')+'-browser-results.json'),JSON.stringify(report,null,2)+'\n');for(const b of browsers)await b.close();}
 })().catch(e=>{console.error(e);process.exitCode=1;});

@@ -1,0 +1,13 @@
+(node:31276) ExperimentalWarning: SQLite is an experimental feature and might change at any time
+(Use `node --trace-warnings ...` to show where the warning was created)
+✔ unstartable AI-disabled room settings and failed joins never leave orphan rooms (109.4685ms)
+✔ lobby reconnect grace preserves a seat, expires abandoned seats, and permits a replacement to start (113.5796ms)
+✔ active game disconnects retain their seat and role beyond lobby grace (68.0752ms)
+ℹ tests 3
+ℹ suites 0
+ℹ pass 3
+ℹ fail 0
+ℹ cancelled 0
+ℹ skipped 0
+ℹ todo 0
+ℹ duration_ms 712.7919
